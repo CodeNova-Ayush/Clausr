@@ -1,0 +1,199 @@
+"""
+Clausr — Inference Script
+Follows the official OpenEnv inference.py format exactly.
+"""
+
+import os
+import time
+import json
+import requests
+from typing import List, Optional
+from openai import OpenAI
+
+# ── Environment variables ─────────────────────────────────────────────────────
+# API_BASE_URL and MODEL_NAME have defaults (required by spec)
+# HF_TOKEN must NOT have a default (required by spec)
+API_BASE_URL = os.getenv("API_BASE_URL", "https://api.openai.com/v1")
+MODEL_NAME   = os.getenv("MODEL_NAME",   "gpt-4o-mini")
+HF_TOKEN     = os.getenv("HF_TOKEN")
+ENV_BASE_URL = os.getenv("ENV_BASE_URL", "http://localhost:7860")
+
+BENCHMARK = "clausr"
+
+# ── OpenAI client ─────────────────────────────────────────────────────────────
+client = OpenAI(
+    api_key=HF_TOKEN or "dummy",
+    base_url=API_BASE_URL,
+)
+
+# ── Required log functions ─────────────────────────────────────────────────────
+def log_start(task: str, env: str, model: str) -> None:
+    print(f"[START] task={task} env={env} model={model}", flush=True)
+
+def log_step(step: int, action: str, reward: float, done: bool, error: Optional[str]) -> None:
+    error_val = error if error else "null"
+    done_val  = str(done).lower()
+    print(
+        f"[STEP] step={step} action={action} reward={reward:.2f} done={done_val} error={error_val}",
+        flush=True,
+    )
+
+def log_end(success: bool, steps: int, score: float, rewards: List[float]) -> None:
+    rewards_str = ",".join(f"{r:.2f}" for r in rewards)
+    print(
+        f"[END] success={str(success).lower()} steps={steps} score={score:.3f} rewards={rewards_str}",
+        flush=True,
+    )
+
+# ── System prompt for contradiction detection ─────────────────────────────────
+SYSTEM_PROMPT = """You are a contract review specialist. Find all pairs of clauses that directly contradict each other within the same legal contract document.
+
+A contradiction exists when:
+- Two clauses make incompatible demands on the same obligation (e.g. different time periods for the same duty)
+- One clause grants a right that another explicitly removes
+- The same duty is assigned to different parties
+- Notice periods that logically cannot both be satisfied
+- The same term is defined differently in two places
+
+Do NOT flag as contradictions:
+- Clauses that apply to different scenarios (e.g. for cause vs for convenience)
+- Clauses using notwithstanding language that intentionally overrides another
+- Clauses covering complementary geographic or temporal scope
+
+Respond ONLY with valid JSON — no markdown fences, no explanation outside JSON:
+{
+  "findings": [
+    {
+      "clause_a_id": "clause_03",
+      "clause_b_id": "clause_07",
+      "explanation": "clause_03 specifies 2 years but clause_07 specifies 36 months for the same confidentiality obligation"
+    }
+  ]
+}
+
+If no contradictions found: {"findings": []}"""
+
+# ── Run one episode ───────────────────────────────────────────────────────────
+def run_episode(task_id: str) -> float:
+    rewards: List[float] = []
+    steps_taken = 0
+    score = 0.0
+    success = False
+
+    log_start(task=task_id, env=BENCHMARK, model=MODEL_NAME)
+
+    try:
+        # Step 1 — Reset environment
+        reset_resp = requests.post(
+            f"{ENV_BASE_URL}/reset?task_id={task_id}",
+            timeout=30
+        )
+        reset_resp.raise_for_status()
+        obs = reset_resp.json()
+
+        contract_text       = obs.get("contract_text", "")
+        clauses             = obs.get("clauses", [])
+        num_contradictions  = obs.get("num_contradictions", 1)
+        instructions        = obs.get("instructions", "Find all contradictions in this contract.")
+
+        # Step 2 — Build prompt
+        clause_list = "\n".join([
+            f"[{c['id']}] {c.get('title','')}: {c.get('text','')}"
+            for c in clauses
+        ])
+
+        user_message = (
+            f"{instructions}\n\n"
+            f"IMPORTANT: There are exactly {num_contradictions} contradiction(s) in this contract. "
+            f"Find all of them.\n\n"
+            f"=== FULL CONTRACT TEXT ===\n{contract_text}\n\n"
+            f"=== STRUCTURED CLAUSE LIST ===\n{clause_list}"
+        )
+
+        # Step 3 — Call LLM
+        completion = client.chat.completions.create(
+            model=MODEL_NAME,
+            messages=[
+                {"role": "system", "content": SYSTEM_PROMPT},
+                {"role": "user",   "content": user_message},
+            ],
+            max_tokens=2000,
+            temperature=0.0,
+        )
+
+        raw = (completion.choices[0].message.content or "").strip()
+        raw = raw.replace("```json", "").replace("```", "").strip()
+
+        try:
+            result_json = json.loads(raw)
+            findings = result_json.get("findings", [])
+        except Exception:
+            findings = []
+
+        action_str = f"submitted_{len(findings)}_findings"
+        steps_taken = 1
+
+        # Step 4 — Submit findings
+        step_resp = requests.post(
+            f"{ENV_BASE_URL}/step",
+            json={"findings": findings},
+            timeout=30
+        )
+        step_resp.raise_for_status()
+        step_data = step_resp.json()
+
+        score    = float(step_data.get("score", 0.0))
+        feedback = step_data.get("feedback", "")
+        done     = step_data.get("done", True)
+
+        score   = max(0.0, min(1.0, score))
+        reward  = score
+        success = score > 0.0
+
+        rewards.append(reward)
+
+        log_step(
+            step=1,
+            action=action_str,
+            reward=reward,
+            done=done,
+            error=None
+        )
+
+    except Exception as e:
+        error_msg = str(e)
+        steps_taken = max(steps_taken, 1)
+        rewards = rewards or [0.0]
+        log_step(step=steps_taken, action="error", reward=0.0, done=True, error=error_msg)
+        score   = 0.0
+        success = False
+
+    finally:
+        log_end(success=success, steps=steps_taken, score=score, rewards=rewards)
+
+    return score
+
+
+# ── Main ──────────────────────────────────────────────────────────────────────
+def main():
+    tasks  = ["easy", "medium", "hard"]
+    scores = {}
+
+    for task_id in tasks:
+        score = run_episode(task_id)
+        scores[task_id] = score
+        print("", flush=True)  # blank line between episodes
+
+    mean_score = sum(scores.values()) / len(scores)
+
+    print("=" * 50, flush=True)
+    print("CLAUSR INFERENCE RESULTS", flush=True)
+    print("=" * 50, flush=True)
+    for task_id, score in scores.items():
+        print(f"{task_id.upper():<10} {score:.4f}", flush=True)
+    print(f"{'MEAN':<10} {mean_score:.4f}", flush=True)
+    print("=" * 50, flush=True)
+
+
+if __name__ == "__main__":
+    main()

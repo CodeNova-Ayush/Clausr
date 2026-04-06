@@ -1,0 +1,622 @@
+{
+  "contract_id": "hard_002",
+  "task_id": "hard",
+  "title": "Technology Licensing and Services Agreement between CoreTech Innovations and GlobalBank Financial",
+  "contract_text": "Preamble and Recitals\nThis Technology Licensing and Services Agreement (\"Agreement\") is entered into between CoreTech Innovations, a Delaware corporation (\"Licensor\"), and GlobalBank Financial, a national banking association chartered under the laws of the United States (\"Licensee\"). Licensor has developed proprietary financial technology software and Licensee desires to license such software.\n\nDefinitions\n\"Platform\" means the proprietary financial technology software suite. \"Licensed Territory\" means the United States, Canada, and the United Kingdom. \"Regulatory Authority\" means any federal, state, or foreign financial regulator with jurisdiction. \"Service Credits\" means monetary credits issued for SLA failures.\n\nData Retention\nLicensor agrees to retain all system logs, transaction metadata, audit trails, and processing records for a strictly limited period of twelve (12) months from the date of creation, after which such records shall be permanently and irretrievably deleted.\n\nLicense Grant\nLicensor grants Licensee a non-exclusive, non-transferable license to use the Platform within the Licensed Territory for the processing of financial transactions, regulatory reporting, and internal risk management analytics.\n\nDefinition of Confidential Information\n\"Confidential Information\" means all non-public information disclosed by either party, including source code, algorithms, and customer data. Confidential Information shall strictly exclude any transactional data that has been fully anonymized and aggregated, which may be freely used for statistical and benchmarking purposes.\n\nFees and Payment\nLicensee shall pay an annual license fee as set forth in the applicable Order Form, plus per-transaction fees for processing volumes exceeding the base tier. All fees are non-refundable.\n\nImplementation Services\nLicensor shall provide implementation services including installation, configuration, data migration, integration with Licensee's core banking systems, and user acceptance testing support over a period not to exceed one hundred twenty (120) days.\n\nAvailability SLA\nThe Platform shall maintain an availability rate of no less than 99.9% uptime measured on a calendar month basis, excluding scheduled maintenance windows communicated at least seventy-two (72) hours in advance.\n\nSupport Tiers\nLicensor shall provide three tiers of technical support: Tier 1 (self-service knowledge base), Tier 2 (email and phone support during business hours), and Tier 3 (dedicated engineering escalation for critical issues).\n\nSource Code Escrow\nLicensor agrees to deposit the complete Platform source code, including all libraries, build scripts, and documentation, into escrow with a mutually agreed escrow agent within thirty (30) days of the Effective Date, for the benefit and protection of Licensee.\n\nAcceptance Testing\nLicensee shall have thirty (30) Business Days from delivery to conduct acceptance testing. Deliverables not formally rejected within this period shall be deemed accepted.\n\nCompliance Records\nTo satisfy New York Department of Financial Services (DFS) regulatory requirements and federal banking record retention mandates, all system logs, transaction metadata, audit trails, and processing records shall be continuously preserved by Licensor for a minimum of five (5) years from the date of creation.\n\nBase Support Scope\nThe base support package exclusively covers Severity Level 3 and Severity Level 4 tickets and is available only during regional business hours as defined in the applicable country addendum.\n\nChange Management\nAll changes to the Platform's production environment shall follow Licensor's ITIL-aligned change management process, including impact assessment, approval by the Change Advisory Board, and post-implementation review.\n\nHosting Options\nLicensee may at its sole discretion deploy the licensed Platform across multiple public cloud architectures, including Amazon Web Services, Microsoft Azure, and Google Cloud Platform, in any availability zone within the Licensed Territory.\n\nGeneral Release\nMajor feature releases and version upgrades shall be automatically pushed to all designated sandbox and development environments for regression testing prior to production deployment.\n\nWarranties\nLicensor warrants that the Platform shall perform materially in accordance with its published specifications and that Licensor has the legal right and authority to grant the licenses contemplated herein.\n\nPenetration Testing\nLicensee is authorized and expected to conduct quarterly penetration tests on the Platform using Licensee's authorized third-party security vendors at Licensee's own expense, to verify the security posture of the hosted environment.\n\nIndemnification by Licensor\nLicensor shall indemnify, defend, and hold harmless Licensee from and against all claims arising from infringement of any third-party intellectual property rights by the Platform.\n\nPCI Compliance\nLicensor shall obtain, maintain, and demonstrate SOC 2 Type II and PCI-DSS Level 1 compliance across all hosted infrastructure and shall be solely responsible for the costs of initial certification and annual recertification.\n\nData Classification\nLicensee's data shall be classified into four tiers: Public, Internal, Confidential, and Restricted. Each tier is subject to specific handling, encryption, and access control requirements.\n\nLiability for Fraud by Authorized Users\nLicensor shall have no liability for any fraudulent transactions executed by Licensee's authorized users acting within the scope of their system permissions and access credentials.\n\nLimitation of Liability\nIn no event shall either party's total aggregate liability under this Agreement exceed the total license and service fees paid or payable during the twelve (12) months immediately preceding the event giving rise to the claim.\n\nTermination for Convenience\nEither party may terminate this Agreement upon ninety (90) days' prior written notice to the other party, provided that all outstanding fees are paid through the termination date.\n\nDeployment Limitations\nDeployment of the licensed Platform is strictly prohibited in multi-tenant public cloud environments. The Platform shall be deployed solely on Licensee's private, dedicated bare-metal infrastructure within Licensee's own data centers.\n\nRegulatory Cooperation\nLicensor shall cooperate fully with Licensee and any applicable Regulatory Authority in connection with examinations, investigations, or audits relating to the Platform or the Services.\n\nTransition Services\nUpon termination, Licensor shall provide transition assistance for a period of one hundred eighty (180) days, including data export, knowledge transfer, and parallel operation support.\n\nForce Majeure\nNeither party shall be liable for failures in performance resulting from events beyond its reasonable control, including natural disasters, acts of terrorism, epidemics, cyberattacks, or government-imposed sanctions.\n\nExport Controls\nNeither party shall export or re-export any software, technical data, or deliverables in violation of U.S. Export Administration Regulations or OFAC sanctions.\n\nSecurity Audits\nUnder no circumstances shall the Licensee or any party acting on Licensee's behalf subject the Platform to penetration testing, vulnerability scanning, or any form of security assessment. All such testing shall be conducted exclusively by Licensor's internal information security team.\n\nAnti-Money Laundering\nBoth parties shall comply with all applicable anti-money laundering laws and regulations, including the Bank Secrecy Act and USA PATRIOT Act.\n\nDisaster Recovery\nLicensor shall maintain a comprehensive disaster recovery plan with a Recovery Time Objective (RTO) of four (4) hours and Recovery Point Objective (RPO) of one (1) hour for all critical systems.\n\nEncryption Standards\nAll data at rest shall be encrypted using AES-256 or equivalent. All data in transit shall be encrypted using TLS 1.3 or higher. Encryption key management shall follow NIST SP 800-57 guidelines.\n\nService Credit Mechanics\nFor each 0.1% of downtime below the guaranteed SLA threshold, Licensor shall issue a service credit equal to 5% of the monthly fees, up to a maximum of 30% of such monthly fees.\n\nForce Majeure Notice\nA party affected by a Force Majeure event must provide formal written notice to the other party within forty-eight (48) hours of the commencement of such event, specifying the nature, expected duration, and steps being taken to mitigate its impact.\n\nGoverning Law\nThis Agreement shall be governed by and construed in accordance with the laws of the State of New York, without regard to its conflict of laws provisions.\n\nDispute Resolution\nAny dispute shall be resolved through binding arbitration under the rules of the American Arbitration Association, with proceedings held in New York City. The arbitration panel shall consist of three arbitrators experienced in financial technology.\n\nUptime Requirements\nLicensor is bound to maintain an availability rate of no less than 99.999% uptime for all Tier 1 critical banking applications, measured against a rolling seven-day window. Any deviation shall constitute a material breach.\n\nBackground Checks\nAll Licensor personnel with access to Licensee systems or data shall undergo comprehensive background checks, including criminal history, credit history, and OFAC screening.\n\nProprietary Core\nThe core algorithmic trading engine, risk modeling framework, and associated machine learning models are highly proprietary and classified as Licensor Trade Secrets. These components are expressly exempt from any source code escrow, inspection, or disclosure obligations under this Agreement or any applicable law.\n\nIncident Response\nIn the event of a data breach or security incident, Licensor shall notify Licensee within twenty-four (24) hours and cooperate fully in the investigation and remediation.\n\nMulti-Factor Authentication\nAccess to the Platform shall require multi-factor authentication for all users, including API service accounts processing financial transactions.\n\nPremium Add-On\nSubject to payment of the Premium Support Fee set forth in Schedule B, Severity Level 1 and Severity Level 2 tickets shall be serviced on a 24/7/365 basis with guaranteed initial response times of fifteen (15) minutes for Severity 1 and one (1) hour for Severity 2.\n\nAccess Control\nLicensor shall implement role-based access controls aligned with the principle of least privilege. Access reviews shall be conducted quarterly.\n\nEmergency Declarations\nIn the event of a banking holiday, systemic market outage, or industry-wide disruption qualifying as Force Majeure, formal written notice of the Force Majeure event may be delayed for up to fourteen (14) calendar days without penalty or adverse consequence to the affected party.\n\nProduction Freeze\nNotwithstanding clause_16, no automated code pushes, version updates, or feature releases shall be deployed to any production environment without explicit manual approval from Licensee's Technology Change Advisory Board.\n\nAudit Rights\nLicensee and any applicable Regulatory Authority shall have the right to audit Licensor's facilities, systems, processes, and records upon thirty (30) days' written notice.\n\nNon-Solicitation\nDuring the term and for eighteen (18) months following termination, neither party shall solicit or hire any key employee of the other party.\n\nAssignment\nNeither party may assign this Agreement without the other party's consent, except in connection with a merger, acquisition, or sale of substantially all assets.\n\nData Aggregation Rights\nEven after undergoing full anonymization and aggregation, all transactional data processed through the Platform retains its classification as Confidential Information and may not be shared, distributed, sold, or made available to any third party, including for statistical or benchmarking purposes.\n\nSurvival\nThe following provisions shall survive termination: Confidentiality, Limitation of Liability, Indemnification, Intellectual Property, Data Retention, and Governing Law.\n\nLiability for Intrusion\nLicensor assumes full and complete liability for all fraudulent transactions that are caused directly by an unauthorized breach of Licensor's network security perimeter by an external malicious actor exploiting a vulnerability in Licensor's infrastructure.\n\nNotices\nAll notices shall be in writing and delivered by certified mail, overnight courier, or secure email to the addresses specified in the signature block.\n\nSeverability\nIf any provision is held invalid or unenforceable, the remaining provisions shall continue in full force and effect.\n\nRegulatory Certifications\nLicensee shall absorb the full cost and sole responsibility for attaining and maintaining all PCI-DSS certifications, SOC 2 attestations, and related regulatory compliance certifications for the hosted environment and all associated infrastructure.\n\nWaiver\nFailure to enforce any provision shall not constitute a waiver of that provision or the right to enforce it at a later time.\n\nAmendments\nThis Agreement may be amended only by a written instrument signed by authorized representatives of both parties.\n\nThird-Party Beneficiaries\nThis Agreement is for the sole benefit of the parties hereto and does not create any rights in favor of any third party.\n\nEntire Agreement\nThis Agreement, together with all Order Forms and Schedules, constitutes the entire agreement and supersedes all prior negotiations and agreements.\n\nCounterparts\nThis Agreement may be executed in counterparts, each deemed an original and all together constituting one instrument.",
+  "clauses": [
+    {
+      "id": "clause_01",
+      "title": "Preamble and Recitals",
+      "text": "This Technology Licensing and Services Agreement (\"Agreement\") is entered into between CoreTech Innovations, a Delaware corporation (\"Licensor\"), and GlobalBank Financial, a national banking association chartered under the laws of the United States (\"Licensee\"). Licensor has developed proprietary financial technology software and Licensee desires to license such software."
+    },
+    {
+      "id": "clause_02",
+      "title": "Definitions",
+      "text": "\"Platform\" means the proprietary financial technology software suite. \"Licensed Territory\" means the United States, Canada, and the United Kingdom. \"Regulatory Authority\" means any federal, state, or foreign financial regulator with jurisdiction. \"Service Credits\" means monetary credits issued for SLA failures."
+    },
+    {
+      "id": "clause_03",
+      "title": "Data Retention",
+      "text": "Licensor agrees to retain all system logs, transaction metadata, audit trails, and processing records for a strictly limited period of twelve (12) months from the date of creation, after which such records shall be permanently and irretrievably deleted."
+    },
+    {
+      "id": "clause_04",
+      "title": "License Grant",
+      "text": "Licensor grants Licensee a non-exclusive, non-transferable license to use the Platform within the Licensed Territory for the processing of financial transactions, regulatory reporting, and internal risk management analytics."
+    },
+    {
+      "id": "clause_05",
+      "title": "Definition of Confidential Information",
+      "text": "\"Confidential Information\" means all non-public information disclosed by either party, including source code, algorithms, and customer data. Confidential Information shall strictly exclude any transactional data that has been fully anonymized and aggregated, which may be freely used for statistical and benchmarking purposes."
+    },
+    {
+      "id": "clause_06",
+      "title": "Fees and Payment",
+      "text": "Licensee shall pay an annual license fee as set forth in the applicable Order Form, plus per-transaction fees for processing volumes exceeding the base tier. All fees are non-refundable."
+    },
+    {
+      "id": "clause_07",
+      "title": "Implementation Services",
+      "text": "Licensor shall provide implementation services including installation, configuration, data migration, integration with Licensee's core banking systems, and user acceptance testing support over a period not to exceed one hundred twenty (120) days."
+    },
+    {
+      "id": "clause_08",
+      "title": "Availability SLA",
+      "text": "The Platform shall maintain an availability rate of no less than 99.9% uptime measured on a calendar month basis, excluding scheduled maintenance windows communicated at least seventy-two (72) hours in advance."
+    },
+    {
+      "id": "clause_09",
+      "title": "Support Tiers",
+      "text": "Licensor shall provide three tiers of technical support: Tier 1 (self-service knowledge base), Tier 2 (email and phone support during business hours), and Tier 3 (dedicated engineering escalation for critical issues)."
+    },
+    {
+      "id": "clause_10",
+      "title": "Source Code Escrow",
+      "text": "Licensor agrees to deposit the complete Platform source code, including all libraries, build scripts, and documentation, into escrow with a mutually agreed escrow agent within thirty (30) days of the Effective Date, for the benefit and protection of Licensee."
+    },
+    {
+      "id": "clause_11",
+      "title": "Acceptance Testing",
+      "text": "Licensee shall have thirty (30) Business Days from delivery to conduct acceptance testing. Deliverables not formally rejected within this period shall be deemed accepted."
+    },
+    {
+      "id": "clause_12",
+      "title": "Compliance Records",
+      "text": "To satisfy New York Department of Financial Services (DFS) regulatory requirements and federal banking record retention mandates, all system logs, transaction metadata, audit trails, and processing records shall be continuously preserved by Licensor for a minimum of five (5) years from the date of creation."
+    },
+    {
+      "id": "clause_13",
+      "title": "Base Support Scope",
+      "text": "The base support package exclusively covers Severity Level 3 and Severity Level 4 tickets and is available only during regional business hours as defined in the applicable country addendum."
+    },
+    {
+      "id": "clause_14",
+      "title": "Change Management",
+      "text": "All changes to the Platform's production environment shall follow Licensor's ITIL-aligned change management process, including impact assessment, approval by the Change Advisory Board, and post-implementation review."
+    },
+    {
+      "id": "clause_15",
+      "title": "Hosting Options",
+      "text": "Licensee may at its sole discretion deploy the licensed Platform across multiple public cloud architectures, including Amazon Web Services, Microsoft Azure, and Google Cloud Platform, in any availability zone within the Licensed Territory."
+    },
+    {
+      "id": "clause_16",
+      "title": "General Release",
+      "text": "Major feature releases and version upgrades shall be automatically pushed to all designated sandbox and development environments for regression testing prior to production deployment."
+    },
+    {
+      "id": "clause_17",
+      "title": "Warranties",
+      "text": "Licensor warrants that the Platform shall perform materially in accordance with its published specifications and that Licensor has the legal right and authority to grant the licenses contemplated herein."
+    },
+    {
+      "id": "clause_18",
+      "title": "Penetration Testing",
+      "text": "Licensee is authorized and expected to conduct quarterly penetration tests on the Platform using Licensee's authorized third-party security vendors at Licensee's own expense, to verify the security posture of the hosted environment."
+    },
+    {
+      "id": "clause_19",
+      "title": "Indemnification by Licensor",
+      "text": "Licensor shall indemnify, defend, and hold harmless Licensee from and against all claims arising from infringement of any third-party intellectual property rights by the Platform."
+    },
+    {
+      "id": "clause_20",
+      "title": "PCI Compliance",
+      "text": "Licensor shall obtain, maintain, and demonstrate SOC 2 Type II and PCI-DSS Level 1 compliance across all hosted infrastructure and shall be solely responsible for the costs of initial certification and annual recertification."
+    },
+    {
+      "id": "clause_21",
+      "title": "Data Classification",
+      "text": "Licensee's data shall be classified into four tiers: Public, Internal, Confidential, and Restricted. Each tier is subject to specific handling, encryption, and access control requirements."
+    },
+    {
+      "id": "clause_22",
+      "title": "Liability for Fraud by Authorized Users",
+      "text": "Licensor shall have no liability for any fraudulent transactions executed by Licensee's authorized users acting within the scope of their system permissions and access credentials."
+    },
+    {
+      "id": "clause_23",
+      "title": "Limitation of Liability",
+      "text": "In no event shall either party's total aggregate liability under this Agreement exceed the total license and service fees paid or payable during the twelve (12) months immediately preceding the event giving rise to the claim."
+    },
+    {
+      "id": "clause_24",
+      "title": "Termination for Convenience",
+      "text": "Either party may terminate this Agreement upon ninety (90) days' prior written notice to the other party, provided that all outstanding fees are paid through the termination date."
+    },
+    {
+      "id": "clause_25",
+      "title": "Deployment Limitations",
+      "text": "Deployment of the licensed Platform is strictly prohibited in multi-tenant public cloud environments. The Platform shall be deployed solely on Licensee's private, dedicated bare-metal infrastructure within Licensee's own data centers."
+    },
+    {
+      "id": "clause_26",
+      "title": "Regulatory Cooperation",
+      "text": "Licensor shall cooperate fully with Licensee and any applicable Regulatory Authority in connection with examinations, investigations, or audits relating to the Platform or the Services."
+    },
+    {
+      "id": "clause_27",
+      "title": "Transition Services",
+      "text": "Upon termination, Licensor shall provide transition assistance for a period of one hundred eighty (180) days, including data export, knowledge transfer, and parallel operation support."
+    },
+    {
+      "id": "clause_28",
+      "title": "Force Majeure",
+      "text": "Neither party shall be liable for failures in performance resulting from events beyond its reasonable control, including natural disasters, acts of terrorism, epidemics, cyberattacks, or government-imposed sanctions."
+    },
+    {
+      "id": "clause_29",
+      "title": "Export Controls",
+      "text": "Neither party shall export or re-export any software, technical data, or deliverables in violation of U.S. Export Administration Regulations or OFAC sanctions."
+    },
+    {
+      "id": "clause_30",
+      "title": "Security Audits",
+      "text": "Under no circumstances shall the Licensee or any party acting on Licensee's behalf subject the Platform to penetration testing, vulnerability scanning, or any form of security assessment. All such testing shall be conducted exclusively by Licensor's internal information security team."
+    },
+    {
+      "id": "clause_31",
+      "title": "Anti-Money Laundering",
+      "text": "Both parties shall comply with all applicable anti-money laundering laws and regulations, including the Bank Secrecy Act and USA PATRIOT Act."
+    },
+    {
+      "id": "clause_32",
+      "title": "Disaster Recovery",
+      "text": "Licensor shall maintain a comprehensive disaster recovery plan with a Recovery Time Objective (RTO) of four (4) hours and Recovery Point Objective (RPO) of one (1) hour for all critical systems."
+    },
+    {
+      "id": "clause_33",
+      "title": "Encryption Standards",
+      "text": "All data at rest shall be encrypted using AES-256 or equivalent. All data in transit shall be encrypted using TLS 1.3 or higher. Encryption key management shall follow NIST SP 800-57 guidelines."
+    },
+    {
+      "id": "clause_34",
+      "title": "Service Credit Mechanics",
+      "text": "For each 0.1% of downtime below the guaranteed SLA threshold, Licensor shall issue a service credit equal to 5% of the monthly fees, up to a maximum of 30% of such monthly fees."
+    },
+    {
+      "id": "clause_35",
+      "title": "Force Majeure Notice",
+      "text": "A party affected by a Force Majeure event must provide formal written notice to the other party within forty-eight (48) hours of the commencement of such event, specifying the nature, expected duration, and steps being taken to mitigate its impact."
+    },
+    {
+      "id": "clause_36",
+      "title": "Governing Law",
+      "text": "This Agreement shall be governed by and construed in accordance with the laws of the State of New York, without regard to its conflict of laws provisions."
+    },
+    {
+      "id": "clause_37",
+      "title": "Dispute Resolution",
+      "text": "Any dispute shall be resolved through binding arbitration under the rules of the American Arbitration Association, with proceedings held in New York City. The arbitration panel shall consist of three arbitrators experienced in financial technology."
+    },
+    {
+      "id": "clause_38",
+      "title": "Uptime Requirements",
+      "text": "Licensor is bound to maintain an availability rate of no less than 99.999% uptime for all Tier 1 critical banking applications, measured against a rolling seven-day window. Any deviation shall constitute a material breach."
+    },
+    {
+      "id": "clause_39",
+      "title": "Background Checks",
+      "text": "All Licensor personnel with access to Licensee systems or data shall undergo comprehensive background checks, including criminal history, credit history, and OFAC screening."
+    },
+    {
+      "id": "clause_40",
+      "title": "Proprietary Core",
+      "text": "The core algorithmic trading engine, risk modeling framework, and associated machine learning models are highly proprietary and classified as Licensor Trade Secrets. These components are expressly exempt from any source code escrow, inspection, or disclosure obligations under this Agreement or any applicable law."
+    },
+    {
+      "id": "clause_41",
+      "title": "Incident Response",
+      "text": "In the event of a data breach or security incident, Licensor shall notify Licensee within twenty-four (24) hours and cooperate fully in the investigation and remediation."
+    },
+    {
+      "id": "clause_42",
+      "title": "Multi-Factor Authentication",
+      "text": "Access to the Platform shall require multi-factor authentication for all users, including API service accounts processing financial transactions."
+    },
+    {
+      "id": "clause_43",
+      "title": "Premium Add-On",
+      "text": "Subject to payment of the Premium Support Fee set forth in Schedule B, Severity Level 1 and Severity Level 2 tickets shall be serviced on a 24/7/365 basis with guaranteed initial response times of fifteen (15) minutes for Severity 1 and one (1) hour for Severity 2."
+    },
+    {
+      "id": "clause_44",
+      "title": "Access Control",
+      "text": "Licensor shall implement role-based access controls aligned with the principle of least privilege. Access reviews shall be conducted quarterly."
+    },
+    {
+      "id": "clause_45",
+      "title": "Emergency Declarations",
+      "text": "In the event of a banking holiday, systemic market outage, or industry-wide disruption qualifying as Force Majeure, formal written notice of the Force Majeure event may be delayed for up to fourteen (14) calendar days without penalty or adverse consequence to the affected party."
+    },
+    {
+      "id": "clause_46",
+      "title": "Production Freeze",
+      "text": "Notwithstanding clause_16, no automated code pushes, version updates, or feature releases shall be deployed to any production environment without explicit manual approval from Licensee's Technology Change Advisory Board."
+    },
+    {
+      "id": "clause_47",
+      "title": "Audit Rights",
+      "text": "Licensee and any applicable Regulatory Authority shall have the right to audit Licensor's facilities, systems, processes, and records upon thirty (30) days' written notice."
+    },
+    {
+      "id": "clause_48",
+      "title": "Non-Solicitation",
+      "text": "During the term and for eighteen (18) months following termination, neither party shall solicit or hire any key employee of the other party."
+    },
+    {
+      "id": "clause_49",
+      "title": "Assignment",
+      "text": "Neither party may assign this Agreement without the other party's consent, except in connection with a merger, acquisition, or sale of substantially all assets."
+    },
+    {
+      "id": "clause_50",
+      "title": "Data Aggregation Rights",
+      "text": "Even after undergoing full anonymization and aggregation, all transactional data processed through the Platform retains its classification as Confidential Information and may not be shared, distributed, sold, or made available to any third party, including for statistical or benchmarking purposes."
+    },
+    {
+      "id": "clause_51",
+      "title": "Survival",
+      "text": "The following provisions shall survive termination: Confidentiality, Limitation of Liability, Indemnification, Intellectual Property, Data Retention, and Governing Law."
+    },
+    {
+      "id": "clause_52",
+      "title": "Liability for Intrusion",
+      "text": "Licensor assumes full and complete liability for all fraudulent transactions that are caused directly by an unauthorized breach of Licensor's network security perimeter by an external malicious actor exploiting a vulnerability in Licensor's infrastructure."
+    },
+    {
+      "id": "clause_53",
+      "title": "Notices",
+      "text": "All notices shall be in writing and delivered by certified mail, overnight courier, or secure email to the addresses specified in the signature block."
+    },
+    {
+      "id": "clause_54",
+      "title": "Severability",
+      "text": "If any provision is held invalid or unenforceable, the remaining provisions shall continue in full force and effect."
+    },
+    {
+      "id": "clause_55",
+      "title": "Regulatory Certifications",
+      "text": "Licensee shall absorb the full cost and sole responsibility for attaining and maintaining all PCI-DSS certifications, SOC 2 attestations, and related regulatory compliance certifications for the hosted environment and all associated infrastructure."
+    },
+    {
+      "id": "clause_56",
+      "title": "Waiver",
+      "text": "Failure to enforce any provision shall not constitute a waiver of that provision or the right to enforce it at a later time."
+    },
+    {
+      "id": "clause_57",
+      "title": "Amendments",
+      "text": "This Agreement may be amended only by a written instrument signed by authorized representatives of both parties."
+    },
+    {
+      "id": "clause_58",
+      "title": "Third-Party Beneficiaries",
+      "text": "This Agreement is for the sole benefit of the parties hereto and does not create any rights in favor of any third party."
+    },
+    {
+      "id": "clause_59",
+      "title": "Entire Agreement",
+      "text": "This Agreement, together with all Order Forms and Schedules, constitutes the entire agreement and supersedes all prior negotiations and agreements."
+    },
+    {
+      "id": "clause_60",
+      "title": "Counterparts",
+      "text": "This Agreement may be executed in counterparts, each deemed an original and all together constituting one instrument."
+    }
+  ],
+  "contradictions": [
+    {
+      "clause_a_id": "clause_03",
+      "clause_b_id": "clause_12",
+      "type": "numeric",
+      "description": "12-month retention vs 5-year retention for the same system logs and transaction metadata."
+    },
+    {
+      "clause_a_id": "clause_15",
+      "clause_b_id": "clause_25",
+      "type": "scope",
+      "description": "Public cloud deployment permitted vs prohibited \u2014 restricted to private bare-metal only."
+    },
+    {
+      "clause_a_id": "clause_18",
+      "clause_b_id": "clause_30",
+      "type": "party_obligation",
+      "description": "Licensee authorized to conduct pen testing vs Licensee prohibited from pen testing."
+    },
+    {
+      "clause_a_id": "clause_35",
+      "clause_b_id": "clause_45",
+      "type": "temporal",
+      "description": "48-hour Force Majeure notice vs 14-day delay allowed."
+    },
+    {
+      "clause_a_id": "clause_05",
+      "clause_b_id": "clause_50",
+      "type": "definition",
+      "description": "Anonymized data excluded from Confidential Information vs anonymized data remains Confidential."
+    },
+    {
+      "clause_a_id": "clause_08",
+      "clause_b_id": "clause_38",
+      "type": "numeric",
+      "description": "99.9% uptime SLA vs 99.999% uptime requirement."
+    },
+    {
+      "clause_a_id": "clause_10",
+      "clause_b_id": "clause_40",
+      "type": "scope",
+      "description": "Complete source code escrow vs core algorithmic engine exempt from escrow."
+    },
+    {
+      "clause_a_id": "clause_20",
+      "clause_b_id": "clause_55",
+      "type": "party_obligation",
+      "description": "Licensor responsible for PCI-DSS certifications vs Licensee bears full cost and responsibility."
+    }
+  ],
+  "traps": [
+    {
+      "clause_a_id": "clause_13",
+      "clause_b_id": "clause_43",
+      "reason": "Different service tiers: Base support covers Sev 3-4 during business hours, Premium add-on covers Sev 1-2 24/7."
+    },
+    {
+      "clause_a_id": "clause_16",
+      "clause_b_id": "clause_46",
+      "reason": "Explicit override: clause_46 says 'Notwithstanding clause_16' for production environments specifically."
+    },
+    {
+      "clause_a_id": "clause_22",
+      "clause_b_id": "clause_52",
+      "reason": "Different scenarios: authorized user fraud vs external intrusion \u2014 different actors and different liability triggers."
+    }
+  ],
+  "execution_scenarios": [
+    {
+      "scenario_id": "scenario_01",
+      "title": "Licensor deletes transaction logs after 12 months",
+      "description": "CoreTech automated purge system permanently deletes system logs and transaction records that are 12 months old. GlobalBank compliance discovers the deletion during a DFS regulatory examination.",
+      "actor": "Licensor (CoreTech Innovations)",
+      "action_taken": "CoreTech permanently deletes 12-month-old transaction records per automated retention policy",
+      "triggers_clauses": [
+        "clause_03",
+        "clause_12"
+      ],
+      "crashes": true,
+      "crash_pair": {
+        "clause_a_id": "clause_03",
+        "clause_b_id": "clause_12"
+      },
+      "crash_description": "Clause 03 limits retention to 12 months with mandatory deletion. Clause 12 requires 5-year retention for DFS compliance. The same records are subject to contradictory retention obligations, creating regulatory exposure.",
+      "financial_exposure": "Regulatory penalties from DFS for failure to maintain required banking records",
+      "clean_resolution": null
+    },
+    {
+      "scenario_id": "scenario_02",
+      "title": "GlobalBank deploys Platform on AWS cloud infrastructure",
+      "description": "GlobalBank IT team deploys the licensed Platform on Amazon Web Services in US-East region. CoreTech sends violation notice claiming deployment must be on private bare-metal infrastructure.",
+      "actor": "Licensee (GlobalBank Financial)",
+      "action_taken": "GlobalBank deploys Platform on AWS public cloud within Licensed Territory",
+      "triggers_clauses": [
+        "clause_15",
+        "clause_25"
+      ],
+      "crashes": true,
+      "crash_pair": {
+        "clause_a_id": "clause_15",
+        "clause_b_id": "clause_25"
+      },
+      "crash_description": "Clause 15 explicitly permits deployment on AWS, Azure, and GCP. Clause 25 strictly prohibits multi-tenant public cloud deployment. The same deployment action is simultaneously authorized and prohibited.",
+      "financial_exposure": "License termination risk and forced migration costs from cloud to bare-metal infrastructure",
+      "clean_resolution": null
+    },
+    {
+      "scenario_id": "scenario_03",
+      "title": "GlobalBank security vendor conducts quarterly penetration test",
+      "description": "GlobalBank engages their authorized third-party security firm to conduct the quarterly penetration test on the Platform as expected under the agreement. CoreTech blocks the test citing the security audit prohibition clause.",
+      "actor": "Licensee (GlobalBank Financial)",
+      "action_taken": "GlobalBank authorizes third-party penetration testing of the Platform environment",
+      "triggers_clauses": [
+        "clause_18",
+        "clause_30"
+      ],
+      "crashes": true,
+      "crash_pair": {
+        "clause_a_id": "clause_18",
+        "clause_b_id": "clause_30"
+      },
+      "crash_description": "Clause 18 authorizes and expects quarterly pen testing by the Licensee. Clause 30 prohibits any penetration testing by the Licensee under any circumstances. The same security assessment is simultaneously mandated and forbidden.",
+      "financial_exposure": "Undetected vulnerabilities in financial transaction processing infrastructure",
+      "clean_resolution": null
+    },
+    {
+      "scenario_id": "scenario_04",
+      "title": "Force majeure event with delayed notification",
+      "description": "A major cyberattack disrupts CoreTech operations for 10 days. CoreTech sends formal written notice of the force majeure event on day 8. GlobalBank argues the notice was due within 48 hours.",
+      "actor": "Licensor (CoreTech Innovations)",
+      "action_taken": "CoreTech sends force majeure notice 8 days after the start of a major cyberattack",
+      "triggers_clauses": [
+        "clause_35",
+        "clause_45"
+      ],
+      "crashes": true,
+      "crash_pair": {
+        "clause_a_id": "clause_35",
+        "clause_b_id": "clause_45"
+      },
+      "crash_description": "Clause 35 requires formal notice within 48 hours. Clause 45 allows up to 14 calendar days delay without penalty for qualifying disruptions. The notice at day 8 is late under one clause but timely under the other.",
+      "financial_exposure": "Disputed liability for 8 days of outage damages potentially exceeding SLA thresholds",
+      "clean_resolution": null
+    },
+    {
+      "scenario_id": "scenario_05",
+      "title": "CoreTech shares anonymized transaction data for benchmarking",
+      "description": "CoreTech data science team fully anonymizes and aggregates GlobalBank transaction data and shares it with an industry consortium for benchmarking. GlobalBank legal discovers the sharing and demands it stop immediately.",
+      "actor": "Licensor (CoreTech Innovations)",
+      "action_taken": "CoreTech shares fully anonymized and aggregated transaction data with third party for benchmarking",
+      "triggers_clauses": [
+        "clause_05",
+        "clause_50"
+      ],
+      "crashes": true,
+      "crash_pair": {
+        "clause_a_id": "clause_05",
+        "clause_b_id": "clause_50"
+      },
+      "crash_description": "Clause 05 explicitly excludes anonymized aggregated data from Confidential Information, permitting free use for benchmarking. Clause 50 states that even anonymized data retains Confidential classification and cannot be shared. The same data is simultaneously public and confidential.",
+      "financial_exposure": "Potential data breach liability and loss of banking client trust",
+      "clean_resolution": null
+    },
+    {
+      "scenario_id": "scenario_06",
+      "title": "Platform uptime drops to 99.95% for the month",
+      "description": "The Platform achieves 99.95% availability for March. CoreTech claims this meets the SLA. GlobalBank claims it constitutes a material breach requiring immediate service credits.",
+      "actor": "Licensee (GlobalBank Financial)",
+      "action_taken": "GlobalBank files SLA violation claim for 99.95% monthly uptime demanding service credits and breach remediation",
+      "triggers_clauses": [
+        "clause_08",
+        "clause_38"
+      ],
+      "crashes": true,
+      "crash_pair": {
+        "clause_a_id": "clause_08",
+        "clause_b_id": "clause_38"
+      },
+      "crash_description": "Clause 08 guarantees 99.9% uptime (which 99.95% exceeds). Clause 38 requires 99.999% uptime for Tier 1 banking applications (which 99.95% fails). The same availability is simultaneously compliant and in material breach.",
+      "financial_exposure": "Service credits up to 30% of monthly fees plus potential material breach termination",
+      "clean_resolution": null
+    },
+    {
+      "scenario_id": "scenario_07",
+      "title": "GlobalBank requests escrow release of core trading engine source code",
+      "description": "CoreTech faces potential insolvency. GlobalBank exercises escrow release rights to access the complete Platform source code. CoreTech objects, claiming the core algorithmic trading engine is exempt from escrow.",
+      "actor": "Licensee (GlobalBank Financial)",
+      "action_taken": "GlobalBank requests release of complete source code from escrow agent including core trading engine",
+      "triggers_clauses": [
+        "clause_10",
+        "clause_40"
+      ],
+      "crashes": true,
+      "crash_pair": {
+        "clause_a_id": "clause_10",
+        "clause_b_id": "clause_40"
+      },
+      "crash_description": "Clause 10 requires complete source code deposit including all libraries and documentation. Clause 40 exempts the core algorithmic engine from any escrow or disclosure. The escrow is simultaneously complete and incomplete.",
+      "financial_exposure": "Business continuity risk if critical source code components are unavailable during vendor insolvency",
+      "clean_resolution": null
+    },
+    {
+      "scenario_id": "scenario_08",
+      "title": "CoreTech refuses PCI-DSS audit costs saying Licensee is responsible",
+      "description": "Annual PCI-DSS recertification is due. CoreTech sends the $150K certification invoice to GlobalBank. GlobalBank refuses, citing the clause making Licensor solely responsible for certification costs.",
+      "actor": "Licensor (CoreTech Innovations)",
+      "action_taken": "CoreTech invoices GlobalBank for PCI-DSS recertification costs claiming Licensee bears responsibility",
+      "triggers_clauses": [
+        "clause_20",
+        "clause_55"
+      ],
+      "crashes": true,
+      "crash_pair": {
+        "clause_a_id": "clause_20",
+        "clause_b_id": "clause_55"
+      },
+      "crash_description": "Clause 20 makes Licensor solely responsible for PCI-DSS and SOC 2 certification costs. Clause 55 makes Licensee solely responsible for the same certifications. Neither party can determine who pays for compliance.",
+      "financial_exposure": "Lapsed PCI-DSS certification risking card processing suspension and regulatory action",
+      "clean_resolution": null
+    },
+    {
+      "scenario_id": "scenario_09",
+      "title": "Base support team receives Severity 1 ticket during business hours",
+      "description": "A Severity 1 critical incident is filed at 11 AM on Tuesday. The base support team acknowledges and routes it to Tier 3 engineering. GlobalBank questions whether premium support fees are needed for Sev 1 coverage.",
+      "actor": "Licensee (GlobalBank Financial)",
+      "action_taken": "GlobalBank files Severity 1 ticket during business hours and questions support coverage scope",
+      "triggers_clauses": [
+        "clause_13",
+        "clause_43"
+      ],
+      "crashes": false,
+      "crash_pair": null,
+      "crash_description": null,
+      "financial_exposure": null,
+      "clean_resolution": "Clause 13 covers base support for Sev 3-4 only. Clause 43 covers Sev 1-2 via premium add-on requiring separate fee. These are different service tiers with complementary scope \u2014 no contradiction triggered."
+    },
+    {
+      "scenario_id": "scenario_10",
+      "title": "Automated sandbox deploy blocked by production freeze",
+      "description": "A major feature release is automatically pushed to the sandbox environment for regression testing. GlobalBank asks if this violates the production freeze clause.",
+      "actor": "Licensor (CoreTech Innovations)",
+      "action_taken": "CoreTech auto-deploys version upgrade to sandbox and development environments for testing",
+      "triggers_clauses": [
+        "clause_16",
+        "clause_46"
+      ],
+      "crashes": false,
+      "crash_pair": null,
+      "crash_description": null,
+      "financial_exposure": null,
+      "clean_resolution": "Clause 46 says \"Notwithstanding clause_16\" and restricts only production deployments. Clause 16 governs sandbox/dev deployments. The override is explicit and intentional \u2014 no contradiction triggered."
+    },
+    {
+      "scenario_id": "scenario_11",
+      "title": "Authorized user commits fraud within their system permissions",
+      "description": "A GlobalBank trader with valid system credentials executes unauthorized trades for personal gain. GlobalBank demands CoreTech accept liability for the fraudulent transactions.",
+      "actor": "Licensee (GlobalBank Financial)",
+      "action_taken": "GlobalBank demands CoreTech assume liability for fraudulent trades by authorized user",
+      "triggers_clauses": [
+        "clause_22",
+        "clause_52"
+      ],
+      "crashes": false,
+      "crash_pair": null,
+      "crash_description": null,
+      "financial_exposure": null,
+      "clean_resolution": "Clause 22 covers fraud by authorized users (internal actor) \u2014 no Licensor liability. Clause 52 covers fraud from external intrusion (external actor) \u2014 Licensor liable. These are different scenarios with different actors. No contradiction triggered."
+    },
+    {
+      "scenario_id": "scenario_12",
+      "title": "Licensor notifies Licensee of data breach within 24 hours",
+      "description": "CoreTech detects unauthorized access to a staging database. Their security team notifies GlobalBank within 18 hours and begins remediation. GlobalBank confirms receipt and joins the investigation.",
+      "actor": "Licensor (CoreTech Innovations)",
+      "action_taken": "CoreTech notifies GlobalBank of data breach within 24 hours and cooperates in investigation",
+      "triggers_clauses": [
+        "clause_41"
+      ],
+      "crashes": false,
+      "crash_pair": null,
+      "crash_description": null,
+      "financial_exposure": null,
+      "clean_resolution": "Clause 41 requires 24-hour notification and full cooperation. Both conditions are met. No contradiction triggered."
+    },
+    {
+      "scenario_id": "scenario_13",
+      "title": "GlobalBank conducts regulatory audit with 30-day notice",
+      "description": "The OCC schedules a technology examination of GlobalBank. GlobalBank provides CoreTech with 30 days written notice of the upcoming audit. CoreTech prepares documentation.",
+      "actor": "Licensee (GlobalBank Financial)",
+      "action_taken": "GlobalBank and OCC conduct scheduled regulatory audit of Licensor facilities with proper notice",
+      "triggers_clauses": [
+        "clause_47"
+      ],
+      "crashes": false,
+      "crash_pair": null,
+      "crash_description": null,
+      "financial_exposure": null,
+      "clean_resolution": "Clause 47 grants Licensee and Regulatory Authorities audit rights upon 30 days notice. All conditions are met. No contradiction triggered."
+    },
+    {
+      "scenario_id": "scenario_14",
+      "title": "Both parties sign amendment to adjust transaction fee tiers",
+      "description": "CoreTech and GlobalBank negotiate new per-transaction pricing for increased volume. Both authorized representatives sign a written amendment to the Order Form.",
+      "actor": "Both parties",
+      "action_taken": "Both parties execute written amendment modifying per-transaction fee structure",
+      "triggers_clauses": [
+        "clause_57"
+      ],
+      "crashes": false,
+      "crash_pair": null,
+      "crash_description": null,
+      "financial_exposure": null,
+      "clean_resolution": "Clause 57 requires amendments to be signed by both parties. Both conditions are met. No contradiction triggered."
+    }
+  ]
+}

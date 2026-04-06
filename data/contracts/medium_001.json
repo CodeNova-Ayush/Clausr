@@ -1,0 +1,266 @@
+{
+  "contract_id": "medium_001",
+  "task_id": "medium",
+  "title": "SaaS Subscription Agreement between NovaSoft Inc and RetailCo Ltd",
+  "contract_text": "Definitions\nIn this SaaS Subscription Agreement between NovaSoft Inc (\"Vendor\") and RetailCo Ltd (\"Customer\"): \"Platform\" means the cloud-based software application; \"Subscription Term\" means the period during which access is granted; \"Authorized Users\" means employees or contractors designated by Customer.\n\nScope of Services\nVendor shall provide Customer with access to the Platform, including all standard features, modules, and integrations as described in the applicable Order Form.\n\nImplementation and Onboarding\nVendor shall provide a dedicated implementation manager and complete onboarding within sixty (60) days of the Effective Date, including data migration, user training, and configuration of the Platform to Customer's specifications.\n\nPayment Terms\nAll invoices issued by Vendor are payable within Net 30 days of receipt by the Customer. Customer shall remit payment via wire transfer or ACH to the account specified on each invoice.\n\nSupport and Maintenance SLA\nVendor shall provide Tier 1 and Tier 2 technical support during business hours (8:00 AM to 6:00 PM Eastern Time, Monday through Friday). Critical severity issues shall receive an initial response within one (1) hour.\n\nLicense Grant\nVendor grants Customer a non-exclusive, worldwide license to use the Platform and its associated documentation for any commercial purpose, including the right to sublicense and resell access to the Platform to Customer's own end users and clients.\n\nUptime Guarantee\nVendor guarantees Platform availability of 99.9% measured on a calendar month basis, excluding scheduled maintenance windows communicated at least 48 hours in advance.\n\nData Backup\nVendor shall maintain automated daily backups of all Customer data stored in the Platform and shall retain such backups for a minimum of thirty (30) days. In the event of data loss, Vendor shall restore Customer data from the most recent available backup at no additional charge.\n\nSecurity and Compliance\nVendor shall maintain SOC 2 Type II certification and comply with all applicable data protection regulations. All Customer data shall be encrypted at rest using AES-256 and in transit using TLS 1.2 or higher.\n\nIntellectual Property Ownership\nVendor retains all right, title, and interest in the Platform, including all modifications and derivative works. Customer retains all rights in Customer Data uploaded to or generated within the Platform.\n\nUse Restrictions\nThe license granted hereunder is strictly limited to the Customer's internal business operations. Any resale, sublicensing, redistribution, or provision of access to third parties is expressly prohibited without prior written consent from Vendor.\n\nTermination for Convenience\nEither party may terminate this Agreement at any time upon providing thirty (30) days written notice to the other party, without the requirement to show cause or provide justification.\n\nConfidentiality\nEach party agrees to maintain the confidentiality of the other party's proprietary information and shall not disclose such information to any third party without prior written consent.\n\nLate Payment Penalty\nAny invoice remaining unpaid after forty-five (45) days from the date of receipt shall incur a late payment fee of two percent (2%) per month on the outstanding balance, compounding monthly until paid in full.\n\nWarranties and Representations\nVendor warrants that the Platform shall perform substantially in accordance with its published documentation and that Vendor has the legal authority to enter into this Agreement.\n\nLimitation of Liability\nIn no event shall either party's total aggregate liability under this Agreement exceed the total fees paid by Customer during the twelve (12) month period immediately preceding the claim.\n\nCustomer Responsibilities\nCustomer is solely and exclusively responsible for maintaining adequate backups of all data uploaded to or generated within the Platform. Vendor assumes no responsibility whatsoever for any data loss, corruption, or unavailability regardless of cause.\n\nIndemnification\nEach party shall indemnify and hold harmless the other party from any third-party claims arising from the indemnifying party's breach of this Agreement or negligent acts or omissions.\n\nForce Majeure\nNeither party shall be liable for any failure or delay in performance due to circumstances beyond its reasonable control, including natural disasters, war, pandemic, or government actions.\n\nAutomatic Renewal\nThis Agreement shall automatically renew for successive one-year terms unless either party provides written notice of non-renewal no less than ninety (90) days prior to the end of the then-current term.\n\nAudit Rights\nVendor shall permit Customer to audit Vendor's compliance with the terms of this Agreement upon thirty (30) days written notice, no more than once per calendar year.\n\nNotices and Communications\nAll notices required under this Agreement shall be in writing and delivered via certified mail, overnight courier, or email to the addresses specified in the Order Form.\n\nAmendments and Waivers\nNo amendment to this Agreement shall be effective unless made in writing and signed by authorized representatives of both parties.\n\nGoverning Law\nThis Agreement shall be governed by and construed in accordance with the laws of the State of California, without regard to its conflict of laws provisions.\n\nEntire Agreement\nThis Agreement, including all schedules and exhibits attached hereto, constitutes the entire agreement between the parties and supersedes all prior negotiations, representations, and agreements.",
+  "clauses": [
+    {
+      "id": "clause_01",
+      "title": "Definitions",
+      "text": "In this SaaS Subscription Agreement between NovaSoft Inc (\"Vendor\") and RetailCo Ltd (\"Customer\"): \"Platform\" means the cloud-based software application; \"Subscription Term\" means the period during which access is granted; \"Authorized Users\" means employees or contractors designated by Customer."
+    },
+    {
+      "id": "clause_02",
+      "title": "Scope of Services",
+      "text": "Vendor shall provide Customer with access to the Platform, including all standard features, modules, and integrations as described in the applicable Order Form."
+    },
+    {
+      "id": "clause_03",
+      "title": "Implementation and Onboarding",
+      "text": "Vendor shall provide a dedicated implementation manager and complete onboarding within sixty (60) days of the Effective Date, including data migration, user training, and configuration of the Platform to Customer's specifications."
+    },
+    {
+      "id": "clause_04",
+      "title": "Payment Terms",
+      "text": "All invoices issued by Vendor are payable within Net 30 days of receipt by the Customer. Customer shall remit payment via wire transfer or ACH to the account specified on each invoice."
+    },
+    {
+      "id": "clause_05",
+      "title": "Support and Maintenance SLA",
+      "text": "Vendor shall provide Tier 1 and Tier 2 technical support during business hours (8:00 AM to 6:00 PM Eastern Time, Monday through Friday). Critical severity issues shall receive an initial response within one (1) hour."
+    },
+    {
+      "id": "clause_06",
+      "title": "License Grant",
+      "text": "Vendor grants Customer a non-exclusive, worldwide license to use the Platform and its associated documentation for any commercial purpose, including the right to sublicense and resell access to the Platform to Customer's own end users and clients."
+    },
+    {
+      "id": "clause_07",
+      "title": "Uptime Guarantee",
+      "text": "Vendor guarantees Platform availability of 99.9% measured on a calendar month basis, excluding scheduled maintenance windows communicated at least 48 hours in advance."
+    },
+    {
+      "id": "clause_08",
+      "title": "Data Backup",
+      "text": "Vendor shall maintain automated daily backups of all Customer data stored in the Platform and shall retain such backups for a minimum of thirty (30) days. In the event of data loss, Vendor shall restore Customer data from the most recent available backup at no additional charge."
+    },
+    {
+      "id": "clause_09",
+      "title": "Security and Compliance",
+      "text": "Vendor shall maintain SOC 2 Type II certification and comply with all applicable data protection regulations. All Customer data shall be encrypted at rest using AES-256 and in transit using TLS 1.2 or higher."
+    },
+    {
+      "id": "clause_10",
+      "title": "Intellectual Property Ownership",
+      "text": "Vendor retains all right, title, and interest in the Platform, including all modifications and derivative works. Customer retains all rights in Customer Data uploaded to or generated within the Platform."
+    },
+    {
+      "id": "clause_11",
+      "title": "Use Restrictions",
+      "text": "The license granted hereunder is strictly limited to the Customer's internal business operations. Any resale, sublicensing, redistribution, or provision of access to third parties is expressly prohibited without prior written consent from Vendor."
+    },
+    {
+      "id": "clause_12",
+      "title": "Termination for Convenience",
+      "text": "Either party may terminate this Agreement at any time upon providing thirty (30) days written notice to the other party, without the requirement to show cause or provide justification."
+    },
+    {
+      "id": "clause_13",
+      "title": "Confidentiality",
+      "text": "Each party agrees to maintain the confidentiality of the other party's proprietary information and shall not disclose such information to any third party without prior written consent."
+    },
+    {
+      "id": "clause_14",
+      "title": "Late Payment Penalty",
+      "text": "Any invoice remaining unpaid after forty-five (45) days from the date of receipt shall incur a late payment fee of two percent (2%) per month on the outstanding balance, compounding monthly until paid in full."
+    },
+    {
+      "id": "clause_15",
+      "title": "Warranties and Representations",
+      "text": "Vendor warrants that the Platform shall perform substantially in accordance with its published documentation and that Vendor has the legal authority to enter into this Agreement."
+    },
+    {
+      "id": "clause_16",
+      "title": "Limitation of Liability",
+      "text": "In no event shall either party's total aggregate liability under this Agreement exceed the total fees paid by Customer during the twelve (12) month period immediately preceding the claim."
+    },
+    {
+      "id": "clause_17",
+      "title": "Customer Responsibilities",
+      "text": "Customer is solely and exclusively responsible for maintaining adequate backups of all data uploaded to or generated within the Platform. Vendor assumes no responsibility whatsoever for any data loss, corruption, or unavailability regardless of cause."
+    },
+    {
+      "id": "clause_18",
+      "title": "Indemnification",
+      "text": "Each party shall indemnify and hold harmless the other party from any third-party claims arising from the indemnifying party's breach of this Agreement or negligent acts or omissions."
+    },
+    {
+      "id": "clause_19",
+      "title": "Force Majeure",
+      "text": "Neither party shall be liable for any failure or delay in performance due to circumstances beyond its reasonable control, including natural disasters, war, pandemic, or government actions."
+    },
+    {
+      "id": "clause_20",
+      "title": "Automatic Renewal",
+      "text": "This Agreement shall automatically renew for successive one-year terms unless either party provides written notice of non-renewal no less than ninety (90) days prior to the end of the then-current term."
+    },
+    {
+      "id": "clause_21",
+      "title": "Audit Rights",
+      "text": "Vendor shall permit Customer to audit Vendor's compliance with the terms of this Agreement upon thirty (30) days written notice, no more than once per calendar year."
+    },
+    {
+      "id": "clause_22",
+      "title": "Notices and Communications",
+      "text": "All notices required under this Agreement shall be in writing and delivered via certified mail, overnight courier, or email to the addresses specified in the Order Form."
+    },
+    {
+      "id": "clause_23",
+      "title": "Amendments and Waivers",
+      "text": "No amendment to this Agreement shall be effective unless made in writing and signed by authorized representatives of both parties."
+    },
+    {
+      "id": "clause_24",
+      "title": "Governing Law",
+      "text": "This Agreement shall be governed by and construed in accordance with the laws of the State of California, without regard to its conflict of laws provisions."
+    },
+    {
+      "id": "clause_25",
+      "title": "Entire Agreement",
+      "text": "This Agreement, including all schedules and exhibits attached hereto, constitutes the entire agreement between the parties and supersedes all prior negotiations, representations, and agreements."
+    }
+  ],
+  "contradictions": [
+    {
+      "clause_a_id": "clause_04",
+      "clause_b_id": "clause_14",
+      "type": "numeric",
+      "description": "Payment due Net 30 but late penalty triggers at 45 days, creating a 15-day gap."
+    },
+    {
+      "clause_a_id": "clause_06",
+      "clause_b_id": "clause_11",
+      "type": "scope",
+      "description": "License allows resale and sublicensing vs restrictions expressly prohibit resale."
+    },
+    {
+      "clause_a_id": "clause_08",
+      "clause_b_id": "clause_17",
+      "type": "party_obligation",
+      "description": "Vendor maintains backups vs Customer solely responsible for backups."
+    },
+    {
+      "clause_a_id": "clause_12",
+      "clause_b_id": "clause_20",
+      "type": "termination_renewal",
+      "description": "30-day termination notice vs 90-day non-renewal notice are irreconcilable."
+    }
+  ],
+  "traps": [],
+  "execution_scenarios": [
+    {
+      "scenario_id": "scenario_01",
+      "title": "RetailCo pays invoice on day 35 and receives late fee notice",
+      "description": "RetailCo's AP department pays an invoice 35 days after receipt. NovaSoft's billing system flags the payment as late and automatically generates a 2% late fee. RetailCo disputes the fee, arguing they paid within reasonable terms.",
+      "actor": "Customer (RetailCo Ltd)",
+      "action_taken": "RetailCo pays invoice on day 35 and disputes the automatically generated late payment fee",
+      "triggers_clauses": ["clause_04", "clause_14"],
+      "crashes": true,
+      "crash_pair": {"clause_a_id": "clause_04", "clause_b_id": "clause_14"},
+      "crash_description": "Clause 04 requires payment within Net 30 days. Clause 14 says late fees start at 45 days. Payment at day 35 is technically late under Clause 04 but penalty-free under Clause 14, creating a 15-day ambiguity window. Neither party can determine if the fee is contractually valid.",
+      "financial_exposure": "Disputed late fee compounding at 2% monthly on outstanding balance",
+      "clean_resolution": null
+    },
+    {
+      "scenario_id": "scenario_02",
+      "title": "RetailCo resells Platform access to franchise partners",
+      "description": "RetailCo's VP of Partnerships begins offering Platform access to 12 franchise partners as a value-added service. The franchisees access the Platform under RetailCo's account. NovaSoft's usage monitoring detects the third-party access.",
+      "actor": "Customer (RetailCo Ltd)",
+      "action_taken": "RetailCo sublicenses Platform access to franchise partners without NovaSoft's written consent",
+      "triggers_clauses": ["clause_06", "clause_11"],
+      "crashes": true,
+      "crash_pair": {"clause_a_id": "clause_06", "clause_b_id": "clause_11"},
+      "crash_description": "Clause 06 explicitly grants the right to sublicense and resell access to end users. Clause 11 expressly prohibits resale and sublicensing without prior written consent. RetailCo cannot determine if the franchise arrangement is permitted.",
+      "financial_exposure": "Potential license termination and liability for unauthorized sublicensing revenue",
+      "clean_resolution": null
+    },
+    {
+      "scenario_id": "scenario_03",
+      "title": "NovaSoft experiences data loss and both parties dispute backup responsibility",
+      "description": "A server failure causes loss of three months of Customer transaction data. RetailCo demands NovaSoft restore from backup. NovaSoft points to the clause stating Customer is solely responsible for maintaining their own backups.",
+      "actor": "Customer (RetailCo Ltd)",
+      "action_taken": "RetailCo demands data restoration from NovaSoft after server failure causes data loss",
+      "triggers_clauses": ["clause_08", "clause_17"],
+      "crashes": true,
+      "crash_pair": {"clause_a_id": "clause_08", "clause_b_id": "clause_17"},
+      "crash_description": "Clause 08 obligates Vendor to maintain daily backups and restore data at no charge. Clause 17 states Customer is solely responsible for backups and Vendor assumes no responsibility for data loss. Both clauses cover the same data but assign responsibility to opposite parties.",
+      "financial_exposure": "Unrecoverable transaction data worth potential regulatory penalties and operational disruption",
+      "clean_resolution": null
+    },
+    {
+      "scenario_id": "scenario_04",
+      "title": "RetailCo sends 30-day termination notice during auto-renewal period",
+      "description": "RetailCo decides to switch platforms. Their legal team sends a 30-day termination notice citing the termination for convenience clause. NovaSoft responds that the agreement already auto-renewed and requires 90-day non-renewal notice.",
+      "actor": "Customer (RetailCo Ltd)",
+      "action_taken": "RetailCo provides 30 days written notice of termination during auto-renewed term",
+      "triggers_clauses": ["clause_12", "clause_20"],
+      "crashes": true,
+      "crash_pair": {"clause_a_id": "clause_12", "clause_b_id": "clause_20"},
+      "crash_description": "Clause 12 allows either party to terminate at any time with 30 days notice. Clause 20 requires 90 days notice before term end to prevent auto-renewal. The 30-day notice is valid under one clause but insufficient under the other.",
+      "financial_exposure": "Automatic renewal creating unintended 12-month commitment with full fee obligation",
+      "clean_resolution": null
+    },
+    {
+      "scenario_id": "scenario_05",
+      "title": "NovaSoft schedules maintenance with 48-hour advance notice",
+      "description": "NovaSoft's operations team schedules a 4-hour maintenance window for Saturday evening and sends notification to RetailCo exactly 48 hours before the planned downtime. RetailCo confirms receipt.",
+      "actor": "Vendor (NovaSoft Inc)",
+      "action_taken": "NovaSoft sends 48-hour advance maintenance notification and performs scheduled maintenance",
+      "triggers_clauses": ["clause_07"],
+      "crashes": false,
+      "crash_pair": null,
+      "crash_description": null,
+      "financial_exposure": null,
+      "clean_resolution": "Clause 07 requires at least 48 hours advance notice for maintenance windows. The notice meets this requirement exactly. No contradiction triggered."
+    },
+    {
+      "scenario_id": "scenario_06",
+      "title": "RetailCo requests annual compliance audit of NovaSoft",
+      "description": "RetailCo's compliance officer sends a written request to audit NovaSoft's data handling practices. This is the first audit request of the calendar year. NovaSoft is given 30 days notice.",
+      "actor": "Customer (RetailCo Ltd)",
+      "action_taken": "RetailCo exercises annual audit right with 30 days written notice",
+      "triggers_clauses": ["clause_21"],
+      "crashes": false,
+      "crash_pair": null,
+      "crash_description": null,
+      "financial_exposure": null,
+      "clean_resolution": "Clause 21 permits one audit per calendar year with 30 days notice. Both conditions are met. No contradiction triggered."
+    },
+    {
+      "scenario_id": "scenario_07",
+      "title": "NovaSoft reports critical security vulnerability to RetailCo",
+      "description": "NovaSoft discovers a critical SQL injection vulnerability and immediately patches it. They notify RetailCo of the security incident and the remediation steps taken.",
+      "actor": "Vendor (NovaSoft Inc)",
+      "action_taken": "NovaSoft patches vulnerability and notifies Customer of the security incident",
+      "triggers_clauses": ["clause_09", "clause_13"],
+      "crashes": false,
+      "crash_pair": null,
+      "crash_description": null,
+      "financial_exposure": null,
+      "clean_resolution": "Clause 09 requires SOC 2 Type II and data encryption compliance. Clause 13 governs confidentiality. Patching and notification are standard operational duties — no conflicting obligations triggered."
+    },
+    {
+      "scenario_id": "scenario_08",
+      "title": "Both parties sign amendment to adjust pricing tier",
+      "description": "NovaSoft and RetailCo negotiate a volume discount. Both authorized representatives sign a written amendment adjusting the per-user pricing from the original Order Form.",
+      "actor": "Both parties",
+      "action_taken": "Both parties execute a written amendment modifying the pricing structure",
+      "triggers_clauses": ["clause_23"],
+      "crashes": false,
+      "crash_pair": null,
+      "crash_description": null,
+      "financial_exposure": null,
+      "clean_resolution": "Clause 23 requires amendments to be in writing and signed by both parties. Both conditions are met. No contradiction triggered."
+    }
+  ]
+}

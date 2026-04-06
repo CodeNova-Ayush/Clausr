@@ -1,0 +1,266 @@
+{
+  "contract_id": "medium_002",
+  "task_id": "medium",
+  "title": "Professional Services Agreement between DesignPro Agency and BuildCorp Ltd",
+  "contract_text": "Preamble\nThis Professional Services Agreement (\"Agreement\") is entered into between DesignPro Agency, a creative services firm incorporated in New York (\"Service Provider\"), and BuildCorp Ltd, a construction and development company headquartered in Chicago, Illinois (\"Client\").\n\nScope of Work\nService Provider shall deliver brand identity design, architectural visualization, marketing collateral, and digital strategy consulting services as detailed in the Statement of Work attached as Exhibit A.\n\nHourly Rates\nThe maximum blended hourly rate for any personnel assigned to the project shall not exceed One Hundred Fifty United States Dollars ($150.00) per hour, inclusive of all overhead and administrative costs.\n\nPayment Schedule\nClient shall pay thirty percent (30%) of the total project fee upon execution of this Agreement, forty percent (40%) upon delivery of initial concepts, and the remaining thirty percent (30%) upon final approval of all deliverables.\n\nIntellectual Property Ownership\nUpon full and final payment of all fees and costs, Client shall obtain exclusive, perpetual, irrevocable, worldwide ownership of all copyrights, trademarks, and intellectual property rights in and to the final deliverables created specifically for Client under this Agreement.\n\nConfidentiality\nBoth parties agree to keep strictly confidential all proprietary information, trade secrets, business strategies, and unpublished creative works shared during the term of this Agreement, for a period of three (3) years following termination.\n\nWarranties\nService Provider warrants that all deliverables shall be original works of authorship and shall not infringe upon any third-party intellectual property rights.\n\nInsurance\nService Provider shall maintain professional liability (errors and omissions) insurance with minimum coverage of One Million United States Dollars ($1,000,000) throughout the duration of this Agreement.\n\nSenior Staffing Rate\nClient agrees to be billed at a rate of Two Hundred Twenty-Five United States Dollars ($225.00) per hour for all hours worked by senior design directors and principal creative officers assigned to the engagement.\n\nTravel Expenses\nService Provider shall be solely responsible for covering all travel, lodging, and meal expenses associated with performing the services under this Agreement, including site visits, client presentations, and industry conferences.\n\nTerm\nThis Agreement shall commence on the Effective Date and shall continue for an initial term of twelve (12) months, or until all deliverables have been completed and accepted, whichever occurs later.\n\nTermination for Cause\nEither party may terminate this Agreement immediately upon written notice if the other party commits a material breach and fails to cure such breach within fifteen (15) business days of receiving written notice specifying the nature of the breach.\n\nRetained Rights\nService Provider retains all copyrights, intellectual property rights, and moral rights to the final deliverables produced under this Agreement and grants Client only a limited, non-exclusive, non-transferable license for use in Client's internal business operations.\n\nIndemnification\nService Provider shall indemnify and hold harmless Client from and against all claims, damages, losses, and expenses arising from any breach of Service Provider's warranties or negligent acts or omissions.\n\nProject Extension\nThe project timeline may be extended by mutual written agreement of the parties, provided that written notice of the requested extension is given at least fourteen (14) calendar days before the then-scheduled completion date.\n\nForce Majeure\nNeither party shall be liable for delays or failures in performance resulting from causes beyond its reasonable control, including but not limited to acts of God, natural disasters, epidemics, government orders, labor disputes, or supply chain disruptions.\n\nNon-Solicitation\nDuring the term of this Agreement and for twelve (12) months thereafter, neither party shall directly or indirectly solicit or hire any employee or contractor of the other party without prior written consent.\n\nReimbursable Costs\nClient agrees to fully reimburse Service Provider for all out-of-pocket travel, lodging, and meal expenses incurred during the performance of services under this Agreement, upon submission of itemized receipts within thirty (30) days.\n\nDispute Resolution\nAny dispute arising under this Agreement shall be resolved through mediation administered by JAMS in New York, New York. If mediation fails, the dispute shall proceed to binding arbitration under JAMS Comprehensive Arbitration Rules.\n\nLimitation of Liability\nIn no event shall either party's total liability under this Agreement exceed the total fees actually paid or payable to Service Provider during the twelve (12) months preceding the event giving rise to the claim.\n\nSubcontracting\nService Provider may engage qualified subcontractors to perform portions of the services, provided that Service Provider remains fully responsible for the quality and timeliness of all work product.\n\nTimeline Finality\nAny request to extend the project timeline must be submitted in writing by the requesting party no fewer than forty-five (45) calendar days prior to the original completion date specified in the Statement of Work. Requests submitted after this deadline shall be automatically denied.\n\nGoverning Law\nThis Agreement shall be governed by the laws of the State of New York, without regard to its conflict of laws provisions.\n\nNotices\nAll notices under this Agreement shall be in writing and delivered by certified mail, nationally recognized overnight courier, or email with confirmed receipt, to the addresses set forth in the signature block.\n\nEntire Agreement\nThis Agreement, together with all exhibits and schedules, constitutes the entire agreement between the parties and supersedes all prior understandings, negotiations, and agreements, whether written or oral.",
+  "clauses": [
+    {
+      "id": "clause_01",
+      "title": "Preamble",
+      "text": "This Professional Services Agreement (\"Agreement\") is entered into between DesignPro Agency, a creative services firm incorporated in New York (\"Service Provider\"), and BuildCorp Ltd, a construction and development company headquartered in Chicago, Illinois (\"Client\")."
+    },
+    {
+      "id": "clause_02",
+      "title": "Scope of Work",
+      "text": "Service Provider shall deliver brand identity design, architectural visualization, marketing collateral, and digital strategy consulting services as detailed in the Statement of Work attached as Exhibit A."
+    },
+    {
+      "id": "clause_03",
+      "title": "Hourly Rates",
+      "text": "The maximum blended hourly rate for any personnel assigned to the project shall not exceed One Hundred Fifty United States Dollars ($150.00) per hour, inclusive of all overhead and administrative costs."
+    },
+    {
+      "id": "clause_04",
+      "title": "Payment Schedule",
+      "text": "Client shall pay thirty percent (30%) of the total project fee upon execution of this Agreement, forty percent (40%) upon delivery of initial concepts, and the remaining thirty percent (30%) upon final approval of all deliverables."
+    },
+    {
+      "id": "clause_05",
+      "title": "Intellectual Property Ownership",
+      "text": "Upon full and final payment of all fees and costs, Client shall obtain exclusive, perpetual, irrevocable, worldwide ownership of all copyrights, trademarks, and intellectual property rights in and to the final deliverables created specifically for Client under this Agreement."
+    },
+    {
+      "id": "clause_06",
+      "title": "Confidentiality",
+      "text": "Both parties agree to keep strictly confidential all proprietary information, trade secrets, business strategies, and unpublished creative works shared during the term of this Agreement, for a period of three (3) years following termination."
+    },
+    {
+      "id": "clause_07",
+      "title": "Warranties",
+      "text": "Service Provider warrants that all deliverables shall be original works of authorship and shall not infringe upon any third-party intellectual property rights."
+    },
+    {
+      "id": "clause_08",
+      "title": "Insurance",
+      "text": "Service Provider shall maintain professional liability (errors and omissions) insurance with minimum coverage of One Million United States Dollars ($1,000,000) throughout the duration of this Agreement."
+    },
+    {
+      "id": "clause_09",
+      "title": "Senior Staffing Rate",
+      "text": "Client agrees to be billed at a rate of Two Hundred Twenty-Five United States Dollars ($225.00) per hour for all hours worked by senior design directors and principal creative officers assigned to the engagement."
+    },
+    {
+      "id": "clause_10",
+      "title": "Travel Expenses",
+      "text": "Service Provider shall be solely responsible for covering all travel, lodging, and meal expenses associated with performing the services under this Agreement, including site visits, client presentations, and industry conferences."
+    },
+    {
+      "id": "clause_11",
+      "title": "Term",
+      "text": "This Agreement shall commence on the Effective Date and shall continue for an initial term of twelve (12) months, or until all deliverables have been completed and accepted, whichever occurs later."
+    },
+    {
+      "id": "clause_12",
+      "title": "Termination for Cause",
+      "text": "Either party may terminate this Agreement immediately upon written notice if the other party commits a material breach and fails to cure such breach within fifteen (15) business days of receiving written notice specifying the nature of the breach."
+    },
+    {
+      "id": "clause_13",
+      "title": "Retained Rights",
+      "text": "Service Provider retains all copyrights, intellectual property rights, and moral rights to the final deliverables produced under this Agreement and grants Client only a limited, non-exclusive, non-transferable license for use in Client's internal business operations."
+    },
+    {
+      "id": "clause_14",
+      "title": "Indemnification",
+      "text": "Service Provider shall indemnify and hold harmless Client from and against all claims, damages, losses, and expenses arising from any breach of Service Provider's warranties or negligent acts or omissions."
+    },
+    {
+      "id": "clause_15",
+      "title": "Project Extension",
+      "text": "The project timeline may be extended by mutual written agreement of the parties, provided that written notice of the requested extension is given at least fourteen (14) calendar days before the then-scheduled completion date."
+    },
+    {
+      "id": "clause_16",
+      "title": "Force Majeure",
+      "text": "Neither party shall be liable for delays or failures in performance resulting from causes beyond its reasonable control, including but not limited to acts of God, natural disasters, epidemics, government orders, labor disputes, or supply chain disruptions."
+    },
+    {
+      "id": "clause_17",
+      "title": "Non-Solicitation",
+      "text": "During the term of this Agreement and for twelve (12) months thereafter, neither party shall directly or indirectly solicit or hire any employee or contractor of the other party without prior written consent."
+    },
+    {
+      "id": "clause_18",
+      "title": "Reimbursable Costs",
+      "text": "Client agrees to fully reimburse Service Provider for all out-of-pocket travel, lodging, and meal expenses incurred during the performance of services under this Agreement, upon submission of itemized receipts within thirty (30) days."
+    },
+    {
+      "id": "clause_19",
+      "title": "Dispute Resolution",
+      "text": "Any dispute arising under this Agreement shall be resolved through mediation administered by JAMS in New York, New York. If mediation fails, the dispute shall proceed to binding arbitration under JAMS Comprehensive Arbitration Rules."
+    },
+    {
+      "id": "clause_20",
+      "title": "Limitation of Liability",
+      "text": "In no event shall either party's total liability under this Agreement exceed the total fees actually paid or payable to Service Provider during the twelve (12) months preceding the event giving rise to the claim."
+    },
+    {
+      "id": "clause_21",
+      "title": "Subcontracting",
+      "text": "Service Provider may engage qualified subcontractors to perform portions of the services, provided that Service Provider remains fully responsible for the quality and timeliness of all work product."
+    },
+    {
+      "id": "clause_22",
+      "title": "Timeline Finality",
+      "text": "Any request to extend the project timeline must be submitted in writing by the requesting party no fewer than forty-five (45) calendar days prior to the original completion date specified in the Statement of Work. Requests submitted after this deadline shall be automatically denied."
+    },
+    {
+      "id": "clause_23",
+      "title": "Governing Law",
+      "text": "This Agreement shall be governed by the laws of the State of New York, without regard to its conflict of laws provisions."
+    },
+    {
+      "id": "clause_24",
+      "title": "Notices",
+      "text": "All notices under this Agreement shall be in writing and delivered by certified mail, nationally recognized overnight courier, or email with confirmed receipt, to the addresses set forth in the signature block."
+    },
+    {
+      "id": "clause_25",
+      "title": "Entire Agreement",
+      "text": "This Agreement, together with all exhibits and schedules, constitutes the entire agreement between the parties and supersedes all prior understandings, negotiations, and agreements, whether written or oral."
+    }
+  ],
+  "contradictions": [
+    {
+      "clause_a_id": "clause_03",
+      "clause_b_id": "clause_09",
+      "type": "numeric",
+      "description": "Max blended hourly rate is $150 per hour but senior design directors billed at $225 per hour."
+    },
+    {
+      "clause_a_id": "clause_05",
+      "clause_b_id": "clause_13",
+      "type": "scope",
+      "description": "Client gets exclusive IP ownership vs Service Provider retains all IP, granting only limited license."
+    },
+    {
+      "clause_a_id": "clause_10",
+      "clause_b_id": "clause_18",
+      "type": "party_obligation",
+      "description": "Provider covers travel expenses vs Client reimburses all travel expenses."
+    },
+    {
+      "clause_a_id": "clause_15",
+      "clause_b_id": "clause_22",
+      "type": "temporal",
+      "description": "14-day extension notice required vs 45-day extension notice required."
+    }
+  ],
+  "traps": [],
+  "execution_scenarios": [
+    {
+      "scenario_id": "scenario_01",
+      "title": "Senior design director bills 40 hours at $225/hr",
+      "description": "The Principal Creative Officer logs 40 hours on the BuildCorp branding project. DesignPro's billing department issues an invoice at the senior staffing rate. BuildCorp's AP team flags the rate as exceeding the maximum blended rate specified in the agreement.",
+      "actor": "Service Provider (DesignPro Agency)",
+      "action_taken": "DesignPro invoices 40 hours of senior design director time at $225 per hour",
+      "triggers_clauses": ["clause_03", "clause_09"],
+      "crashes": true,
+      "crash_pair": {"clause_a_id": "clause_03", "clause_b_id": "clause_09"},
+      "crash_description": "Clause 03 caps the maximum blended hourly rate at $150 inclusive of all overhead. Clause 09 specifies senior design directors are billed at $225/hr. The invoice is valid under one clause but exceeds the cap under the other. Neither party can determine the correct billing rate.",
+      "financial_exposure": "Disputed invoice of $9,000 ($75/hr difference x 40 hours) with potential for ongoing billing disputes",
+      "clean_resolution": null
+    },
+    {
+      "scenario_id": "scenario_02",
+      "title": "BuildCorp uses final logo on retail signage and merchandise",
+      "description": "After paying all fees in full, BuildCorp's marketing team begins using the new logo on store signage, product packaging, and merchandise. DesignPro sends a cease and desist claiming they retain IP rights.",
+      "actor": "Client (BuildCorp Ltd)",
+      "action_taken": "BuildCorp deploys final logo deliverables commercially across retail operations after full payment",
+      "triggers_clauses": ["clause_05", "clause_13"],
+      "crashes": true,
+      "crash_pair": {"clause_a_id": "clause_05", "clause_b_id": "clause_13"},
+      "crash_description": "Clause 05 grants BuildCorp exclusive, perpetual, worldwide IP ownership upon full payment. Clause 13 states DesignPro retains all IP rights and only grants a limited, non-exclusive license. BuildCorp cannot determine if they own or merely license the delivered work.",
+      "financial_exposure": "Potential trademark infringement claim against deployed retail signage and merchandise",
+      "clean_resolution": null
+    },
+    {
+      "scenario_id": "scenario_03",
+      "title": "DesignPro submits travel expense report for site visit",
+      "description": "A DesignPro team travels to Chicago for a 3-day on-site review at BuildCorp's headquarters. They submit a $8,200 expense report for flights, hotel, and meals. BuildCorp refuses to reimburse, citing the clause that makes DesignPro responsible for travel costs.",
+      "actor": "Service Provider (DesignPro Agency)",
+      "action_taken": "DesignPro submits itemized travel expense report for client site visit requesting reimbursement",
+      "triggers_clauses": ["clause_10", "clause_18"],
+      "crashes": true,
+      "crash_pair": {"clause_a_id": "clause_10", "clause_b_id": "clause_18"},
+      "crash_description": "Clause 10 states DesignPro is solely responsible for all travel expenses. Clause 18 states BuildCorp agrees to fully reimburse all travel expenses. The same costs are covered by both clauses but with opposite payment responsibility.",
+      "financial_exposure": "Disputed travel reimbursement of $8,200 with ongoing uncertainty for future site visits",
+      "clean_resolution": null
+    },
+    {
+      "scenario_id": "scenario_04",
+      "title": "BuildCorp requests 3-week project extension 20 days before deadline",
+      "description": "Due to internal organizational changes, BuildCorp submits a written request to extend the project deadline by three weeks. The request is sent 20 days before the scheduled completion date.",
+      "actor": "Client (BuildCorp Ltd)",
+      "action_taken": "BuildCorp sends formal written extension request 20 calendar days before completion date",
+      "triggers_clauses": ["clause_15", "clause_22"],
+      "crashes": true,
+      "crash_pair": {"clause_a_id": "clause_15", "clause_b_id": "clause_22"},
+      "crash_description": "Clause 15 requires 14 calendar days notice for extension requests, which is met. Clause 22 requires 45 calendar days notice and states requests after the deadline are automatically denied. The request is valid under one clause but denied under the other.",
+      "financial_exposure": "Project timeline uncertainty affecting BuildCorp's retail launch schedule",
+      "clean_resolution": null
+    },
+    {
+      "scenario_id": "scenario_05",
+      "title": "DesignPro engages freelance illustrator for specialized artwork",
+      "description": "DesignPro hires a freelance illustrator to create custom architectural visualizations for the project. DesignPro remains responsible for quality and timeliness of the work product.",
+      "actor": "Service Provider (DesignPro Agency)",
+      "action_taken": "DesignPro subcontracts illustration work to qualified freelance artist while retaining quality responsibility",
+      "triggers_clauses": ["clause_21"],
+      "crashes": false,
+      "crash_pair": null,
+      "crash_description": null,
+      "financial_exposure": null,
+      "clean_resolution": "Clause 21 explicitly permits subcontracting provided DesignPro remains responsible for quality and timeliness. Both conditions are met."
+    },
+    {
+      "scenario_id": "scenario_06",
+      "title": "BuildCorp makes milestone payment upon concept delivery",
+      "description": "DesignPro delivers initial brand concepts. BuildCorp's finance team releases the second milestone payment equal to 40% of the project fee as specified in the payment schedule.",
+      "actor": "Client (BuildCorp Ltd)",
+      "action_taken": "BuildCorp remits 40% milestone payment upon delivery of initial concepts",
+      "triggers_clauses": ["clause_04"],
+      "crashes": false,
+      "crash_pair": null,
+      "crash_description": null,
+      "financial_exposure": null,
+      "clean_resolution": "Clause 04 specifies 40% payment upon delivery of initial concepts. The payment matches the schedule exactly. No contradiction triggered."
+    },
+    {
+      "scenario_id": "scenario_07",
+      "title": "Both parties agree to mediation over quality dispute",
+      "description": "A disagreement arises about whether the final deliverables meet the original specification. Both parties agree to submit the dispute to JAMS mediation in New York as outlined in the agreement.",
+      "actor": "Both parties",
+      "action_taken": "Both parties initiate JAMS mediation in New York to resolve quality dispute",
+      "triggers_clauses": ["clause_19"],
+      "crashes": false,
+      "crash_pair": null,
+      "crash_description": null,
+      "financial_exposure": null,
+      "clean_resolution": "Clause 19 specifies JAMS mediation in New York as the first step for dispute resolution. Both parties follow the prescribed process. No contradiction triggered."
+    },
+    {
+      "scenario_id": "scenario_08",
+      "title": "DesignPro terminates after BuildCorp fails to cure material breach",
+      "description": "BuildCorp fails to make the second milestone payment for 30 days. DesignPro sends a written notice specifying the breach. BuildCorp fails to cure within 15 business days. DesignPro terminates the agreement.",
+      "actor": "Service Provider (DesignPro Agency)",
+      "action_taken": "DesignPro terminates agreement after BuildCorp fails to cure payment breach within 15 business days",
+      "triggers_clauses": ["clause_12"],
+      "crashes": false,
+      "crash_pair": null,
+      "crash_description": null,
+      "financial_exposure": null,
+      "clean_resolution": "Clause 12 allows immediate termination upon notice if the other party fails to cure a material breach within 15 business days. The process is followed correctly. No contradiction triggered."
+    }
+  ]
+}
