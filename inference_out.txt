@@ -1,0 +1,20 @@
+[START] task=easy env=clausr model=dummy-model
+[STEP] step=1 action=error reward=0.00 done=true error=Error code: 401 - {'error': {'message': 'Incorrect API key provided: dummy_token. You can find your API key at https://platform.openai.com/account/api-keys.', 'type': 'invalid_request_error', 'param': None, 'code': 'invalid_api_key'}}
+[END] success=false steps=1 score=0.000 rewards=0.00
+
+[START] task=medium env=clausr model=dummy-model
+[STEP] step=1 action=error reward=0.00 done=true error=Error code: 401 - {'error': {'message': 'Incorrect API key provided: dummy_token. You can find your API key at https://platform.openai.com/account/api-keys.', 'type': 'invalid_request_error', 'param': None, 'code': 'invalid_api_key'}}
+[END] success=false steps=1 score=0.000 rewards=0.00
+
+[START] task=hard env=clausr model=dummy-model
+[STEP] step=1 action=error reward=0.00 done=true error=Error code: 401 - {'error': {'message': 'Incorrect API key provided: dummy_token. You can find your API key at https://platform.openai.com/account/api-keys.', 'type': 'invalid_request_error', 'param': None, 'code': 'invalid_api_key'}}
+[END] success=false steps=1 score=0.000 rewards=0.00
+
+==================================================
+CLAUSR INFERENCE RESULTS
+==================================================
+EASY       0.0000
+MEDIUM     0.0000
+HARD       0.0000
+MEAN       0.0000
+==================================================

@@ -1,0 +1,46 @@
+=== CHECK 1 ===
+{"status":"ok"}
+=== CHECK 2 ===
+{"contract_text":"Parties and Recitals\nThis Servi...
+{"contract_text":"Preamble\nThis Professional Serv...
+{"contract_text":"Parties and Recitals\nThis Maste...
+
+=== CHECK 3 ===
+{
+  "score": 0.0,
+  "done": true
+}
+
+=== CHECK 4 ===
+{"episode_id":"5b0e7287-4ba7-4687-8ea9-f8d499d2b2b4","task_id":"easy","score":0.0,"contradictions_found":0,"contradictions_total":1,"done":false}
+=== CHECK 5 & 6 ===
+✅ openenv.yaml fully valid
+✅ ContractAction: {"findings":[]}
+✅ ContractObservation fields: ['contract_text', 'clauses', 'task_id', 'num_contradictions', 'instructions', 'done', 'score', 'feedback', 'episode_id', 'contract_id']
+✅ ContractState fields: ['episode_id', 'task_id', 'score', 'contradictions_found', 'contradictions_total', 'done']
+
+=== CHECK 7 ===
+
+=== CHECK 8 ===
+cbfb7cbd5d099f20bec00292d50342e4ce58ad9f418a95cf30998aef60e2cc1b
+{"status":"ok"}clausr-test
+clausr-test
+
+=== CHECK 9 ===
+  ✅ Named inference.py in root
+  ✅ Uses OpenAI client
+  ✅ API_BASE_URL env var
+  ✅ MODEL_NAME env var
+  ✅ HF_TOKEN env var
+  ✅ [START] log format
+  ✅ [STEP] log format
+  ✅ [END] log format
+  ✅ No hardcoded API keys
+  ✅ API_BASE_URL has default
+  ✅ MODEL_NAME has default
+  ✅ HF_TOKEN no default
+✅ inference.py READY
+
+=== CHECK 12 ===
+vcpu=2 (limit=2): ✅
+memory_gb=8 (limit=8): ✅
