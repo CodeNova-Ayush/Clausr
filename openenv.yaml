@@ -1,5 +1,6 @@
 name: clausr
 version: "1.0.0"
+entrypoint: inference.py
 description: >
   Clausr trains AI agents to detect hidden contradictions in legal contracts.
   Three environments: static contradiction detection, contract execution simulation,
