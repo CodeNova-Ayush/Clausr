@@ -89,7 +89,7 @@ If no contradictions found, include empty findings list."""
 def run_episode(task_id: str) -> float:
     rewards: List[float] = []
     steps_taken = 0
-    score = 0.0
+    score = 0.001
     success = False
 
     log_start(task=task_id, env=BENCHMARK, model=MODEL_NAME)
@@ -153,13 +153,13 @@ def run_episode(task_id: str) -> float:
         step_resp.raise_for_status()
         step_data = step_resp.json()
 
-        score    = float(step_data.get("score", 0.0))
+        score    = float(step_data.get("score", 0.001))
         feedback = step_data.get("feedback", "")
         done     = step_data.get("done", True)
 
         score   = max(0.001, min(0.999, score))
         reward  = score
-        success = score > 0.0
+        success = score > 0.001
 
         rewards.append(reward)
 
@@ -174,9 +174,9 @@ def run_episode(task_id: str) -> float:
     except Exception as e:
         error_msg = str(e)
         steps_taken = max(steps_taken, 1)
-        rewards = rewards or [0.0]
-        log_step(step=steps_taken, action="error", reward=0.0, done=True, error=error_msg)
-        score   = 0.0
+        rewards = rewards or [0.001]
+        log_step(step=steps_taken, action="error", reward=0.001, done=True, error=error_msg)
+        score   = 0.001
         success = False
 
     finally:

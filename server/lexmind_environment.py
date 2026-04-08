@@ -17,7 +17,7 @@ class LexMindEnv:
         self._task_id = "lexmind_easy"
         self._contract = None
         self._drafting_sequence = []
-        self._score = 0.0
+        self._score = 0.001
         self._done = False
         self._correctly_detected = 0
         self._false_alarms = 0
@@ -28,7 +28,7 @@ class LexMindEnv:
     def reset(self, task_id: str = "lexmind_easy") -> LexMindObservation:
         self._task_id = task_id
         self._done = False
-        self._score = 0.0
+        self._score = 0.001
         self._correctly_detected = 0
         self._false_alarms = 0
         self._episode_id = str(uuid.uuid4())
@@ -62,7 +62,7 @@ class LexMindEnv:
         self._task_id = self._contract.get("task_id", "lexmind_easy")
         self._episode_id = str(uuid.uuid4())
         self._done = False
-        self._score = 0.0
+        self._score = 0.001
         self._correctly_detected = 0
         self._false_alarms = 0
         self._last_feedback = None

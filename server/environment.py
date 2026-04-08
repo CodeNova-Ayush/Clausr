@@ -11,7 +11,7 @@ class ContractFixEnv:
         self._episode_id = ""
         self._task_id = "easy"
         self._contract = None
-        self._score = 0.0
+        self._score = 0.001
         self._done = False
         self._contradictions_found = 0
         self._last_feedback = None
@@ -20,7 +20,7 @@ class ContractFixEnv:
     def reset(self, task_id: str = "easy") -> ContractObservation:
         self._task_id = task_id
         self._done = False
-        self._score = 0.0
+        self._score = 0.001
         self._contradictions_found = 0
         self._episode_id = str(uuid.uuid4())
         self._last_feedback = None
@@ -49,7 +49,7 @@ class ContractFixEnv:
         self._task_id = self._contract.get("task_id", "easy")
         self._episode_id = str(uuid.uuid4())
         self._done = False
-        self._score = 0.0
+        self._score = 0.001
         self._contradictions_found = 0
         self._last_feedback = None
 
