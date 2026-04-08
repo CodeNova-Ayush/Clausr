@@ -182,7 +182,7 @@ class ContractExecutionEnv:
                 else:
                     total_score -= 0.1  # False alarm penalty
 
-        score = max(0.0, min(1.0, total_score / total))
+        score = max(0.001, min(0.999, total_score / total))
         score = round(score, 4)
 
         feedback = (

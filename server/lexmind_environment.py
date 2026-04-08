@@ -239,7 +239,7 @@ class LexMindEnv:
                     penalties += 0.1
 
         raw_score = (total_score / total_events) - penalties if total_events > 0 else 0.0
-        final_score = max(0.0, min(1.0, raw_score))
+        final_score = max(0.001, min(0.999, raw_score))
         final_score = round(final_score, 4)
 
         actual_contradictions = sum(

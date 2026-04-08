@@ -157,7 +157,7 @@ def run_episode(task_id: str) -> float:
         feedback = step_data.get("feedback", "")
         done     = step_data.get("done", True)
 
-        score   = max(0.0, min(1.0, score))
+        score   = max(0.001, min(0.999, score))
         reward  = score
         success = score > 0.0
 
