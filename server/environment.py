@@ -134,12 +134,13 @@ class ContractFixEnv:
         else:
             raw = true_positives / len(true_pairs)
 
-        score = max(0.0, min(1.0, raw - (0.1 * false_positives)))
+        lambda_penalty = {"easy": 0.10, "medium": 0.15, "hard": 0.20}.get(self._task_id, 0.10)
+        score = max(0.0, min(1.0, raw - (lambda_penalty * false_positives)))
         score = round(score, 4)
 
         feedback_string = (
             f"Correctly identified: {true_positives}/{len(true_pairs)} contradictions. "
-            f"False positives: {false_positives}. Score: {score:.2f}"
+            f"False positives: {false_positives}. Score: {score:.2f} (Penalty scale: {lambda_penalty})"
         )
 
         return score, feedback_string, true_positives

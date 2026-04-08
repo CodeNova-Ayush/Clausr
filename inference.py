@@ -48,6 +48,11 @@ def log_end(success: bool, steps: int, score: float, rewards: List[float]) -> No
 # ── System prompt for contradiction detection ─────────────────────────────────
 SYSTEM_PROMPT = """You are a contract review specialist. Find all pairs of clauses that directly contradict each other within the same legal contract document.
 
+You must follow the LexMind structural pipeline:
+Step 1. Clause Indexing: Group clauses by topic (e.g., Liability, Payment, Termination).
+Step 2. Cross-Reference Analysis: Think step-by-step to compare clauses within each topic and across related topics.
+Step 3. Final Findings: Return the actual contradiction pairs.
+
 A contradiction exists when:
 - Two clauses make incompatible demands on the same obligation (e.g. different time periods for the same duty)
 - One clause grants a right that another explicitly removes
@@ -60,8 +65,15 @@ Do NOT flag as contradictions:
 - Clauses using notwithstanding language that intentionally overrides another
 - Clauses covering complementary geographic or temporal scope
 
-Respond ONLY with valid JSON — no markdown fences, no explanation outside JSON:
+Respond ONLY with valid JSON — no markdown fences, no text outside JSON:
 {
+  "clause_indexing": {
+    "topic_1": ["clause_01", "clause_02"],
+    "topic_2": ["clause_03"]
+  },
+  "cross_reference_analysis": [
+    "Analyzing topic_1: clause_01 says X, clause_02 says Y. This is a contradiction."
+  ],
   "findings": [
     {
       "clause_a_id": "clause_03",
@@ -71,7 +83,7 @@ Respond ONLY with valid JSON — no markdown fences, no explanation outside JSON
   ]
 }
 
-If no contradictions found: {"findings": []}"""
+If no contradictions found, include empty findings list."""
 
 # ── Run one episode ───────────────────────────────────────────────────────────
 def run_episode(task_id: str) -> float:
@@ -106,7 +118,6 @@ def run_episode(task_id: str) -> float:
             f"{instructions}\n\n"
             f"IMPORTANT: There are exactly {num_contradictions} contradiction(s) in this contract. "
             f"Find all of them.\n\n"
-            f"=== FULL CONTRACT TEXT ===\n{contract_text}\n\n"
             f"=== STRUCTURED CLAUSE LIST ===\n{clause_list}"
         )
 
