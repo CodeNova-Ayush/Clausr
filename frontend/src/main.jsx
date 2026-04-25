@@ -7,19 +7,22 @@ import ComparePage from './pages/ComparePage'
 import GraphPage from './pages/GraphPage'
 import OraclePage from './pages/OraclePage'
 import LexMindPage from './pages/LexMindPage'
+import Layout from './components/Layout'
 import './index.css'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
     <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<LandingPage />} />
-        <Route path="/app" element={<AppPage />} />
-        <Route path="/compare" element={<ComparePage />} />
-        <Route path="/graph" element={<GraphPage />} />
-        <Route path="/oracle" element={<OraclePage />} />
-        <Route path="/lexmind" element={<LexMindPage />} />
-      </Routes>
+      <Layout>
+        <Routes>
+          <Route path="/" element={<LandingPage />} />
+          <Route path="/app" element={<AppPage />} />
+          <Route path="/compare" element={<ComparePage />} />
+          <Route path="/graph" element={<GraphPage />} />
+          <Route path="/oracle" element={<OraclePage />} />
+          <Route path="/lexmind" element={<LexMindPage />} />
+        </Routes>
+      </Layout>
     </BrowserRouter>
   </StrictMode>
 )
