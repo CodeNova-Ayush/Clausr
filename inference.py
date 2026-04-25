@@ -310,6 +310,128 @@ def run_adversarial_episode(task_id: str) -> float:
     return score
 
 
+# ── CurriculumForge — Curriculum Episode ─────────────────────────────────────
+def run_curriculum_episode(task_id: str, num_episodes: int = 5) -> float:
+    rewards: List[float] = []
+    steps_taken = 0
+    score = 0.001
+    success = False
+    mode = "paired" if "paired" in task_id else "standard"
+
+    log_start(task=task_id, env=BENCHMARK, model=MODEL_NAME)
+
+    try:
+        reg_resp = requests.post(
+            f"{ENV_BASE_URL}/curriculum/register",
+            json={"model_name": MODEL_NAME, "algorithm": "absolute_learning_progress"},
+            timeout=30,
+        )
+        reg_resp.raise_for_status()
+        run_id = reg_resp.json()["run_id"]
+
+        episode_scores = []
+        for ep in range(num_episodes):
+            reset_resp = requests.post(
+                f"{ENV_BASE_URL}/curriculum/reset?run_id={run_id}&mode={mode}",
+                timeout=30,
+            )
+            reset_resp.raise_for_status()
+            obs = reset_resp.json()
+
+            selected_task = obs.get("selected_task", "easy")
+            sub_env = obs.get("sub_environment", "detection")
+            sub_obs = obs.get("sub_observation", {})
+
+            if sub_env == "detection":
+                clauses = sub_obs.get("clauses", [])
+                num_contradictions = sub_obs.get("num_contradictions", 1)
+                clause_list = "\n".join([
+                    f"[{c['id']}] {c.get('title','')}: {c.get('text','')}"
+                    for c in clauses
+                ])
+                user_msg = (
+                    f"Find exactly {num_contradictions} contradiction(s).\n\n"
+                    f"=== CLAUSES ===\n{clause_list}"
+                )
+                completion = client.chat.completions.create(
+                    model=MODEL_NAME,
+                    messages=[
+                        {"role": "system", "content": SYSTEM_PROMPT},
+                        {"role": "user", "content": user_msg},
+                    ],
+                    max_tokens=2000, temperature=0.0,
+                )
+                raw = (completion.choices[0].message.content or "").strip()
+                raw = raw.replace("```json", "").replace("```", "").strip()
+                try:
+                    findings = json.loads(raw).get("findings", [])
+                except Exception:
+                    findings = []
+                action_payload = {"findings": findings}
+
+            elif sub_env == "adversarial":
+                clauses = sub_obs.get("clauses", [])
+                clause_list = "\n".join([
+                    f"[{c['id']}] {c.get('title','')}: {c.get('text','')}"
+                    for c in clauses
+                ])
+                completion = client.chat.completions.create(
+                    model=MODEL_NAME,
+                    messages=[
+                        {"role": "system", "content": FORGER_SYSTEM_PROMPT},
+                        {"role": "user", "content": f"=== CLAUSES ===\n{clause_list}\n\n{sub_obs.get('instructions', '')}"},
+                    ],
+                    max_tokens=2000, temperature=0.3,
+                )
+                raw = (completion.choices[0].message.content or "").strip()
+                raw = raw.replace("```json", "").replace("```", "").strip()
+                try:
+                    action_payload = json.loads(raw)
+                except Exception:
+                    action_payload = {
+                        "target_clause_id": clauses[0]["id"] if clauses else "clause_01",
+                        "modified_clause_text": "All obligations shall be performed within fifteen (15) business days.",
+                        "injected_clause_text": "Deliverables require forty-five (45) calendar days from commencement.",
+                        "inject_after_clause_id": clauses[-1]["id"] if clauses else "clause_01",
+                        "claimed_contradiction_type": "temporal",
+                        "stealth_rationale": "Fallback",
+                    }
+            else:
+                action_payload = {"findings": []}
+
+            step_resp = requests.post(
+                f"{ENV_BASE_URL}/curriculum/step?run_id={run_id}",
+                json=action_payload,
+                timeout=30,
+            )
+            step_resp.raise_for_status()
+            result = step_resp.json()
+
+            ep_score = float(result.get("composite_score", 0.001))
+            episode_scores.append(ep_score)
+            rewards.append(ep_score)
+            steps_taken += 1
+
+            log_step(step=ep + 1, action=f"curriculum_{selected_task}", reward=ep_score, done=True, error=None)
+
+        score = sum(episode_scores) / len(episode_scores) if episode_scores else 0.001
+        score = max(0.001, min(0.999, score))
+        success = score > 0.001
+
+    except Exception as e:
+        error_msg = str(e)
+        steps_taken = max(steps_taken, 1)
+        rewards = rewards or [0.001]
+        log_step(step=steps_taken, action="error", reward=0.001, done=True, error=error_msg)
+        score = 0.001
+        success = False
+
+    finally:
+        log_end(success=success, steps=steps_taken, score=score, rewards=rewards)
+
+    return score
+
+
 # ── Main ──────────────────────────────────────────────────────────────────────
 def main():
     tasks  = ["easy", "medium", "hard"]
@@ -317,6 +439,7 @@ def main():
         "adversarial_easy", "adversarial_medium",
         "adversarial_hard", "adversarial_selfplay",
     ]
+    curriculum_tasks = ["curriculum_standard", "curriculum_paired"]
     scores = {}
 
     for task_id in tasks:
@@ -326,6 +449,11 @@ def main():
 
     for task_id in adversarial_tasks:
         score = run_adversarial_episode(task_id)
+        scores[task_id] = score
+        print("", flush=True)
+
+    for task_id in curriculum_tasks:
+        score = run_curriculum_episode(task_id, num_episodes=3)
         scores[task_id] = score
         print("", flush=True)
 
