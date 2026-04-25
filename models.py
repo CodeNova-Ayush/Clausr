@@ -313,3 +313,64 @@ class CurriculumEpisodeRecord(BaseModel):
     composite_score: float
     contradiction_types_attempted: List[str] = []
     timestamp: str = ""
+
+# ── ConstitutionForge Models ─────────────────────────────────────────────
+
+class PortfolioContract(BaseModel):
+    contract_id: str
+    contract_type: str
+    clauses: List[Clause]
+
+class PortfolioObservation(BaseModel):
+    episode_id: str
+    task_id: str
+    contracts: List[PortfolioContract]
+    num_cross_contradictions: int
+    num_cascades: int
+    instructions: str
+    done: bool
+    score: Optional[float] = None
+    feedback: Optional[str] = None
+
+class CrossFinding(BaseModel):
+    contract_a_id: str
+    clause_a_id: str
+    contract_b_id: str
+    clause_b_id: str
+    contradiction_type: str
+    explanation: str
+
+class ConstitutionAction(BaseModel):
+    cross_findings: List[CrossFinding]
+    cascade_chains: Optional[List[List[int]]] = None
+
+class PortfolioState(BaseModel):
+    episode_id: str
+    task_id: str
+    score: float
+    cross_contradictions_found: int
+    cascades_found: int
+    done: bool
+
+# ── ContractDNA Models ───────────────────────────────────────────────────
+
+class FingerprintRequest(BaseModel):
+    clause_texts: Optional[List[str]] = None
+    episode_id: Optional[str] = None
+
+class FingerprintDelta(BaseModel):
+    changed_most_dimension: str
+    magnitude: float
+    attack_detected: bool
+
+class FingerprintResult(BaseModel):
+    episode_id: Optional[str] = None
+    numeric_risk: float
+    temporal_risk: float
+    party_obligation_risk: float
+    termination_risk: float
+    conditional_risk: float
+    overall_risk: float
+    risk_label: str
+    dominant_risk_type: str
+    delta: Optional[FingerprintDelta] = None

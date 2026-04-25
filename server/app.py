@@ -7,6 +7,8 @@ from server.execution_environment import ContractExecutionEnv
 from server.lexmind_environment import LexMindEnv
 from server.adversarial_environment import AdversarialArenaEnv
 from server.curriculum_environment import CurriculumForgeEnv
+from server.constitution_environment import ConstitutionForgeEnv
+from server.fingerprint_engine import dna_engine
 from models import (
     ContractAction, ContractObservation, ContractState,
     ExecutionAction, ExecutionObservation, ContractExecutionState,
@@ -15,6 +17,8 @@ from models import (
     AdversarialState, OpponentConfig, CheckpointSubmission,
     CurriculumRunConfig, CurriculumObservation, CurriculumStepResult,
     CompetenceProfile,
+    PortfolioObservation, ConstitutionAction, PortfolioState,
+    FingerprintRequest, FingerprintResult,
 )
 
 app = FastAPI(
@@ -241,6 +245,62 @@ def curriculum_export(run_id: str):
     episodes = _curriculum_env.export_episodes(run_id)
     from fastapi.responses import JSONResponse
     return JSONResponse(content=episodes)
+
+
+# ── ConstitutionForge Endpoints ──────────────────────────────────────────
+
+@app.get("/constitution/health")
+def constitution_health():
+    return {"status": "ok", "environment": "ConstitutionForge"}
+
+@app.post("/constitution/reset", response_model=PortfolioObservation)
+def constitution_reset(task_id: str = "constitution_easy"):
+    env = ConstitutionForgeEnv()
+    return env.reset(task_id=task_id)
+
+@app.post("/constitution/step", response_model=PortfolioObservation)
+def constitution_step(action: ConstitutionAction, task_id: str = "constitution_easy", portfolio_id: str = None):
+    env = ConstitutionForgeEnv()
+    if portfolio_id:
+        env.load_portfolio_by_id(portfolio_id)
+    else:
+        env.reset(task_id=task_id)
+    return env.step(action)
+
+@app.get("/constitution/state", response_model=PortfolioState)
+def constitution_state(task_id: str = "constitution_easy"):
+    env = ConstitutionForgeEnv()
+    env.reset(task_id=task_id)
+    return env.state
+
+
+# ── ContractDNA Endpoints ────────────────────────────────────────────────
+
+@app.get("/fingerprint/schema")
+def fingerprint_schema():
+    return dna_engine.get_schema()
+
+@app.post("/fingerprint", response_model=FingerprintResult)
+def fingerprint(req: FingerprintRequest):
+    clause_texts = req.clause_texts
+    
+    if not clause_texts and req.episode_id:
+        # Try to find clauses from the global adversarial env if ID matches
+        if _adversarial_env._episode_id == req.episode_id:
+            clause_texts = [c["text"] for c in _adversarial_env._clauses]
+        else:
+            # Fallback: check curriculum env
+            if _curriculum_env._episode_id == req.episode_id:
+                # This depends on which sub-env was active
+                # For simplicity, we assume adversarial or detection style clauses
+                obs = _curriculum_env._last_obs
+                if obs and "clauses" in obs:
+                    clause_texts = [c.get("text", "") for c in obs["clauses"]]
+
+    if not clause_texts:
+        return {"error": "No clauses provided or episode_id not found"}
+        
+    return dna_engine.calculate_fingerprint(clause_texts, req.episode_id)
 
 
 @app.websocket("/ws")

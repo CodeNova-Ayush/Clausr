@@ -5,6 +5,8 @@ description: >
   Clausr trains AI agents to detect hidden contradictions in legal contracts.
   Four environments: static contradiction detection, contract execution simulation,
   real-time negotiation monitoring, and adversarial self-play arena.
+metadata:
+  fingerprint_endpoint: true
 tasks:
   - id: easy
     description: "NDA with 8 clauses and 1 planted contradiction. Agent must find the contradicting clause pair."
@@ -40,6 +42,18 @@ tasks:
     max_score: 0.999
   - id: curriculum_paired
     description: "PAIRED-mode curriculum using adversarial generator for frontier-seeking difficulty."
+    min_score: 0.001
+    max_score: 0.999
+  - id: constitution_easy
+    description: "3-contract portfolio with 2 cross-contract contradictions"
+    min_score: 0.001
+    max_score: 0.999
+  - id: constitution_medium
+    description: "4-contract portfolio with 5 contradictions and 1 cascade chain"
+    min_score: 0.001
+    max_score: 0.999
+  - id: constitution_hard
+    description: "5-contract portfolio with 9 contradictions and 2 cascade chains"
     min_score: 0.001
     max_score: 0.999
 action_space: ContractAction

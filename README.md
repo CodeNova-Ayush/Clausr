@@ -1,4 +1,11 @@
-
+---
+title: Clausr
+emoji: ⚖️
+colorFrom: blue
+colorTo: red
+sdk: docker
+pinned: false
+---
 
 <div align="center">
 

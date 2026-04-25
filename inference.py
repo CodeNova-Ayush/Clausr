@@ -7,7 +7,8 @@ import os
 import time
 import json
 import requests
-from typing import List, Optional
+import re
+from typing import List, Optional, Dict
 from openai import OpenAI
 
 # ── Environment variables ─────────────────────────────────────────────────────
@@ -16,13 +17,14 @@ from openai import OpenAI
 API_BASE_URL = os.getenv("API_BASE_URL", "https://api.openai.com/v1")
 MODEL_NAME   = os.getenv("MODEL_NAME",   "gpt-4o-mini")
 HF_TOKEN     = os.getenv("HF_TOKEN")
+OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
 ENV_BASE_URL = os.getenv("ENV_BASE_URL", "http://localhost:7860")
 
 BENCHMARK = "clausr"
 
 # ── OpenAI client ─────────────────────────────────────────────────────────────
 client = OpenAI(
-    api_key=HF_TOKEN or "dummy",
+    api_key=OPENAI_API_KEY or HF_TOKEN or "dummy",
     base_url=API_BASE_URL,
 )
 
@@ -86,6 +88,38 @@ Respond ONLY with valid JSON — no markdown fences, no text outside JSON:
 If no contradictions found, include empty findings list."""
 
 # ── Run one episode ───────────────────────────────────────────────────────────
+def extract_json_findings(raw_text: str) -> List[Dict]:
+    print(f"RAW LLM RESPONSE (first 300 chars):\n{raw_text[:300]}\n" + "-"*40, flush=True)
+    
+    # Try to find JSON block
+    match = re.search(r'\{.*\}', raw_text.replace('\n', ' '), re.DOTALL)
+    if match:
+        json_str = match.group(0)
+    else:
+        json_str = raw_text
+        
+    try:
+        clean_str = json_str.replace("```json", "").replace("```", "").strip()
+        data = json.loads(clean_str)
+        findings = data.get("findings", [])
+        
+        cleaned_findings = []
+        for f in findings:
+            if isinstance(f, dict):
+                clause_a = f.get("clause_a_id") or f.get("clause_a", "")
+                clause_b = f.get("clause_b_id") or f.get("clause_b", "")
+                explanation = f.get("explanation", "")
+                if clause_a and clause_b:
+                    cleaned_findings.append({
+                        "clause_a_id": str(clause_a),
+                        "clause_b_id": str(clause_b),
+                        "explanation": str(explanation)
+                    })
+        return cleaned_findings
+    except Exception as e:
+        print(f"JSON parsing failed: {e}", flush=True)
+        return []
+
 def run_episode(task_id: str) -> float:
     rewards: List[float] = []
     steps_taken = 0
@@ -95,7 +129,6 @@ def run_episode(task_id: str) -> float:
     log_start(task=task_id, env=BENCHMARK, model=MODEL_NAME)
 
     try:
-        # Step 1 — Reset environment
         reset_resp = requests.post(
             f"{ENV_BASE_URL}/reset?task_id={task_id}",
             timeout=30
@@ -103,62 +136,128 @@ def run_episode(task_id: str) -> float:
         reset_resp.raise_for_status()
         obs = reset_resp.json()
 
-        contract_text       = obs.get("contract_text", "")
-        clauses             = obs.get("clauses", [])
-        num_contradictions  = obs.get("num_contradictions", 1)
-        instructions        = obs.get("instructions", "Find all contradictions in this contract.")
+        clauses = obs.get("clauses", [])
+        num_contradictions = obs.get("num_contradictions", 1)
+        instructions = obs.get("instructions", "Find all contradictions in this contract.")
 
-        # Step 2 — Build prompt
-        clause_list = "\n".join([
-            f"[{c['id']}] {c.get('title','')}: {c.get('text','')}"
-            for c in clauses
-        ])
+        clause_ids = [c["id"] for c in clauses]
+        print(f"Loaded {len(clauses)} clauses. IDs: {clause_ids}", flush=True)
 
-        user_message = (
-            f"{instructions}\n\n"
-            f"IMPORTANT: There are exactly {num_contradictions} contradiction(s) in this contract. "
-            f"Find all of them.\n\n"
-            f"=== STRUCTURED CLAUSE LIST ===\n{clause_list}"
-        )
+        if task_id == "hard":
+            print("\n" + "="*50)
+            print("CONTRACT DNA RISK FINGERPRINT")
+            print("="*50)
+            try:
+                fp_resp = requests.post(
+                    f"{ENV_BASE_URL}/fingerprint",
+                    json={"clause_texts": [c["text"] for c in clauses]},
+                    timeout=10
+                )
+                if fp_resp.status_code == 200:
+                    fp = fp_resp.json()
+                    print(f"Overall Risk: {fp['overall_risk']} ({fp['risk_label']})")
+                    print(f"Dominant Risk: {fp['dominant_risk_type']}")
+                    print(f"Numeric: {fp['numeric_risk']} | Temporal: {fp['temporal_risk']}")
+                    print(f"Party Obligation: {fp['party_obligation_risk']} | Termination: {fp['termination_risk']}")
+                    print(f"Conditional: {fp['conditional_risk']}")
+            except Exception as e:
+                print(f"Fingerprint failed: {e}")
+            print("="*50 + "\n")
+        
+        if "easy" in task_id:
+            max_pairs = 3
+        elif "medium" in task_id:
+            max_pairs = 6
+        elif "hard" in task_id:
+            max_pairs = 10
+        else:
+            max_pairs = 10
 
-        # Step 3 — Call LLM
-        completion = client.chat.completions.create(
-            model=MODEL_NAME,
-            messages=[
-                {"role": "system", "content": SYSTEM_PROMPT},
-                {"role": "user",   "content": user_message},
-            ],
-            max_tokens=2000,
-            temperature=0.0,
-        )
+        all_findings = []
 
-        raw = (completion.choices[0].message.content or "").strip()
-        raw = raw.replace("```json", "").replace("```", "").strip()
+        if len(clauses) <= 15:
+            clause_list = "\n".join([f"[{c['id']}] {c.get('title','')}: {c.get('text','')}" for c in clauses])
+            user_message = (
+                f"{instructions}\n\n"
+                f"IMPORTANT: There are exactly {num_contradictions} contradiction(s) in this contract. "
+                f"Find all of them.\n\n"
+                f"=== STRUCTURED CLAUSE LIST ===\n{clause_list}"
+            )
+            completion = client.chat.completions.create(
+                model=MODEL_NAME,
+                messages=[
+                    {"role": "system", "content": SYSTEM_PROMPT},
+                    {"role": "user",   "content": user_message},
+                ],
+                max_tokens=2000,
+                temperature=0.0,
+            )
+            raw = (completion.choices[0].message.content or "").strip()
+            all_findings.extend(extract_json_findings(raw))
+            time.sleep(1)
+        else:
+            window_size = 12
+            step_size = 10
+            
+            for i in range(0, len(clauses), step_size):
+                chunk = clauses[i:i + window_size]
+                if not chunk:
+                    break
+                
+                clause_list = "\n".join([f"[{c['id']}] {c.get('title','')}: {c.get('text','')}" for c in chunk])
+                user_message = (
+                    f"{instructions}\n\n"
+                    f"IMPORTANT: You are analyzing a small SUBSET of clauses from a larger contract.\n"
+                    f"There is a very high probability that there are ZERO contradictions in this subset.\n"
+                    f"If you do not see a direct, undeniable contradiction, return an empty findings array [].\n"
+                    f"Do NOT force a contradiction where none exists. False positives are heavily penalized.\n\n"
+                    f"=== STRUCTURED CLAUSE LIST ===\n{clause_list}"
+                )
+                
+                try:
+                    completion = client.chat.completions.create(
+                        model=MODEL_NAME,
+                        messages=[
+                            {"role": "system", "content": SYSTEM_PROMPT},
+                            {"role": "user",   "content": user_message},
+                        ],
+                        max_tokens=2000,
+                        temperature=0.0,
+                    )
+                    raw = (completion.choices[0].message.content or "").strip()
+                    findings = extract_json_findings(raw)
+                    all_findings.extend(findings)
+                except Exception as e:
+                    print(f"Chunk processing error: {e}", flush=True)
+                
+                time.sleep(1)
 
-        try:
-            result_json = json.loads(raw)
-            findings = result_json.get("findings", [])
-        except Exception:
-            findings = []
+        unique_findings = []
+        seen_pairs = set()
+        for f in all_findings:
+            pair = tuple(sorted([f["clause_a_id"], f["clause_b_id"]]))
+            if pair not in seen_pairs:
+                seen_pairs.add(pair)
+                unique_findings.append(f)
 
-        action_str = f"submitted_{len(findings)}_findings"
+        final_findings = unique_findings[:max_pairs]
+        print(f"\n[DEBUG] SUBMITTING {len(final_findings)} FINDINGS for {task_id}: {json.dumps(final_findings, indent=2)}\n", flush=True)
+        action_str = f"submitted_{len(final_findings)}_findings"
         steps_taken = 1
 
-        # Step 4 — Submit findings
         step_resp = requests.post(
             f"{ENV_BASE_URL}/step",
-            json={"findings": findings},
+            json={"findings": final_findings},
             timeout=30
         )
         step_resp.raise_for_status()
         step_data = step_resp.json()
 
-        score    = float(step_data.get("score", 0.001))
-        feedback = step_data.get("feedback", "")
-        done     = step_data.get("done", True)
+        score = float(step_data.get("score", 0.001))
+        done = step_data.get("done", True)
 
-        score   = max(0.001, min(0.999, score))
-        reward  = score
+        score = max(0.001, min(0.999, score))
+        reward = score
         success = score > 0.001
 
         rewards.append(reward)
@@ -176,7 +275,7 @@ def run_episode(task_id: str) -> float:
         steps_taken = max(steps_taken, 1)
         rewards = rewards or [0.001]
         log_step(step=steps_taken, action="error", reward=0.001, done=True, error=error_msg)
-        score   = 0.001
+        score = 0.001
         success = False
 
     finally:
@@ -432,28 +531,120 @@ def run_curriculum_episode(task_id: str, num_episodes: int = 5) -> float:
     return score
 
 
+# ── ConstitutionForge — Portfolio Episode ──────────────────────────────────────
+CONSTITUTION_SYSTEM_PROMPT = """You are a contract review specialist analyzing a portfolio of contracts. Your goal is to find CROSS-CONTRACT contradictions.
+
+A cross-contract contradiction occurs when two different contracts in the portfolio contain clauses that directly conflict with each other (e.g., Jurisdiction Conflict, Confidentiality Scope Conflict, IP Ownership Conflict, Liability Cap Conflict, Termination Notice Conflict).
+
+You must also identify CASCADE CHAINS: where fixing one contradiction creates another contradiction (e.g., finding 0 and finding 1 share a contradictory clause in a way that creates a chain).
+
+Respond ONLY with valid JSON — no markdown fences, no text outside JSON:
+{
+  "cross_findings": [
+    {
+      "contract_a_id": "contract_1",
+      "clause_a_id": "clause_01",
+      "contract_b_id": "contract_2",
+      "clause_b_id": "clause_02",
+      "contradiction_type": "Jurisdiction Conflict",
+      "explanation": "..."
+    }
+  ],
+  "cascade_chains": [
+    [0, 1] 
+  ]
+}
+If no contradictions found, include empty findings list.
+"""
+
+def run_constitution_episode(task_id: str) -> float:
+    rewards: List[float] = []
+    steps_taken = 0
+    score = 0.001
+    success = False
+
+    log_start(task=task_id, env=BENCHMARK, model=MODEL_NAME)
+
+    try:
+        reset_resp = requests.post(
+            f"{ENV_BASE_URL}/constitution/reset?task_id={task_id}",
+            timeout=30
+        )
+        reset_resp.raise_for_status()
+        obs = reset_resp.json()
+
+        contracts = obs.get("contracts", [])
+        instructions = obs.get("instructions", "")
+
+        portfolio_str = "=== PORTFOLIO ===\n"
+        for c in contracts:
+            portfolio_str += f"\nContract ID: {c['contract_id']} (Type: {c['contract_type']})\n"
+            for clause in c.get("clauses", []):
+                portfolio_str += f"  [{clause['id']}] {clause.get('title', '')}: {clause.get('text', '')}\n"
+
+        user_message = f"{instructions}\n\n{portfolio_str}"
+
+        completion = client.chat.completions.create(
+            model=MODEL_NAME,
+            messages=[
+                {"role": "system", "content": CONSTITUTION_SYSTEM_PROMPT},
+                {"role": "user", "content": user_message},
+            ],
+            max_tokens=2000,
+            temperature=0.0,
+        )
+        raw = (completion.choices[0].message.content or "").strip()
+        raw = raw.replace("```json", "").replace("```", "").strip()
+
+        try:
+            action_payload = json.loads(raw)
+            if "cross_findings" not in action_payload:
+                action_payload = {"cross_findings": [], "cascade_chains": []}
+        except Exception:
+            action_payload = {"cross_findings": [], "cascade_chains": []}
+
+        steps_taken = 1
+
+        step_resp = requests.post(
+            f"{ENV_BASE_URL}/constitution/step?task_id={task_id}",
+            json=action_payload,
+            timeout=30
+        )
+        step_resp.raise_for_status()
+        step_data = step_resp.json()
+
+        score = float(step_data.get("score", 0.001))
+        done = step_data.get("done", True)
+        score = max(0.001, min(1.0, score))
+        reward = score
+        success = score > 0.001
+        rewards.append(reward)
+
+        log_step(step=1, action=f"submitted_{len(action_payload.get('cross_findings', []))}_findings", reward=reward, done=done, error=None)
+
+    except Exception as e:
+        error_msg = str(e)
+        steps_taken = max(steps_taken, 1)
+        rewards = rewards or [0.001]
+        log_step(step=steps_taken, action="error", reward=0.001, done=True, error=error_msg)
+        score = 0.001
+        success = False
+    finally:
+        log_end(success=success, steps=steps_taken, score=score, rewards=rewards)
+
+    return score
+
+
 # ── Main ──────────────────────────────────────────────────────────────────────
 def main():
-    tasks  = ["easy", "medium", "hard"]
-    adversarial_tasks = [
-        "adversarial_easy", "adversarial_medium",
-        "adversarial_hard", "adversarial_selfplay",
-    ]
-    curriculum_tasks = ["curriculum_standard", "curriculum_paired"]
+    tasks  = ["medium", "hard", "constitution_easy", "constitution_medium", "constitution_hard"]
     scores = {}
 
     for task_id in tasks:
-        score = run_episode(task_id)
-        scores[task_id] = score
-        print("", flush=True)
-
-    for task_id in adversarial_tasks:
-        score = run_adversarial_episode(task_id)
-        scores[task_id] = score
-        print("", flush=True)
-
-    for task_id in curriculum_tasks:
-        score = run_curriculum_episode(task_id, num_episodes=3)
+        if task_id.startswith("constitution_"):
+            score = run_constitution_episode(task_id)
+        else:
+            score = run_episode(task_id)
         scores[task_id] = score
         print("", flush=True)
 
