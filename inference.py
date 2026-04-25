@@ -40,6 +40,7 @@ def _create_with_retry(*args, **kwargs):
             err_str = str(e)
             if '429' in err_str or 'rate_limit_exceeded' in err_str:
                 if attempt < max_retries - 1:
+                    import time
                     print(f"Rate limited. Sleeping for 20s... (Attempt {attempt+1}/{max_retries})", flush=True)
                     time.sleep(20)
                 else:
@@ -51,6 +52,7 @@ def _create_with_retry(*args, **kwargs):
                     if isinstance(msg.get('content', ''), str) and len(msg['content']) > 4000:
                         msg['content'] = msg['content'][:3000] + "\n...[TRUNCATED due to context limit]"
                 if attempt < max_retries - 1:
+                    import time
                     time.sleep(5)
                 else:
                     raise e
@@ -59,6 +61,7 @@ def _create_with_retry(*args, **kwargs):
     return _original_create(*args, **kwargs)
 
 client.chat.completions.create = _create_with_retry
+
 
 # ── Required log functions ─────────────────────────────────────────────────────
 def log_start(task: str, env: str, model: str) -> None:
@@ -120,33 +123,61 @@ Respond ONLY with valid JSON — no markdown fences, no text outside JSON:
 If no contradictions found, include empty findings list."""
 
 # ── Run one episode ───────────────────────────────────────────────────────────
-def extract_json_findings(raw_text: str) -> List[Dict]:
-    print(f"RAW LLM RESPONSE (first 300 chars):\n{raw_text[:300]}\n" + "-"*40, flush=True)
+def normalize_finding(finding_dict):
+    if not isinstance(finding_dict, dict):
+        return None
+    clause_a_keys = ["clause_a_id", "clause_a", "clauseA", "clause_1", "first_clause", "clause_id_a", "clauase_a_id"]
+    clause_b_keys = ["clause_b_id", "clause_b", "clauseB", "clause_2", "second_clause", "clause_id_b"]
+    explanation_keys = ["explanation", "reason", "description", "conflict", "rationale", "details", "note"]
     
-    # Try to find JSON block
-    match = re.search(r'\{.*\}', raw_text.replace('\n', ' '), re.DOTALL)
-    if match:
-        json_str = match.group(0)
-    else:
-        json_str = raw_text
-        
+    clause_a_val = clause_b_val = explanation_val = None
+    
+    for k, v in finding_dict.items():
+        k_lower = str(k).lower()
+        if not clause_a_val and k_lower in clause_a_keys:
+            clause_a_val = v
+        elif not clause_b_val and k_lower in clause_b_keys:
+            clause_b_val = v
+        elif not explanation_val and k_lower in explanation_keys:
+            explanation_val = v
+            
+    if clause_a_val and clause_b_val:
+        return {
+            "clause_a_id": str(clause_a_val),
+            "clause_b_id": str(clause_b_val),
+            "explanation": str(explanation_val or "")
+        }
+    return None
+
+def extract_json_findings(raw_text: str) -> List[Dict]:
     try:
-        clean_str = json_str.replace("```json", "").replace("```", "").strip()
+        clean_str = raw_text.replace("```json", "").replace("```", "").strip()
+        # Try to find the outermost JSON array or object
+        start_bracket = clean_str.find('[')
+        start_brace = clean_str.find('{')
+        
+        if start_bracket != -1 and (start_brace == -1 or start_bracket < start_brace):
+            # Array-first
+            end_bracket = clean_str.rfind(']')
+            if end_bracket != -1:
+                clean_str = clean_str[start_bracket:end_bracket+1]
+        elif start_brace != -1:
+            # Object-first
+            end_brace = clean_str.rfind('}')
+            if end_brace != -1:
+                clean_str = clean_str[start_brace:end_brace+1]
+
         data = json.loads(clean_str)
-        findings = data.get("findings", [])
+        if isinstance(data, list):
+            findings = data
+        else:
+            findings = data.get("findings", [data])
         
         cleaned_findings = []
         for f in findings:
-            if isinstance(f, dict):
-                clause_a = f.get("clause_a_id") or f.get("clause_a", "")
-                clause_b = f.get("clause_b_id") or f.get("clause_b", "")
-                explanation = f.get("explanation", "")
-                if clause_a and clause_b:
-                    cleaned_findings.append({
-                        "clause_a_id": str(clause_a),
-                        "clause_b_id": str(clause_b),
-                        "explanation": str(explanation)
-                    })
+            nf = normalize_finding(f)
+            if nf:
+                cleaned_findings.append(nf)
         return cleaned_findings
     except Exception as e:
         print(f"JSON parsing failed: {e}", flush=True)
@@ -372,6 +403,125 @@ Respond ONLY with valid JSON:
 }"""
 
 
+
+# ── Execution Environment ────────────────────────────────────────────────────
+def run_execution_episode(task_id: str) -> float:
+    rewards = []
+    steps_taken = 0
+    score = 0.001
+    success = False
+    log_start(task=task_id, env=BENCHMARK, model=MODEL_NAME)
+    try:
+        reset_resp = requests.post(f"{ENV_BASE_URL}/reset?task_id={task_id}", timeout=30)
+        reset_resp.raise_for_status()
+        obs = reset_resp.json()
+        
+        system_prompt = """You are a contract execution simulator.
+Respond with ONLY a JSON object with key scenario_analyses containing an array. Each element must have exactly these keys: scenario_id, crashes as boolean, crash_pair as array of two clause ID strings, crash_description as string. Use exact scenario_id and clause_id values from the observation. No markdown."""
+        
+        user_message = f"=== OBSERVATION ===\n{json.dumps(obs, indent=2)}\nAnalyze execution."
+        completion = client.chat.completions.create(
+            model=MODEL_NAME,
+            messages=[
+                {"role": "system", "content": system_prompt},
+                {"role": "user", "content": user_message},
+            ],
+            max_tokens=2000, temperature=0.0,
+        )
+        raw = (completion.choices[0].message.content or "").strip()
+        raw = raw.replace("```json", "").replace("```", "").strip()
+        try:
+            parsed = json.loads(raw)
+            analyses = parsed if isinstance(parsed, list) else parsed.get("scenario_analyses", [])
+            normalized = []
+            for a in analyses:
+                if not isinstance(a, dict): continue
+                crashes_val = a.get("crashes", a.get("is_crash", a.get("has_crash", a.get("crash", False))))
+                pair_val = a.get("crash_pair", a.get("clause_pair", a.get("conflicting_clauses", a.get("crashed_clauses", []))))
+                normalized.append({
+                    "scenario_id": str(a.get("scenario_id", "")),
+                    "crashes": bool(crashes_val),
+                    "crash_pair": pair_val,
+                    "crash_description": str(a.get("crash_description", ""))
+                })
+        except Exception:
+            normalized = []
+            
+        action_payload = {"scenario_analyses": normalized}
+        steps_taken = 1
+        step_resp = requests.post(f"{ENV_BASE_URL}/execution/step?task_id={task_id}", json=action_payload, timeout=30)
+        step_resp.raise_for_status()
+        step_data = step_resp.json()
+        score = max(0.001, min(0.999, float(step_data.get("score", 0.001))))
+        success = score > 0.001
+        rewards.append(score)
+        log_step(1, "submit_analyses", score, True, None)
+    except Exception as e:
+        steps_taken = max(1, steps_taken)
+        rewards.append(0.001)
+        log_step(steps_taken, "error", 0.001, True, str(e))
+    finally:
+        log_end(success, steps_taken, score, rewards)
+    return score
+
+# ── LexMind Environment ──────────────────────────────────────────────────────
+def run_lexmind_episode(task_id: str) -> float:
+    rewards = []
+    steps_taken = 0
+    score = 0.001
+    success = False
+    log_start(task=task_id, env=BENCHMARK, model=MODEL_NAME)
+    try:
+        reset_resp = requests.post(f"{ENV_BASE_URL}/reset?task_id={task_id}", timeout=30)
+        reset_resp.raise_for_status()
+        obs = reset_resp.json()
+        
+        system_prompt = """You are analyzing a sequence of contract drafting events.
+Respond with ONLY a JSON object with key predictions containing an array. Each element must have exactly: event_id, introduces_contradiction as boolean, contradicts_clause_id as string or null, contradiction_type as string or null. Use exact event_id values from the drafting sequence. No markdown."""
+        
+        user_message = f"=== OBSERVATION ===\n{json.dumps(obs, indent=2)}\nAnalyze drafting sequence."
+        completion = client.chat.completions.create(
+            model=MODEL_NAME,
+            messages=[
+                {"role": "system", "content": system_prompt},
+                {"role": "user", "content": user_message},
+            ],
+            max_tokens=2000, temperature=0.0,
+        )
+        raw = (completion.choices[0].message.content or "").strip()
+        raw = raw.replace("```json", "").replace("```", "").strip()
+        try:
+            parsed = json.loads(raw)
+            preds = parsed if isinstance(parsed, list) else parsed.get("predictions", [])
+            normalized = []
+            for p in preds:
+                if not isinstance(p, dict): continue
+                intro_val = p.get("introduces_contradiction", p.get("has_contradiction", p.get("is_contradiction", p.get("contradicts", False))))
+                normalized.append({
+                    "event_id": str(p.get("event_id", "")),
+                    "introduces_contradiction": bool(intro_val),
+                    "contradicts_clause_id": p.get("contradicts_clause_id"),
+                    "contradiction_type": p.get("contradiction_type")
+                })
+        except Exception:
+            normalized = []
+            
+        action_payload = {"predictions": normalized}
+        steps_taken = 1
+        step_resp = requests.post(f"{ENV_BASE_URL}/lexmind/step?task_id={task_id}", json=action_payload, timeout=30)
+        step_resp.raise_for_status()
+        step_data = step_resp.json()
+        score = max(0.001, min(0.999, float(step_data.get("score", 0.001))))
+        success = score > 0.001
+        rewards.append(score)
+        log_step(1, "submit_predictions", score, True, None)
+    except Exception as e:
+        steps_taken = max(1, steps_taken)
+        rewards.append(0.001)
+        log_step(steps_taken, "error", 0.001, True, str(e))
+    finally:
+        log_end(success, steps_taken, score, rewards)
+    return score
 def run_adversarial_episode(task_id: str) -> float:
     rewards: List[float] = []
     steps_taken = 0
@@ -387,66 +537,54 @@ def run_adversarial_episode(task_id: str) -> float:
         )
         reset_resp.raise_for_status()
         obs = reset_resp.json()
-
+        
+        role = obs.get("role", "forger") 
         clauses = obs.get("clauses", [])
-        taxonomy = obs.get("obligation_taxonomy", [])
-        forbidden = obs.get("forbidden_lexical_patterns", [])
+        clause_list = "\n".join([f"[{c['id']}] {c.get('title','')}: {c.get('text','')}" for c in clauses])
 
-        clause_list = "\n".join([
-            f"[{c['id']}] {c.get('title','')}: {c.get('text','')}"
-            for c in clauses
-        ])
-
-        taxonomy_str = "\n".join([
-            f"  {t['clause_id']}: {', '.join(t.get('obligations', []))}"
-            for t in taxonomy
-        ])
-
-        user_message = (
-            f"CONTRACT TITLE: {obs.get('contract_title', '')}\n\n"
-            f"=== CLAUSES ===\n{clause_list}\n\n"
-            f"=== OBLIGATION TAXONOMY ===\n{taxonomy_str}\n\n"
-            f"=== FORBIDDEN LEXICAL PATTERNS ===\n{', '.join(forbidden)}\n\n"
-            f"{obs.get('instructions', '')}"
-        )
+        if role == "forger":
+            system_prompt = """Respond with ONLY a JSON object with keys: role as forger, target_clause_id as string, injected_text as string containing valid legal clause text, contradiction_type as one of numeric temporal conditional party_obligation termination. No markdown."""
+            user_msg = f"=== CLAUSES ===\n{clause_list}\n\n{obs.get('instructions', '')}"
+        else:
+            system_prompt = """Respond with ONLY a JSON object with keys: role as auditor, clause_a_id as string, clause_b_id as string, explanation as string. No markdown."""
+            user_msg = f"=== CLAUSES ===\n{clause_list}\n\nFind the contradiction."
 
         completion = client.chat.completions.create(
             model=MODEL_NAME,
             messages=[
-                {"role": "system", "content": FORGER_SYSTEM_PROMPT},
-                {"role": "user", "content": user_message},
+                {"role": "system", "content": system_prompt},
+                {"role": "user", "content": user_msg},
             ],
             max_tokens=2000,
-            temperature=0.3,
+            temperature=0.3 if role == "forger" else 0.0,
         )
-
         raw = (completion.choices[0].message.content or "").strip()
         raw = raw.replace("```json", "").replace("```", "").strip()
 
         try:
-            forger_action = json.loads(raw)
+            action_payload = json.loads(raw)
+            if role == "auditor":
+                raw_findings = action_payload if isinstance(action_payload, list) else action_payload.get("findings", [action_payload])
+                findings = [normalize_finding(f) for f in raw_findings if normalize_finding(f)]
+                action_payload = {"findings": findings}
         except Exception:
-            forger_action = {
-                "target_clause_id": clauses[0]["id"] if clauses else "clause_01",
-                "modified_clause_text": "All obligations under this agreement shall be performed within fifteen (15) business days.",
-                "injected_clause_text": "The contracted deliverables require a minimum processing window of forty-five (45) calendar days from commencement.",
-                "inject_after_clause_id": clauses[-1]["id"] if clauses else "clause_01",
-                "claimed_contradiction_type": "temporal",
-                "stealth_rationale": "Fallback injection",
-            }
+            if role == "forger":
+                action_payload = {"role": "forger", "target_clause_id": clauses[0]["id"] if clauses else "clause_01", "injected_text": "All obligations shall be performed within forty-five (45) days.", "contradiction_type": "temporal"}
+            else:
+                action_payload = {"findings": []}
 
-        action_str = f"forger_inject_{forger_action.get('target_clause_id', 'unknown')}"
+        if role == "forger":
+            step_url = f"{ENV_BASE_URL}/adversarial/forger_step?task_id={task_id}"
+            action_str = f"forger_inject_{action_payload.get('target_clause_id', 'unknown')}"
+        else:
+            step_url = f"{ENV_BASE_URL}/adversarial/auditor_step?task_id={task_id}"
+            action_str = "auditor_submit_findings"
+
         steps_taken = 1
-
-        step_resp = requests.post(
-            f"{ENV_BASE_URL}/adversarial/forger_step?task_id={task_id}",
-            json=forger_action,
-            timeout=30,
-        )
+        step_resp = requests.post(step_url, json=action_payload, timeout=30)
         step_resp.raise_for_status()
         result = step_resp.json()
-
-        score = float(result.get("forger_score", 0.001))
+        score = float(result.get("score", result.get("forger_score", result.get("auditor_score", 0.001))))
         score = max(0.001, min(0.999, score))
         reward = score
         success = score > 0.001
@@ -598,30 +736,8 @@ def run_curriculum_episode(task_id: str, num_episodes: int = 5) -> float:
 
 
 # ── ConstitutionForge — Portfolio Episode ──────────────────────────────────────
-CONSTITUTION_SYSTEM_PROMPT = """You are a contract review specialist analyzing a portfolio of contracts. Your goal is to find CROSS-CONTRACT contradictions.
-
-A cross-contract contradiction occurs when two different contracts in the portfolio contain clauses that directly conflict with each other (e.g., Jurisdiction Conflict, Confidentiality Scope Conflict, IP Ownership Conflict, Liability Cap Conflict, Termination Notice Conflict).
-
-You must also identify CASCADE CHAINS: where fixing one contradiction creates another contradiction (e.g., finding 0 and finding 1 share a contradictory clause in a way that creates a chain).
-
-Respond ONLY with valid JSON — no markdown fences, no text outside JSON:
-{
-  "cross_findings": [
-    {
-      "contract_a_id": "contract_1",
-      "clause_a_id": "clause_01",
-      "contract_b_id": "contract_2",
-      "clause_b_id": "clause_02",
-      "contradiction_type": "Jurisdiction Conflict",
-      "explanation": "..."
-    }
-  ],
-  "cascade_chains": [
-    [0, 1] 
-  ]
-}
-If no contradictions found, include empty findings list.
-"""
+CONSTITUTION_SYSTEM_PROMPT = """You have received multiple contracts. Compare every clause in each contract against every clause in every other contract. Look for these conflict types: jurisdiction, IP ownership, liability cap, confidentiality scope, termination notice.
+Respond with ONLY a JSON object with key cross_findings containing an array. Each element must have exactly: contract_a_id, clause_a_id, contract_b_id, clause_b_id, contradiction_type, explanation. No markdown."""
 
 def run_constitution_episode(task_id: str) -> float:
     rewards: List[float] = []
@@ -737,29 +853,9 @@ Respond ONLY with valid JSON:
   "commercial_intent_label": "BUYER_FAVORABLE"
 }"""
 
-REGULATOR_SYSTEM_PROMPT = """You are the REGULATOR agent monitoring a contract for regulatory violations. You must flag clauses that violate the specified regulatory frameworks.
-
-GDPR violations: unauthorized data sharing, cross-border transfers without safeguards, indefinite data retention, lack of data subject rights, processing without lawful basis.
-
-SOX violations: modification of audit trails, off-balance-sheet arrangements, discretionary revenue recognition, lack of internal controls.
-
-EXPORT_CONTROL violations: sublicensing controlled technology without approval, cross-border technology transfer without end-use restrictions, sharing with foreign entities without authorization.
-
-ANTI_BRIBERY violations: facilitation payments to officials, engagement fees to procurement officers, discretionary payments to government officials.
-
-SCORING: +1.0 per correct detection, -0.5 per missed violation, -0.3 per false positive. Be precise.
-
-Respond ONLY with valid JSON:
-{
-  "flags": [
-    {
-      "clause_id": "clause_XX",
-      "violation_type": "GDPR",
-      "explanation": "Why this violates the framework"
-    }
-  ]
-}
-If no violations found, return {"flags": []}."""
+REGULATOR_SYSTEM_PROMPT = """You are a strict legal regulator. Your goal is to flag ANY potential violation of the compliance frameworks (GDPR, SOX, etc.). 
+CRITICAL: Missing a violation is penalized much more heavily than a false positive. If a clause is even slightly suspicious or ambiguous, FLAG IT. 
+Respond with ONLY a JSON object with key flags containing an array. Each element must have: clause_id, violation_type, explanation. No markdown."""
 
 
 def run_federated_episode(task_id: str) -> float:
@@ -970,29 +1066,8 @@ def run_federated_episode(task_id: str) -> float:
 
 # ── ContractTimeMachine — Forensic Attribution ────────────────────────────────
 
-TIMEMACHINE_SYSTEM_PROMPT = """You are a forensic contract analyst performing causal attribution. You receive the complete version history of a contract that contains a fatal contradiction.
-
-Your task:
-1. Examine the FINAL version to identify the contradicting clause pair
-2. Work BACKWARDS through the version history doing diff analysis
-3. Find the EXACT version where the contradiction was first introduced
-4. Identify which party (Drafter or Counterparty) authored that version
-
-STRATEGY:
-- First find the contradiction in the final version
-- Then check each version from earliest to latest
-- For each version, check if both conflicting clauses exist AND conflict
-- The introduction version is the FIRST version where the conflict appears
-- The author of that version is the party who introduced it
-
-Respond ONLY with valid JSON:
-{
-  "introduced_at_version": 4,
-  "introduced_by": "Counterparty",
-  "clause_a_id": "clause_03",
-  "clause_b_id": "clause_06",
-  "explanation": "At v4, Counterparty changed clause_06 payment terms to 14 days while clause_03 still says 30 days."
-}"""
+TIMEMACHINE_SYSTEM_PROMPT = """You have received a contract version history. Compare each version to the previous version. Find which version first introduced a contradiction between two clauses that persists in all later versions.
+Respond with ONLY a JSON object with key attribution containing: introduced_at_version as integer, introduced_by as either Drafter or Counterparty, clause_a_id as string, clause_b_id as string, explanation as string. No markdown."""
 
 
 def run_timemachine_episode(task_id: str) -> float:
@@ -1124,8 +1199,14 @@ def main():
             score = run_federated_episode(task_id)
         elif task_id.startswith("constitution_"):
             score = run_constitution_episode(task_id)
-        # Note: adversarial, lexmind, execution, curriculum might need special runners 
-        # but if they don't exist in inference.py currently, fallback to run_episode
+        elif task_id.startswith("execution_"):
+            score = run_execution_episode(task_id)
+        elif task_id.startswith("lexmind_"):
+            score = run_lexmind_episode(task_id)
+        elif task_id.startswith("adversarial_"):
+            score = run_adversarial_episode(task_id)
+        elif task_id.startswith("curriculum_"):
+            score = run_curriculum_episode(task_id)
         else:
             score = run_episode(task_id)
         

@@ -501,3 +501,79 @@ FederatedArena: 5 rounds, frameworks: GDPR, SOX, EXPORT_CONTROL, ANTI_BRIBERY
 [STEP] step=10 action=seller_inject_r4 reward=0.00 done=false error=null
 [STEP] step=11 action=buyer_inject_r4 reward=0.00 done=false error=null
 [STEP] step=12 action=regulator_flag_r4 reward=2.20 done=false error=null
+[STEP] step=13 action=seller_inject_r5 reward=0.00 done=false error=null
+[STEP] step=14 action=buyer_inject_r5 reward=0.00 done=false error=null
+[STEP] step=15 action=regulator_flag_r5 reward=1.90 done=true error=null
+
+==================================================
+FEDERATED ARENA RESULTS — FEDERATED_HARD
+==================================================
+Seller Score:  0.0010
+Buyer Score:   0.0600
+Regulator:     0.9990
+Commercial:    0.1200
+Compliance:    1.0000
+Violations:    5/5
+False Pos:     19
+==================================================
+
+[END] success=true steps=15 score=0.353 rewards=5.70,3.40,3.10,2.20,1.90
+
+[START] task=timemachine_easy env=clausr model=llama-3.1-8b-instant
+TimeMachine: 6 versions, type hint: numeric
+
+==================================================
+TIMEMACHINE RESULTS — TIMEMACHINE_EASY
+==================================================
+Score: 0.2000
+Feedback: CLOSE: you said v4, actual was v3 (±1 partial credit). | WRONG: you said Counterparty, actual was Drafter. | WRONG: expected clause_04 ↔ clause_07, got clause_05 ↔ clause_10.
+  version_score: 0.20
+  author_score: 0.00
+  clause_pair_score: 0.00
+==================================================
+
+[STEP] step=1 action=attribution_submitted reward=0.20 done=true error=null
+[END] success=true steps=1 score=0.200 rewards=0.20
+
+[START] task=timemachine_medium env=clausr model=llama-3.1-8b-instant
+TimeMachine: 12 versions, type hint: party_obligation
+Rate limited. Sleeping for 20s... (Attempt 1/3)
+Rate limited. Sleeping for 20s... (Attempt 2/3)
+[STEP] step=1 action=error reward=0.00 done=true error=Error code: 413 - {'error': {'message': 'Request too large for model `llama-3.1-8b-instant` in organization `org_01kq22c6k0fzfrxqvvx248xzdz` service tier `on_demand` on tokens per minute (TPM): Limit 6000, Requested 6510, please reduce your message size and try again. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}
+[END] success=false steps=1 score=0.001 rewards=0.00
+
+[START] task=timemachine_hard env=clausr model=llama-3.1-8b-instant
+TimeMachine: 15 versions, type hint: termination
+Rate limited. Sleeping for 20s... (Attempt 1/3)
+Rate limited. Sleeping for 20s... (Attempt 2/3)
+[STEP] step=1 action=error reward=0.00 done=true error=Error code: 413 - {'error': {'message': 'Request too large for model `llama-3.1-8b-instant` in organization `org_01kq22c6k0fzfrxqvvx248xzdz` service tier `on_demand` on tokens per minute (TPM): Limit 6000, Requested 9599, please reduce your message size and try again. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}
+[END] success=false steps=1 score=0.001 rewards=0.00
+
+==================================================
+CLAUSR INFERENCE RESULTS
+==================================================
+EASY                      0.0010
+MEDIUM                    0.0010
+HARD                      0.0010
+EXECUTION_EASY            0.0010
+EXECUTION_MEDIUM          0.0010
+EXECUTION_HARD            0.0010
+LEXMIND_EASY              0.0010
+LEXMIND_MEDIUM            0.0010
+LEXMIND_HARD              0.0010
+ADVERSARIAL_EASY          0.0010
+ADVERSARIAL_MEDIUM        0.0010
+ADVERSARIAL_HARD          0.0010
+ADVERSARIAL_SELFPLAY      0.0010
+CURRICULUM_ADAPTIVE       0.0010
+CONSTITUTION_EASY         0.0010
+CONSTITUTION_MEDIUM       0.0010
+CONSTITUTION_HARD         0.0010
+FEDERATED_EASY            0.4571
+FEDERATED_MEDIUM          0.6286
+FEDERATED_HARD            0.3533
+TIMEMACHINE_EASY          0.2000
+TIMEMACHINE_MEDIUM        0.0010
+TIMEMACHINE_HARD          0.0010
+MEAN                      0.0721
+==================================================
