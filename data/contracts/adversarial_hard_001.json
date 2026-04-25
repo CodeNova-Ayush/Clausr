@@ -1,0 +1,429 @@
+{
+  "contract_id": "adversarial_hard_001",
+  "task_id": "adversarial_hard",
+  "title": "Enterprise MSA between Nexus Technologies Corp and Continental Holdings Group",
+  "contract_text": "Parties and Recitals\nThis Enterprise Master Services Agreement (\"MSA\") is entered into between Nexus Technologies Corp, a Delaware corporation (\"Vendor\"), and Continental Holdings Group, a multinational conglomerate headquartered in New York (\"Client\").\n\nDefinitions\n\"Business Day\" means Monday through Friday, excluding federal holidays. \"Deliverables\" means all work product. \"Services\" means professional consulting, integration, and managed services. \"Confidential Information\" means all non-public information disclosed by either party.\n\nScope of Services\nVendor shall provide enterprise technology consulting, systems integration, cloud migration, and application development services as specified in each Statement of Work.\n\nStatements of Work\nEach engagement shall be governed by a separate Statement of Work referencing this MSA.\n\nPayment Terms\nAll invoices are payable within Net 30 days of receipt. Late payments accrue interest at 1.5% per month.\n\nPersonnel\nVendor shall assign qualified personnel with relevant expertise. Client may request replacement of assigned personnel.\n\nLicense to Deliverables\nVendor grants Client a perpetual, worldwide, royalty-free license to use, modify, and create derivative works from all Deliverables.\n\nRecurring Services Payment\nManaged services invoices follow Net 45 payment terms from invoice date.\n\nVendor Liability Cap\nVendor's total aggregate liability shall not exceed Five Hundred Thousand Dollars ($500,000).\n\nService Warranty\nVendor warrants Services shall be performed in a professional manner consistent with industry standards.\n\nVendor Indemnification\nVendor shall indemnify and defend Client against all third-party claims arising from Vendor's negligence or willful misconduct.\n\nConfidentiality\nEach party shall protect Confidential Information with reasonable care for a period of three (3) years following termination.\n\nClient Audit Rights\nClient may audit Vendor's systems, records, and processes at any time upon five (5) Business Days written notice.\n\nData Processing Location\nAll primary data processing shall occur within facilities in the United States and Canada.\n\nData Protection\nVendor shall comply with CCPA, GDPR, and applicable privacy laws. All personal data shall be encrypted at rest and in transit.\n\nVendor Insurance\nVendor shall maintain general liability insurance of Two Million Dollars ($2,000,000) per occurrence and name Client as additional insured.\n\nRegulatory Compliance\nBoth parties shall comply with all applicable federal, state, and local laws.\n\nDeliverable Restrictions\nClient may not modify, reverse engineer, decompile, or create derivative works from any Deliverables without Vendor's written approval.\n\nNon-Solicitation\nDuring the term and for twelve (12) months after termination, neither party shall solicit the other's employees.\n\nTermination for Convenience\nEither party may terminate this Agreement at any time upon thirty (30) days written notice without cause.\n\nTermination for Breach\nEither party may terminate immediately upon material breach uncured for thirty (30) days after written notice.\n\nAP Processing Cycle\nClient's accounts payable cycle requires sixty (60) days from invoice receipt before payment issuance.\n\nTransition Services\nUpon termination, Vendor shall provide ninety (90) days of transition services.\n\nChange Management\nScope or fee changes require a signed Change Order.\n\nTermination for Cause Notice\nFor material breach, the non-breaching party may terminate upon fourteen (14) days written notice.\n\nGoverning Law\nThis Agreement is governed by Delaware law.\n\nDispute Resolution\nDisputes shall be escalated to senior management, then binding arbitration under AAA rules in Wilmington, Delaware.\n\nStrategic Account Terms\nNotwithstanding clause_08, strategic accounts designated by Vendor's CFO are eligible for Net 90 terms.\n\nSubcontracting\nVendor may subcontract with Client's prior written consent.\n\nService Levels\nVendor shall meet SLA targets. Three consecutive months of SLA failures entitle Client to service credits.\n\nAggregate Liability Cap\nTotal aggregate liability of either party, including indemnification, shall not exceed One Million Dollars ($1,000,000).\n\nExport Controls\nNeither party shall export data or software in violation of US export control laws.\n\nAnti-Corruption\nBoth parties comply with the FCPA and applicable anti-corruption laws.\n\nRecords Retention\nEach party shall maintain records related to this Agreement for five (5) years following termination.\n\nMutual Indemnification Waiver\nEach party shall defend itself against third-party claims. Neither party has any obligation to indemnify the other.\n\nPublicity\nNeither party shall issue press releases about this Agreement without the other's written approval.\n\nIndependent Contractors\nThe parties are independent contractors. Nothing creates a partnership, joint venture, or employment relationship.\n\nResponse Time SLA\nVendor shall respond to Priority 1 incidents within four (4) Business Hours (8 AM to 8 PM Eastern, including Saturdays).\n\nBackground Checks\nAll Vendor personnel at Client facilities shall undergo background screening.\n\nVendor Operational Confidentiality\nVendor's internal systems and processes are proprietary. Client has no right to inspect or audit Vendor's internal operations.\n\nBusiness Continuity\nVendor shall maintain and annually test a business continuity and disaster recovery plan.\n\nAccessibility\nSoftware deliverables shall comply with WCAG 2.1 Level AA.\n\nEnvironmental Responsibility\nBoth parties commit to environmentally responsible operations.\n\nClient Insurance Responsibility\nClient is solely responsible for all insurance coverage. Vendor assumes no insurance obligations.\n\nTechnology Refresh\nVendor shall update infrastructure to current versions annually at no cost.\n\nMonthly Reports\nVendor shall provide monthly status reports by the fifth Business Day of each month.\n\nEscalation Matrix\nBoth parties shall follow the escalation matrix in Schedule C.\n\nExtended Termination Notice\nFor convenience termination, ninety (90) days written notice is required for orderly wind-down.\n\nAcceptance Testing\nClient has fifteen (15) Business Days from delivery for acceptance testing.\n\nCode of Conduct\nVendor personnel shall adhere to Client's Code of Conduct on Client premises.\n\nBenchmarking\nClient may engage an independent third party to benchmark Vendor's pricing annually.\n\nMinimum Commitment\nNeither party may terminate for convenience during the initial twelve (12) month term. Thereafter, 180 days notice required.\n\nSurvival\nConfidentiality, Liability, Indemnification, IP, and Governing Law survive termination.\n\nThird-Party Software\nVendor ensures all third-party software in Deliverables is properly licensed.\n\nSeverability\nInvalid provisions do not affect the remaining provisions.\n\nWaiver\nFailure to enforce a provision does not waive the right to enforce it later.\n\nAssignment\nAssignment requires consent except for mergers or asset sales.\n\nDR Facilities\nBackup replication and disaster recovery may use facilities outside the primary Territory, including EU and APAC data centers.\n\nEntire Agreement\nThis Agreement and all SOWs constitute the entire agreement.\n\nCounterparts\nMay be executed in counterparts.",
+  "clauses": [
+    {
+      "id": "clause_01",
+      "title": "Parties and Recitals",
+      "text": "This Enterprise Master Services Agreement (\"MSA\") is entered into between Nexus Technologies Corp, a Delaware corporation (\"Vendor\"), and Continental Holdings Group, a multinational conglomerate headquartered in New York (\"Client\")."
+    },
+    {
+      "id": "clause_02",
+      "title": "Definitions",
+      "text": "\"Business Day\" means Monday through Friday, excluding federal holidays. \"Deliverables\" means all work product. \"Services\" means professional consulting, integration, and managed services. \"Confidential Information\" means all non-public information disclosed by either party."
+    },
+    {
+      "id": "clause_03",
+      "title": "Scope of Services",
+      "text": "Vendor shall provide enterprise technology consulting, systems integration, cloud migration, and application development services as specified in each Statement of Work."
+    },
+    {
+      "id": "clause_04",
+      "title": "Statements of Work",
+      "text": "Each engagement shall be governed by a separate Statement of Work referencing this MSA."
+    },
+    {
+      "id": "clause_05",
+      "title": "Payment Terms",
+      "text": "All invoices are payable within Net 30 days of receipt. Late payments accrue interest at 1.5% per month."
+    },
+    {
+      "id": "clause_06",
+      "title": "Personnel",
+      "text": "Vendor shall assign qualified personnel with relevant expertise. Client may request replacement of assigned personnel."
+    },
+    {
+      "id": "clause_07",
+      "title": "License to Deliverables",
+      "text": "Vendor grants Client a perpetual, worldwide, royalty-free license to use, modify, and create derivative works from all Deliverables."
+    },
+    {
+      "id": "clause_08",
+      "title": "Recurring Services Payment",
+      "text": "Managed services invoices follow Net 45 payment terms from invoice date."
+    },
+    {
+      "id": "clause_09",
+      "title": "Vendor Liability Cap",
+      "text": "Vendor's total aggregate liability shall not exceed Five Hundred Thousand Dollars ($500,000)."
+    },
+    {
+      "id": "clause_10",
+      "title": "Service Warranty",
+      "text": "Vendor warrants Services shall be performed in a professional manner consistent with industry standards."
+    },
+    {
+      "id": "clause_11",
+      "title": "Vendor Indemnification",
+      "text": "Vendor shall indemnify and defend Client against all third-party claims arising from Vendor's negligence or willful misconduct."
+    },
+    {
+      "id": "clause_12",
+      "title": "Confidentiality",
+      "text": "Each party shall protect Confidential Information with reasonable care for a period of three (3) years following termination."
+    },
+    {
+      "id": "clause_13",
+      "title": "Client Audit Rights",
+      "text": "Client may audit Vendor's systems, records, and processes at any time upon five (5) Business Days written notice."
+    },
+    {
+      "id": "clause_14",
+      "title": "Data Processing Location",
+      "text": "All primary data processing shall occur within facilities in the United States and Canada."
+    },
+    {
+      "id": "clause_15",
+      "title": "Data Protection",
+      "text": "Vendor shall comply with CCPA, GDPR, and applicable privacy laws. All personal data shall be encrypted at rest and in transit."
+    },
+    {
+      "id": "clause_16",
+      "title": "Vendor Insurance",
+      "text": "Vendor shall maintain general liability insurance of Two Million Dollars ($2,000,000) per occurrence and name Client as additional insured."
+    },
+    {
+      "id": "clause_17",
+      "title": "Regulatory Compliance",
+      "text": "Both parties shall comply with all applicable federal, state, and local laws."
+    },
+    {
+      "id": "clause_18",
+      "title": "Deliverable Restrictions",
+      "text": "Client may not modify, reverse engineer, decompile, or create derivative works from any Deliverables without Vendor's written approval."
+    },
+    {
+      "id": "clause_19",
+      "title": "Non-Solicitation",
+      "text": "During the term and for twelve (12) months after termination, neither party shall solicit the other's employees."
+    },
+    {
+      "id": "clause_20",
+      "title": "Termination for Convenience",
+      "text": "Either party may terminate this Agreement at any time upon thirty (30) days written notice without cause."
+    },
+    {
+      "id": "clause_21",
+      "title": "Termination for Breach",
+      "text": "Either party may terminate immediately upon material breach uncured for thirty (30) days after written notice."
+    },
+    {
+      "id": "clause_22",
+      "title": "AP Processing Cycle",
+      "text": "Client's accounts payable cycle requires sixty (60) days from invoice receipt before payment issuance."
+    },
+    {
+      "id": "clause_23",
+      "title": "Transition Services",
+      "text": "Upon termination, Vendor shall provide ninety (90) days of transition services."
+    },
+    {
+      "id": "clause_24",
+      "title": "Change Management",
+      "text": "Scope or fee changes require a signed Change Order."
+    },
+    {
+      "id": "clause_25",
+      "title": "Termination for Cause Notice",
+      "text": "For material breach, the non-breaching party may terminate upon fourteen (14) days written notice."
+    },
+    {
+      "id": "clause_26",
+      "title": "Governing Law",
+      "text": "This Agreement is governed by Delaware law."
+    },
+    {
+      "id": "clause_27",
+      "title": "Dispute Resolution",
+      "text": "Disputes shall be escalated to senior management, then binding arbitration under AAA rules in Wilmington, Delaware."
+    },
+    {
+      "id": "clause_28",
+      "title": "Strategic Account Terms",
+      "text": "Notwithstanding clause_08, strategic accounts designated by Vendor's CFO are eligible for Net 90 terms."
+    },
+    {
+      "id": "clause_29",
+      "title": "Subcontracting",
+      "text": "Vendor may subcontract with Client's prior written consent."
+    },
+    {
+      "id": "clause_30",
+      "title": "Service Levels",
+      "text": "Vendor shall meet SLA targets. Three consecutive months of SLA failures entitle Client to service credits."
+    },
+    {
+      "id": "clause_31",
+      "title": "Aggregate Liability Cap",
+      "text": "Total aggregate liability of either party, including indemnification, shall not exceed One Million Dollars ($1,000,000)."
+    },
+    {
+      "id": "clause_32",
+      "title": "Export Controls",
+      "text": "Neither party shall export data or software in violation of US export control laws."
+    },
+    {
+      "id": "clause_33",
+      "title": "Anti-Corruption",
+      "text": "Both parties comply with the FCPA and applicable anti-corruption laws."
+    },
+    {
+      "id": "clause_34",
+      "title": "Records Retention",
+      "text": "Each party shall maintain records related to this Agreement for five (5) years following termination."
+    },
+    {
+      "id": "clause_35",
+      "title": "Mutual Indemnification Waiver",
+      "text": "Each party shall defend itself against third-party claims. Neither party has any obligation to indemnify the other."
+    },
+    {
+      "id": "clause_36",
+      "title": "Publicity",
+      "text": "Neither party shall issue press releases about this Agreement without the other's written approval."
+    },
+    {
+      "id": "clause_37",
+      "title": "Independent Contractors",
+      "text": "The parties are independent contractors. Nothing creates a partnership, joint venture, or employment relationship."
+    },
+    {
+      "id": "clause_38",
+      "title": "Response Time SLA",
+      "text": "Vendor shall respond to Priority 1 incidents within four (4) Business Hours (8 AM to 8 PM Eastern, including Saturdays)."
+    },
+    {
+      "id": "clause_39",
+      "title": "Background Checks",
+      "text": "All Vendor personnel at Client facilities shall undergo background screening."
+    },
+    {
+      "id": "clause_40",
+      "title": "Vendor Operational Confidentiality",
+      "text": "Vendor's internal systems and processes are proprietary. Client has no right to inspect or audit Vendor's internal operations."
+    },
+    {
+      "id": "clause_41",
+      "title": "Business Continuity",
+      "text": "Vendor shall maintain and annually test a business continuity and disaster recovery plan."
+    },
+    {
+      "id": "clause_42",
+      "title": "Accessibility",
+      "text": "Software deliverables shall comply with WCAG 2.1 Level AA."
+    },
+    {
+      "id": "clause_43",
+      "title": "Environmental Responsibility",
+      "text": "Both parties commit to environmentally responsible operations."
+    },
+    {
+      "id": "clause_44",
+      "title": "Client Insurance Responsibility",
+      "text": "Client is solely responsible for all insurance coverage. Vendor assumes no insurance obligations."
+    },
+    {
+      "id": "clause_45",
+      "title": "Technology Refresh",
+      "text": "Vendor shall update infrastructure to current versions annually at no cost."
+    },
+    {
+      "id": "clause_46",
+      "title": "Monthly Reports",
+      "text": "Vendor shall provide monthly status reports by the fifth Business Day of each month."
+    },
+    {
+      "id": "clause_47",
+      "title": "Escalation Matrix",
+      "text": "Both parties shall follow the escalation matrix in Schedule C."
+    },
+    {
+      "id": "clause_48",
+      "title": "Extended Termination Notice",
+      "text": "For convenience termination, ninety (90) days written notice is required for orderly wind-down."
+    },
+    {
+      "id": "clause_49",
+      "title": "Acceptance Testing",
+      "text": "Client has fifteen (15) Business Days from delivery for acceptance testing."
+    },
+    {
+      "id": "clause_50",
+      "title": "Code of Conduct",
+      "text": "Vendor personnel shall adhere to Client's Code of Conduct on Client premises."
+    },
+    {
+      "id": "clause_51",
+      "title": "Benchmarking",
+      "text": "Client may engage an independent third party to benchmark Vendor's pricing annually."
+    },
+    {
+      "id": "clause_52",
+      "title": "Minimum Commitment",
+      "text": "Neither party may terminate for convenience during the initial twelve (12) month term. Thereafter, 180 days notice required."
+    },
+    {
+      "id": "clause_53",
+      "title": "Survival",
+      "text": "Confidentiality, Liability, Indemnification, IP, and Governing Law survive termination."
+    },
+    {
+      "id": "clause_54",
+      "title": "Third-Party Software",
+      "text": "Vendor ensures all third-party software in Deliverables is properly licensed."
+    },
+    {
+      "id": "clause_55",
+      "title": "Severability",
+      "text": "Invalid provisions do not affect the remaining provisions."
+    },
+    {
+      "id": "clause_56",
+      "title": "Waiver",
+      "text": "Failure to enforce a provision does not waive the right to enforce it later."
+    },
+    {
+      "id": "clause_57",
+      "title": "Assignment",
+      "text": "Assignment requires consent except for mergers or asset sales."
+    },
+    {
+      "id": "clause_58",
+      "title": "DR Facilities",
+      "text": "Backup replication and disaster recovery may use facilities outside the primary Territory, including EU and APAC data centers."
+    },
+    {
+      "id": "clause_59",
+      "title": "Entire Agreement",
+      "text": "This Agreement and all SOWs constitute the entire agreement."
+    },
+    {
+      "id": "clause_60",
+      "title": "Counterparts",
+      "text": "May be executed in counterparts."
+    }
+  ],
+  "obligation_taxonomy": [
+    {
+      "clause_id": "clause_05",
+      "obligations": [
+        "payment"
+      ]
+    },
+    {
+      "clause_id": "clause_07",
+      "obligations": [
+        "ip_rights"
+      ]
+    },
+    {
+      "clause_id": "clause_08",
+      "obligations": [
+        "payment"
+      ]
+    },
+    {
+      "clause_id": "clause_09",
+      "obligations": [
+        "liability"
+      ]
+    },
+    {
+      "clause_id": "clause_11",
+      "obligations": [
+        "liability"
+      ]
+    },
+    {
+      "clause_id": "clause_12",
+      "obligations": [
+        "confidentiality"
+      ]
+    },
+    {
+      "clause_id": "clause_13",
+      "obligations": [
+        "confidentiality"
+      ]
+    },
+    {
+      "clause_id": "clause_14",
+      "obligations": [
+        "delivery"
+      ]
+    },
+    {
+      "clause_id": "clause_16",
+      "obligations": [
+        "liability"
+      ]
+    },
+    {
+      "clause_id": "clause_18",
+      "obligations": [
+        "ip_rights"
+      ]
+    },
+    {
+      "clause_id": "clause_20",
+      "obligations": [
+        "termination"
+      ]
+    },
+    {
+      "clause_id": "clause_22",
+      "obligations": [
+        "payment"
+      ]
+    },
+    {
+      "clause_id": "clause_31",
+      "obligations": [
+        "liability"
+      ]
+    },
+    {
+      "clause_id": "clause_35",
+      "obligations": [
+        "liability"
+      ]
+    },
+    {
+      "clause_id": "clause_40",
+      "obligations": [
+        "confidentiality"
+      ]
+    },
+    {
+      "clause_id": "clause_44",
+      "obligations": [
+        "liability"
+      ]
+    },
+    {
+      "clause_id": "clause_48",
+      "obligations": [
+        "termination"
+      ]
+    },
+    {
+      "clause_id": "clause_52",
+      "obligations": [
+        "termination"
+      ]
+    }
+  ],
+  "forbidden_lexical_patterns": [
+    "day",
+    "month",
+    "year",
+    "net",
+    "dollar",
+    "percent",
+    "liabil"
+  ],
+  "contradictions": [],
+  "auditor_history": null
+}
