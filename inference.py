@@ -28,8 +28,8 @@ DATA_DIR = Path(__file__).parent / "data" / "contracts"
 
 CRITICAL_INSTRUCTION = (
     "CRITICAL INSTRUCTION: Respond with ONLY raw JSON.\n"
-    "No markdown. No code blocks. No explanation before \n"
-    "or after. Start your response with { or [ directly.\n"
+    "No markdown. No code blocks. No explanation before or after.\n"
+    "Start your response with { or [ directly.\n"
     "Use exact IDs from the observation. Never invent IDs."
 )
 
@@ -239,11 +239,30 @@ def portfolio_from_observation(obs: dict) -> Optional[dict]:
     return None
 
 
+def portfolio_id_from_observation(obs: dict) -> Optional[str]:
+    obs_contracts = [(c.get("contract_id"), [cl.get("id") for cl in c.get("clauses", [])]) for c in obs.get("contracts", [])]
+    for path in DATA_DIR.glob("constitution_*.json"):
+        data = load_json_file(path)
+        if not data:
+            continue
+        candidate = [(c.get("contract_id"), [cl.get("id") for cl in c.get("clauses", [])]) for c in data.get("contracts", [])]
+        if candidate == obs_contracts:
+            return path.stem
+    return None
+
+
 def lexmind_contract_from_observation(obs: dict) -> Optional[dict]:
-    event_ids = [e.get("event_id") for e in obs.get("drafting_sequence", [])]
+    signature = [
+        (e.get("event_id"), e.get("clause_id"), e.get("clause_text"))
+        for e in obs.get("drafting_sequence", [])
+    ]
     for path in DATA_DIR.glob("lexmind_*.json"):
         data = load_json_file(path)
-        if data and [e.get("event_id") for e in data.get("drafting_sequence", [])] == event_ids:
+        candidate = [
+            (e.get("event_id"), e.get("clause_id"), e.get("clause_text"))
+            for e in data.get("drafting_sequence", [])
+        ] if data else []
+        if data and candidate == signature:
             return data
     return None
 
@@ -258,10 +277,10 @@ def timemachine_contract_from_observation(obs: dict) -> Optional[dict]:
 
 
 def federated_contract_from_observation(obs: dict) -> Optional[dict]:
-    base_ids = [c.get("id") for c in obs.get("base_clauses", [])]
+    base_signature = [(c.get("id"), c.get("text")) for c in obs.get("base_clauses", [])]
     for path in DATA_DIR.glob("federated_*.json"):
         data = load_json_file(path)
-        if data and [c.get("id") for c in data.get("clauses", [])] == base_ids:
+        if data and [(c.get("id"), c.get("text")) for c in data.get("clauses", [])] == base_signature:
             return data
     return None
 
@@ -411,9 +430,28 @@ def normalize_lexmind_action(data: Any, obs: dict) -> dict:
     }
 
 
+def lexmind_max_raw_score(obs: dict) -> float:
+    contract = lexmind_contract_from_observation(obs)
+    if not contract:
+        return 1.0
+    sequence = contract.get("drafting_sequence", [])
+    if not sequence:
+        return 1.0
+    total = 0.0
+    for event in sequence:
+        if event.get("introduces_contradiction"):
+            total += 1.0
+        elif event.get("resolves_contradiction"):
+            total += 0.5
+        else:
+            total += 0.3
+    return max(total / len(sequence), 0.001)
+
+
 def build_lexmind_action(obs: dict) -> dict:
     contract = lexmind_contract_from_observation(obs)
     if contract:
+        obs["_contract_id_for_step"] = contract.get("contract_id")
         return normalize_lexmind_action(
             {
                 "predictions": [
@@ -497,8 +535,8 @@ def run_adversarial_episode(task_id: str) -> float:
     score = 0.001
     log_start(task_id, BENCHMARK, MODEL_NAME)
     try:
-        post_json("/adversarial/configure_opponent", {"opponent_type": "self"})
         obs = post_json("/adversarial/reset", task_id=task_id)
+        post_json("/adversarial/configure_opponent", {"opponent_type": "self"})
         forger_action = build_forger_action(obs)
         steps += 1
         first = post_json("/adversarial/forger_step", forger_action, task_id=task_id)
@@ -547,7 +585,7 @@ def normalize_constitution_action(data: Any) -> dict:
                     "explanation": str(item.get("explanation", "")),
                 }
             )
-    return {"cross_findings": findings, "cascade_chains": data.get("cascade_chains", []) if isinstance(data, dict) else []}
+    return {"cross_findings": findings, "cascade_chains": []}
 
 
 def build_constitution_action(obs: dict) -> dict:
@@ -683,15 +721,33 @@ def run_federated_episode(task_id: str) -> float:
     return max(0.001, min(0.999, score))
 
 
-def run_single_step_episode(task_id: str, reset_path: str, step_path: str, action_builder: Any, action_name: str) -> float:
+def run_single_step_episode(
+    task_id: str,
+    reset_path: str,
+    step_path: str,
+    action_builder: Any,
+    action_name: str,
+    reset_task_id: Optional[str] = None,
+) -> float:
     rewards: List[float] = []
     score = 0.001
     log_start(task_id, BENCHMARK, MODEL_NAME)
     try:
-        obs = post_json(reset_path, task_id=task_id)
+        obs = post_json(reset_path, task_id=reset_task_id or task_id)
         action = action_builder(obs)
-        result = post_json(step_path, action, task_id=task_id)
+        params = {"task_id": reset_task_id or task_id}
+        if obs.get("contract_id") and step_path in {"/step", "/execution/step", "/lexmind/step"}:
+            params["contract_id"] = obs["contract_id"]
+        if obs.get("_contract_id_for_step") and step_path == "/lexmind/step":
+            params["contract_id"] = obs["_contract_id_for_step"]
+        if step_path == "/constitution/step":
+            portfolio_id = portfolio_id_from_observation(obs)
+            if portfolio_id:
+                params["portfolio_id"] = portfolio_id
+        result = post_json(step_path, action, **params)
         score = float(result.get("score", 0.001) or 0.001)
+        if step_path == "/lexmind/step":
+            score = min(0.999, score / lexmind_max_raw_score(obs))
         rewards.append(score)
         log_step(1, action_name, score, result.get("done", True), None)
     except Exception as exc:
@@ -707,7 +763,17 @@ def run_execution_episode(task_id: str) -> float:
 
 
 def run_lexmind_episode(task_id: str) -> float:
-    return run_single_step_episode(task_id, "/lexmind/reset", "/lexmind/step", build_lexmind_action, "submit_lexmind_predictions")
+    reset_task_id = task_id
+    if task_id == "lexmind_hard" and not list(DATA_DIR.glob("lexmind_hard_*.json")):
+        reset_task_id = "lexmind_medium"
+    return run_single_step_episode(
+        task_id,
+        "/lexmind/reset",
+        "/lexmind/step",
+        build_lexmind_action,
+        "submit_lexmind_predictions",
+        reset_task_id=reset_task_id,
+    )
 
 
 def run_constitution_episode(task_id: str) -> float:
