@@ -185,15 +185,149 @@ def run_episode(task_id: str) -> float:
     return score
 
 
+# ── Adversarial Arena — Forger Prompt ────────────────────────────────────────
+FORGER_SYSTEM_PROMPT = """You are a contract forger in an adversarial arena. Your goal is to inject a hidden logical contradiction into a clean contract that will evade detection by an auditor.
+
+Requirements:
+1. SEMANTICALLY DISTANT: The conflicting clauses must use completely different vocabulary
+2. LEXICALLY NON-OVERLAPPING: No shared root words between the conflicting elements
+3. CONTEXTUALLY PLAUSIBLE: Each clause must sound like legitimate contract boilerplate
+4. LOGICALLY NON-OBVIOUS: The contradiction only emerges when both clauses are enforced simultaneously
+
+Contradiction types: numeric, temporal, conditional, party_obligation, termination
+
+Respond ONLY with valid JSON:
+{
+  "target_clause_id": "clause_XX",
+  "modified_clause_text": "Modified version of the target clause",
+  "injected_clause_text": "New clause to add that contradicts the modified clause",
+  "inject_after_clause_id": "clause_XX",
+  "claimed_contradiction_type": "one of the five types",
+  "stealth_rationale": "Why this will evade detection"
+}"""
+
+
+def run_adversarial_episode(task_id: str) -> float:
+    rewards: List[float] = []
+    steps_taken = 0
+    score = 0.001
+    success = False
+
+    log_start(task=task_id, env=BENCHMARK, model=MODEL_NAME)
+
+    try:
+        reset_resp = requests.post(
+            f"{ENV_BASE_URL}/adversarial/reset?task_id={task_id}",
+            timeout=30,
+        )
+        reset_resp.raise_for_status()
+        obs = reset_resp.json()
+
+        clauses = obs.get("clauses", [])
+        taxonomy = obs.get("obligation_taxonomy", [])
+        forbidden = obs.get("forbidden_lexical_patterns", [])
+
+        clause_list = "\n".join([
+            f"[{c['id']}] {c.get('title','')}: {c.get('text','')}"
+            for c in clauses
+        ])
+
+        taxonomy_str = "\n".join([
+            f"  {t['clause_id']}: {', '.join(t.get('obligations', []))}"
+            for t in taxonomy
+        ])
+
+        user_message = (
+            f"CONTRACT TITLE: {obs.get('contract_title', '')}\n\n"
+            f"=== CLAUSES ===\n{clause_list}\n\n"
+            f"=== OBLIGATION TAXONOMY ===\n{taxonomy_str}\n\n"
+            f"=== FORBIDDEN LEXICAL PATTERNS ===\n{', '.join(forbidden)}\n\n"
+            f"{obs.get('instructions', '')}"
+        )
+
+        completion = client.chat.completions.create(
+            model=MODEL_NAME,
+            messages=[
+                {"role": "system", "content": FORGER_SYSTEM_PROMPT},
+                {"role": "user", "content": user_message},
+            ],
+            max_tokens=2000,
+            temperature=0.3,
+        )
+
+        raw = (completion.choices[0].message.content or "").strip()
+        raw = raw.replace("```json", "").replace("```", "").strip()
+
+        try:
+            forger_action = json.loads(raw)
+        except Exception:
+            forger_action = {
+                "target_clause_id": clauses[0]["id"] if clauses else "clause_01",
+                "modified_clause_text": "All obligations under this agreement shall be performed within fifteen (15) business days.",
+                "injected_clause_text": "The contracted deliverables require a minimum processing window of forty-five (45) calendar days from commencement.",
+                "inject_after_clause_id": clauses[-1]["id"] if clauses else "clause_01",
+                "claimed_contradiction_type": "temporal",
+                "stealth_rationale": "Fallback injection",
+            }
+
+        action_str = f"forger_inject_{forger_action.get('target_clause_id', 'unknown')}"
+        steps_taken = 1
+
+        step_resp = requests.post(
+            f"{ENV_BASE_URL}/adversarial/forger_step?task_id={task_id}",
+            json=forger_action,
+            timeout=30,
+        )
+        step_resp.raise_for_status()
+        result = step_resp.json()
+
+        score = float(result.get("forger_score", 0.001))
+        score = max(0.001, min(0.999, score))
+        reward = score
+        success = score > 0.001
+
+        rewards.append(reward)
+
+        log_step(
+            step=1,
+            action=action_str,
+            reward=reward,
+            done=result.get("done", True),
+            error=None,
+        )
+
+    except Exception as e:
+        error_msg = str(e)
+        steps_taken = max(steps_taken, 1)
+        rewards = rewards or [0.001]
+        log_step(step=steps_taken, action="error", reward=0.001, done=True, error=error_msg)
+        score = 0.001
+        success = False
+
+    finally:
+        log_end(success=success, steps=steps_taken, score=score, rewards=rewards)
+
+    return score
+
+
 # ── Main ──────────────────────────────────────────────────────────────────────
 def main():
     tasks  = ["easy", "medium", "hard"]
+    adversarial_tasks = [
+        "adversarial_easy", "adversarial_medium",
+        "adversarial_hard", "adversarial_selfplay",
+    ]
     scores = {}
 
     for task_id in tasks:
         score = run_episode(task_id)
         scores[task_id] = score
-        print("", flush=True)  # blank line between episodes
+        print("", flush=True)
+
+    for task_id in adversarial_tasks:
+        score = run_adversarial_episode(task_id)
+        scores[task_id] = score
+        print("", flush=True)
 
     mean_score = sum(scores.values()) / len(scores)
 
@@ -201,8 +335,8 @@ def main():
     print("CLAUSR INFERENCE RESULTS", flush=True)
     print("=" * 50, flush=True)
     for task_id, score in scores.items():
-        print(f"{task_id.upper():<10} {score:.4f}", flush=True)
-    print(f"{'MEAN':<10} {mean_score:.4f}", flush=True)
+        print(f"{task_id.upper():<25} {score:.4f}", flush=True)
+    print(f"{'MEAN':<25} {mean_score:.4f}", flush=True)
     print("=" * 50, flush=True)
 
 

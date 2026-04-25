@@ -135,3 +135,104 @@ class LexMindState(BaseModel):
     false_alarms_so_far: int
     score: float
     done: bool
+
+
+# ── Adversarial Arena Models ────────────────────────────────────────────
+
+class ObligationTaxonomyEntry(BaseModel):
+    clause_id: str
+    obligations: List[str]
+
+class ForgerObservation(BaseModel):
+    episode_id: str
+    task_id: str
+    role: str = "forger"
+    contract_title: str
+    clauses: List[Clause]
+    contract_text: str
+    obligation_taxonomy: List[ObligationTaxonomyEntry]
+    forbidden_lexical_patterns: List[str]
+    auditor_history: Optional[dict] = None
+    instructions: str
+    done: bool
+    score: Optional[float] = None
+    feedback: Optional[str] = None
+
+class ForgerAction(BaseModel):
+    target_clause_id: str
+    modified_clause_text: str
+    injected_clause_text: str
+    inject_after_clause_id: str
+    claimed_contradiction_type: str
+    stealth_rationale: str = ""
+
+class FindingAction(BaseModel):
+    clause_a: str
+    clause_b: str
+    reason: str
+    contradiction_type: str
+
+class AuditorObservation(BaseModel):
+    episode_id: str
+    task_id: str
+    role: str = "auditor"
+    contract_title: str
+    clauses: List[Clause]
+    contract_text: str
+    total_clause_count: int
+    instructions: str
+    done: bool
+    score: Optional[float] = None
+    feedback: Optional[str] = None
+
+class AuditorAction(BaseModel):
+    findings: List[FindingAction]
+
+class RubricScore(BaseModel):
+    name: str
+    weight: float
+    raw_score: float
+    weighted_score: float
+    detail: str = ""
+
+class ForgerGradeResult(BaseModel):
+    stealth: RubricScore
+    validity: RubricScore
+    subtlety: RubricScore
+    plausibility: RubricScore
+    total_score: float
+    oracle_accepted: bool
+
+class AuditorGradeResult(BaseModel):
+    detection: RubricScore
+    precision: RubricScore
+    reasoning_quality: RubricScore
+    total_score: float
+
+class AdversarialEpisodeResult(BaseModel):
+    episode_id: str
+    task_id: str
+    forger_score: float
+    auditor_score: float
+    forger_rubrics: ForgerGradeResult
+    auditor_rubrics: AuditorGradeResult
+    oracle_accepted: bool
+    injection_details: Optional[dict] = None
+
+class OpponentConfig(BaseModel):
+    opponent_type: str  # "random", "fixed_v1", "self", "pool"
+
+class CheckpointSubmission(BaseModel):
+    checkpoint_id: str
+    role: str
+    score_history: List[float] = []
+    metadata: Optional[dict] = None
+
+class AdversarialState(BaseModel):
+    episode_id: str
+    task_id: str
+    phase: str
+    forger_score: float
+    auditor_score: float
+    oracle_accepted: bool
+    done: bool

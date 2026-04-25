@@ -1,0 +1,87 @@
+{
+  "contract_id": "adversarial_easy_002",
+  "task_id": "adversarial_easy",
+  "title": "Cloud Service Agreement between CloudServe Corp and DataFlow Inc",
+  "contract_text": "Parties and Recitals\nThis Service Agreement is between CloudServe Corp, a California corporation (\"Provider\"), and DataFlow Inc, a Texas corporation (\"Client\").\n\nService Description\nProvider shall deliver cloud hosting, data storage, and API management services as described in Schedule A.\n\nService Level Agreement\nProvider guarantees 99.9% uptime measured monthly, excluding scheduled maintenance communicated 48 hours in advance.\n\nFees\nClient shall pay the monthly service fee set forth in the Order Form within thirty (30) days of invoice date.\n\nData Security\nProvider shall encrypt all data at rest using AES-256 and in transit using TLS 1.2 or higher.\n\nLiability Cap\nNeither party's total liability shall exceed the fees paid during the twelve months preceding the claim.\n\nTermination\nEither party may terminate upon sixty (60) days written notice for any reason.\n\nDispute Resolution\nDisputes shall be resolved through binding arbitration in San Francisco under AAA rules.",
+  "clauses": [
+    {
+      "id": "clause_01",
+      "title": "Parties and Recitals",
+      "text": "This Service Agreement is between CloudServe Corp, a California corporation (\"Provider\"), and DataFlow Inc, a Texas corporation (\"Client\")."
+    },
+    {
+      "id": "clause_02",
+      "title": "Service Description",
+      "text": "Provider shall deliver cloud hosting, data storage, and API management services as described in Schedule A."
+    },
+    {
+      "id": "clause_03",
+      "title": "Service Level Agreement",
+      "text": "Provider guarantees 99.9% uptime measured monthly, excluding scheduled maintenance communicated 48 hours in advance."
+    },
+    {
+      "id": "clause_04",
+      "title": "Fees",
+      "text": "Client shall pay the monthly service fee set forth in the Order Form within thirty (30) days of invoice date."
+    },
+    {
+      "id": "clause_05",
+      "title": "Data Security",
+      "text": "Provider shall encrypt all data at rest using AES-256 and in transit using TLS 1.2 or higher."
+    },
+    {
+      "id": "clause_06",
+      "title": "Liability Cap",
+      "text": "Neither party's total liability shall exceed the fees paid during the twelve months preceding the claim."
+    },
+    {
+      "id": "clause_07",
+      "title": "Termination",
+      "text": "Either party may terminate upon sixty (60) days written notice for any reason."
+    },
+    {
+      "id": "clause_08",
+      "title": "Dispute Resolution",
+      "text": "Disputes shall be resolved through binding arbitration in San Francisco under AAA rules."
+    }
+  ],
+  "obligation_taxonomy": [
+    {
+      "clause_id": "clause_03",
+      "obligations": [
+        "delivery"
+      ]
+    },
+    {
+      "clause_id": "clause_04",
+      "obligations": [
+        "payment"
+      ]
+    },
+    {
+      "clause_id": "clause_05",
+      "obligations": [
+        "confidentiality"
+      ]
+    },
+    {
+      "clause_id": "clause_06",
+      "obligations": [
+        "liability"
+      ]
+    },
+    {
+      "clause_id": "clause_07",
+      "obligations": [
+        "termination"
+      ]
+    }
+  ],
+  "forbidden_lexical_patterns": [
+    "uptime",
+    "percent",
+    "availab"
+  ],
+  "contradictions": [],
+  "auditor_history": null
+}
