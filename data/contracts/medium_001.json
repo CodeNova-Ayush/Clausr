@@ -156,7 +156,14 @@
       "description": "30-day termination notice vs 90-day non-renewal notice are irreconcilable."
     }
   ],
-  "traps": [],
+  "traps": [
+    {
+      "clause_a_id": "clause_12",
+      "clause_b_id": "clause_20",
+      "reason": "Termination-for-convenience notice and automatic-renewal non-renewal notice look related but govern different election mechanics unless both are invoked for the same term end.",
+      "is_contradiction": false
+    }
+  ],
   "execution_scenarios": [
     {
       "scenario_id": "scenario_01",
@@ -164,9 +171,15 @@
       "description": "RetailCo's AP department pays an invoice 35 days after receipt. NovaSoft's billing system flags the payment as late and automatically generates a 2% late fee. RetailCo disputes the fee, arguing they paid within reasonable terms.",
       "actor": "Customer (RetailCo Ltd)",
       "action_taken": "RetailCo pays invoice on day 35 and disputes the automatically generated late payment fee",
-      "triggers_clauses": ["clause_04", "clause_14"],
+      "triggers_clauses": [
+        "clause_04",
+        "clause_14"
+      ],
       "crashes": true,
-      "crash_pair": {"clause_a_id": "clause_04", "clause_b_id": "clause_14"},
+      "crash_pair": {
+        "clause_a_id": "clause_04",
+        "clause_b_id": "clause_14"
+      },
       "crash_description": "Clause 04 requires payment within Net 30 days. Clause 14 says late fees start at 45 days. Payment at day 35 is technically late under Clause 04 but penalty-free under Clause 14, creating a 15-day ambiguity window. Neither party can determine if the fee is contractually valid.",
       "financial_exposure": "Disputed late fee compounding at 2% monthly on outstanding balance",
       "clean_resolution": null
@@ -177,9 +190,15 @@
       "description": "RetailCo's VP of Partnerships begins offering Platform access to 12 franchise partners as a value-added service. The franchisees access the Platform under RetailCo's account. NovaSoft's usage monitoring detects the third-party access.",
       "actor": "Customer (RetailCo Ltd)",
       "action_taken": "RetailCo sublicenses Platform access to franchise partners without NovaSoft's written consent",
-      "triggers_clauses": ["clause_06", "clause_11"],
+      "triggers_clauses": [
+        "clause_06",
+        "clause_11"
+      ],
       "crashes": true,
-      "crash_pair": {"clause_a_id": "clause_06", "clause_b_id": "clause_11"},
+      "crash_pair": {
+        "clause_a_id": "clause_06",
+        "clause_b_id": "clause_11"
+      },
       "crash_description": "Clause 06 explicitly grants the right to sublicense and resell access to end users. Clause 11 expressly prohibits resale and sublicensing without prior written consent. RetailCo cannot determine if the franchise arrangement is permitted.",
       "financial_exposure": "Potential license termination and liability for unauthorized sublicensing revenue",
       "clean_resolution": null
@@ -190,9 +209,15 @@
       "description": "A server failure causes loss of three months of Customer transaction data. RetailCo demands NovaSoft restore from backup. NovaSoft points to the clause stating Customer is solely responsible for maintaining their own backups.",
       "actor": "Customer (RetailCo Ltd)",
       "action_taken": "RetailCo demands data restoration from NovaSoft after server failure causes data loss",
-      "triggers_clauses": ["clause_08", "clause_17"],
+      "triggers_clauses": [
+        "clause_08",
+        "clause_17"
+      ],
       "crashes": true,
-      "crash_pair": {"clause_a_id": "clause_08", "clause_b_id": "clause_17"},
+      "crash_pair": {
+        "clause_a_id": "clause_08",
+        "clause_b_id": "clause_17"
+      },
       "crash_description": "Clause 08 obligates Vendor to maintain daily backups and restore data at no charge. Clause 17 states Customer is solely responsible for backups and Vendor assumes no responsibility for data loss. Both clauses cover the same data but assign responsibility to opposite parties.",
       "financial_exposure": "Unrecoverable transaction data worth potential regulatory penalties and operational disruption",
       "clean_resolution": null
@@ -203,9 +228,15 @@
       "description": "RetailCo decides to switch platforms. Their legal team sends a 30-day termination notice citing the termination for convenience clause. NovaSoft responds that the agreement already auto-renewed and requires 90-day non-renewal notice.",
       "actor": "Customer (RetailCo Ltd)",
       "action_taken": "RetailCo provides 30 days written notice of termination during auto-renewed term",
-      "triggers_clauses": ["clause_12", "clause_20"],
+      "triggers_clauses": [
+        "clause_12",
+        "clause_20"
+      ],
       "crashes": true,
-      "crash_pair": {"clause_a_id": "clause_12", "clause_b_id": "clause_20"},
+      "crash_pair": {
+        "clause_a_id": "clause_12",
+        "clause_b_id": "clause_20"
+      },
       "crash_description": "Clause 12 allows either party to terminate at any time with 30 days notice. Clause 20 requires 90 days notice before term end to prevent auto-renewal. The 30-day notice is valid under one clause but insufficient under the other.",
       "financial_exposure": "Automatic renewal creating unintended 12-month commitment with full fee obligation",
       "clean_resolution": null
@@ -216,7 +247,9 @@
       "description": "NovaSoft's operations team schedules a 4-hour maintenance window for Saturday evening and sends notification to RetailCo exactly 48 hours before the planned downtime. RetailCo confirms receipt.",
       "actor": "Vendor (NovaSoft Inc)",
       "action_taken": "NovaSoft sends 48-hour advance maintenance notification and performs scheduled maintenance",
-      "triggers_clauses": ["clause_07"],
+      "triggers_clauses": [
+        "clause_07"
+      ],
       "crashes": false,
       "crash_pair": null,
       "crash_description": null,
@@ -229,7 +262,9 @@
       "description": "RetailCo's compliance officer sends a written request to audit NovaSoft's data handling practices. This is the first audit request of the calendar year. NovaSoft is given 30 days notice.",
       "actor": "Customer (RetailCo Ltd)",
       "action_taken": "RetailCo exercises annual audit right with 30 days written notice",
-      "triggers_clauses": ["clause_21"],
+      "triggers_clauses": [
+        "clause_21"
+      ],
       "crashes": false,
       "crash_pair": null,
       "crash_description": null,
@@ -242,12 +277,15 @@
       "description": "NovaSoft discovers a critical SQL injection vulnerability and immediately patches it. They notify RetailCo of the security incident and the remediation steps taken.",
       "actor": "Vendor (NovaSoft Inc)",
       "action_taken": "NovaSoft patches vulnerability and notifies Customer of the security incident",
-      "triggers_clauses": ["clause_09", "clause_13"],
+      "triggers_clauses": [
+        "clause_09",
+        "clause_13"
+      ],
       "crashes": false,
       "crash_pair": null,
       "crash_description": null,
       "financial_exposure": null,
-      "clean_resolution": "Clause 09 requires SOC 2 Type II and data encryption compliance. Clause 13 governs confidentiality. Patching and notification are standard operational duties — no conflicting obligations triggered."
+      "clean_resolution": "Clause 09 requires SOC 2 Type II and data encryption compliance. Clause 13 governs confidentiality. Patching and notification are standard operational duties \u2014 no conflicting obligations triggered."
     },
     {
       "scenario_id": "scenario_08",
@@ -255,7 +293,9 @@
       "description": "NovaSoft and RetailCo negotiate a volume discount. Both authorized representatives sign a written amendment adjusting the per-user pricing from the original Order Form.",
       "actor": "Both parties",
       "action_taken": "Both parties execute a written amendment modifying the pricing structure",
-      "triggers_clauses": ["clause_23"],
+      "triggers_clauses": [
+        "clause_23"
+      ],
       "crashes": false,
       "crash_pair": null,
       "crash_description": null,

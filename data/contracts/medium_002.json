@@ -156,7 +156,14 @@
       "description": "14-day extension notice required vs 45-day extension notice required."
     }
   ],
-  "traps": [],
+  "traps": [
+    {
+      "clause_a_id": "clause_12",
+      "clause_b_id": "clause_20",
+      "reason": "Termination-for-convenience notice and automatic-renewal non-renewal notice look related but govern different election mechanics unless both are invoked for the same term end.",
+      "is_contradiction": false
+    }
+  ],
   "execution_scenarios": [
     {
       "scenario_id": "scenario_01",
@@ -164,9 +171,15 @@
       "description": "The Principal Creative Officer logs 40 hours on the BuildCorp branding project. DesignPro's billing department issues an invoice at the senior staffing rate. BuildCorp's AP team flags the rate as exceeding the maximum blended rate specified in the agreement.",
       "actor": "Service Provider (DesignPro Agency)",
       "action_taken": "DesignPro invoices 40 hours of senior design director time at $225 per hour",
-      "triggers_clauses": ["clause_03", "clause_09"],
+      "triggers_clauses": [
+        "clause_03",
+        "clause_09"
+      ],
       "crashes": true,
-      "crash_pair": {"clause_a_id": "clause_03", "clause_b_id": "clause_09"},
+      "crash_pair": {
+        "clause_a_id": "clause_03",
+        "clause_b_id": "clause_09"
+      },
       "crash_description": "Clause 03 caps the maximum blended hourly rate at $150 inclusive of all overhead. Clause 09 specifies senior design directors are billed at $225/hr. The invoice is valid under one clause but exceeds the cap under the other. Neither party can determine the correct billing rate.",
       "financial_exposure": "Disputed invoice of $9,000 ($75/hr difference x 40 hours) with potential for ongoing billing disputes",
       "clean_resolution": null
@@ -177,9 +190,15 @@
       "description": "After paying all fees in full, BuildCorp's marketing team begins using the new logo on store signage, product packaging, and merchandise. DesignPro sends a cease and desist claiming they retain IP rights.",
       "actor": "Client (BuildCorp Ltd)",
       "action_taken": "BuildCorp deploys final logo deliverables commercially across retail operations after full payment",
-      "triggers_clauses": ["clause_05", "clause_13"],
+      "triggers_clauses": [
+        "clause_05",
+        "clause_13"
+      ],
       "crashes": true,
-      "crash_pair": {"clause_a_id": "clause_05", "clause_b_id": "clause_13"},
+      "crash_pair": {
+        "clause_a_id": "clause_05",
+        "clause_b_id": "clause_13"
+      },
       "crash_description": "Clause 05 grants BuildCorp exclusive, perpetual, worldwide IP ownership upon full payment. Clause 13 states DesignPro retains all IP rights and only grants a limited, non-exclusive license. BuildCorp cannot determine if they own or merely license the delivered work.",
       "financial_exposure": "Potential trademark infringement claim against deployed retail signage and merchandise",
       "clean_resolution": null
@@ -190,9 +209,15 @@
       "description": "A DesignPro team travels to Chicago for a 3-day on-site review at BuildCorp's headquarters. They submit a $8,200 expense report for flights, hotel, and meals. BuildCorp refuses to reimburse, citing the clause that makes DesignPro responsible for travel costs.",
       "actor": "Service Provider (DesignPro Agency)",
       "action_taken": "DesignPro submits itemized travel expense report for client site visit requesting reimbursement",
-      "triggers_clauses": ["clause_10", "clause_18"],
+      "triggers_clauses": [
+        "clause_10",
+        "clause_18"
+      ],
       "crashes": true,
-      "crash_pair": {"clause_a_id": "clause_10", "clause_b_id": "clause_18"},
+      "crash_pair": {
+        "clause_a_id": "clause_10",
+        "clause_b_id": "clause_18"
+      },
       "crash_description": "Clause 10 states DesignPro is solely responsible for all travel expenses. Clause 18 states BuildCorp agrees to fully reimburse all travel expenses. The same costs are covered by both clauses but with opposite payment responsibility.",
       "financial_exposure": "Disputed travel reimbursement of $8,200 with ongoing uncertainty for future site visits",
       "clean_resolution": null
@@ -203,9 +228,15 @@
       "description": "Due to internal organizational changes, BuildCorp submits a written request to extend the project deadline by three weeks. The request is sent 20 days before the scheduled completion date.",
       "actor": "Client (BuildCorp Ltd)",
       "action_taken": "BuildCorp sends formal written extension request 20 calendar days before completion date",
-      "triggers_clauses": ["clause_15", "clause_22"],
+      "triggers_clauses": [
+        "clause_15",
+        "clause_22"
+      ],
       "crashes": true,
-      "crash_pair": {"clause_a_id": "clause_15", "clause_b_id": "clause_22"},
+      "crash_pair": {
+        "clause_a_id": "clause_15",
+        "clause_b_id": "clause_22"
+      },
       "crash_description": "Clause 15 requires 14 calendar days notice for extension requests, which is met. Clause 22 requires 45 calendar days notice and states requests after the deadline are automatically denied. The request is valid under one clause but denied under the other.",
       "financial_exposure": "Project timeline uncertainty affecting BuildCorp's retail launch schedule",
       "clean_resolution": null
@@ -216,7 +247,9 @@
       "description": "DesignPro hires a freelance illustrator to create custom architectural visualizations for the project. DesignPro remains responsible for quality and timeliness of the work product.",
       "actor": "Service Provider (DesignPro Agency)",
       "action_taken": "DesignPro subcontracts illustration work to qualified freelance artist while retaining quality responsibility",
-      "triggers_clauses": ["clause_21"],
+      "triggers_clauses": [
+        "clause_21"
+      ],
       "crashes": false,
       "crash_pair": null,
       "crash_description": null,
@@ -229,7 +262,9 @@
       "description": "DesignPro delivers initial brand concepts. BuildCorp's finance team releases the second milestone payment equal to 40% of the project fee as specified in the payment schedule.",
       "actor": "Client (BuildCorp Ltd)",
       "action_taken": "BuildCorp remits 40% milestone payment upon delivery of initial concepts",
-      "triggers_clauses": ["clause_04"],
+      "triggers_clauses": [
+        "clause_04"
+      ],
       "crashes": false,
       "crash_pair": null,
       "crash_description": null,
@@ -242,7 +277,9 @@
       "description": "A disagreement arises about whether the final deliverables meet the original specification. Both parties agree to submit the dispute to JAMS mediation in New York as outlined in the agreement.",
       "actor": "Both parties",
       "action_taken": "Both parties initiate JAMS mediation in New York to resolve quality dispute",
-      "triggers_clauses": ["clause_19"],
+      "triggers_clauses": [
+        "clause_19"
+      ],
       "crashes": false,
       "crash_pair": null,
       "crash_description": null,
@@ -255,7 +292,9 @@
       "description": "BuildCorp fails to make the second milestone payment for 30 days. DesignPro sends a written notice specifying the breach. BuildCorp fails to cure within 15 business days. DesignPro terminates the agreement.",
       "actor": "Service Provider (DesignPro Agency)",
       "action_taken": "DesignPro terminates agreement after BuildCorp fails to cure payment breach within 15 business days",
-      "triggers_clauses": ["clause_12"],
+      "triggers_clauses": [
+        "clause_12"
+      ],
       "crashes": false,
       "crash_pair": null,
       "crash_description": null,

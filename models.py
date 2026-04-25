@@ -66,6 +66,7 @@ class ExecutionScenario(BaseModel):
     description: str
     actor: str
     action_taken: str
+    triggered_clauses: List[str] = []
 
 class ExecutionObservation(BaseModel):
     contract_text: str

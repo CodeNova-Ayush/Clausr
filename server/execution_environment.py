@@ -91,7 +91,6 @@ class ContractExecutionEnv:
         clauses = [Clause(**c) for c in self._contract["clauses"]]
         scenarios_raw = self._contract.get("execution_scenarios", [])
 
-        # Strip ground truth from scenarios — agent only sees public fields
         scenarios = []
         num_crashing = 0
         for s in scenarios_raw:
@@ -103,6 +102,7 @@ class ContractExecutionEnv:
                 description=s["description"],
                 actor=s["actor"],
                 action_taken=s["action_taken"],
+                triggered_clauses=s.get("triggers_clauses", []),
             ))
 
         return ExecutionObservation(
@@ -174,15 +174,14 @@ class ContractExecutionEnv:
                     else:
                         total_score += 0.2
                 else:
-                    # Missed crash — most dangerous
-                    total_score += 0.0
+                    total_score -= 0.2
             else:
                 if not trace.crashes:
-                    total_score += 1.0  # Correct clean
+                    total_score += 0.3
                 else:
-                    total_score -= 0.1  # False alarm penalty
+                    total_score -= 0.1
 
-        score = max(0.001, min(0.999, total_score / total))
+        score = max(0.0, min(1.0, total_score / total))
         score = round(score, 4)
 
         feedback = (

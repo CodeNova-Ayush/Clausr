@@ -10,7 +10,7 @@ from server.curriculum_environment import CurriculumForgeEnv
 from server.constitution_environment import ConstitutionForgeEnv
 from server.fingerprint_engine import dna_engine
 from models import (
-    ContractAction, ContractObservation, ContractState,
+    ContractAction, ContractObservation, ContractStepResult, ContractState,
     ExecutionAction, ExecutionObservation, ContractExecutionState,
     LexMindEpisodeAction, LexMindObservation, LexMindState,
     ForgerAction, ForgerObservation, AuditorAction, AuditorObservation,
@@ -46,7 +46,7 @@ def reset(task_id: str = "easy"):
     return env.reset(task_id=task_id)
 
 
-@app.post("/step", response_model=ContractObservation)
+@app.post("/step", response_model=ContractStepResult)
 def step(action: ContractAction, task_id: str = "easy", contract_id: str = None):
     """
     Stateless step endpoint.

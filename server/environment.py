@@ -14,6 +14,7 @@ class ContractFixEnv:
         self._score = 0.001
         self._done = False
         self._contradictions_found = 0
+        self._false_positives = 0
         self._last_feedback = None
         self._contracts_dir = Path(__file__).parent.parent / "data" / "contracts"
 
@@ -22,6 +23,7 @@ class ContractFixEnv:
         self._done = False
         self._score = 0.001
         self._contradictions_found = 0
+        self._false_positives = 0
         self._episode_id = str(uuid.uuid4())
         self._last_feedback = None
 
@@ -51,6 +53,7 @@ class ContractFixEnv:
         self._done = False
         self._score = 0.001
         self._contradictions_found = 0
+        self._false_positives = 0
         self._last_feedback = None
 
     def step(self, action: ContractAction) -> ContractObservation:
@@ -59,9 +62,10 @@ class ContractFixEnv:
                 done=True, score=self._score, feedback=self._last_feedback
             )
 
-        score, feedback, found = self._grade(action)
+        score, feedback, found, false_positives = self._grade(action)
         self._score = score
         self._contradictions_found = found
+        self._false_positives = false_positives
         self._done = True
         self._last_feedback = feedback
 
@@ -89,12 +93,7 @@ class ContractFixEnv:
 
         reward = score if score is not None else None
         contradictions_found = self._contradictions_found if done else None
-        false_positives = None
-        if feedback:
-            import re
-            match = re.search(r"False positives: (\d+)", feedback)
-            if match:
-                false_positives = int(match.group(1))
+        false_positives = self._false_positives if done else None
 
         return ContractObservation(
             contract_text=self._contract["contract_text"],
@@ -130,7 +129,7 @@ class ContractFixEnv:
             "different geographic regions, different service tiers, different user types)."
         )
 
-    def _grade(self, action: ContractAction) -> Tuple[float, str, int]:
+    def _grade(self, action: ContractAction) -> Tuple[float, str, int, int]:
         true_pairs = set()
         for c in self._contract.get("contradictions", []):
             true_pairs.add(tuple(sorted([c["clause_a_id"], c["clause_b_id"]])))
@@ -142,13 +141,10 @@ class ContractFixEnv:
         true_positives = len(found_pairs & true_pairs)
         false_positives = len(found_pairs - true_pairs)
 
-        if not true_pairs:
-            raw = 1.0
-        else:
-            raw = true_positives / len(true_pairs)
-
+        recall = 1.0 if not true_pairs else true_positives / len(true_pairs)
+        false_positive_rate = false_positives / max(len(found_pairs), 1)
         lambda_penalty = {"easy": 0.10, "medium": 0.15, "hard": 0.20}.get(self._task_id, 0.10)
-        score = max(0.001, min(0.999, raw - (lambda_penalty * false_positives)))
+        score = max(0.0, min(1.0, recall - (lambda_penalty * false_positive_rate)))
         score = round(score, 4)
 
         feedback_string = (
@@ -156,4 +152,4 @@ class ContractFixEnv:
             f"False positives: {false_positives}. Score: {score:.2f} (Penalty scale: {lambda_penalty})"
         )
 
-        return score, feedback_string, true_positives
+        return score, feedback_string, true_positives, false_positives
