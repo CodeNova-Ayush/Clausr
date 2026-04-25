@@ -177,9 +177,9 @@ class ContractExecutionEnv:
                     total_score -= 0.2
             else:
                 if not trace.crashes:
-                    total_score += 0.3
+                    total_score += 1.0
                 else:
-                    total_score -= 0.1
+                    total_score -= 0.2
 
         score = max(0.0, min(1.0, total_score / total))
         score = round(score, 4)

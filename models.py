@@ -18,6 +18,12 @@ class Finding(BaseModel):
 class ContractAction(BaseModel):
     findings: List[Finding]
 
+class CompeteRequest(BaseModel):
+    task_id: str = "easy"
+    contract_id: Optional[str] = None
+    agent_a_findings: List[Finding]
+    agent_b_findings: List[Finding]
+
 class ContractObservation(BaseModel):
     contract_text: str
     clauses: List[Clause]
@@ -392,6 +398,10 @@ class FingerprintResult(BaseModel):
     overall_risk: float
     risk_label: str
     dominant_risk_type: str
+    contradiction_distribution: Optional[Dict[str, float]] = None
+    obligation_density: Optional[float] = None
+    complexity_score: Optional[float] = None
+    estimated_difficulty: Optional[str] = None
     delta: Optional[FingerprintDelta] = None
 
 # ── FederatedArena Models ────────────────────────────────────────────────

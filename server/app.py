@@ -18,7 +18,7 @@ from models import (
     CurriculumRunConfig, CurriculumObservation, CurriculumStepResult,
     CompetenceProfile,
     PortfolioObservation, ConstitutionAction, PortfolioState,
-    FingerprintRequest, FingerprintResult,
+    FingerprintRequest, FingerprintResult, CompeteRequest, Finding,
 )
 
 app = FastAPI(
@@ -41,9 +41,9 @@ def health():
 
 
 @app.post("/reset", response_model=ContractObservation)
-def reset(task_id: str = "easy"):
+def reset(task_id: str = "easy", adaptive: bool = False):
     env = ContractFixEnv()
-    return env.reset(task_id=task_id)
+    return env.reset(task_id=task_id, adaptive=adaptive)
 
 
 @app.post("/step", response_model=ContractStepResult)
@@ -66,6 +66,43 @@ def state(task_id: str = "easy"):
     env = ContractFixEnv()
     env.reset(task_id=task_id)
     return env.state
+
+
+@app.post("/compete")
+def compete(req: CompeteRequest):
+    env_a = ContractFixEnv()
+    if req.contract_id:
+        env_a.load_contract_by_id(req.contract_id)
+    else:
+        env_a.reset(task_id=req.task_id)
+        
+    env_b = ContractFixEnv()
+    env_b._contract = env_a._contract
+    env_b._task_id = env_a._task_id
+    env_b._episode_id = env_a._episode_id
+    
+    action_a = ContractAction(findings=req.agent_a_findings)
+    obs_a = env_a.step(action_a)
+    
+    action_b = ContractAction(findings=req.agent_b_findings)
+    obs_b = env_b.step(action_b)
+    
+    return {
+        "contract_id": env_a._contract.get("contract_id", ""),
+        "agent_a": {
+            "score": obs_a.score,
+            "contradictions_found": obs_a.contradictions_found,
+            "false_positives": obs_a.false_positives,
+            "winner": obs_a.score > obs_b.score
+        },
+        "agent_b": {
+            "score": obs_b.score,
+            "contradictions_found": obs_b.contradictions_found,
+            "false_positives": obs_b.false_positives,
+            "winner": obs_b.score > obs_a.score
+        },
+        "tie": obs_a.score == obs_b.score
+    }
 
 
 # ── Execution Simulator Endpoints ───────────────────────────────────────
@@ -410,6 +447,43 @@ async def websocket_endpoint(websocket: WebSocket):
                 await websocket.send_json({"error": "Unknown message type"})
     except WebSocketDisconnect:
         pass
+
+
+import asyncio
+
+@app.websocket("/ws/live")
+async def websocket_live_endpoint(websocket: WebSocket):
+    await websocket.accept()
+    env = ContractFixEnv()
+
+    try:
+        data_str = await websocket.receive_text()
+        data = json.loads(data_str)
+        task_id = data.get("task_id", "easy")
+        obs = env.reset(task_id=task_id)
+        
+        await websocket.send_json({"type": "init", "contract_title": env._contract.get("title", "")})
+        
+        clauses_so_far = []
+        for clause in env._contract.get("clauses", []):
+            clauses_so_far.append(clause["text"])
+            
+            fingerprint = dna_engine.calculate_fingerprint(clauses_so_far, env._episode_id)
+            
+            await websocket.send_json({
+                "type": "clause_update",
+                "clause": clause,
+                "running_risk": fingerprint.overall_risk,
+                "risk_label": fingerprint.risk_label
+            })
+            
+            await asyncio.sleep(0.5)
+            
+        await websocket.send_json({"type": "done"})
+    except WebSocketDisconnect:
+        pass
+    except Exception as e:
+        await websocket.send_json({"error": str(e)})
 
 def main():
     import uvicorn

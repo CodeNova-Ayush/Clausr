@@ -7,41 +7,77 @@ description: >
   and incremental LexMind drafting environments.
 tasks:
   - id: easy
-    description: "Detection: 8-clause contract with 1 planted contradiction."
+    description: "Detection Easy: The agent sees an 8-clause contract with 1 planted contradiction. It must output the exact clause pair and explanation. A perfect score requires identifying the contradiction with zero false positives."
     min_score: 0.0
     max_score: 1.0
+    metadata:
+      num_contradictions: 1
+      contradiction_types: ["numeric", "temporal"]
+      expected_score_range: "0.8 - 1.0 for >7B models"
   - id: medium
-    description: "Detection: 25-clause contract with 4 planted contradictions and a trap clause."
+    description: "Detection Medium: The agent sees a 25-clause contract with 4 planted contradictions and a trap clause. It must output all pairs. A perfect score requires high recall and avoiding the trap."
     min_score: 0.0
     max_score: 1.0
+    metadata:
+      num_contradictions: 4
+      contradiction_types: ["numeric", "temporal", "conditional", "party_obligation"]
+      expected_score_range: "0.6 - 0.9 for >7B models"
   - id: hard
-    description: "Detection: 60-clause contract with 8 planted contradictions across all contradiction types and 3 traps."
+    description: "Detection Hard: The agent sees a 60-clause contract with 8 planted contradictions and 3 traps. It must output all pairs. A perfect score requires perfect recall and correctly navigating legal overrides."
     min_score: 0.0
     max_score: 1.0
+    metadata:
+      num_contradictions: 8
+      contradiction_types: ["numeric", "temporal", "conditional", "party_obligation", "scope", "definition"]
+      expected_score_range: "0.4 - 0.85 for >7B models"
   - id: execution_easy
-    description: "Oracle execution: easy scenarios that activate contract clauses and may crash."
+    description: "Oracle Execution Easy: The agent sees easy business scenarios that activate contract clauses. It must trace which clauses activate and identify if two clauses crash simultaneously. Perfect score requires correctly labeling all clean and crashing scenarios."
     min_score: 0.0
     max_score: 1.0
+    metadata:
+      num_contradictions: 2
+      contradiction_types: ["execution_crash"]
+      expected_score_range: "0.7 - 1.0 for >7B models"
   - id: execution_medium
-    description: "Oracle execution: medium scenarios requiring crash-pair identification."
+    description: "Oracle Execution Medium: The agent sees medium scenarios requiring crash-pair identification. Perfect score requires distinguishing between sequential operations and simultaneous crashes."
     min_score: 0.0
     max_score: 1.0
+    metadata:
+      num_contradictions: 4
+      contradiction_types: ["execution_crash"]
+      expected_score_range: "0.6 - 0.9 for >7B models"
   - id: execution_hard
-    description: "Oracle execution: hard multi-scenario contract execution analysis."
+    description: "Oracle Execution Hard: The agent analyzes hard multi-scenario execution paths. Perfect score requires deep causal reasoning and ignoring overrides."
     min_score: 0.0
     max_score: 1.0
+    metadata:
+      num_contradictions: 8
+      contradiction_types: ["execution_crash"]
+      expected_score_range: "0.4 - 0.8 for >7B models"
   - id: lexmind_easy
-    description: "LexMind: easy incremental drafting sequence with contradiction introduction detection."
+    description: "LexMind Easy: The agent monitors an easy incremental drafting sequence. It must detect when a newly added clause contradicts a previously accepted clause. Perfect score requires maintaining contract memory."
     min_score: 0.0
     max_score: 1.0
+    metadata:
+      num_contradictions: 2
+      contradiction_types: ["incremental_conflict"]
+      expected_score_range: "0.8 - 1.0 for >7B models"
   - id: lexmind_medium
-    description: "LexMind: medium multi-round drafting sequence with subtle contradiction introductions."
+    description: "LexMind Medium: The agent monitors a medium multi-round drafting sequence. Perfect score requires tracking shifting obligations."
     min_score: 0.0
     max_score: 1.0
+    metadata:
+      num_contradictions: 4
+      contradiction_types: ["incremental_conflict"]
+      expected_score_range: "0.6 - 0.9 for >7B models"
   - id: lexmind_hard
-    description: "LexMind: hard incremental drafting sequence requiring full event-by-event monitoring."
+    description: "LexMind Hard: The agent monitors a hard incremental drafting sequence requiring full event-by-event monitoring and tracking supersessions. Perfect score requires avoiding false alarms on supersessions."
     min_score: 0.0
     max_score: 1.0
+    metadata:
+      num_contradictions: 8
+      contradiction_types: ["incremental_conflict", "supersession"]
+      expected_score_range: "0.4 - 0.8 for >7B models"
 action_space: ContractAction | ExecutionAction | LexMindEpisodeAction
 observation_space: ContractObservation | ExecutionObservation | LexMindObservation
 resources:

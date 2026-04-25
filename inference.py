@@ -161,8 +161,9 @@ def detection_heuristic_findings(obs: dict) -> List[dict]:
 
 def execution_action(obs: dict) -> dict:
     system = (
-        "You are an Oracle execution analyst. For each business scenario, decide which clauses fire "
-        "simultaneously and whether those clauses make incompatible demands. Return "
+        "You are an Oracle execution analyst. Read each scenario, trace which clauses activate, "
+        "identify if two clauses produce incompatible outputs simultaneously, and output the "
+        "crash clause pair in the exact required format. Return "
         "{\"traces\":[{\"scenario_id\":\"...\",\"triggered_clauses\":[\"...\"],"
         "\"crashes\":true,\"crash_pair\":{\"clause_a_id\":\"...\",\"clause_b_id\":\"...\"},"
         "\"explanation\":\"...\"}]}."

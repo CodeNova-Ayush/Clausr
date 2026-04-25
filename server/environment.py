@@ -18,7 +18,9 @@ class ContractFixEnv:
         self._last_feedback = None
         self._contracts_dir = Path(__file__).parent.parent / "data" / "contracts"
 
-    def reset(self, task_id: str = "easy") -> ContractObservation:
+    _last_missed_types = []
+
+    def reset(self, task_id: str = "easy", adaptive: bool = False) -> ContractObservation:
         self._task_id = task_id
         self._done = False
         self._score = 0.001
@@ -38,6 +40,23 @@ class ContractFixEnv:
         chosen_file = random.choice(matching_files)
         with open(chosen_file, "r", encoding="utf-8") as f:
             self._contract = json.load(f)
+
+        if adaptive and task_id == "hard":
+            missed_types = getattr(ContractFixEnv, "_last_missed_types", [])
+            if missed_types:
+                target_type = missed_types[0]
+                extra_id = f"clause_adaptive_{random.randint(100, 999)}"
+                self._contract["clauses"].append({
+                    "id": extra_id,
+                    "title": "Adaptive Addition",
+                    "text": f"This is an adaptive trap focusing on {target_type}. It directly conflicts with clause_01."
+                })
+                self._contract["contradictions"].append({
+                    "clause_a_id": extra_id,
+                    "clause_b_id": "clause_01",
+                    "type": target_type,
+                    "description": f"Adaptive {target_type} contradiction based on previous failure."
+                })
 
         return self._make_observation(done=False)
 
@@ -131,12 +150,33 @@ class ContractFixEnv:
 
     def _grade(self, action: ContractAction) -> Tuple[float, str, int, int]:
         true_pairs = set()
+        pair_to_type = {}
         for c in self._contract.get("contradictions", []):
-            true_pairs.add(tuple(sorted([c["clause_a_id"], c["clause_b_id"]])))
+            pair = tuple(sorted([c["clause_a_id"], c["clause_b_id"]]))
+            true_pairs.add(pair)
+            pair_to_type[pair] = c.get("type", "unknown")
 
         found_pairs = set()
+        explanation_score = 0.0
+        explanation_count = 0
+
         for f in action.findings:
-            found_pairs.add(tuple(sorted([f.clause_a_id, f.clause_b_id])))
+            pair = tuple(sorted([f.clause_a_id, f.clause_b_id]))
+            found_pairs.add(pair)
+            if pair in true_pairs:
+                explanation = (f.explanation or "").lower()
+                explanation_count += 1
+                score_bump = 0.0
+                if "conflict" in explanation or "incompatible" in explanation or "contradict" in explanation:
+                    score_bump += 0.5
+                if len(explanation.split()) > 5:
+                    score_bump += 0.5
+                explanation_score += min(1.0, score_bump)
+
+        missed_pairs = true_pairs - found_pairs
+        missed_types = [pair_to_type[p] for p in missed_pairs]
+        if missed_types:
+            ContractFixEnv._last_missed_types = missed_types
 
         true_positives = len(found_pairs & true_pairs)
         false_positives = len(found_pairs - true_pairs)
@@ -144,7 +184,12 @@ class ContractFixEnv:
         recall = 1.0 if not true_pairs else true_positives / len(true_pairs)
         false_positive_rate = false_positives / max(len(found_pairs), 1)
         lambda_penalty = {"easy": 0.10, "medium": 0.15, "hard": 0.20}.get(self._task_id, 0.10)
-        score = max(0.0, min(1.0, recall - (lambda_penalty * false_positive_rate)))
+        
+        base_score = max(0.0, min(1.0, recall - (lambda_penalty * false_positive_rate)))
+        
+        # Explanation score (up to 10% bonus for correct findings)
+        avg_expl_score = (explanation_score / explanation_count) if explanation_count > 0 else 0.0
+        score = base_score * 0.9 + (avg_expl_score * 0.1)
         score = round(score, 4)
 
         feedback_string = (

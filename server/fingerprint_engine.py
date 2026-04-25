@@ -233,6 +233,16 @@ class ContractDNAEngine:
             overall_risk=round(overall, 3),
             risk_label=label,
             dominant_risk_type=dominant,
+            contradiction_distribution={
+                "numeric": round(numeric_score, 3),
+                "temporal": round(temporal_score, 3),
+                "party_obligation": round(party_score, 3),
+                "termination": round(term_score, 3),
+                "conditional": round(cond_score, 3),
+            },
+            obligation_density=round(min(1.0, sum([1 for c in clause_texts if any(kw in c.lower() for kw in _OBLIGATION_KEYWORDS)]) / max(n, 1)), 3),
+            complexity_score=round((numeric_score + temporal_score + cond_score) / 3, 3),
+            estimated_difficulty="HARD" if overall >= 0.6 else "MEDIUM" if overall >= 0.3 else "EASY",
         )
 
         # Delta calculation for repeated calls on the same episode
