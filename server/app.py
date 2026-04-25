@@ -1,4 +1,4 @@
-from fastapi import FastAPI, WebSocket, WebSocketDisconnect
+from fastapi import FastAPI, Request, WebSocket, WebSocketDisconnect
 from fastapi.middleware.cors import CORSMiddleware
 import json
 
@@ -6,12 +6,15 @@ from server.environment import ContractFixEnv
 from server.execution_environment import ContractExecutionEnv
 from server.lexmind_environment import LexMindEnv
 from server.adversarial_environment import AdversarialArenaEnv
+from server.curriculum_environment import CurriculumForgeEnv
 from models import (
     ContractAction, ContractObservation, ContractState,
     ExecutionAction, ExecutionObservation, ContractExecutionState,
     LexMindEpisodeAction, LexMindObservation, LexMindState,
     ForgerAction, ForgerObservation, AuditorAction, AuditorObservation,
     AdversarialState, OpponentConfig, CheckpointSubmission,
+    CurriculumRunConfig, CurriculumObservation, CurriculumStepResult,
+    CompetenceProfile,
 )
 
 app = FastAPI(
@@ -196,6 +199,48 @@ def adversarial_full_episode(
     else:
         _adversarial_env.reset(task_id=task_id)
     return _adversarial_env.forger_step(forger_action)
+
+
+# ── CurriculumForge Endpoints ────────────────────────────────────────────
+
+_curriculum_env = CurriculumForgeEnv()
+
+
+@app.get("/curriculum/health")
+def curriculum_health():
+    return {"status": "ok", "environment": "CurriculumForge"}
+
+
+@app.post("/curriculum/register")
+def curriculum_register(config: CurriculumRunConfig):
+    return _curriculum_env.register_run(
+        model_name=config.model_name,
+        algorithm=config.algorithm,
+        starting_task=config.starting_task,
+    )
+
+
+@app.post("/curriculum/reset", response_model=CurriculumObservation)
+def curriculum_reset(run_id: str, mode: str = "standard", task_id: str = None):
+    return _curriculum_env.reset(run_id=run_id, mode=mode, force_task=task_id)
+
+
+@app.post("/curriculum/step", response_model=CurriculumStepResult)
+async def curriculum_step(run_id: str, request: Request):
+    action = await request.json()
+    return _curriculum_env.step(run_id=run_id, action_data=action)
+
+
+@app.get("/curriculum/profile/{run_id}", response_model=CompetenceProfile)
+def curriculum_profile(run_id: str):
+    return _curriculum_env.get_profile(run_id)
+
+
+@app.get("/curriculum/export/{run_id}")
+def curriculum_export(run_id: str):
+    episodes = _curriculum_env.export_episodes(run_id)
+    from fastapi.responses import JSONResponse
+    return JSONResponse(content=episodes)
 
 
 @app.websocket("/ws")
