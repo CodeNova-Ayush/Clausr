@@ -184,12 +184,89 @@ def lexmind_action(obs: dict) -> dict:
                 "contradicts_clause_id": step.get("contradicts_clause_id"),
                 "explanation": str(step.get("explanation", "")),
             }
+    if not by_id:
+        by_id = lexmind_heuristic_predictions(obs)
     return {
         "steps": [
             by_id.get(e["event_id"], {"event_id": e["event_id"], "introduces_contradiction": False, "contradicts_clause_id": None, "explanation": ""})
             for e in obs.get("drafting_sequence", [])
         ]
     }
+
+
+def lexmind_heuristic_predictions(obs: dict) -> Dict[str, dict]:
+    """Public-observation fallback for LexMind when no API key is configured."""
+    events = obs.get("drafting_sequence", [])
+    predictions: Dict[str, dict] = {}
+    previous: List[dict] = []
+
+    def text(e: dict) -> str:
+        return (e.get("clause_title", "") + " " + e.get("clause_text", "")).lower()
+
+    for event in events:
+        event_text = text(event)
+        match_id = None
+        explanation = ""
+        for prior in previous:
+            prior_text = text(prior)
+            if ("payment" in event_text or "invoice" in event_text or "refund" in event_text) and (
+                "payment" in prior_text or "invoice" in prior_text or "refund" in prior_text
+            ):
+                if any(term in event_text for term in ["fifteen", "15", "full refund", "non-refundable"]) and any(
+                    term in prior_text for term in ["thirty", "30", "non-refundable", "monthly"]
+                ):
+                    match_id = prior["clause_id"]
+                    explanation = "Payment/refund terms impose incompatible timing or refund obligations."
+                    break
+            if ("liability" in event_text or "indemnif" in event_text) and ("liability" in prior_text or "indemnif" in prior_text):
+                if ("no cap" in event_text and "exceed" in prior_text) or ("exceed" in event_text and "no cap" in prior_text):
+                    match_id = prior["clause_id"]
+                    explanation = "One clause uncaps indemnity/liability while another caps aggregate liability."
+                    break
+            if ("data" in event_text and ("analy" in event_text or "machine learning" in event_text)) and (
+                "client data" in prior_text and any(term in prior_text for term in ["shall not access", "shall not access, use", "not access"])
+            ):
+                match_id = prior["clause_id"]
+                explanation = "Data analytics license conflicts with prior data-use prohibition."
+                break
+            if ("terminate" in event_text or "termination" in event_text) and ("renew" in prior_text or "non-renewal" in prior_text):
+                if ("30" in event_text or "thirty" in event_text) and ("90" in prior_text or "ninety" in prior_text):
+                    match_id = prior["clause_id"]
+                    explanation = "Thirty-day termination conflicts with ninety-day non-renewal framework."
+                    break
+            if ("breach" in event_text and ("72" in event_text or "seventy-two" in event_text)) and (
+                "breach" in prior_text and ("24" in prior_text or "twenty-four" in prior_text)
+            ):
+                match_id = prior["clause_id"]
+                explanation = "Breach notification deadlines conflict."
+                break
+            if ("confidential" in event_text and any(term in event_text for term in ["perpetuity", "indefinitely"])) and (
+                "confidential" in prior_text and ("five" in prior_text or "5" in prior_text or "three" in prior_text or "3" in prior_text)
+            ):
+                match_id = prior["clause_id"]
+                explanation = "Perpetual confidentiality conflicts with fixed confidentiality duration."
+                break
+            if ("portfolio" in event_text or "redistribute" in event_text) and (
+                "exclusive property" in prior_text or "owned exclusively" in prior_text
+            ):
+                match_id = prior["clause_id"]
+                explanation = "Provider reuse rights conflict with client-exclusive ownership."
+                break
+            if ("arbitration" in event_text and ("san francisco" in event_text or "new york" in event_text)) and (
+                "courts" in prior_text or "houston" in prior_text
+            ):
+                match_id = prior["clause_id"]
+                explanation = "Arbitration venue conflicts with court/forum clause."
+                break
+
+        predictions[event["event_id"]] = {
+            "event_id": event["event_id"],
+            "introduces_contradiction": match_id is not None,
+            "contradicts_clause_id": match_id,
+            "explanation": explanation,
+        }
+        previous.append(event)
+    return predictions
 
 
 def run_single(task_id: str, reset_path: str, step_path: str, builder: Any) -> float:

@@ -188,7 +188,7 @@ class LexMindEnv:
         total_events = len(self._drafting_sequence)
 
         total_score = 0.0
-        penalties = 0.0
+        max_possible_score = 0.0
         correctly_detected = 0
         false_alarms = 0
         missed = 0
@@ -198,13 +198,18 @@ class LexMindEnv:
             gt_contradiction = event.get("introduces_contradiction", False)
             gt_clause_id = event.get("contradicts_clause_id")
             gt_resolves = event.get("resolves_contradiction", False)
+            if gt_contradiction:
+                max_possible_score += 1.0
+            elif gt_resolves:
+                max_possible_score += 0.5
+            else:
+                max_possible_score += 0.3
 
             step = step_map.get(eid)
             if step is None:
                 # Missing prediction — treat as "no contradiction"
                 if gt_contradiction:
                     missed += 1
-                    penalties += 0.2
                 elif gt_resolves:
                     total_score += 0.5  # Benefit of doubt for resolution
                 else:
@@ -224,21 +229,22 @@ class LexMindEnv:
                         correctly_detected += 1  # Still detected the event
                 else:
                     missed += 1
-                    penalties += 0.2
             elif gt_resolves:
                 if not pred_contradiction:
                     total_score += 0.5
                 else:
                     false_alarms += 1
-                    penalties += 0.1
             else:
                 if not pred_contradiction:
                     total_score += 0.3
                 else:
                     false_alarms += 1
-                    penalties += 0.1
 
-        raw_score = (total_score / total_events) - penalties if total_events > 0 else 0.0
+        # Normalize by the maximum attainable score for this specific sequence.
+        # Otherwise sparse tasks with many clean events can score below 0.40 even
+        # when every prediction is exactly correct (e.g. one contradiction in
+        # eight events: (1 + 7*0.3)/8 = 0.3875).
+        raw_score = (total_score - missed - (0.3 * false_alarms)) / max(max_possible_score, 1e-9)
         final_score = max(0.001, min(0.999, raw_score))
         final_score = round(final_score, 4)
 
