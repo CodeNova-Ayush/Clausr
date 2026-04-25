@@ -1,5 +1,5 @@
 from pydantic import BaseModel
-from typing import Optional, List
+from typing import Dict, Optional, List
 
 class Clause(BaseModel):
     id: str
@@ -236,3 +236,80 @@ class AdversarialState(BaseModel):
     auditor_score: float
     oracle_accepted: bool
     done: bool
+
+
+# ── CurriculumForge Models ──────────────────────────────────────────────
+
+class CompetenceProfile(BaseModel):
+    run_id: str
+    model_name: str = ""
+    algorithm: str = "absolute_learning_progress"
+    total_episodes: int = 0
+    per_environment_scores: Dict[str, float] = {}
+    per_contradiction_type_accuracy: Dict[str, float] = {}
+    per_difficulty_history: Dict[str, List[float]] = {}
+    improvement_gradients: Dict[str, float] = {}
+    plateau_flags: Dict[str, bool] = {}
+    failure_flags: Dict[str, bool] = {}
+    estimated_mastery_eta: Dict[str, Optional[float]] = {}
+    task_selection_probabilities: Dict[str, float] = {}
+    recent_task_history: List[str] = []
+    mastered_types: List[str] = []
+
+class TeacherReasoning(BaseModel):
+    selected_task: str
+    selected_difficulty: str
+    algorithm: str
+    reasoning_steps: List[str] = []
+    learning_progress_scores: Dict[str, float] = {}
+    selection_probabilities: Dict[str, float] = {}
+
+class CurriculumRunConfig(BaseModel):
+    model_name: str = "default"
+    algorithm: str = "absolute_learning_progress"
+    starting_task: Optional[str] = None
+
+class CurriculumObservation(BaseModel):
+    run_id: str
+    episode_id: str
+    episode_number: int
+    selected_task: str
+    selected_difficulty: str
+    sub_environment: str
+    teacher_reasoning: TeacherReasoning
+    competence_snapshot: CompetenceProfile
+    sub_observation: dict
+    instructions: str
+    done: bool
+    score: Optional[float] = None
+    feedback: Optional[str] = None
+
+class CurriculumStepResult(BaseModel):
+    run_id: str
+    episode_id: str
+    episode_number: int
+    selected_task: str
+    base_score: float
+    curriculum_bonus: float
+    breadth_bonus: float
+    transfer_bonus: float
+    composite_score: float
+    sub_result: dict
+    competence_snapshot: CompetenceProfile
+    done: bool
+    feedback: str = ""
+
+class CurriculumEpisodeRecord(BaseModel):
+    run_id: str
+    episode_id: str
+    episode_number: int
+    task_id: str
+    difficulty: str
+    sub_environment: str
+    base_score: float
+    curriculum_bonus: float
+    breadth_bonus: float
+    transfer_bonus: float
+    composite_score: float
+    contradiction_types_attempted: List[str] = []
+    timestamp: str = ""
