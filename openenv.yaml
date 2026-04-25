@@ -62,12 +62,8 @@ tasks:
     description: "Both roles played by the same model. Full self-play mode with population-based training."
     min_score: 0.001
     max_score: 0.999
-  - id: curriculum_standard
-    description: "Adaptive curriculum across all environments. Teacher selects tasks based on learning progress."
-    min_score: 0.001
-    max_score: 0.999
-  - id: curriculum_paired
-    description: "PAIRED-mode curriculum using adversarial generator for frontier-seeking difficulty."
+  - id: curriculum_adaptive
+    description: "Adaptive curriculum across all environments. Teacher selects five tasks based on learning progress."
     min_score: 0.001
     max_score: 0.999
   - id: constitution_easy

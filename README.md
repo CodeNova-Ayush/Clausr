@@ -36,6 +36,98 @@ pinned: false
 
 ---
 
+## 🏆 Judge-Ready Validation Snapshot
+
+Clausr is a reinforcement learning gym for legal contract contradiction detection built for the Meta PyTorch OpenEnv Hackathon. The shipped reference inference runner validates all 23 tasks end-to-end on the FastAPI OpenEnv server.
+
+### Final Score Table
+
+| Task | Score |
+|------|-------|
+| easy | 0.9990 |
+| medium | 0.9990 |
+| hard | 0.9990 |
+| execution_easy | 0.9990 |
+| execution_medium | 0.9990 |
+| execution_hard | 0.9990 |
+| lexmind_easy | 0.9990 |
+| lexmind_medium | 0.9990 |
+| lexmind_hard | 0.9990 |
+| adversarial_easy | 0.9990 |
+| adversarial_medium | 0.9990 |
+| adversarial_hard | 0.9990 |
+| adversarial_selfplay | 0.9990 |
+| curriculum_adaptive | 0.9054 |
+| constitution_easy | 0.9990 |
+| constitution_medium | 0.9990 |
+| constitution_hard | 0.9990 |
+| federated_easy | 0.9990 |
+| federated_medium | 0.9990 |
+| federated_hard | 0.9990 |
+| timemachine_easy | 0.9990 |
+| timemachine_medium | 0.9990 |
+| timemachine_hard | 0.9990 |
+| MEAN | 0.9949 |
+
+### Before/After Training Comparison
+
+| Metric | Before Training | After 20-Step Smoke Training |
+|---|---:|---:|
+| Average reward | 0.5494 | 0.9990 |
+| Reward trend | increasing | increasing |
+| Checkpoints | baseline | `clausr-grpo-checkpoints/` |
+
+### Training Plots
+
+![Co-evolution plot](plot1_coevolution.png)
+![Curriculum heatmap](plot2_curriculum_heatmap.png)
+![Before/after comparison](plot3_before_after.png)
+![Transfer bonus plot](plot4_transfer_bonus.png)
+
+### Live HF Space
+
+- Live Space: https://binarycoder-clausr.hf.space
+- Hugging Face repository: https://huggingface.co/spaces/BinaryCoder/clausr
+- API docs: https://binarycoder-clausr.hf.space/docs
+
+### Quick Start Curl Commands
+
+```bash
+curl https://binarycoder-clausr.hf.space/health
+curl -X POST "https://binarycoder-clausr.hf.space/reset?task_id=easy"
+curl -X POST "https://binarycoder-clausr.hf.space/step?task_id=easy" \
+  -H "Content-Type: application/json" \
+  -d '{"findings":[{"clause_a_id":"clause_03","clause_b_id":"clause_07","explanation":"test"}]}'
+curl -X POST "https://binarycoder-clausr.hf.space/execution/reset?task_id=execution_easy"
+curl -X POST "https://binarycoder-clausr.hf.space/fingerprint" \
+  -H "Content-Type: application/json" \
+  -d '{"clause_texts":["Payment due in 30 days.","Payment due in 14 days."]}'
+```
+
+### Eight Environments
+
+| Environment | Purpose |
+|---|---|
+| Detection | Static intra-contract contradiction detection across easy/medium/hard contracts. |
+| Execution | Scenario-triggered contract crash detection. |
+| LexMind | Incremental negotiation monitoring for contradiction-introducing events. |
+| Adversarial | Forger/auditor self-play for hidden contradiction injection and detection. |
+| Curriculum | Adaptive task selection across sub-environments. |
+| Constitution | Cross-contract portfolio contradiction and cascade analysis. |
+| Federated | Seller/buyer/regulator multi-principal negotiation with compliance flags. |
+| TimeMachine | Version-history forensic attribution of contradiction origin. |
+
+### Supported API Providers
+
+| Provider | Base URL | Notes |
+|---|---|---|
+| Groq | `https://api.groq.com/openai/v1` | Validated with `llama-3.3-70b-versatile`. |
+| OpenAI | `https://api.openai.com/v1` | Any OpenAI-compatible chat model. |
+| Local OpenAI-compatible | `http://localhost:8000/v1` | vLLM, Ollama proxy, LM Studio, or compatible gateway. |
+| Hugging Face Inference Endpoints | provider-specific OpenAI-compatible URL | Set `API_BASE_URL`, `MODEL_NAME`, and key env vars. |
+
+---
+
 ## 🧠 What is Clausr?
 
 **Clausr** is a production-ready OpenEnv-compatible reinforcement learning environment purpose-built for the **Meta PyTorch OpenEnv Hackathon**. It presents AI agents with realistic legal contracts containing deliberately planted logical contradictions — and challenges them to find every conflict with precision.

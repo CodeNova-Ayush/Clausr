@@ -1,0 +1,11 @@
+venv/
+__pycache__/
+*.pyc
+.git/
+frontend/node_modules/
+frontend/dist/
+clausr-grpo-checkpoints/
+training_plots/
+server*.log
+inference*.log
+*.log

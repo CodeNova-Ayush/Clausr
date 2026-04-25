@@ -22,9 +22,22 @@ class ContractObservation(BaseModel):
     instructions: str
     done: bool
     score: Optional[float] = None
+    reward: Optional[float] = None
     feedback: Optional[str] = None
     episode_id: Optional[str] = None
     contract_id: Optional[str] = None
+    contradictions_found: Optional[int] = None
+    contradictions_total: Optional[int] = None
+    false_positives: Optional[int] = None
+
+
+class ContractStepResult(ContractObservation):
+    reward: float
+    score: float
+    feedback: str
+    contradictions_found: int
+    contradictions_total: int
+    false_positives: int
 
 class ContractState(BaseModel):
     episode_id: str

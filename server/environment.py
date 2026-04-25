@@ -87,6 +87,15 @@ class ContractFixEnv:
         clauses = [Clause(**c) for c in self._contract["clauses"]]
         num_contradictions = len(self._contract["contradictions"])
 
+        reward = score if score is not None else None
+        contradictions_found = self._contradictions_found if done else None
+        false_positives = None
+        if feedback:
+            import re
+            match = re.search(r"False positives: (\d+)", feedback)
+            if match:
+                false_positives = int(match.group(1))
+
         return ContractObservation(
             contract_text=self._contract["contract_text"],
             clauses=clauses,
@@ -95,7 +104,11 @@ class ContractFixEnv:
             instructions=self._instructions(),
             done=done,
             score=score,
+            reward=reward,
             feedback=feedback,
+            contradictions_found=contradictions_found,
+            contradictions_total=num_contradictions,
+            false_positives=false_positives,
             episode_id=self._episode_id,
             contract_id=self._contract.get("contract_id", ""),
         )

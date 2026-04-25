@@ -1,3 +1,7 @@
+clausr-grpo-checkpoints/
+keep_alive.log
+keep_alive.pid
+training_plots/
 venv/
 __pycache__/
 *.pyc
