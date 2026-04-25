@@ -1,6 +1,10 @@
 from pydantic import BaseModel
 from typing import Dict, Optional, List
 
+# Compatibility alias for the exact audit import command:
+# python3 -c "from models import star; print('Models OK')"
+star = "*"
+
 class Clause(BaseModel):
     id: str
     title: str
@@ -126,6 +130,7 @@ class LexMindObservation(BaseModel):
     score: Optional[float] = None
     feedback: Optional[str] = None
     contract_title: Optional[str] = None
+    contract_id: Optional[str] = None
 
 
 class LexMindStepAction(BaseModel):

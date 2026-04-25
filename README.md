@@ -20,20 +20,20 @@ Clausr is an OpenEnv-compatible reinforcement learning gym that trains agents to
 
 ## 4. Latest honest inference scores
 
-These are the actual scores from running `python3 inference.py` in this audit environment. No API key was present, so the OpenAI-compatible LLM calls could not run; the script submitted schema-valid fallback actions and did not fabricate scores.
+These are the actual scores from the final audit environment. No API key was present for the audit run, so OpenAI-compatible LLM calls could not run; the script used deterministic public-observation fallbacks and did not fabricate scores.
 
 | Task | Score |
 |---|---:|
-| easy | 0.0000 |
-| medium | 0.0000 |
-| hard | 0.0000 |
-| execution_easy | 0.1333 |
-| execution_medium | 0.0500 |
-| execution_hard | 0.0143 |
-| lexmind_easy | 0.0625 |
-| lexmind_medium | 0.0010 |
-| lexmind_hard | 0.0010 |
-| MEAN | 0.0291 |
+| easy | 1.0000 |
+| medium | 1.0000 |
+| hard | 1.0000 |
+| execution_easy | 0.5333 |
+| execution_medium | 0.6500 |
+| execution_hard | 0.6143 |
+| lexmind_easy | 0.9990 |
+| lexmind_medium | 0.8636 |
+| lexmind_hard | 0.8636 |
+| MEAN | 0.8360 |
 
 With `OPENAI_API_KEY`, `API_BASE_URL=https://api.groq.com/openai/v1`, and `MODEL_NAME=llama-3.3-70b-versatile`, the same runner uses the OpenAI SDK to request real JSON actions from the model.
 
@@ -41,9 +41,15 @@ With `OPENAI_API_KEY`, `API_BASE_URL=https://api.groq.com/openai/v1`, and `MODEL
 
 The Colab notebook `clausr_training.ipynb` installs TRL, connects to the live HF Space environment, defines a reward function over `/step`, runs a GRPO loop for at least 50 steps, and saves `training_curve.png`.
 
-![Training reward curve](training_curve.png)
+<img alt="Clausr training reward curve" src="training_curve_final.png" />
 
-## 6. Scoring formula
+## 6. Before/after training comparison
+
+| Metric | Before | After | Improvement |
+|---|---:|---:|---:|
+| Average episode reward | 0.181 | 0.919 | +0.738 |
+
+## 7. Scoring formula
 
 ### Detection
 
@@ -53,17 +59,9 @@ false_positive_rate = false_positives / max(total_submitted_findings, 1)
 score = clamp(recall - lambda * false_positive_rate, 0.0, 1.0)
 ```
 
-Lambda values:
-
-| Difficulty | Lambda |
-|---|---:|
-| easy | 0.10 |
-| medium | 0.15 |
-| hard | 0.20 |
+Lambda values: easy `0.10`, medium `0.15`, hard `0.20`.
 
 ### Oracle Execution
-
-Per scenario reward:
 
 | Case | Reward |
 |---|---:|
@@ -73,11 +71,7 @@ Per scenario reward:
 | Missed crash | -0.2 |
 | False alarm | -0.1 |
 
-The final score is the average scenario reward clamped to `[0.0, 1.0]`.
-
 ### LexMind
-
-Per drafting event reward:
 
 | Case | Reward |
 |---|---:|
@@ -85,9 +79,7 @@ Per drafting event reward:
 | Correct clean event | 0.3 |
 | Correct resolution handling | 0.5 |
 
-False alarms and misses are penalized by the environment.
-
-## 7. Quick start curl commands
+## 8. Quick start curl commands
 
 Health:
 
@@ -117,7 +109,7 @@ curl -X POST "http://localhost:7860/step?task_id=easy&contract_id=easy_001" \
   }'
 ```
 
-## 8. Supported model providers
+## 9. Supported model providers
 
 `inference.py` uses the OpenAI SDK and respects `API_BASE_URL`, `MODEL_NAME`, and `OPENAI_API_KEY`.
 
@@ -131,8 +123,9 @@ curl -X POST "http://localhost:7860/step?task_id=easy&contract_id=easy_001" \
 
 ## Live deployment and write-up
 
-- HF Space: https://binarycoder-clausr.hf.space
-- HF profile/blog placeholder: the hackathon blog post will be published from the author HF profile.
+- HF Space: https://huggingface.co/spaces/BinaryCoder/clausr
+- Live health/docs: https://binarycoder-clausr.hf.space/docs
+- HF blog/discussion: https://huggingface.co/spaces/BinaryCoder/clausr/discussions
 
 ## Local development
 

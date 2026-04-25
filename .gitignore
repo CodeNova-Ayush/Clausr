@@ -10,3 +10,16 @@ __pycache__/
 .DS_Store
 backend.log
 test_out.txt
+*.log
+inference_out.txt
+checks_output.txt
+server_*.log
+inference_*.log
+full_inference_run.log
+plot1_coevolution.png
+plot2_curriculum_heatmap.png
+plot3_before_after.png
+plot4_transfer_bonus.png
+training_curve.png
+upload_this.ipynb
+frontend/src/assets/hero.png

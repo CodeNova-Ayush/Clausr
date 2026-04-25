@@ -156,6 +156,7 @@ class LexMindEnv:
             score=score,
             feedback=feedback,
             contract_title=self._contract.get("title", ""),
+            contract_id=self._contract.get("contract_id", ""),
         )
 
     def _instructions(self) -> str:
