@@ -3,8 +3,8 @@ version: "1.0.0"
 entrypoint: inference.py
 description: >
   Clausr trains AI agents to detect hidden contradictions in legal contracts.
-  Three environments: static contradiction detection, contract execution simulation,
-  and real-time negotiation monitoring.
+  Four environments: static contradiction detection, contract execution simulation,
+  real-time negotiation monitoring, and adversarial self-play arena.
 tasks:
   - id: easy
     description: "NDA with 8 clauses and 1 planted contradiction. Agent must find the contradicting clause pair."
@@ -16,6 +16,22 @@ tasks:
     max_score: 0.999
   - id: hard
     description: "Enterprise MSA with 60 clauses, 8 contradictions, and 3 near-contradiction traps."
+    min_score: 0.001
+    max_score: 0.999
+  - id: adversarial_easy
+    description: "8-clause contract, Auditor is a fixed keyword-matcher. Forger must score above 0.5 to advance."
+    min_score: 0.001
+    max_score: 0.999
+  - id: adversarial_medium
+    description: "25-clause contract, Auditor is an embedding-similarity model. Tests semantic subtlety."
+    min_score: 0.001
+    max_score: 0.999
+  - id: adversarial_hard
+    description: "60-clause contract, Auditor is the LexMind full agent. Tests deep legal reasoning."
+    min_score: 0.001
+    max_score: 0.999
+  - id: adversarial_selfplay
+    description: "Both roles played by the same model. Full self-play mode with population-based training."
     min_score: 0.001
     max_score: 0.999
 action_space: ContractAction
