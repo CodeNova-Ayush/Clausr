@@ -1,0 +1,96 @@
+{
+  "contract_id": "federated_easy_001",
+  "task_id": "federated_easy",
+  "title": "Software Development Services Agreement",
+  "total_rounds": 3,
+  "regulatory_frameworks": ["GDPR"],
+  "planted_violations": [
+    {
+      "clause_id": "clause_06",
+      "violation_type": "GDPR",
+      "description": "Clause permits unlimited third-party data sharing without data subject consent, violating GDPR Article 6."
+    },
+    {
+      "clause_id": "clause_11",
+      "violation_type": "GDPR",
+      "description": "Clause states personal data can be retained indefinitely after contract termination, violating GDPR data minimization and storage limitation principles."
+    }
+  ],
+  "clauses": [
+    {
+      "id": "clause_01",
+      "title": "Definitions",
+      "text": "In this Agreement, 'Provider' means TechBuild Solutions Ltd, 'Client' means GreenField Enterprises Inc, 'Services' means the custom software development services described in Schedule A, and 'Deliverables' means all work product created by the Provider under this Agreement."
+    },
+    {
+      "id": "clause_02",
+      "title": "Scope of Services",
+      "text": "The Provider shall perform the Services described in Schedule A in accordance with commercially reasonable standards and shall deliver the Deliverables to the Client on or before the milestones specified therein."
+    },
+    {
+      "id": "clause_03",
+      "title": "Payment Terms",
+      "text": "The Client shall pay the Provider the fees set forth in Schedule B within thirty (30) days of receipt of a valid invoice. Late payments shall accrue interest at the rate of 1.5% per month or the maximum rate permitted by law, whichever is lower."
+    },
+    {
+      "id": "clause_04",
+      "title": "Intellectual Property",
+      "text": "All Deliverables created by the Provider under this Agreement shall be considered work-for-hire. Upon full payment, ownership of all intellectual property rights in the Deliverables shall transfer to the Client."
+    },
+    {
+      "id": "clause_05",
+      "title": "Confidentiality",
+      "text": "Each party shall maintain the confidentiality of all proprietary information received from the other party and shall not disclose such information to any third party without prior written consent, except as required by law."
+    },
+    {
+      "id": "clause_06",
+      "title": "Data Processing",
+      "text": "The Provider may process, transfer, and share all data received from the Client, including personal data of the Client's customers, with any third-party subprocessors, affiliates, or business partners as the Provider deems necessary for operational efficiency, without requiring additional consent or notification."
+    },
+    {
+      "id": "clause_07",
+      "title": "Warranty",
+      "text": "The Provider warrants that the Deliverables shall conform to the specifications set forth in Schedule A for a period of ninety (90) days from delivery. The Provider's sole obligation under this warranty shall be to correct any non-conforming Deliverables at no additional cost."
+    },
+    {
+      "id": "clause_08",
+      "title": "Limitation of Liability",
+      "text": "Neither party shall be liable to the other for any indirect, incidental, special, consequential, or punitive damages. The total aggregate liability of either party under this Agreement shall not exceed the total fees paid or payable in the twelve (12) months preceding the claim."
+    },
+    {
+      "id": "clause_09",
+      "title": "Termination",
+      "text": "Either party may terminate this Agreement upon thirty (30) days' written notice. In the event of material breach, the non-breaching party may terminate immediately upon written notice if the breach is not cured within fifteen (15) days of notice."
+    },
+    {
+      "id": "clause_10",
+      "title": "Force Majeure",
+      "text": "Neither party shall be liable for any failure or delay in performance due to causes beyond its reasonable control, including but not limited to acts of God, war, terrorism, pandemic, labor disputes, or government actions."
+    },
+    {
+      "id": "clause_11",
+      "title": "Data Retention",
+      "text": "Following termination or expiration of this Agreement, the Provider shall retain all personal data, customer records, and transaction logs indefinitely in its archival systems for potential future business use and analytics purposes."
+    },
+    {
+      "id": "clause_12",
+      "title": "Indemnification",
+      "text": "Each party shall indemnify, defend, and hold harmless the other party from and against any claims, damages, losses, and expenses arising from the indemnifying party's breach of this Agreement or negligence."
+    },
+    {
+      "id": "clause_13",
+      "title": "Dispute Resolution",
+      "text": "Any dispute arising under this Agreement shall first be submitted to good faith mediation. If mediation fails within thirty (30) days, the dispute shall be resolved by binding arbitration under the rules of the American Arbitration Association."
+    },
+    {
+      "id": "clause_14",
+      "title": "Entire Agreement",
+      "text": "This Agreement, together with all Schedules and Exhibits, constitutes the entire agreement between the parties and supersedes all prior negotiations, representations, and agreements, whether written or oral."
+    },
+    {
+      "id": "clause_15",
+      "title": "Governing Law",
+      "text": "This Agreement shall be governed by and construed in accordance with the laws of the State of California, United States of America, without regard to its conflict of laws provisions."
+    }
+  ]
+}

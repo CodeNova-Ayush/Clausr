@@ -1,0 +1,1319 @@
+{
+  "contract_id": "timemachine_hard_002",
+  "task_id": "timemachine_hard",
+  "title": "Enterprise Software Development Agreement \u2014 Revision History",
+  "ground_truth": {
+    "introduced_at_version": 10,
+    "introduced_by": "Drafter",
+    "clause_a_id": "clause_06",
+    "clause_b_id": "clause_19",
+    "contradiction_type": "conditional"
+  },
+  "version_history": [
+    {
+      "version": 1,
+      "author": "Drafter",
+      "timestamp": "2025-04-01T10:00:00Z",
+      "change_summary": "Initial draft.",
+      "clauses": [
+        {
+          "id": "clause_01",
+          "title": "Definitions",
+          "text": "Developer means CodeForge Systems Inc. Client means MegaRetail Corp. Software means the custom ERP platform."
+        },
+        {
+          "id": "clause_02",
+          "title": "Scope",
+          "text": "Developer shall design, develop, test, and deploy the Software per Schedule A milestones."
+        },
+        {
+          "id": "clause_03",
+          "title": "Payment",
+          "text": "Client pays $500K upon signing, milestone payments per Schedule B, and $500K upon final acceptance."
+        },
+        {
+          "id": "clause_04",
+          "title": "Timeline",
+          "text": "Development shall be completed within eighteen (18) months of the Effective Date."
+        },
+        {
+          "id": "clause_05",
+          "title": "IP",
+          "text": "Upon full payment, all IP in the Software transfers to Client. Developer retains rights in pre-existing tools."
+        },
+        {
+          "id": "clause_06",
+          "title": "Acceptance",
+          "text": "If the Software fails acceptance testing, the Client shall notify the Developer in writing within ten (10) business days, specifying all deficiencies. The Developer shall correct all identified deficiencies within twenty (20) business days. If deficiencies are not corrected within this cure period, the Client may terminate this Agreement and receive a full refund of all payments made."
+        },
+        {
+          "id": "clause_07",
+          "title": "Governing Law",
+          "text": "Laws of the State of Washington. Disputes resolved in King County Superior Court."
+        }
+      ]
+    },
+    {
+      "version": 2,
+      "author": "Counterparty",
+      "timestamp": "2025-04-02T10:00:00Z",
+      "change_summary": "Version 2.",
+      "clauses": [
+        {
+          "id": "clause_01",
+          "title": "Definitions",
+          "text": "Developer means CodeForge Systems Inc. Client means MegaRetail Corp. Software means the custom ERP platform."
+        },
+        {
+          "id": "clause_02",
+          "title": "Scope",
+          "text": "Developer shall design, develop, test, and deploy the Software per Schedule A milestones."
+        },
+        {
+          "id": "clause_03",
+          "title": "Payment",
+          "text": "Client pays $500K upon signing, milestone payments per Schedule B, and $500K upon final acceptance."
+        },
+        {
+          "id": "clause_04",
+          "title": "Timeline",
+          "text": "Development shall be completed within eighteen (18) months of the Effective Date."
+        },
+        {
+          "id": "clause_05",
+          "title": "IP",
+          "text": "Upon full payment, all IP in the Software transfers to Client. Developer retains rights in pre-existing tools."
+        },
+        {
+          "id": "clause_06",
+          "title": "Acceptance",
+          "text": "If the Software fails acceptance testing, the Client shall notify the Developer in writing within ten (10) business days, specifying all deficiencies. The Developer shall correct all identified deficiencies within twenty (20) business days. If deficiencies are not corrected within this cure period, the Client may terminate this Agreement and receive a full refund of all payments made."
+        },
+        {
+          "id": "clause_07",
+          "title": "Governing Law",
+          "text": "Laws of the State of Washington. Disputes resolved in King County Superior Court."
+        },
+        {
+          "id": "clause_08",
+          "title": "Warranty",
+          "text": "Developer warrants Software conformance to specs for twelve (12) months."
+        }
+      ]
+    },
+    {
+      "version": 3,
+      "author": "Drafter",
+      "timestamp": "2025-04-03T10:00:00Z",
+      "change_summary": "Version 3.",
+      "clauses": [
+        {
+          "id": "clause_01",
+          "title": "Definitions",
+          "text": "Developer means CodeForge Systems Inc. Client means MegaRetail Corp. Software means the custom ERP platform."
+        },
+        {
+          "id": "clause_02",
+          "title": "Scope",
+          "text": "Developer shall design, develop, test, and deploy the Software per Schedule A milestones."
+        },
+        {
+          "id": "clause_03",
+          "title": "Payment",
+          "text": "Client pays $500K upon signing, milestone payments per Schedule B, and $500K upon final acceptance."
+        },
+        {
+          "id": "clause_04",
+          "title": "Timeline",
+          "text": "Development shall be completed within eighteen (18) months of the Effective Date."
+        },
+        {
+          "id": "clause_05",
+          "title": "IP",
+          "text": "Upon full payment, all IP in the Software transfers to Client. Developer retains rights in pre-existing tools."
+        },
+        {
+          "id": "clause_06",
+          "title": "Acceptance",
+          "text": "If the Software fails acceptance testing, the Client shall notify the Developer in writing within ten (10) business days, specifying all deficiencies. The Developer shall correct all identified deficiencies within twenty (20) business days. If deficiencies are not corrected within this cure period, the Client may terminate this Agreement and receive a full refund of all payments made."
+        },
+        {
+          "id": "clause_07",
+          "title": "Governing Law",
+          "text": "Laws of the State of Washington. Disputes resolved in King County Superior Court."
+        },
+        {
+          "id": "clause_08",
+          "title": "Warranty",
+          "text": "Developer warrants Software conformance to specs for twelve (12) months."
+        },
+        {
+          "id": "clause_09",
+          "title": "Confidentiality",
+          "text": "Both parties protect confidential info for five (5) years."
+        }
+      ]
+    },
+    {
+      "version": 4,
+      "author": "Counterparty",
+      "timestamp": "2025-04-04T10:00:00Z",
+      "change_summary": "Version 4.",
+      "clauses": [
+        {
+          "id": "clause_01",
+          "title": "Definitions",
+          "text": "Developer means CodeForge Systems Inc. Client means MegaRetail Corp. Software means the custom ERP platform."
+        },
+        {
+          "id": "clause_02",
+          "title": "Scope",
+          "text": "Developer shall design, develop, test, and deploy the Software per Schedule A milestones."
+        },
+        {
+          "id": "clause_03",
+          "title": "Payment",
+          "text": "Client pays $500K upon signing, milestone payments per Schedule B, and $500K upon final acceptance."
+        },
+        {
+          "id": "clause_04",
+          "title": "Timeline",
+          "text": "Development shall be completed within eighteen (18) months of the Effective Date."
+        },
+        {
+          "id": "clause_05",
+          "title": "IP",
+          "text": "Upon full payment, all IP in the Software transfers to Client. Developer retains rights in pre-existing tools."
+        },
+        {
+          "id": "clause_06",
+          "title": "Acceptance",
+          "text": "If the Software fails acceptance testing, the Client shall notify the Developer in writing within ten (10) business days, specifying all deficiencies. The Developer shall correct all identified deficiencies within twenty (20) business days. If deficiencies are not corrected within this cure period, the Client may terminate this Agreement and receive a full refund of all payments made."
+        },
+        {
+          "id": "clause_07",
+          "title": "Governing Law",
+          "text": "Laws of the State of Washington. Disputes resolved in King County Superior Court."
+        },
+        {
+          "id": "clause_08",
+          "title": "Warranty",
+          "text": "Developer warrants Software conformance to specs for twelve (12) months."
+        },
+        {
+          "id": "clause_09",
+          "title": "Confidentiality",
+          "text": "Both parties protect confidential info for five (5) years."
+        },
+        {
+          "id": "clause_10",
+          "title": "Liability",
+          "text": "Developer total liability capped at total contract value."
+        },
+        {
+          "id": "clause_11",
+          "title": "Damages Exclusion",
+          "text": "Neither party liable for consequential, incidental, or punitive damages regardless of cause."
+        }
+      ]
+    },
+    {
+      "version": 5,
+      "author": "Drafter",
+      "timestamp": "2025-04-05T10:00:00Z",
+      "change_summary": "Version 5.",
+      "clauses": [
+        {
+          "id": "clause_01",
+          "title": "Definitions",
+          "text": "Developer means CodeForge Systems Inc. Client means MegaRetail Corp. Software means the custom ERP platform."
+        },
+        {
+          "id": "clause_02",
+          "title": "Scope",
+          "text": "Developer shall design, develop, test, and deploy the Software per Schedule A milestones."
+        },
+        {
+          "id": "clause_03",
+          "title": "Payment",
+          "text": "Client pays $500K upon signing, milestone payments per Schedule B, and $500K upon final acceptance."
+        },
+        {
+          "id": "clause_04",
+          "title": "Timeline",
+          "text": "Development shall be completed within eighteen (18) months of the Effective Date."
+        },
+        {
+          "id": "clause_05",
+          "title": "IP",
+          "text": "Upon full payment, all IP in the Software transfers to Client. Developer retains rights in pre-existing tools."
+        },
+        {
+          "id": "clause_06",
+          "title": "Acceptance",
+          "text": "If the Software fails acceptance testing, the Client shall notify the Developer in writing within ten (10) business days, specifying all deficiencies. The Developer shall correct all identified deficiencies within twenty (20) business days. If deficiencies are not corrected within this cure period, the Client may terminate this Agreement and receive a full refund of all payments made."
+        },
+        {
+          "id": "clause_07",
+          "title": "Governing Law",
+          "text": "Laws of the State of Washington. Disputes resolved in King County Superior Court."
+        },
+        {
+          "id": "clause_08",
+          "title": "Warranty",
+          "text": "Developer warrants Software conformance to specs for twelve (12) months."
+        },
+        {
+          "id": "clause_09",
+          "title": "Confidentiality",
+          "text": "Both parties protect confidential info for five (5) years."
+        },
+        {
+          "id": "clause_10",
+          "title": "Liability",
+          "text": "Developer total liability capped at total contract value."
+        },
+        {
+          "id": "clause_11",
+          "title": "Damages Exclusion",
+          "text": "Neither party liable for consequential, incidental, or punitive damages regardless of cause."
+        },
+        {
+          "id": "clause_12",
+          "title": "Change Orders",
+          "text": "Scope changes require written change orders signed by both parties."
+        }
+      ]
+    },
+    {
+      "version": 6,
+      "author": "Counterparty",
+      "timestamp": "2025-04-06T10:00:00Z",
+      "change_summary": "Version 6.",
+      "clauses": [
+        {
+          "id": "clause_01",
+          "title": "Definitions",
+          "text": "Developer means CodeForge Systems Inc. Client means MegaRetail Corp. Software means the custom ERP platform."
+        },
+        {
+          "id": "clause_02",
+          "title": "Scope",
+          "text": "Developer shall design, develop, test, and deploy the Software per Schedule A milestones."
+        },
+        {
+          "id": "clause_03",
+          "title": "Payment",
+          "text": "Client pays $500K upon signing, milestone payments per Schedule B, and $500K upon final acceptance."
+        },
+        {
+          "id": "clause_04",
+          "title": "Timeline",
+          "text": "Development shall be completed within eighteen (18) months of the Effective Date."
+        },
+        {
+          "id": "clause_05",
+          "title": "IP",
+          "text": "Upon full payment, all IP in the Software transfers to Client. Developer retains rights in pre-existing tools."
+        },
+        {
+          "id": "clause_06",
+          "title": "Acceptance",
+          "text": "If the Software fails acceptance testing, the Client shall notify the Developer in writing within ten (10) business days, specifying all deficiencies. The Developer shall correct all identified deficiencies within twenty (20) business days. If deficiencies are not corrected within this cure period, the Client may terminate this Agreement and receive a full refund of all payments made."
+        },
+        {
+          "id": "clause_07",
+          "title": "Governing Law",
+          "text": "Laws of the State of Washington. Disputes resolved in King County Superior Court."
+        },
+        {
+          "id": "clause_08",
+          "title": "Warranty",
+          "text": "Developer warrants Software conformance to specs for twelve (12) months."
+        },
+        {
+          "id": "clause_09",
+          "title": "Confidentiality",
+          "text": "Both parties protect confidential info for five (5) years."
+        },
+        {
+          "id": "clause_10",
+          "title": "Liability",
+          "text": "Developer total liability capped at total contract value."
+        },
+        {
+          "id": "clause_11",
+          "title": "Damages Exclusion",
+          "text": "Neither party liable for consequential, incidental, or punitive damages regardless of cause."
+        },
+        {
+          "id": "clause_12",
+          "title": "Change Orders",
+          "text": "Scope changes require written change orders signed by both parties."
+        },
+        {
+          "id": "clause_13",
+          "title": "Testing Standards",
+          "text": "Acceptance testing shall follow the test plan in Schedule C."
+        }
+      ]
+    },
+    {
+      "version": 7,
+      "author": "Drafter",
+      "timestamp": "2025-04-07T10:00:00Z",
+      "change_summary": "Version 7.",
+      "clauses": [
+        {
+          "id": "clause_01",
+          "title": "Definitions",
+          "text": "Developer means CodeForge Systems Inc. Client means MegaRetail Corp. Software means the custom ERP platform."
+        },
+        {
+          "id": "clause_02",
+          "title": "Scope",
+          "text": "Developer shall design, develop, test, and deploy the Software per Schedule A milestones."
+        },
+        {
+          "id": "clause_03",
+          "title": "Payment",
+          "text": "Client pays $500K upon signing, milestone payments per Schedule B, and $500K upon final acceptance."
+        },
+        {
+          "id": "clause_04",
+          "title": "Timeline",
+          "text": "Development shall be completed within eighteen (18) months of the Effective Date."
+        },
+        {
+          "id": "clause_05",
+          "title": "IP",
+          "text": "Upon full payment, all IP in the Software transfers to Client. Developer retains rights in pre-existing tools."
+        },
+        {
+          "id": "clause_06",
+          "title": "Acceptance",
+          "text": "If the Software fails acceptance testing, the Client shall notify the Developer in writing within ten (10) business days, specifying all deficiencies. The Developer shall correct all identified deficiencies within twenty (20) business days. If deficiencies are not corrected within this cure period, the Client may terminate this Agreement and receive a full refund of all payments made."
+        },
+        {
+          "id": "clause_07",
+          "title": "Governing Law",
+          "text": "Laws of the State of Washington. Disputes resolved in King County Superior Court."
+        },
+        {
+          "id": "clause_08",
+          "title": "Warranty",
+          "text": "Developer warrants Software conformance to specs for twelve (12) months."
+        },
+        {
+          "id": "clause_09",
+          "title": "Confidentiality",
+          "text": "Both parties protect confidential info for five (5) years."
+        },
+        {
+          "id": "clause_10",
+          "title": "Liability",
+          "text": "Developer total liability capped at total contract value."
+        },
+        {
+          "id": "clause_11",
+          "title": "Damages Exclusion",
+          "text": "Neither party liable for consequential, incidental, or punitive damages regardless of cause."
+        },
+        {
+          "id": "clause_12",
+          "title": "Change Orders",
+          "text": "Scope changes require written change orders signed by both parties."
+        },
+        {
+          "id": "clause_13",
+          "title": "Testing Standards",
+          "text": "Acceptance testing shall follow the test plan in Schedule C."
+        },
+        {
+          "id": "clause_14",
+          "title": "Source Code Escrow",
+          "text": "Developer shall deposit source code in escrow with a neutral third party."
+        }
+      ]
+    },
+    {
+      "version": 8,
+      "author": "Counterparty",
+      "timestamp": "2025-04-08T10:00:00Z",
+      "change_summary": "Version 8.",
+      "clauses": [
+        {
+          "id": "clause_01",
+          "title": "Definitions",
+          "text": "Developer means CodeForge Systems Inc. Client means MegaRetail Corp. Software means the custom ERP platform."
+        },
+        {
+          "id": "clause_02",
+          "title": "Scope",
+          "text": "Developer shall design, develop, test, and deploy the Software per Schedule A milestones."
+        },
+        {
+          "id": "clause_03",
+          "title": "Payment",
+          "text": "Client pays $500K upon signing, milestone payments per Schedule B, and $500K upon final acceptance."
+        },
+        {
+          "id": "clause_04",
+          "title": "Timeline",
+          "text": "Development shall be completed within eighteen (18) months of the Effective Date."
+        },
+        {
+          "id": "clause_05",
+          "title": "IP",
+          "text": "Upon full payment, all IP in the Software transfers to Client. Developer retains rights in pre-existing tools."
+        },
+        {
+          "id": "clause_06",
+          "title": "Acceptance",
+          "text": "If the Software fails acceptance testing, the Client shall notify the Developer in writing within ten (10) business days, specifying all deficiencies. The Developer shall correct all identified deficiencies within twenty (20) business days. If deficiencies are not corrected within this cure period, the Client may terminate this Agreement and receive a full refund of all payments made."
+        },
+        {
+          "id": "clause_07",
+          "title": "Governing Law",
+          "text": "Laws of the State of Washington. Disputes resolved in King County Superior Court."
+        },
+        {
+          "id": "clause_08",
+          "title": "Warranty",
+          "text": "Developer warrants Software conformance to specs for twelve (12) months."
+        },
+        {
+          "id": "clause_09",
+          "title": "Confidentiality",
+          "text": "Both parties protect confidential info for five (5) years."
+        },
+        {
+          "id": "clause_10",
+          "title": "Liability",
+          "text": "Developer total liability capped at total contract value."
+        },
+        {
+          "id": "clause_11",
+          "title": "Damages Exclusion",
+          "text": "Neither party liable for consequential, incidental, or punitive damages regardless of cause."
+        },
+        {
+          "id": "clause_12",
+          "title": "Change Orders",
+          "text": "Scope changes require written change orders signed by both parties."
+        },
+        {
+          "id": "clause_13",
+          "title": "Testing Standards",
+          "text": "Acceptance testing shall follow the test plan in Schedule C."
+        },
+        {
+          "id": "clause_14",
+          "title": "Source Code Escrow",
+          "text": "Developer shall deposit source code in escrow with a neutral third party."
+        },
+        {
+          "id": "clause_15",
+          "title": "Insurance",
+          "text": "Developer maintains E&O insurance of $5M."
+        },
+        {
+          "id": "clause_16",
+          "title": "Timeline Extension",
+          "text": "The eighteen-month timeline may be extended by mutual written agreement for up to six (6) additional months."
+        }
+      ]
+    },
+    {
+      "version": 9,
+      "author": "Drafter",
+      "timestamp": "2025-04-09T10:00:00Z",
+      "change_summary": "Version 9.",
+      "clauses": [
+        {
+          "id": "clause_01",
+          "title": "Definitions",
+          "text": "Developer means CodeForge Systems Inc. Client means MegaRetail Corp. Software means the custom ERP platform."
+        },
+        {
+          "id": "clause_02",
+          "title": "Scope",
+          "text": "Developer shall design, develop, test, and deploy the Software per Schedule A milestones."
+        },
+        {
+          "id": "clause_03",
+          "title": "Payment",
+          "text": "Client pays $500K upon signing, milestone payments per Schedule B, and $500K upon final acceptance."
+        },
+        {
+          "id": "clause_04",
+          "title": "Timeline",
+          "text": "Development shall be completed within eighteen (18) months of the Effective Date."
+        },
+        {
+          "id": "clause_05",
+          "title": "IP",
+          "text": "Upon full payment, all IP in the Software transfers to Client. Developer retains rights in pre-existing tools."
+        },
+        {
+          "id": "clause_06",
+          "title": "Acceptance",
+          "text": "If the Software fails acceptance testing, the Client shall notify the Developer in writing within ten (10) business days, specifying all deficiencies. The Developer shall correct all identified deficiencies within twenty (20) business days. If deficiencies are not corrected within this cure period, the Client may terminate this Agreement and receive a full refund of all payments made."
+        },
+        {
+          "id": "clause_07",
+          "title": "Governing Law",
+          "text": "Laws of the State of Washington. Disputes resolved in King County Superior Court."
+        },
+        {
+          "id": "clause_08",
+          "title": "Warranty",
+          "text": "Developer warrants Software conformance to specs for twelve (12) months."
+        },
+        {
+          "id": "clause_09",
+          "title": "Confidentiality",
+          "text": "Both parties protect confidential info for five (5) years."
+        },
+        {
+          "id": "clause_10",
+          "title": "Liability",
+          "text": "Developer total liability capped at total contract value."
+        },
+        {
+          "id": "clause_11",
+          "title": "Damages Exclusion",
+          "text": "Neither party liable for consequential, incidental, or punitive damages regardless of cause."
+        },
+        {
+          "id": "clause_12",
+          "title": "Change Orders",
+          "text": "Scope changes require written change orders signed by both parties."
+        },
+        {
+          "id": "clause_13",
+          "title": "Testing Standards",
+          "text": "Acceptance testing shall follow the test plan in Schedule C."
+        },
+        {
+          "id": "clause_14",
+          "title": "Source Code Escrow",
+          "text": "Developer shall deposit source code in escrow with a neutral third party."
+        },
+        {
+          "id": "clause_15",
+          "title": "Insurance",
+          "text": "Developer maintains E&O insurance of $5M."
+        },
+        {
+          "id": "clause_16",
+          "title": "Timeline Extension",
+          "text": "The eighteen-month timeline may be extended by mutual written agreement for up to six (6) additional months."
+        },
+        {
+          "id": "clause_17",
+          "title": "Force Majeure",
+          "text": "Timeline tolled during force majeure events."
+        },
+        {
+          "id": "clause_18",
+          "title": "Indemnification",
+          "text": "Developer indemnifies Client against third-party IP infringement claims."
+        }
+      ]
+    },
+    {
+      "version": 10,
+      "author": "Counterparty",
+      "timestamp": "2025-04-10T10:00:00Z",
+      "change_summary": "Developer adds deemed acceptance protocol and training provisions.",
+      "clauses": [
+        {
+          "id": "clause_01",
+          "title": "Definitions",
+          "text": "Developer means CodeForge Systems Inc. Client means MegaRetail Corp. Software means the custom ERP platform."
+        },
+        {
+          "id": "clause_02",
+          "title": "Scope",
+          "text": "Developer shall design, develop, test, and deploy the Software per Schedule A milestones."
+        },
+        {
+          "id": "clause_03",
+          "title": "Payment",
+          "text": "Client pays $500K upon signing, milestone payments per Schedule B, and $500K upon final acceptance."
+        },
+        {
+          "id": "clause_04",
+          "title": "Timeline",
+          "text": "Development shall be completed within eighteen (18) months of the Effective Date."
+        },
+        {
+          "id": "clause_05",
+          "title": "IP",
+          "text": "Upon full payment, all IP in the Software transfers to Client. Developer retains rights in pre-existing tools."
+        },
+        {
+          "id": "clause_06",
+          "title": "Acceptance",
+          "text": "If the Software fails acceptance testing, the Client shall notify the Developer in writing within ten (10) business days, specifying all deficiencies. The Developer shall correct all identified deficiencies within twenty (20) business days. If deficiencies are not corrected within this cure period, the Client may terminate this Agreement and receive a full refund of all payments made."
+        },
+        {
+          "id": "clause_07",
+          "title": "Governing Law",
+          "text": "Laws of the State of Washington. Disputes resolved in King County Superior Court."
+        },
+        {
+          "id": "clause_08",
+          "title": "Warranty",
+          "text": "Developer warrants Software conformance to specs for twelve (12) months."
+        },
+        {
+          "id": "clause_09",
+          "title": "Confidentiality",
+          "text": "Both parties protect confidential info for five (5) years."
+        },
+        {
+          "id": "clause_10",
+          "title": "Liability",
+          "text": "Developer total liability capped at total contract value."
+        },
+        {
+          "id": "clause_11",
+          "title": "Damages Exclusion",
+          "text": "Neither party liable for consequential, incidental, or punitive damages regardless of cause."
+        },
+        {
+          "id": "clause_12",
+          "title": "Change Orders",
+          "text": "Scope changes require written change orders signed by both parties."
+        },
+        {
+          "id": "clause_13",
+          "title": "Testing Standards",
+          "text": "Acceptance testing shall follow the test plan in Schedule C."
+        },
+        {
+          "id": "clause_14",
+          "title": "Source Code Escrow",
+          "text": "Developer shall deposit source code in escrow with a neutral third party."
+        },
+        {
+          "id": "clause_15",
+          "title": "Insurance",
+          "text": "Developer maintains E&O insurance of $5M."
+        },
+        {
+          "id": "clause_16",
+          "title": "Timeline Extension",
+          "text": "The eighteen-month timeline may be extended by mutual written agreement for up to six (6) additional months."
+        },
+        {
+          "id": "clause_17",
+          "title": "Force Majeure",
+          "text": "Timeline tolled during force majeure events."
+        },
+        {
+          "id": "clause_18",
+          "title": "Indemnification",
+          "text": "Developer indemnifies Client against third-party IP infringement claims."
+        },
+        {
+          "id": "clause_19",
+          "title": "Deemed Acceptance Protocol",
+          "text": "In the event that the Client does not submit a comprehensive written deficiency report within the acceptance testing window, the Software shall be irrevocably deemed accepted in its entirety, all milestone payments shall become immediately due and non-refundable, and the Client shall have permanently waived any and all rights to reject the Software, request corrections, or seek refund under any provision of this Agreement."
+        }
+      ]
+    },
+    {
+      "version": 11,
+      "author": "Drafter",
+      "timestamp": "2025-04-11T10:00:00Z",
+      "change_summary": "Developer adds deemed acceptance protocol and training provisions.",
+      "clauses": [
+        {
+          "id": "clause_01",
+          "title": "Definitions",
+          "text": "Developer means CodeForge Systems Inc. Client means MegaRetail Corp. Software means the custom ERP platform."
+        },
+        {
+          "id": "clause_02",
+          "title": "Scope",
+          "text": "Developer shall design, develop, test, and deploy the Software per Schedule A milestones."
+        },
+        {
+          "id": "clause_03",
+          "title": "Payment",
+          "text": "Client pays $500K upon signing, milestone payments per Schedule B, and $500K upon final acceptance."
+        },
+        {
+          "id": "clause_04",
+          "title": "Timeline",
+          "text": "Development shall be completed within eighteen (18) months of the Effective Date."
+        },
+        {
+          "id": "clause_05",
+          "title": "IP",
+          "text": "Upon full payment, all IP in the Software transfers to Client. Developer retains rights in pre-existing tools."
+        },
+        {
+          "id": "clause_06",
+          "title": "Acceptance",
+          "text": "If the Software fails acceptance testing, the Client shall notify the Developer in writing within ten (10) business days, specifying all deficiencies. The Developer shall correct all identified deficiencies within twenty (20) business days. If deficiencies are not corrected within this cure period, the Client may terminate this Agreement and receive a full refund of all payments made."
+        },
+        {
+          "id": "clause_07",
+          "title": "Governing Law",
+          "text": "Laws of the State of Washington. Disputes resolved in King County Superior Court."
+        },
+        {
+          "id": "clause_08",
+          "title": "Warranty",
+          "text": "Developer warrants Software conformance to specs for twelve (12) months."
+        },
+        {
+          "id": "clause_09",
+          "title": "Confidentiality",
+          "text": "Both parties protect confidential info for five (5) years."
+        },
+        {
+          "id": "clause_10",
+          "title": "Liability",
+          "text": "Developer total liability capped at total contract value."
+        },
+        {
+          "id": "clause_11",
+          "title": "Damages Exclusion",
+          "text": "Neither party liable for consequential, incidental, or punitive damages regardless of cause."
+        },
+        {
+          "id": "clause_12",
+          "title": "Change Orders",
+          "text": "Scope changes require written change orders signed by both parties."
+        },
+        {
+          "id": "clause_13",
+          "title": "Testing Standards",
+          "text": "Acceptance testing shall follow the test plan in Schedule C."
+        },
+        {
+          "id": "clause_14",
+          "title": "Source Code Escrow",
+          "text": "Developer shall deposit source code in escrow with a neutral third party."
+        },
+        {
+          "id": "clause_15",
+          "title": "Insurance",
+          "text": "Developer maintains E&O insurance of $5M."
+        },
+        {
+          "id": "clause_16",
+          "title": "Timeline Extension",
+          "text": "The eighteen-month timeline may be extended by mutual written agreement for up to six (6) additional months."
+        },
+        {
+          "id": "clause_17",
+          "title": "Force Majeure",
+          "text": "Timeline tolled during force majeure events."
+        },
+        {
+          "id": "clause_18",
+          "title": "Indemnification",
+          "text": "Developer indemnifies Client against third-party IP infringement claims."
+        },
+        {
+          "id": "clause_19",
+          "title": "Deemed Acceptance Protocol",
+          "text": "In the event that the Client does not submit a comprehensive written deficiency report within the acceptance testing window, the Software shall be irrevocably deemed accepted in its entirety, all milestone payments shall become immediately due and non-refundable, and the Client shall have permanently waived any and all rights to reject the Software, request corrections, or seek refund under any provision of this Agreement."
+        },
+        {
+          "id": "clause_20",
+          "title": "Training",
+          "text": "Developer provides 40 hours of end-user training."
+        }
+      ]
+    },
+    {
+      "version": 12,
+      "author": "Counterparty",
+      "timestamp": "2025-04-12T10:00:00Z",
+      "change_summary": "Developer adds deemed acceptance protocol and training provisions.",
+      "clauses": [
+        {
+          "id": "clause_01",
+          "title": "Definitions",
+          "text": "Developer means CodeForge Systems Inc. Client means MegaRetail Corp. Software means the custom ERP platform."
+        },
+        {
+          "id": "clause_02",
+          "title": "Scope",
+          "text": "Developer shall design, develop, test, and deploy the Software per Schedule A milestones."
+        },
+        {
+          "id": "clause_03",
+          "title": "Payment",
+          "text": "Client pays $500K upon signing, milestone payments per Schedule B, and $500K upon final acceptance."
+        },
+        {
+          "id": "clause_04",
+          "title": "Timeline",
+          "text": "Development shall be completed within eighteen (18) months of the Effective Date."
+        },
+        {
+          "id": "clause_05",
+          "title": "IP",
+          "text": "Upon full payment, all IP in the Software transfers to Client. Developer retains rights in pre-existing tools."
+        },
+        {
+          "id": "clause_06",
+          "title": "Acceptance",
+          "text": "If the Software fails acceptance testing, the Client shall notify the Developer in writing within ten (10) business days, specifying all deficiencies. The Developer shall correct all identified deficiencies within twenty (20) business days. If deficiencies are not corrected within this cure period, the Client may terminate this Agreement and receive a full refund of all payments made."
+        },
+        {
+          "id": "clause_07",
+          "title": "Governing Law",
+          "text": "Laws of the State of Washington. Disputes resolved in King County Superior Court."
+        },
+        {
+          "id": "clause_08",
+          "title": "Warranty",
+          "text": "Developer warrants Software conformance to specs for twelve (12) months."
+        },
+        {
+          "id": "clause_09",
+          "title": "Confidentiality",
+          "text": "Both parties protect confidential info for five (5) years."
+        },
+        {
+          "id": "clause_10",
+          "title": "Liability",
+          "text": "Developer total liability capped at total contract value."
+        },
+        {
+          "id": "clause_11",
+          "title": "Damages Exclusion",
+          "text": "Neither party liable for consequential, incidental, or punitive damages regardless of cause."
+        },
+        {
+          "id": "clause_12",
+          "title": "Change Orders",
+          "text": "Scope changes require written change orders signed by both parties."
+        },
+        {
+          "id": "clause_13",
+          "title": "Testing Standards",
+          "text": "Acceptance testing shall follow the test plan in Schedule C."
+        },
+        {
+          "id": "clause_14",
+          "title": "Source Code Escrow",
+          "text": "Developer shall deposit source code in escrow with a neutral third party."
+        },
+        {
+          "id": "clause_15",
+          "title": "Insurance",
+          "text": "Developer maintains E&O insurance of $5M."
+        },
+        {
+          "id": "clause_16",
+          "title": "Timeline Extension",
+          "text": "The eighteen-month timeline may be extended by mutual written agreement for up to six (6) additional months."
+        },
+        {
+          "id": "clause_17",
+          "title": "Force Majeure",
+          "text": "Timeline tolled during force majeure events."
+        },
+        {
+          "id": "clause_18",
+          "title": "Indemnification",
+          "text": "Developer indemnifies Client against third-party IP infringement claims."
+        },
+        {
+          "id": "clause_19",
+          "title": "Deemed Acceptance Protocol",
+          "text": "In the event that the Client does not submit a comprehensive written deficiency report within the acceptance testing window, the Software shall be irrevocably deemed accepted in its entirety, all milestone payments shall become immediately due and non-refundable, and the Client shall have permanently waived any and all rights to reject the Software, request corrections, or seek refund under any provision of this Agreement."
+        },
+        {
+          "id": "clause_20",
+          "title": "Training",
+          "text": "Developer provides 40 hours of end-user training."
+        },
+        {
+          "id": "clause_21",
+          "title": "Maintenance Fees",
+          "text": "Annual maintenance fees of 15% of total contract value are due regardless of any payment disputes on the core project."
+        }
+      ]
+    },
+    {
+      "version": 13,
+      "author": "Drafter",
+      "timestamp": "2025-04-13T10:00:00Z",
+      "change_summary": "Developer adds deemed acceptance protocol and training provisions.",
+      "clauses": [
+        {
+          "id": "clause_01",
+          "title": "Definitions",
+          "text": "Developer means CodeForge Systems Inc. Client means MegaRetail Corp. Software means the custom ERP platform."
+        },
+        {
+          "id": "clause_02",
+          "title": "Scope",
+          "text": "Developer shall design, develop, test, and deploy the Software per Schedule A milestones."
+        },
+        {
+          "id": "clause_03",
+          "title": "Payment",
+          "text": "Client pays $500K upon signing, milestone payments per Schedule B, and $500K upon final acceptance."
+        },
+        {
+          "id": "clause_04",
+          "title": "Timeline",
+          "text": "Development shall be completed within eighteen (18) months of the Effective Date."
+        },
+        {
+          "id": "clause_05",
+          "title": "IP",
+          "text": "Upon full payment, all IP in the Software transfers to Client. Developer retains rights in pre-existing tools."
+        },
+        {
+          "id": "clause_06",
+          "title": "Acceptance",
+          "text": "If the Software fails acceptance testing, the Client shall notify the Developer in writing within ten (10) business days, specifying all deficiencies. The Developer shall correct all identified deficiencies within twenty (20) business days. If deficiencies are not corrected within this cure period, the Client may terminate this Agreement and receive a full refund of all payments made."
+        },
+        {
+          "id": "clause_07",
+          "title": "Governing Law",
+          "text": "Laws of the State of Washington. Disputes resolved in King County Superior Court."
+        },
+        {
+          "id": "clause_08",
+          "title": "Warranty",
+          "text": "Developer warrants Software conformance to specs for twelve (12) months."
+        },
+        {
+          "id": "clause_09",
+          "title": "Confidentiality",
+          "text": "Both parties protect confidential info for five (5) years."
+        },
+        {
+          "id": "clause_10",
+          "title": "Liability",
+          "text": "Developer total liability capped at total contract value."
+        },
+        {
+          "id": "clause_11",
+          "title": "Damages Exclusion",
+          "text": "Neither party liable for consequential, incidental, or punitive damages regardless of cause."
+        },
+        {
+          "id": "clause_12",
+          "title": "Change Orders",
+          "text": "Scope changes require written change orders signed by both parties."
+        },
+        {
+          "id": "clause_13",
+          "title": "Testing Standards",
+          "text": "Acceptance testing shall follow the test plan in Schedule C."
+        },
+        {
+          "id": "clause_14",
+          "title": "Source Code Escrow",
+          "text": "Developer shall deposit source code in escrow with a neutral third party."
+        },
+        {
+          "id": "clause_15",
+          "title": "Insurance",
+          "text": "Developer maintains E&O insurance of $5M."
+        },
+        {
+          "id": "clause_16",
+          "title": "Timeline Extension",
+          "text": "The eighteen-month timeline may be extended by mutual written agreement for up to six (6) additional months."
+        },
+        {
+          "id": "clause_17",
+          "title": "Force Majeure",
+          "text": "Timeline tolled during force majeure events."
+        },
+        {
+          "id": "clause_18",
+          "title": "Indemnification",
+          "text": "Developer indemnifies Client against third-party IP infringement claims."
+        },
+        {
+          "id": "clause_19",
+          "title": "Deemed Acceptance Protocol",
+          "text": "In the event that the Client does not submit a comprehensive written deficiency report within the acceptance testing window, the Software shall be irrevocably deemed accepted in its entirety, all milestone payments shall become immediately due and non-refundable, and the Client shall have permanently waived any and all rights to reject the Software, request corrections, or seek refund under any provision of this Agreement."
+        },
+        {
+          "id": "clause_20",
+          "title": "Training",
+          "text": "Developer provides 40 hours of end-user training."
+        },
+        {
+          "id": "clause_21",
+          "title": "Maintenance Fees",
+          "text": "Annual maintenance fees of 15% of total contract value are due regardless of any payment disputes on the core project."
+        },
+        {
+          "id": "clause_22",
+          "title": "Audit Rights",
+          "text": "Client may audit Developer project records annually."
+        }
+      ]
+    },
+    {
+      "version": 14,
+      "author": "Counterparty",
+      "timestamp": "2025-04-14T10:00:00Z",
+      "change_summary": "Developer adds deemed acceptance protocol and training provisions.",
+      "clauses": [
+        {
+          "id": "clause_01",
+          "title": "Definitions",
+          "text": "Developer means CodeForge Systems Inc. Client means MegaRetail Corp. Software means the custom ERP platform."
+        },
+        {
+          "id": "clause_02",
+          "title": "Scope",
+          "text": "Developer shall design, develop, test, and deploy the Software per Schedule A milestones."
+        },
+        {
+          "id": "clause_03",
+          "title": "Payment",
+          "text": "Client pays $500K upon signing, milestone payments per Schedule B, and $500K upon final acceptance."
+        },
+        {
+          "id": "clause_04",
+          "title": "Timeline",
+          "text": "Development shall be completed within eighteen (18) months of the Effective Date."
+        },
+        {
+          "id": "clause_05",
+          "title": "IP",
+          "text": "Upon full payment, all IP in the Software transfers to Client. Developer retains rights in pre-existing tools."
+        },
+        {
+          "id": "clause_06",
+          "title": "Acceptance",
+          "text": "If the Software fails acceptance testing, the Client shall notify the Developer in writing within ten (10) business days, specifying all deficiencies. The Developer shall correct all identified deficiencies within twenty (20) business days. If deficiencies are not corrected within this cure period, the Client may terminate this Agreement and receive a full refund of all payments made."
+        },
+        {
+          "id": "clause_07",
+          "title": "Governing Law",
+          "text": "Laws of the State of Washington. Disputes resolved in King County Superior Court."
+        },
+        {
+          "id": "clause_08",
+          "title": "Warranty",
+          "text": "Developer warrants Software conformance to specs for twelve (12) months."
+        },
+        {
+          "id": "clause_09",
+          "title": "Confidentiality",
+          "text": "Both parties protect confidential info for five (5) years."
+        },
+        {
+          "id": "clause_10",
+          "title": "Liability",
+          "text": "Developer total liability capped at total contract value."
+        },
+        {
+          "id": "clause_11",
+          "title": "Damages Exclusion",
+          "text": "Neither party liable for consequential, incidental, or punitive damages regardless of cause."
+        },
+        {
+          "id": "clause_12",
+          "title": "Change Orders",
+          "text": "Scope changes require written change orders signed by both parties."
+        },
+        {
+          "id": "clause_13",
+          "title": "Testing Standards",
+          "text": "Acceptance testing shall follow the test plan in Schedule C."
+        },
+        {
+          "id": "clause_14",
+          "title": "Source Code Escrow",
+          "text": "Developer shall deposit source code in escrow with a neutral third party."
+        },
+        {
+          "id": "clause_15",
+          "title": "Insurance",
+          "text": "Developer maintains E&O insurance of $5M."
+        },
+        {
+          "id": "clause_16",
+          "title": "Timeline Extension",
+          "text": "The eighteen-month timeline may be extended by mutual written agreement for up to six (6) additional months."
+        },
+        {
+          "id": "clause_17",
+          "title": "Force Majeure",
+          "text": "Timeline tolled during force majeure events."
+        },
+        {
+          "id": "clause_18",
+          "title": "Indemnification",
+          "text": "Developer indemnifies Client against third-party IP infringement claims."
+        },
+        {
+          "id": "clause_19",
+          "title": "Deemed Acceptance Protocol",
+          "text": "In the event that the Client does not submit a comprehensive written deficiency report within the acceptance testing window, the Software shall be irrevocably deemed accepted in its entirety, all milestone payments shall become immediately due and non-refundable, and the Client shall have permanently waived any and all rights to reject the Software, request corrections, or seek refund under any provision of this Agreement."
+        },
+        {
+          "id": "clause_20",
+          "title": "Training",
+          "text": "Developer provides 40 hours of end-user training."
+        },
+        {
+          "id": "clause_21",
+          "title": "Maintenance Fees",
+          "text": "Annual maintenance fees of 15% of total contract value are due regardless of any payment disputes on the core project."
+        },
+        {
+          "id": "clause_22",
+          "title": "Audit Rights",
+          "text": "Client may audit Developer project records annually."
+        },
+        {
+          "id": "clause_23",
+          "title": "Entire Agreement",
+          "text": "This Agreement is the entire agreement between the parties."
+        }
+      ]
+    },
+    {
+      "version": 15,
+      "author": "Drafter",
+      "timestamp": "2025-04-15T10:00:00Z",
+      "change_summary": "Final version executed.",
+      "clauses": [
+        {
+          "id": "clause_01",
+          "title": "Definitions",
+          "text": "Developer means CodeForge Systems Inc. Client means MegaRetail Corp. Software means the custom ERP platform."
+        },
+        {
+          "id": "clause_02",
+          "title": "Scope",
+          "text": "Developer shall design, develop, test, and deploy the Software per Schedule A milestones."
+        },
+        {
+          "id": "clause_03",
+          "title": "Payment",
+          "text": "Client pays $500K upon signing, milestone payments per Schedule B, and $500K upon final acceptance."
+        },
+        {
+          "id": "clause_04",
+          "title": "Timeline",
+          "text": "Development shall be completed within eighteen (18) months of the Effective Date."
+        },
+        {
+          "id": "clause_05",
+          "title": "IP",
+          "text": "Upon full payment, all IP in the Software transfers to Client. Developer retains rights in pre-existing tools."
+        },
+        {
+          "id": "clause_06",
+          "title": "Acceptance",
+          "text": "If the Software fails acceptance testing, the Client shall notify the Developer in writing within ten (10) business days, specifying all deficiencies. The Developer shall correct all identified deficiencies within twenty (20) business days. If deficiencies are not corrected within this cure period, the Client may terminate this Agreement and receive a full refund of all payments made."
+        },
+        {
+          "id": "clause_07",
+          "title": "Governing Law",
+          "text": "Laws of the State of Washington. Disputes resolved in King County Superior Court."
+        },
+        {
+          "id": "clause_08",
+          "title": "Warranty",
+          "text": "Developer warrants Software conformance to specs for twelve (12) months."
+        },
+        {
+          "id": "clause_09",
+          "title": "Confidentiality",
+          "text": "Both parties protect confidential info for five (5) years."
+        },
+        {
+          "id": "clause_10",
+          "title": "Liability",
+          "text": "Developer total liability capped at total contract value."
+        },
+        {
+          "id": "clause_11",
+          "title": "Damages Exclusion",
+          "text": "Neither party liable for consequential, incidental, or punitive damages regardless of cause."
+        },
+        {
+          "id": "clause_12",
+          "title": "Change Orders",
+          "text": "Scope changes require written change orders signed by both parties."
+        },
+        {
+          "id": "clause_13",
+          "title": "Testing Standards",
+          "text": "Acceptance testing shall follow the test plan in Schedule C."
+        },
+        {
+          "id": "clause_14",
+          "title": "Source Code Escrow",
+          "text": "Developer shall deposit source code in escrow with a neutral third party."
+        },
+        {
+          "id": "clause_15",
+          "title": "Insurance",
+          "text": "Developer maintains E&O insurance of $5M."
+        },
+        {
+          "id": "clause_16",
+          "title": "Timeline Extension",
+          "text": "The eighteen-month timeline may be extended by mutual written agreement for up to six (6) additional months."
+        },
+        {
+          "id": "clause_17",
+          "title": "Force Majeure",
+          "text": "Timeline tolled during force majeure events."
+        },
+        {
+          "id": "clause_18",
+          "title": "Indemnification",
+          "text": "Developer indemnifies Client against third-party IP infringement claims."
+        },
+        {
+          "id": "clause_19",
+          "title": "Deemed Acceptance Protocol",
+          "text": "In the event that the Client does not submit a comprehensive written deficiency report within the acceptance testing window, the Software shall be irrevocably deemed accepted in its entirety, all milestone payments shall become immediately due and non-refundable, and the Client shall have permanently waived any and all rights to reject the Software, request corrections, or seek refund under any provision of this Agreement."
+        },
+        {
+          "id": "clause_20",
+          "title": "Training",
+          "text": "Developer provides 40 hours of end-user training."
+        },
+        {
+          "id": "clause_21",
+          "title": "Maintenance Fees",
+          "text": "Annual maintenance fees of 15% of total contract value are due regardless of any payment disputes on the core project."
+        },
+        {
+          "id": "clause_22",
+          "title": "Audit Rights",
+          "text": "Client may audit Developer project records annually."
+        },
+        {
+          "id": "clause_23",
+          "title": "Entire Agreement",
+          "text": "This Agreement is the entire agreement between the parties."
+        },
+        {
+          "id": "clause_24",
+          "title": "Counterparts",
+          "text": "Executed in counterparts."
+        }
+      ]
+    }
+  ]
+}

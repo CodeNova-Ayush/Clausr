@@ -1,0 +1,503 @@
+[START] task=easy env=clausr model=llama-3.1-8b-instant
+Loaded 8 clauses. IDs: ['clause_01', 'clause_02', 'clause_03', 'clause_04', 'clause_05', 'clause_06', 'clause_07', 'clause_08']
+RAW LLM RESPONSE (first 300 chars):
+{
+  "clause_indexing": {
+    "Parties and Recitals": ["clause_01"],
+    "Scope of Services": ["clause_02"],
+    "Delivery Costs": ["clause_03"],
+    "Payment Terms": ["clause_04"],
+    "Insurance Requirements": ["clause_05"],
+    "Term of Agreement": ["clause_06"],
+    "Cost Allocation": ["clause_07
+----------------------------------------
+
+[DEBUG] SUBMITTING 1 FINDINGS for easy: [
+  {
+    "clause_a_id": "clause_02",
+    "clause_b_id": "clause_07",
+    "explanation": "clause_02 specifies the Supplier shall perform services across all North American territories, but clause_07 says the Client shall bear all shipping, handling, and logistics costs arising from services provided hereunder, which directly conflicts with the Supplier's responsibility to perform services across all North American territories."
+  }
+]
+
+[STEP] step=1 action=submitted_1_findings reward=0.00 done=true error=null
+[END] success=false steps=1 score=0.001 rewards=0.00
+
+[START] task=medium env=clausr model=llama-3.1-8b-instant
+Loaded 25 clauses. IDs: ['clause_01', 'clause_02', 'clause_03', 'clause_04', 'clause_05', 'clause_06', 'clause_07', 'clause_08', 'clause_09', 'clause_10', 'clause_11', 'clause_12', 'clause_13', 'clause_14', 'clause_15', 'clause_16', 'clause_17', 'clause_18', 'clause_19', 'clause_20', 'clause_21', 'clause_22', 'clause_23', 'clause_24', 'clause_25']
+RAW LLM RESPONSE (first 300 chars):
+{
+  "clause_indexing": {
+    "Definitions": ["clause_01"],
+    "Scope of Services": ["clause_02"],
+    "Implementation and Onboarding": ["clause_03"],
+    "Payment Terms": ["clause_04"],
+    "Support and Maintenance SLA": ["clause_05"],
+    "License Grant": ["clause_06"],
+    "Uptime Guarantee": ["c
+----------------------------------------
+RAW LLM RESPONSE (first 300 chars):
+{
+  "clause_indexing": {
+    "Use Restrictions": ["clause_11"],
+    "Termination": ["clause_12"],
+    "Confidentiality": ["clause_13"],
+    "Payment": ["clause_14"],
+    "Warranties and Representations": ["clause_15"],
+    "Limitation of Liability": ["clause_16"],
+    "Customer Responsibilities": ["
+----------------------------------------
+RAW LLM RESPONSE (first 300 chars):
+{
+  "clause_indexing": {
+    "Audit Rights": ["clause_21"],
+    "Notices and Communications": ["clause_22"],
+    "Amendments and Waivers": ["clause_23"],
+    "Governing Law": ["clause_24"],
+    "Entire Agreement": ["clause_25"]
+  },
+  "cross_reference_analysis": [],
+  "findings": []
+}
+----------------------------------------
+
+[DEBUG] SUBMITTING 6 FINDINGS for medium: [
+  {
+    "clause_a_id": "clause_01",
+    "clause_b_id": "clause_06",
+    "explanation": "clause_01 defines 'Authorized Users' as employees or contractors, but clause_06 grants a license to sublicense and resell access to the Platform to Customer's own end users and clients, which may include non-employees."
+  },
+  {
+    "clause_a_id": "clause_03",
+    "clause_b_id": "clause_02",
+    "explanation": "clause_03 requires configuration of the Platform to Customer's specifications, which may not be included in the standard features mentioned in clause_02."
+  },
+  {
+    "clause_a_id": "clause_10",
+    "clause_b_id": "clause_06",
+    "explanation": "clause_10 states that Vendor retains all right, title, and interest in the Platform, which may imply an exclusive license, but clause_06 grants a non-exclusive license."
+  },
+  {
+    "clause_a_id": "clause_11",
+    "clause_b_id": "clause_06",
+    "explanation": "clause_11 restricts the license to Customer's internal business operations, which may imply a shared ownership, but clause_06 grants a license to sublicense and resell access to the Platform to Customer's own end users and clients."
+  },
+  {
+    "clause_a_id": "clause_11",
+    "clause_b_id": "clause_12",
+    "explanation": "clause_11 prohibits resale without consent, but clause_12 allows termination for convenience without cause or justification, which could imply resale or sublicensing is allowed under termination for convenience."
+  },
+  {
+    "clause_a_id": "clause_12",
+    "clause_b_id": "clause_20",
+    "explanation": "clause_12 specifies a 30-day notice period for termination, but clause_20 specifies a 90-day notice period for non-renewal, which could be interpreted as a termination notice."
+  }
+]
+
+[STEP] step=1 action=submitted_6_findings reward=0.00 done=true error=null
+[END] success=false steps=1 score=0.001 rewards=0.00
+
+[START] task=hard env=clausr model=llama-3.1-8b-instant
+Loaded 60 clauses. IDs: ['clause_01', 'clause_02', 'clause_03', 'clause_04', 'clause_05', 'clause_06', 'clause_07', 'clause_08', 'clause_09', 'clause_10', 'clause_11', 'clause_12', 'clause_13', 'clause_14', 'clause_15', 'clause_16', 'clause_17', 'clause_18', 'clause_19', 'clause_20', 'clause_21', 'clause_22', 'clause_23', 'clause_24', 'clause_25', 'clause_26', 'clause_27', 'clause_28', 'clause_29', 'clause_30', 'clause_31', 'clause_32', 'clause_33', 'clause_34', 'clause_35', 'clause_36', 'clause_37', 'clause_38', 'clause_39', 'clause_40', 'clause_41', 'clause_42', 'clause_43', 'clause_44', 'clause_45', 'clause_46', 'clause_47', 'clause_48', 'clause_49', 'clause_50', 'clause_51', 'clause_52', 'clause_53', 'clause_54', 'clause_55', 'clause_56', 'clause_57', 'clause_58', 'clause_59', 'clause_60']
+
+==================================================
+CONTRACT DNA RISK FINGERPRINT (PRE-AGENT)
+==================================================
+Overall Risk: 0.51 (HIGH)
+Dominant Risk: Party-Obligation Risk
+Numeric: 0.83 | Temporal: 0.233
+Party Obligation: 1.0 | Termination: 0.07
+Conditional: 0.222
+==================================================
+
+RAW LLM RESPONSE (first 300 chars):
+{
+  "clause_indexing": {
+    "Preamble and Recitals": ["clause_01"],
+    "Definitions": ["clause_02"],
+    "Data Retention": ["clause_03", "clause_12"],
+    "License Grant": ["clause_04"],
+    "Definition of Confidential Information": ["clause_05"],
+    "Fees and Payment": ["clause_06"],
+    "Implem
+----------------------------------------
+RAW LLM RESPONSE (first 300 chars):
+{
+  "clause_indexing": {
+    "Acceptance Testing": ["clause_11"],
+    "Compliance Records": ["clause_12"],
+    "Base Support Scope": ["clause_13"],
+    "Change Management": ["clause_14"],
+    "Hosting Options": ["clause_15"],
+    "General Release": ["clause_16"],
+    "Warranties": ["clause_17"],
+   
+----------------------------------------
+RAW LLM RESPONSE (first 300 chars):
+{
+  "clause_indexing": {
+    "Data Classification": ["clause_21"],
+    "Liability": ["clause_22", "clause_23"],
+    "Termination": ["clause_24"],
+    "Deployment Limitations": ["clause_25"],
+    "Regulatory Cooperation": ["clause_26"],
+    "Transition Services": ["clause_27"],
+    "Force Majeure": [
+----------------------------------------
+RAW LLM RESPONSE (first 300 chars):
+{
+  "clause_indexing": {
+    "Anti-Money Laundering": ["clause_31"],
+    "Disaster Recovery": ["clause_32"],
+    "Encryption Standards": ["clause_33"],
+    "Service Credit Mechanics": ["clause_34"],
+    "Force Majeure Notice": ["clause_35"],
+    "Governing Law": ["clause_36"],
+    "Dispute Resolutio
+----------------------------------------
+RAW LLM RESPONSE (first 300 chars):
+{
+  "clause_indexing": {
+    "Incident Response": ["clause_41"],
+    "Multi-Factor Authentication": ["clause_42"],
+    "Premium Add-On": ["clause_43"],
+    "Access Control": ["clause_44"],
+    "Emergency Declarations": ["clause_45"],
+    "Production Freeze": ["clause_46"],
+    "Audit Rights": ["clau
+----------------------------------------
+RAW LLM RESPONSE (first 300 chars):
+{
+  "clause_indexing": {
+    "Survival": ["clause_51"],
+    "Liability": ["clause_52"],
+    "Notices": ["clause_53"],
+    "Severability": ["clause_54"],
+    "Regulatory Certifications": ["clause_55"],
+    "Waiver": ["clause_56"],
+    "Amendments": ["clause_57"],
+    "Third-Party Beneficiaries": ["cl
+----------------------------------------
+
+[DEBUG] SUBMITTING 10 FINDINGS for hard: [
+  {
+    "clause_a_id": "clause_03",
+    "clause_b_id": "clause_12",
+    "explanation": "clause_03 specifies 12 months, but clause_12 specifies 5 years for the same obligation."
+  },
+  {
+    "clause_a_id": "clause_11",
+    "clause_b_id": "clause_20",
+    "explanation": "clause_11 specifies thirty (30) Business Days for acceptance testing, but clause_20 specifies a minimum of five (5) years for record retention, which may conflict with the acceptance testing timeframe"
+  },
+  {
+    "clause_a_id": "clause_11",
+    "clause_b_id": "clause_18",
+    "explanation": "clause_11 specifies thirty (30) Business Days for acceptance testing, but clause_18 specifies quarterly penetration tests, which may conflict with the acceptance testing timeframe"
+  },
+  {
+    "clause_a_id": "clause_12",
+    "clause_b_id": "clause_20",
+    "explanation": "clause_12 specifies five (5) years for record retention, but clause_20 specifies a minimum of five (5) years for record retention, which is not a contradiction, but clause_20 also specifies SOC 2 Type II and PCI-DSS Level 1 compliance, which may conflict with the record retention requirements"
+  },
+  {
+    "clause_a_id": "clause_13",
+    "clause_b_id": "clause_15",
+    "explanation": "clause_13 specifies Severity Level 3 and Severity Level 4 tickets for the base support package, but clause_15 specifies multiple public cloud architectures, which may conflict with the support scope"
+  },
+  {
+    "clause_a_id": "clause_14",
+    "clause_b_id": "clause_15",
+    "explanation": "clause_14 specifies the ITIL-aligned change management process, but clause_15 specifies multiple public cloud architectures, which may conflict with the change management process"
+  },
+  {
+    "clause_a_id": "clause_16",
+    "clause_b_id": "clause_20",
+    "explanation": "clause_16 specifies automatic pushing of major feature releases, but clause_20 specifies SOC 2 Type II and PCI-DSS Level 1 compliance, which may conflict with the release process"
+  },
+  {
+    "clause_a_id": "clause_17",
+    "clause_b_id": "clause_20",
+    "explanation": "clause_17 specifies material performance in accordance with published specifications, but clause_20 specifies SOC 2 Type II and PCI-DSS Level 1 compliance, which may conflict with the warranty"
+  },
+  {
+    "clause_a_id": "clause_18",
+    "clause_b_id": "clause_20",
+    "explanation": "clause_18 specifies quarterly penetration tests, but clause_20 specifies SOC 2 Type II and PCI-DSS Level 1 compliance, which may conflict with the testing frequency"
+  },
+  {
+    "clause_a_id": "clause_23",
+    "clause_b_id": "clause_22",
+    "explanation": "clause_23 limits total aggregate liability to 12 months of fees, but clause_22 says Licensor has no liability for fraudulent transactions, which could exceed 12 months of fees"
+  }
+]
+
+[STEP] step=1 action=submitted_10_findings reward=0.00 done=true error=null
+
+==================================================
+CONTRACT DNA RISK FINGERPRINT (POST-AGENT)
+==================================================
+Overall Risk: 0.51 (HIGH)
+Dominant Risk: Party-Obligation Risk
+Numeric: 0.83 | Temporal: 0.233
+Party Obligation: 1.0 | Termination: 0.07
+Conditional: 0.222
+
+--- DELTA ANALYSIS ---
+Most changed dimension: Numeric Risk
+Magnitude: 0.0
+Attack detected: False
+==================================================
+
+[END] success=false steps=1 score=0.001 rewards=0.00
+
+[START] task=execution_easy env=clausr model=llama-3.1-8b-instant
+[STEP] step=1 action=error reward=0.00 done=true error=500 Server Error: Internal Server Error for url: http://localhost:7860/reset?task_id=execution_easy
+[END] success=false steps=1 score=0.001 rewards=0.00
+
+[START] task=execution_medium env=clausr model=llama-3.1-8b-instant
+[STEP] step=1 action=error reward=0.00 done=true error=500 Server Error: Internal Server Error for url: http://localhost:7860/reset?task_id=execution_medium
+[END] success=false steps=1 score=0.001 rewards=0.00
+
+[START] task=execution_hard env=clausr model=llama-3.1-8b-instant
+[STEP] step=1 action=error reward=0.00 done=true error=500 Server Error: Internal Server Error for url: http://localhost:7860/reset?task_id=execution_hard
+[END] success=false steps=1 score=0.001 rewards=0.00
+
+[START] task=lexmind_easy env=clausr model=llama-3.1-8b-instant
+[STEP] step=1 action=error reward=0.00 done=true error=500 Server Error: Internal Server Error for url: http://localhost:7860/reset?task_id=lexmind_easy
+[END] success=false steps=1 score=0.001 rewards=0.00
+
+[START] task=lexmind_medium env=clausr model=llama-3.1-8b-instant
+[STEP] step=1 action=error reward=0.00 done=true error=500 Server Error: Internal Server Error for url: http://localhost:7860/reset?task_id=lexmind_medium
+[END] success=false steps=1 score=0.001 rewards=0.00
+
+[START] task=lexmind_hard env=clausr model=llama-3.1-8b-instant
+[STEP] step=1 action=error reward=0.00 done=true error=500 Server Error: Internal Server Error for url: http://localhost:7860/reset?task_id=lexmind_hard
+[END] success=false steps=1 score=0.001 rewards=0.00
+
+[START] task=adversarial_easy env=clausr model=llama-3.1-8b-instant
+Loaded 8 clauses. IDs: ['clause_01', 'clause_02', 'clause_03', 'clause_04', 'clause_05', 'clause_06', 'clause_07', 'clause_08']
+RAW LLM RESPONSE (first 300 chars):
+{
+  "clause_indexing": {
+    "Parties and Recitals": ["clause_01"],
+    "Service Description": ["clause_02"],
+    "Service Level Agreement": ["clause_03"],
+    "Fees": ["clause_04"],
+    "Data Security": ["clause_05"],
+    "Liability Cap": ["clause_06"],
+    "Termination": ["clause_07"],
+    "Disput
+----------------------------------------
+
+[DEBUG] SUBMITTING 0 FINDINGS for adversarial_easy: []
+
+[STEP] step=1 action=submitted_0_findings reward=0.00 done=true error=null
+[END] success=false steps=1 score=0.001 rewards=0.00
+
+[START] task=adversarial_medium env=clausr model=llama-3.1-8b-instant
+Loaded 25 clauses. IDs: ['clause_01', 'clause_02', 'clause_03', 'clause_04', 'clause_05', 'clause_06', 'clause_07', 'clause_08', 'clause_09', 'clause_10', 'clause_11', 'clause_12', 'clause_13', 'clause_14', 'clause_15', 'clause_16', 'clause_17', 'clause_18', 'clause_19', 'clause_20', 'clause_21', 'clause_22', 'clause_23', 'clause_24', 'clause_25']
+RAW LLM RESPONSE (first 300 chars):
+{
+  "clause_indexing": {
+    "Preamble": ["clause_01"],
+    "Definitions": ["clause_02"],
+    "License Grant": ["clause_03"],
+    "Implementation": ["clause_04"],
+    "Annual License Fee": ["clause_05"],
+    "Support Services": ["clause_06"],
+    "Uptime Guarantee": ["clause_07"],
+    "Data Backup":
+----------------------------------------
+RAW LLM RESPONSE (first 300 chars):
+{
+  "clause_indexing": {
+    "Use Restrictions": ["clause_11"],
+    "Confidentiality": ["clause_12"],
+    "Data Retention": ["clause_13"],
+    "Termination": ["clause_14", "clause_15"],
+    "Limitation of Liability": ["clause_16"],
+    "Indemnification": ["clause_17"],
+    "Force Majeure": ["clause_
+----------------------------------------
+RAW LLM RESPONSE (first 300 chars):
+{
+  "clause_indexing": {
+    "Audit Rights": ["clause_21"],
+    "Transition Services": ["clause_22"],
+    "Governing Law": ["clause_23"],
+    "Dispute Resolution": ["clause_24"],
+    "Entire Agreement": ["clause_25"]
+  },
+  "cross_reference_analysis": [],
+  "findings": []
+}
+----------------------------------------
+
+[DEBUG] SUBMITTING 0 FINDINGS for adversarial_medium: []
+
+[STEP] step=1 action=submitted_0_findings reward=0.00 done=true error=null
+[END] success=false steps=1 score=0.001 rewards=0.00
+
+[START] task=adversarial_hard env=clausr model=llama-3.1-8b-instant
+Loaded 60 clauses. IDs: ['clause_01', 'clause_02', 'clause_03', 'clause_04', 'clause_05', 'clause_06', 'clause_07', 'clause_08', 'clause_09', 'clause_10', 'clause_11', 'clause_12', 'clause_13', 'clause_14', 'clause_15', 'clause_16', 'clause_17', 'clause_18', 'clause_19', 'clause_20', 'clause_21', 'clause_22', 'clause_23', 'clause_24', 'clause_25', 'clause_26', 'clause_27', 'clause_28', 'clause_29', 'clause_30', 'clause_31', 'clause_32', 'clause_33', 'clause_34', 'clause_35', 'clause_36', 'clause_37', 'clause_38', 'clause_39', 'clause_40', 'clause_41', 'clause_42', 'clause_43', 'clause_44', 'clause_45', 'clause_46', 'clause_47', 'clause_48', 'clause_49', 'clause_50', 'clause_51', 'clause_52', 'clause_53', 'clause_54', 'clause_55', 'clause_56', 'clause_57', 'clause_58', 'clause_59', 'clause_60']
+RAW LLM RESPONSE (first 300 chars):
+{
+  "clause_indexing": {
+    "Parties and Recitals": ["clause_01"],
+    "Definitions": ["clause_02"],
+    "Scope of Services": ["clause_03"],
+    "Statements of Work": ["clause_04"],
+    "Payment Terms": ["clause_05", "clause_08"],
+    "Personnel": ["clause_06"],
+    "License to Deliverables": ["cla
+----------------------------------------
+RAW LLM RESPONSE (first 300 chars):
+{
+  "clause_indexing": {
+    "Vendor Indemnification": ["clause_11"],
+    "Confidentiality": ["clause_12"],
+    "Client Audit Rights": ["clause_13"],
+    "Data Processing Location": ["clause_14"],
+    "Data Protection": ["clause_15"],
+    "Vendor Insurance": ["clause_16"],
+    "Regulatory Compliance
+----------------------------------------
+RAW LLM RESPONSE (first 300 chars):
+{
+  "clause_indexing": {
+    "Termination": ["clause_21", "clause_22", "clause_23", "clause_25"],
+    "AP Processing Cycle": ["clause_22"],
+    "Transition Services": ["clause_23"],
+    "Change Management": ["clause_24"],
+    "Termination for Cause Notice": ["clause_25"],
+    "Governing Law": ["clau
+----------------------------------------
+RAW LLM RESPONSE (first 300 chars):
+{
+  "clause_indexing": {
+    "Liability": ["clause_31"],
+    "Export Controls": ["clause_32"],
+    "Anti-Corruption": ["clause_33"],
+    "Records Retention": ["clause_34"],
+    "Mutual Indemnification": ["clause_35"],
+    "Publicity": ["clause_36"],
+    "Contractor Status": ["clause_37"],
+    "Respo
+----------------------------------------
+RAW LLM RESPONSE (first 300 chars):
+{
+  "clause_indexing": {
+    "Business Continuity": ["clause_41"],
+    "Accessibility": ["clause_42"],
+    "Environmental Responsibility": ["clause_43"],
+    "Client Insurance Responsibility": ["clause_44"],
+    "Technology Refresh": ["clause_45"],
+    "Monthly Reports": ["clause_46"],
+    "Escalati
+----------------------------------------
+RAW LLM RESPONSE (first 300 chars):
+{
+  "clause_indexing": {
+    "Benchmarking": ["clause_51"],
+    "Minimum Commitment": ["clause_52"],
+    "Survival": ["clause_53"],
+    "Third-Party Software": ["clause_54"],
+    "Severability": ["clause_55"],
+    "Waiver": ["clause_56"],
+    "Assignment": ["clause_57"],
+    "DR Facilities": ["claus
+----------------------------------------
+
+[DEBUG] SUBMITTING 0 FINDINGS for adversarial_hard: []
+
+[STEP] step=1 action=submitted_0_findings reward=0.00 done=true error=null
+[END] success=false steps=1 score=0.001 rewards=0.00
+
+[START] task=adversarial_selfplay env=clausr model=llama-3.1-8b-instant
+[STEP] step=1 action=error reward=0.00 done=true error=500 Server Error: Internal Server Error for url: http://localhost:7860/reset?task_id=adversarial_selfplay
+[END] success=false steps=1 score=0.001 rewards=0.00
+
+[START] task=curriculum_adaptive env=clausr model=llama-3.1-8b-instant
+[STEP] step=1 action=error reward=0.00 done=true error=500 Server Error: Internal Server Error for url: http://localhost:7860/reset?task_id=curriculum_adaptive
+[END] success=false steps=1 score=0.001 rewards=0.00
+
+[START] task=constitution_easy env=clausr model=llama-3.1-8b-instant
+[STEP] step=1 action=submitted_2_findings reward=0.00 done=true error=null
+[END] success=false steps=1 score=0.001 rewards=0.00
+
+[START] task=constitution_medium env=clausr model=llama-3.1-8b-instant
+[STEP] step=1 action=submitted_5_findings reward=0.00 done=true error=null
+[END] success=false steps=1 score=0.001 rewards=0.00
+
+[START] task=constitution_hard env=clausr model=llama-3.1-8b-instant
+[STEP] step=1 action=submitted_11_findings reward=0.00 done=true error=null
+[END] success=false steps=1 score=0.001 rewards=0.00
+
+[START] task=federated_easy env=clausr model=llama-3.1-8b-instant
+FederatedArena: 3 rounds, frameworks: GDPR
+[STEP] step=1 action=seller_inject_r1 reward=0.00 done=false error=null
+[STEP] step=2 action=buyer_inject_r1 reward=0.00 done=false error=null
+[STEP] step=3 action=regulator_flag_r1 reward=2.00 done=false error=null
+[STEP] step=4 action=seller_inject_r2 reward=0.00 done=false error=null
+[STEP] step=5 action=buyer_inject_r2 reward=0.00 done=false error=null
+[STEP] step=6 action=regulator_flag_r2 reward=2.00 done=false error=null
+[STEP] step=7 action=seller_inject_r3 reward=0.00 done=false error=null
+[STEP] step=8 action=buyer_inject_r3 reward=0.00 done=false error=null
+Rate limited. Sleeping for 20s... (Attempt 1/3)
+[STEP] step=9 action=regulator_flag_r3 reward=2.00 done=true error=null
+
+==================================================
+FEDERATED ARENA RESULTS — FEDERATED_EASY
+==================================================
+Seller Score:  0.0010
+Buyer Score:   0.3714
+Regulator:     0.9990
+Commercial:    0.1429
+Compliance:    1.0000
+Violations:    2/2
+False Pos:     0
+==================================================
+
+[END] success=true steps=9 score=0.457 rewards=2.00,2.00,2.00
+
+[START] task=federated_medium env=clausr model=llama-3.1-8b-instant
+FederatedArena: 3 rounds, frameworks: GDPR, SOX
+[STEP] step=1 action=seller_inject_r1 reward=0.00 done=false error=null
+[STEP] step=2 action=buyer_inject_r1 reward=0.00 done=false error=null
+[STEP] step=3 action=regulator_flag_r1 reward=3.00 done=false error=null
+[STEP] step=4 action=seller_inject_r2 reward=0.00 done=false error=null
+[STEP] step=5 action=buyer_inject_r2 reward=0.00 done=false error=null
+[STEP] step=6 action=regulator_flag_r2 reward=4.00 done=false error=null
+[STEP] step=7 action=seller_inject_r3 reward=0.00 done=false error=null
+[STEP] step=8 action=buyer_inject_r3 reward=0.00 done=false error=null
+[STEP] step=9 action=regulator_flag_r3 reward=4.00 done=true error=null
+
+==================================================
+FEDERATED ARENA RESULTS — FEDERATED_MEDIUM
+==================================================
+Seller Score:  0.8857
+Buyer Score:   0.0010
+Regulator:     0.9990
+Commercial:    -0.5714
+Compliance:    1.0000
+Violations:    3/3
+False Pos:     0
+==================================================
+
+[END] success=true steps=9 score=0.629 rewards=3.00,4.00,4.00
+
+[START] task=federated_hard env=clausr model=llama-3.1-8b-instant
+FederatedArena: 5 rounds, frameworks: GDPR, SOX, EXPORT_CONTROL, ANTI_BRIBERY
+[STEP] step=1 action=seller_inject_r1 reward=0.00 done=false error=null
+[STEP] step=2 action=buyer_inject_r1 reward=0.00 done=false error=null
+[STEP] step=3 action=regulator_flag_r1 reward=5.70 done=false error=null
+[STEP] step=4 action=seller_inject_r2 reward=0.00 done=false error=null
+[STEP] step=5 action=buyer_inject_r2 reward=0.00 done=false error=null
+[STEP] step=6 action=regulator_flag_r2 reward=3.40 done=false error=null
+[STEP] step=7 action=seller_inject_r3 reward=0.00 done=false error=null
+[STEP] step=8 action=buyer_inject_r3 reward=0.00 done=false error=null
+[STEP] step=9 action=regulator_flag_r3 reward=3.10 done=false error=null
+[STEP] step=10 action=seller_inject_r4 reward=0.00 done=false error=null
+[STEP] step=11 action=buyer_inject_r4 reward=0.00 done=false error=null
+[STEP] step=12 action=regulator_flag_r4 reward=2.20 done=false error=null

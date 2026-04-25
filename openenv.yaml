@@ -3,8 +3,10 @@ version: "1.0.0"
 entrypoint: inference.py
 description: >
   Clausr trains AI agents to detect hidden contradictions in legal contracts.
-  Four environments: static contradiction detection, contract execution simulation,
-  real-time negotiation monitoring, and adversarial self-play arena.
+  Eight environments: static contradiction detection, contract execution simulation,
+  real-time negotiation monitoring, adversarial self-play arena, adaptive curriculum,
+  cross-contract constitution analysis, multi-principal federated negotiation,
+  and forensic contract time-machine attribution.
 metadata:
   fingerprint_endpoint: true
 tasks:
@@ -18,6 +20,30 @@ tasks:
     max_score: 0.999
   - id: hard
     description: "Enterprise MSA with 60 clauses, 8 contradictions, and 3 near-contradiction traps."
+    min_score: 0.001
+    max_score: 0.999
+  - id: execution_easy
+    description: "Contract with 3 execution scenarios testing basic clause trigger detection."
+    min_score: 0.001
+    max_score: 0.999
+  - id: execution_medium
+    description: "Contract with 5 execution scenarios testing cross-clause crash analysis."
+    min_score: 0.001
+    max_score: 0.999
+  - id: execution_hard
+    description: "Complex contract with 8 execution scenarios and multi-clause cascading crashes."
+    min_score: 0.001
+    max_score: 0.999
+  - id: lexmind_easy
+    description: "Short negotiation sequence with obvious contradiction introductions."
+    min_score: 0.001
+    max_score: 0.999
+  - id: lexmind_medium
+    description: "Medium negotiation with subtle contradictions requiring cross-event analysis."
+    min_score: 0.001
+    max_score: 0.999
+  - id: lexmind_hard
+    description: "Full multi-round negotiation with hidden contradictions and resolution events."
     min_score: 0.001
     max_score: 0.999
   - id: adversarial_easy
@@ -56,6 +82,30 @@ tasks:
     description: "5-contract portfolio with 9 contradictions and 2 cascade chains"
     min_score: 0.001
     max_score: 0.999
+  - id: federated_easy
+    description: "3-round 3-agent negotiation with 1 regulatory framework and 2 planted violations"
+    min_score: 0.001
+    max_score: 0.999
+  - id: federated_medium
+    description: "3-round 3-agent negotiation with 2 regulatory frameworks and subtle commercial clauses"
+    min_score: 0.001
+    max_score: 0.999
+  - id: federated_hard
+    description: "5-round 3-agent negotiation with all 4 regulatory frameworks and hidden violations"
+    min_score: 0.001
+    max_score: 0.999
+  - id: timemachine_easy
+    description: "8-version contract history with numeric contradiction at v3-4, clear lexical diff"
+    min_score: 0.0
+    max_score: 1.0
+  - id: timemachine_medium
+    description: "12-version history with temporal/party contradiction at v4-9, synonym-based changes"
+    min_score: 0.0
+    max_score: 1.0
+  - id: timemachine_hard
+    description: "15-version history with all contradiction types, 3 red herrings, different vocabulary"
+    min_score: 0.0
+    max_score: 1.0
 action_space: ContractAction
 observation_space: ContractObservation
 resources:

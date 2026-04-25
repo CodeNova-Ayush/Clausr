@@ -286,21 +286,88 @@ def fingerprint(req: FingerprintRequest):
     
     if not clause_texts and req.episode_id:
         # Try to find clauses from the global adversarial env if ID matches
-        if _adversarial_env._episode_id == req.episode_id:
-            clause_texts = [c["text"] for c in _adversarial_env._clauses]
-        else:
-            # Fallback: check curriculum env
-            if _curriculum_env._episode_id == req.episode_id:
-                # This depends on which sub-env was active
-                # For simplicity, we assume adversarial or detection style clauses
-                obs = _curriculum_env._last_obs
-                if obs and "clauses" in obs:
-                    clause_texts = [c.get("text", "") for c in obs["clauses"]]
+        if (
+            _adversarial_env._episode_id == req.episode_id
+            and _adversarial_env._contract is not None
+        ):
+            # Use modified clauses (post-forger) if available, else originals
+            source = (
+                _adversarial_env._modified_clauses
+                or _adversarial_env._contract.get("clauses", [])
+            )
+            clause_texts = [c["text"] for c in source]
 
     if not clause_texts:
         return {"error": "No clauses provided or episode_id not found"}
         
     return dna_engine.calculate_fingerprint(clause_texts, req.episode_id)
+
+
+# ── FederatedArena Endpoints ─────────────────────────────────────────────
+
+from server.federated_environment import FederatedArenaEnv
+from models import (
+    FederatedAction, FederatedObservation, FederatedState, FederatedFinalScore,
+)
+
+_federated_env = FederatedArenaEnv()
+
+
+@app.get("/federated/health")
+def federated_health():
+    return {"status": "ok", "environment": "FederatedArena"}
+
+
+@app.post("/federated/reset", response_model=FederatedObservation)
+def federated_reset(task_id: str = "federated_easy"):
+    global _federated_env
+    _federated_env = FederatedArenaEnv()
+    return _federated_env.reset(task_id=task_id)
+
+
+@app.post("/federated/step", response_model=FederatedObservation)
+def federated_step(action: FederatedAction):
+    return _federated_env.step(action)
+
+
+@app.get("/federated/state", response_model=FederatedState)
+def federated_state():
+    return _federated_env.state
+
+
+@app.post("/federated/final_score", response_model=FederatedFinalScore)
+def federated_final_score():
+    return _federated_env.get_final_score()
+
+
+# ── ContractTimeMachine Endpoints ────────────────────────────────────────
+
+from server.timemachine_environment import ContractTimeMachineEnv
+from models import TimeMachineAction, TimeMachineObservation, TimeMachineResult, TimeMachineState
+
+_timemachine_env = ContractTimeMachineEnv()
+
+
+@app.get("/timemachine/health")
+def timemachine_health():
+    return {"status": "ok", "environment": "ContractTimeMachine"}
+
+
+@app.post("/timemachine/reset", response_model=TimeMachineObservation)
+def timemachine_reset(task_id: str = "timemachine_easy"):
+    global _timemachine_env
+    _timemachine_env = ContractTimeMachineEnv()
+    return _timemachine_env.reset(task_id=task_id)
+
+
+@app.post("/timemachine/step", response_model=TimeMachineResult)
+def timemachine_step(action: TimeMachineAction):
+    return _timemachine_env.step(action)
+
+
+@app.get("/timemachine/state", response_model=TimeMachineState)
+def timemachine_state():
+    return _timemachine_env.state
 
 
 @app.websocket("/ws")

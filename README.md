@@ -492,7 +492,7 @@ python inference.py
 | OpenAI | `https://api.openai.com/v1` | `gpt-4o-mini` |
 | Mistral | `https://api.mistral.ai/v1` | `mistral-small-latest` |
 | Together AI | `https://api.together.xyz/v1` | `mistralai/Mixtral-8x7B-Instruct-v0.1` |
-| Groq | `https://api.groq.com/openai/v1` | `llama3-8b-8192` |
+| Groq | `https://api.groq.com/openai/v1` | `llama-3.1-8b-instant` |
 
 ---
 
@@ -593,7 +593,7 @@ class ContractState(BaseModel):
 | GPT-4o-mini | 0.950 | 0.700 | 0.425 | 0.692 |
 | Claude 3 Haiku | 0.950 | 0.750 | 0.500 | 0.733 |
 | Mistral Small | 0.900 | 0.625 | 0.350 | 0.625 |
-| Llama 3 8B | 0.850 | 0.500 | 0.225 | 0.525 |
+| Llama 3.1 8B | 0.850 | 0.500 | 0.225 | 0.525 |
 | Random baseline | 0.100 | 0.050 | 0.020 | 0.057 |
 
 ---

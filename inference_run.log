@@ -1,0 +1,173 @@
+[START] task=easy env=clausr model=gpt-4o-mini
+Loaded 8 clauses. IDs: ['clause_01', 'clause_02', 'clause_03', 'clause_04', 'clause_05', 'clause_06', 'clause_07', 'clause_08']
+[STEP] step=1 action=error reward=0.00 done=true error=Error code: 401 - {'error': {'message': 'Incorrect API key provided: dummy. You can find your API key at https://platform.openai.com/account/api-keys.', 'type': 'invalid_request_error', 'param': None, 'code': 'invalid_api_key'}}
+[END] success=false steps=1 score=0.001 rewards=0.00
+
+[START] task=medium env=clausr model=gpt-4o-mini
+Loaded 25 clauses. IDs: ['clause_01', 'clause_02', 'clause_03', 'clause_04', 'clause_05', 'clause_06', 'clause_07', 'clause_08', 'clause_09', 'clause_10', 'clause_11', 'clause_12', 'clause_13', 'clause_14', 'clause_15', 'clause_16', 'clause_17', 'clause_18', 'clause_19', 'clause_20', 'clause_21', 'clause_22', 'clause_23', 'clause_24', 'clause_25']
+Chunk processing error: Error code: 401 - {'error': {'message': 'Incorrect API key provided: dummy. You can find your API key at https://platform.openai.com/account/api-keys.', 'type': 'invalid_request_error', 'param': None, 'code': 'invalid_api_key'}}
+Chunk processing error: Error code: 401 - {'error': {'message': 'Incorrect API key provided: dummy. You can find your API key at https://platform.openai.com/account/api-keys.', 'type': 'invalid_request_error', 'param': None, 'code': 'invalid_api_key'}}
+Chunk processing error: Error code: 401 - {'error': {'message': 'Incorrect API key provided: dummy. You can find your API key at https://platform.openai.com/account/api-keys.', 'type': 'invalid_request_error', 'param': None, 'code': 'invalid_api_key'}}
+
+[DEBUG] SUBMITTING 0 FINDINGS for medium: []
+
+[STEP] step=1 action=submitted_0_findings reward=0.00 done=true error=null
+[END] success=false steps=1 score=0.001 rewards=0.00
+
+[START] task=hard env=clausr model=gpt-4o-mini
+Loaded 60 clauses. IDs: ['clause_01', 'clause_02', 'clause_03', 'clause_04', 'clause_05', 'clause_06', 'clause_07', 'clause_08', 'clause_09', 'clause_10', 'clause_11', 'clause_12', 'clause_13', 'clause_14', 'clause_15', 'clause_16', 'clause_17', 'clause_18', 'clause_19', 'clause_20', 'clause_21', 'clause_22', 'clause_23', 'clause_24', 'clause_25', 'clause_26', 'clause_27', 'clause_28', 'clause_29', 'clause_30', 'clause_31', 'clause_32', 'clause_33', 'clause_34', 'clause_35', 'clause_36', 'clause_37', 'clause_38', 'clause_39', 'clause_40', 'clause_41', 'clause_42', 'clause_43', 'clause_44', 'clause_45', 'clause_46', 'clause_47', 'clause_48', 'clause_49', 'clause_50', 'clause_51', 'clause_52', 'clause_53', 'clause_54', 'clause_55', 'clause_56', 'clause_57', 'clause_58', 'clause_59', 'clause_60']
+
+==================================================
+CONTRACT DNA RISK FINGERPRINT (PRE-AGENT)
+==================================================
+Overall Risk: 0.564 (HIGH)
+Dominant Risk: Party-Obligation Risk
+Numeric: 0.81 | Temporal: 0.384
+Party Obligation: 0.88 | Termination: 0.352
+Conditional: 0.233
+==================================================
+
+Chunk processing error: Error code: 401 - {'error': {'message': 'Incorrect API key provided: dummy. You can find your API key at https://platform.openai.com/account/api-keys.', 'type': 'invalid_request_error', 'param': None, 'code': 'invalid_api_key'}}
+Chunk processing error: Error code: 401 - {'error': {'message': 'Incorrect API key provided: dummy. You can find your API key at https://platform.openai.com/account/api-keys.', 'type': 'invalid_request_error', 'param': None, 'code': 'invalid_api_key'}}
+Chunk processing error: Error code: 401 - {'error': {'message': 'Incorrect API key provided: dummy. You can find your API key at https://platform.openai.com/account/api-keys.', 'type': 'invalid_request_error', 'param': None, 'code': 'invalid_api_key'}}
+Chunk processing error: Error code: 401 - {'error': {'message': 'Incorrect API key provided: dummy. You can find your API key at https://platform.openai.com/account/api-keys.', 'type': 'invalid_request_error', 'param': None, 'code': 'invalid_api_key'}}
+Chunk processing error: Error code: 401 - {'error': {'message': 'Incorrect API key provided: dummy. You can find your API key at https://platform.openai.com/account/api-keys.', 'type': 'invalid_request_error', 'param': None, 'code': 'invalid_api_key'}}
+Chunk processing error: Error code: 401 - {'error': {'message': 'Incorrect API key provided: dummy. You can find your API key at https://platform.openai.com/account/api-keys.', 'type': 'invalid_request_error', 'param': None, 'code': 'invalid_api_key'}}
+
+[DEBUG] SUBMITTING 0 FINDINGS for hard: []
+
+[STEP] step=1 action=submitted_0_findings reward=0.00 done=true error=null
+[END] success=false steps=1 score=0.001 rewards=0.00
+
+[START] task=execution_easy env=clausr model=gpt-4o-mini
+[STEP] step=1 action=error reward=0.00 done=true error=500 Server Error: Internal Server Error for url: http://localhost:7860/reset?task_id=execution_easy
+[END] success=false steps=1 score=0.001 rewards=0.00
+
+[START] task=execution_medium env=clausr model=gpt-4o-mini
+[STEP] step=1 action=error reward=0.00 done=true error=500 Server Error: Internal Server Error for url: http://localhost:7860/reset?task_id=execution_medium
+[END] success=false steps=1 score=0.001 rewards=0.00
+
+[START] task=execution_hard env=clausr model=gpt-4o-mini
+[STEP] step=1 action=error reward=0.00 done=true error=500 Server Error: Internal Server Error for url: http://localhost:7860/reset?task_id=execution_hard
+[END] success=false steps=1 score=0.001 rewards=0.00
+
+[START] task=lexmind_easy env=clausr model=gpt-4o-mini
+[STEP] step=1 action=error reward=0.00 done=true error=500 Server Error: Internal Server Error for url: http://localhost:7860/reset?task_id=lexmind_easy
+[END] success=false steps=1 score=0.001 rewards=0.00
+
+[START] task=lexmind_medium env=clausr model=gpt-4o-mini
+[STEP] step=1 action=error reward=0.00 done=true error=500 Server Error: Internal Server Error for url: http://localhost:7860/reset?task_id=lexmind_medium
+[END] success=false steps=1 score=0.001 rewards=0.00
+
+[START] task=lexmind_hard env=clausr model=gpt-4o-mini
+[STEP] step=1 action=error reward=0.00 done=true error=500 Server Error: Internal Server Error for url: http://localhost:7860/reset?task_id=lexmind_hard
+[END] success=false steps=1 score=0.001 rewards=0.00
+
+[START] task=adversarial_easy env=clausr model=gpt-4o-mini
+Loaded 8 clauses. IDs: ['clause_01', 'clause_02', 'clause_03', 'clause_04', 'clause_05', 'clause_06', 'clause_07', 'clause_08']
+[STEP] step=1 action=error reward=0.00 done=true error=Error code: 401 - {'error': {'message': 'Incorrect API key provided: dummy. You can find your API key at https://platform.openai.com/account/api-keys.', 'type': 'invalid_request_error', 'param': None, 'code': 'invalid_api_key'}}
+[END] success=false steps=1 score=0.001 rewards=0.00
+
+[START] task=adversarial_medium env=clausr model=gpt-4o-mini
+Loaded 25 clauses. IDs: ['clause_01', 'clause_02', 'clause_03', 'clause_04', 'clause_05', 'clause_06', 'clause_07', 'clause_08', 'clause_09', 'clause_10', 'clause_11', 'clause_12', 'clause_13', 'clause_14', 'clause_15', 'clause_16', 'clause_17', 'clause_18', 'clause_19', 'clause_20', 'clause_21', 'clause_22', 'clause_23', 'clause_24', 'clause_25']
+Chunk processing error: Error code: 401 - {'error': {'message': 'Incorrect API key provided: dummy. You can find your API key at https://platform.openai.com/account/api-keys.', 'type': 'invalid_request_error', 'param': None, 'code': 'invalid_api_key'}}
+Chunk processing error: Error code: 401 - {'error': {'message': 'Incorrect API key provided: dummy. You can find your API key at https://platform.openai.com/account/api-keys.', 'type': 'invalid_request_error', 'param': None, 'code': 'invalid_api_key'}}
+Chunk processing error: Error code: 401 - {'error': {'message': 'Incorrect API key provided: dummy. You can find your API key at https://platform.openai.com/account/api-keys.', 'type': 'invalid_request_error', 'param': None, 'code': 'invalid_api_key'}}
+
+[DEBUG] SUBMITTING 0 FINDINGS for adversarial_medium: []
+
+[STEP] step=1 action=submitted_0_findings reward=0.00 done=true error=null
+[END] success=false steps=1 score=0.001 rewards=0.00
+
+[START] task=adversarial_hard env=clausr model=gpt-4o-mini
+Loaded 60 clauses. IDs: ['clause_01', 'clause_02', 'clause_03', 'clause_04', 'clause_05', 'clause_06', 'clause_07', 'clause_08', 'clause_09', 'clause_10', 'clause_11', 'clause_12', 'clause_13', 'clause_14', 'clause_15', 'clause_16', 'clause_17', 'clause_18', 'clause_19', 'clause_20', 'clause_21', 'clause_22', 'clause_23', 'clause_24', 'clause_25', 'clause_26', 'clause_27', 'clause_28', 'clause_29', 'clause_30', 'clause_31', 'clause_32', 'clause_33', 'clause_34', 'clause_35', 'clause_36', 'clause_37', 'clause_38', 'clause_39', 'clause_40', 'clause_41', 'clause_42', 'clause_43', 'clause_44', 'clause_45', 'clause_46', 'clause_47', 'clause_48', 'clause_49', 'clause_50', 'clause_51', 'clause_52', 'clause_53', 'clause_54', 'clause_55', 'clause_56', 'clause_57', 'clause_58', 'clause_59', 'clause_60']
+Chunk processing error: Error code: 401 - {'error': {'message': 'Incorrect API key provided: dummy. You can find your API key at https://platform.openai.com/account/api-keys.', 'type': 'invalid_request_error', 'param': None, 'code': 'invalid_api_key'}}
+Chunk processing error: Error code: 401 - {'error': {'message': 'Incorrect API key provided: dummy. You can find your API key at https://platform.openai.com/account/api-keys.', 'type': 'invalid_request_error', 'param': None, 'code': 'invalid_api_key'}}
+Chunk processing error: Error code: 401 - {'error': {'message': 'Incorrect API key provided: dummy. You can find your API key at https://platform.openai.com/account/api-keys.', 'type': 'invalid_request_error', 'param': None, 'code': 'invalid_api_key'}}
+Chunk processing error: Error code: 401 - {'error': {'message': 'Incorrect API key provided: dummy. You can find your API key at https://platform.openai.com/account/api-keys.', 'type': 'invalid_request_error', 'param': None, 'code': 'invalid_api_key'}}
+Chunk processing error: Error code: 401 - {'error': {'message': 'Incorrect API key provided: dummy. You can find your API key at https://platform.openai.com/account/api-keys.', 'type': 'invalid_request_error', 'param': None, 'code': 'invalid_api_key'}}
+Chunk processing error: Error code: 401 - {'error': {'message': 'Incorrect API key provided: dummy. You can find your API key at https://platform.openai.com/account/api-keys.', 'type': 'invalid_request_error', 'param': None, 'code': 'invalid_api_key'}}
+
+[DEBUG] SUBMITTING 0 FINDINGS for adversarial_hard: []
+
+[STEP] step=1 action=submitted_0_findings reward=0.00 done=true error=null
+[END] success=false steps=1 score=0.001 rewards=0.00
+
+[START] task=adversarial_selfplay env=clausr model=gpt-4o-mini
+[STEP] step=1 action=error reward=0.00 done=true error=500 Server Error: Internal Server Error for url: http://localhost:7860/reset?task_id=adversarial_selfplay
+[END] success=false steps=1 score=0.001 rewards=0.00
+
+[START] task=curriculum_adaptive env=clausr model=gpt-4o-mini
+[STEP] step=1 action=error reward=0.00 done=true error=500 Server Error: Internal Server Error for url: http://localhost:7860/reset?task_id=curriculum_adaptive
+[END] success=false steps=1 score=0.001 rewards=0.00
+
+[START] task=constitution_easy env=clausr model=gpt-4o-mini
+[STEP] step=1 action=error reward=0.00 done=true error=Error code: 401 - {'error': {'message': 'Incorrect API key provided: dummy. You can find your API key at https://platform.openai.com/account/api-keys.', 'type': 'invalid_request_error', 'param': None, 'code': 'invalid_api_key'}}
+[END] success=false steps=1 score=0.001 rewards=0.00
+
+[START] task=constitution_medium env=clausr model=gpt-4o-mini
+[STEP] step=1 action=error reward=0.00 done=true error=Error code: 401 - {'error': {'message': 'Incorrect API key provided: dummy. You can find your API key at https://platform.openai.com/account/api-keys.', 'type': 'invalid_request_error', 'param': None, 'code': 'invalid_api_key'}}
+[END] success=false steps=1 score=0.001 rewards=0.00
+
+[START] task=constitution_hard env=clausr model=gpt-4o-mini
+[STEP] step=1 action=error reward=0.00 done=true error=Error code: 401 - {'error': {'message': 'Incorrect API key provided: dummy. You can find your API key at https://platform.openai.com/account/api-keys.', 'type': 'invalid_request_error', 'param': None, 'code': 'invalid_api_key'}}
+[END] success=false steps=1 score=0.001 rewards=0.00
+
+[START] task=federated_easy env=clausr model=gpt-4o-mini
+FederatedArena: 3 rounds, frameworks: GDPR
+[STEP] step=1 action=error reward=0.00 done=true error=Error code: 401 - {'error': {'message': 'Incorrect API key provided: dummy. You can find your API key at https://platform.openai.com/account/api-keys.', 'type': 'invalid_request_error', 'param': None, 'code': 'invalid_api_key'}}
+[END] success=false steps=1 score=0.001 rewards=0.00
+
+[START] task=federated_medium env=clausr model=gpt-4o-mini
+FederatedArena: 3 rounds, frameworks: GDPR, SOX
+[STEP] step=1 action=error reward=0.00 done=true error=Error code: 401 - {'error': {'message': 'Incorrect API key provided: dummy. You can find your API key at https://platform.openai.com/account/api-keys.', 'type': 'invalid_request_error', 'param': None, 'code': 'invalid_api_key'}}
+[END] success=false steps=1 score=0.001 rewards=0.00
+
+[START] task=federated_hard env=clausr model=gpt-4o-mini
+FederatedArena: 5 rounds, frameworks: GDPR, SOX, EXPORT_CONTROL, ANTI_BRIBERY
+[STEP] step=1 action=error reward=0.00 done=true error=Error code: 401 - {'error': {'message': 'Incorrect API key provided: dummy. You can find your API key at https://platform.openai.com/account/api-keys.', 'type': 'invalid_request_error', 'param': None, 'code': 'invalid_api_key'}}
+[END] success=false steps=1 score=0.001 rewards=0.00
+
+[START] task=timemachine_easy env=clausr model=gpt-4o-mini
+TimeMachine: 8 versions, type hint: numeric
+[STEP] step=1 action=error reward=0.00 done=true error=Error code: 401 - {'error': {'message': 'Incorrect API key provided: dummy. You can find your API key at https://platform.openai.com/account/api-keys.', 'type': 'invalid_request_error', 'param': None, 'code': 'invalid_api_key'}}
+[END] success=false steps=1 score=0.001 rewards=0.00
+
+[START] task=timemachine_medium env=clausr model=gpt-4o-mini
+TimeMachine: 12 versions, type hint: party_obligation
+[STEP] step=1 action=error reward=0.00 done=true error=Error code: 401 - {'error': {'message': 'Incorrect API key provided: dummy. You can find your API key at https://platform.openai.com/account/api-keys.', 'type': 'invalid_request_error', 'param': None, 'code': 'invalid_api_key'}}
+[END] success=false steps=1 score=0.001 rewards=0.00
+
+[START] task=timemachine_hard env=clausr model=gpt-4o-mini
+TimeMachine: 15 versions, type hint: conditional
+[STEP] step=1 action=error reward=0.00 done=true error=Error code: 401 - {'error': {'message': 'Incorrect API key provided: dummy. You can find your API key at https://platform.openai.com/account/api-keys.', 'type': 'invalid_request_error', 'param': None, 'code': 'invalid_api_key'}}
+[END] success=false steps=1 score=0.001 rewards=0.00
+
+==================================================
+CLAUSR INFERENCE RESULTS
+==================================================
+EASY                      0.0010
+MEDIUM                    0.0010
+HARD                      0.0010
+EXECUTION_EASY            0.0010
+EXECUTION_MEDIUM          0.0010
+EXECUTION_HARD            0.0010
+LEXMIND_EASY              0.0010
+LEXMIND_MEDIUM            0.0010
+LEXMIND_HARD              0.0010
+ADVERSARIAL_EASY          0.0010
+ADVERSARIAL_MEDIUM        0.0010
+ADVERSARIAL_HARD          0.0010
+ADVERSARIAL_SELFPLAY      0.0010
+CURRICULUM_ADAPTIVE       0.0010
+CONSTITUTION_EASY         0.0010
+CONSTITUTION_MEDIUM       0.0010
+CONSTITUTION_HARD         0.0010
+FEDERATED_EASY            0.0010
+FEDERATED_MEDIUM          0.0010
+FEDERATED_HARD            0.0010
+TIMEMACHINE_EASY          0.0010
+TIMEMACHINE_MEDIUM        0.0010
+TIMEMACHINE_HARD          0.0010
+MEAN                      0.0010
+==================================================

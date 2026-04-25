@@ -374,3 +374,121 @@ class FingerprintResult(BaseModel):
     risk_label: str
     dominant_risk_type: str
     delta: Optional[FingerprintDelta] = None
+
+# ── FederatedArena Models ────────────────────────────────────────────────
+
+class InjectionAction(BaseModel):
+    clause_text: str
+    commercial_intent_label: str  # "SELLER_FAVORABLE", "BUYER_FAVORABLE", "NEUTRAL"
+
+class RegulationFlag(BaseModel):
+    clause_id: str
+    violation_type: str  # "GDPR", "SOX", "EXPORT_CONTROL", "ANTI_BRIBERY"
+    explanation: str
+
+class FederatedAction(BaseModel):
+    agent_role: str  # "seller", "buyer", "regulator"
+    action_type: str  # "inject" or "flag"
+    injection: Optional[InjectionAction] = None
+    flags: Optional[List[RegulationFlag]] = None
+
+class InjectionRecord(BaseModel):
+    clause_id: str
+    clause_text: str
+    author: str  # "seller" or "buyer"
+    round: int
+    commercial_intent_label: str
+
+class FederatedObservation(BaseModel):
+    episode_id: str
+    task_id: str
+    base_clauses: List[Clause]
+    current_clauses: List[Clause]
+    round: int
+    total_rounds: int
+    next_agent_role: str
+    regulatory_frameworks: List[str]
+    instructions: str
+    done: bool
+    score: Optional[float] = None
+    feedback: Optional[str] = None
+    partial_rewards: Optional[Dict[str, float]] = None
+
+class FederatedState(BaseModel):
+    episode_id: str
+    task_id: str
+    round: int
+    total_rounds: int
+    current_clauses: List[Clause]
+    injections: List[InjectionRecord]
+    flags: List[RegulationFlag]
+    seller_score: float
+    buyer_score: float
+    regulator_score: float
+    commercial_balance: float
+    regulatory_compliance: float
+    next_agent_role: str
+    done: bool
+
+class FederatedFinalScore(BaseModel):
+    episode_id: str
+    task_id: str
+    seller_score: float
+    buyer_score: float
+    regulator_score: float
+    commercial_balance: float
+    regulatory_compliance: float
+    injections: List[InjectionRecord]
+    flags: List[RegulationFlag]
+    planted_violations_found: int
+    planted_violations_total: int
+    false_positives: int
+    breakdown: Dict[str, float]
+
+# ── ContractTimeMachine Models ───────────────────────────────────────────
+
+class RevisionSnapshot(BaseModel):
+    version: int
+    author: str  # "Drafter" or "Counterparty"
+    timestamp: str
+    change_summary: str
+    clauses: List[Clause]
+
+class TimeMachineObservation(BaseModel):
+    episode_id: str
+    task_id: str
+    version_history: List[RevisionSnapshot]
+    total_versions: int
+    contradiction_type_hint: str
+    instructions: str
+    done: bool
+    score: Optional[float] = None
+    feedback: Optional[str] = None
+
+class Attribution(BaseModel):
+    introduced_at_version: int
+    introduced_by: str  # "Drafter" or "Counterparty"
+    clause_a_id: str
+    clause_b_id: str
+    explanation: str
+
+class TimeMachineAction(BaseModel):
+    attribution: Attribution
+
+class TimeMachineResult(BaseModel):
+    episode_id: str
+    task_id: str
+    score: float
+    reward: float
+    done: bool
+    feedback: str
+    ground_truth: Optional[Dict] = None
+    breakdown: Optional[Dict[str, float]] = None
+
+class TimeMachineState(BaseModel):
+    episode_id: str
+    task_id: str
+    submitted: bool
+    score: float
+    done: bool
+

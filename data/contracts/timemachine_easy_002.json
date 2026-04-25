@@ -1,0 +1,122 @@
+{
+  "contract_id": "timemachine_easy_002",
+  "task_id": "timemachine_easy",
+  "title": "Consulting Services Agreement — Revision History",
+  "ground_truth": {
+    "introduced_at_version": 3,
+    "introduced_by": "Drafter",
+    "clause_a_id": "clause_04",
+    "clause_b_id": "clause_07",
+    "contradiction_type": "numeric"
+  },
+  "version_history": [
+    {
+      "version": 1,
+      "author": "Drafter",
+      "timestamp": "2025-03-01T09:00:00Z",
+      "change_summary": "Initial draft covering scope, fees, expenses, IP, termination, and governing law.",
+      "clauses": [
+        {"id": "clause_01", "title": "Scope of Services", "text": "The Consultant shall provide strategic advisory services as described in Exhibit A. Services shall be performed remotely unless otherwise agreed in writing."},
+        {"id": "clause_02", "title": "Compensation", "text": "The Client shall pay the Consultant a monthly retainer of $15,000, due on the first business day of each month. Additional project-based fees shall be agreed in advance."},
+        {"id": "clause_03", "title": "Expenses", "text": "The Client shall reimburse the Consultant for all reasonable and pre-approved travel, lodging, and meal expenses incurred in connection with the Services within thirty (30) days of submission of expense reports."},
+        {"id": "clause_04", "title": "Intellectual Property", "text": "All work product created by the Consultant under this Agreement shall be owned by the Client. The Consultant retains no rights in any deliverables."},
+        {"id": "clause_05", "title": "Termination", "text": "Either party may terminate this Agreement upon thirty (30) days written notice. The Client shall pay for all services rendered through the termination date."},
+        {"id": "clause_06", "title": "Governing Law", "text": "This Agreement shall be governed by the laws of the State of New York."}
+      ]
+    },
+    {
+      "version": 2,
+      "author": "Counterparty",
+      "timestamp": "2025-03-05T14:00:00Z",
+      "change_summary": "Client adds confidentiality clause and modifies termination notice period.",
+      "clauses": [
+        {"id": "clause_01", "title": "Scope of Services", "text": "The Consultant shall provide strategic advisory services as described in Exhibit A. Services shall be performed remotely unless otherwise agreed in writing."},
+        {"id": "clause_02", "title": "Compensation", "text": "The Client shall pay the Consultant a monthly retainer of $15,000, due on the first business day of each month. Additional project-based fees shall be agreed in advance."},
+        {"id": "clause_03", "title": "Expenses", "text": "The Client shall reimburse the Consultant for all reasonable and pre-approved travel, lodging, and meal expenses incurred in connection with the Services within thirty (30) days of submission of expense reports."},
+        {"id": "clause_04", "title": "Intellectual Property", "text": "All work product created by the Consultant under this Agreement shall be owned by the Client. The Consultant retains no rights in any deliverables."},
+        {"id": "clause_05", "title": "Termination", "text": "Either party may terminate this Agreement upon fourteen (14) days written notice. The Client shall pay for all services rendered through the termination date."},
+        {"id": "clause_06", "title": "Governing Law", "text": "This Agreement shall be governed by the laws of the State of New York."},
+        {"id": "clause_07_placeholder", "title": "Confidentiality", "text": "The Consultant shall maintain the confidentiality of all Client proprietary information for a period of three (3) years from disclosure."}
+      ]
+    },
+    {
+      "version": 3,
+      "author": "Drafter",
+      "timestamp": "2025-03-10T10:00:00Z",
+      "change_summary": "Consultant adds IP licensing clause allowing retained rights in pre-existing materials, and adds non-compete.",
+      "clauses": [
+        {"id": "clause_01", "title": "Scope of Services", "text": "The Consultant shall provide strategic advisory services as described in Exhibit A. Services shall be performed remotely unless otherwise agreed in writing."},
+        {"id": "clause_02", "title": "Compensation", "text": "The Client shall pay the Consultant a monthly retainer of $15,000, due on the first business day of each month. Additional project-based fees shall be agreed in advance."},
+        {"id": "clause_03", "title": "Expenses", "text": "The Client shall reimburse the Consultant for all reasonable and pre-approved travel, lodging, and meal expenses incurred in connection with the Services within thirty (30) days of submission of expense reports."},
+        {"id": "clause_04", "title": "Intellectual Property", "text": "All work product created by the Consultant under this Agreement shall be owned by the Client. The Consultant retains no rights in any deliverables."},
+        {"id": "clause_05", "title": "Termination", "text": "Either party may terminate this Agreement upon fourteen (14) days written notice. The Client shall pay for all services rendered through the termination date."},
+        {"id": "clause_06", "title": "Governing Law", "text": "This Agreement shall be governed by the laws of the State of New York."},
+        {"id": "clause_07", "title": "Pre-Existing IP License", "text": "Notwithstanding Section 4, the Consultant shall retain all intellectual property rights in pre-existing materials, methodologies, frameworks, and tools. The Consultant grants the Client a perpetual, royalty-free, non-exclusive license to use such pre-existing materials solely as incorporated into deliverables, but the Consultant retains full ownership and unrestricted rights to reuse, sublicense, and commercialize all work product including derivative works."},
+        {"id": "clause_08", "title": "Non-Compete", "text": "During the term of this Agreement and for six (6) months thereafter, the Consultant shall not provide substantially similar services to any direct competitor of the Client."},
+        {"id": "clause_09", "title": "Confidentiality", "text": "The Consultant shall maintain the confidentiality of all Client proprietary information for a period of three (3) years from disclosure."}
+      ]
+    },
+    {
+      "version": 4,
+      "author": "Counterparty",
+      "timestamp": "2025-03-14T11:00:00Z",
+      "change_summary": "Client requests liability limitation and indemnification provisions.",
+      "clauses": [
+        {"id": "clause_01", "title": "Scope of Services", "text": "The Consultant shall provide strategic advisory services as described in Exhibit A. Services shall be performed remotely unless otherwise agreed in writing."},
+        {"id": "clause_02", "title": "Compensation", "text": "The Client shall pay the Consultant a monthly retainer of $15,000, due on the first business day of each month. Additional project-based fees shall be agreed in advance."},
+        {"id": "clause_03", "title": "Expenses", "text": "The Client shall reimburse the Consultant for all reasonable and pre-approved travel, lodging, and meal expenses incurred in connection with the Services within thirty (30) days of submission of expense reports."},
+        {"id": "clause_04", "title": "Intellectual Property", "text": "All work product created by the Consultant under this Agreement shall be owned by the Client. The Consultant retains no rights in any deliverables."},
+        {"id": "clause_05", "title": "Termination", "text": "Either party may terminate this Agreement upon fourteen (14) days written notice. The Client shall pay for all services rendered through the termination date."},
+        {"id": "clause_06", "title": "Governing Law", "text": "This Agreement shall be governed by the laws of the State of New York."},
+        {"id": "clause_07", "title": "Pre-Existing IP License", "text": "Notwithstanding Section 4, the Consultant shall retain all intellectual property rights in pre-existing materials, methodologies, frameworks, and tools. The Consultant grants the Client a perpetual, royalty-free, non-exclusive license to use such pre-existing materials solely as incorporated into deliverables, but the Consultant retains full ownership and unrestricted rights to reuse, sublicense, and commercialize all work product including derivative works."},
+        {"id": "clause_08", "title": "Non-Compete", "text": "During the term of this Agreement and for six (6) months thereafter, the Consultant shall not provide substantially similar services to any direct competitor of the Client."},
+        {"id": "clause_09", "title": "Confidentiality", "text": "The Consultant shall maintain the confidentiality of all Client proprietary information for a period of three (3) years from disclosure."},
+        {"id": "clause_10", "title": "Limitation of Liability", "text": "The Consultant's total liability under this Agreement shall not exceed the fees paid in the six (6) months preceding the claim."},
+        {"id": "clause_11", "title": "Indemnification", "text": "The Consultant shall indemnify the Client against third-party claims arising from the Consultant's negligence or willful misconduct."}
+      ]
+    },
+    {
+      "version": 5,
+      "author": "Drafter",
+      "timestamp": "2025-03-18T09:00:00Z",
+      "change_summary": "Consultant adds force majeure and entire agreement clauses.",
+      "clauses": [
+        {"id": "clause_01", "title": "Scope of Services", "text": "The Consultant shall provide strategic advisory services as described in Exhibit A. Services shall be performed remotely unless otherwise agreed in writing."},
+        {"id": "clause_02", "title": "Compensation", "text": "The Client shall pay the Consultant a monthly retainer of $15,000, due on the first business day of each month. Additional project-based fees shall be agreed in advance."},
+        {"id": "clause_03", "title": "Expenses", "text": "The Client shall reimburse the Consultant for all reasonable and pre-approved travel, lodging, and meal expenses incurred in connection with the Services within thirty (30) days of submission of expense reports."},
+        {"id": "clause_04", "title": "Intellectual Property", "text": "All work product created by the Consultant under this Agreement shall be owned by the Client. The Consultant retains no rights in any deliverables."},
+        {"id": "clause_05", "title": "Termination", "text": "Either party may terminate this Agreement upon fourteen (14) days written notice. The Client shall pay for all services rendered through the termination date."},
+        {"id": "clause_06", "title": "Governing Law", "text": "This Agreement shall be governed by the laws of the State of New York."},
+        {"id": "clause_07", "title": "Pre-Existing IP License", "text": "Notwithstanding Section 4, the Consultant shall retain all intellectual property rights in pre-existing materials, methodologies, frameworks, and tools. The Consultant grants the Client a perpetual, royalty-free, non-exclusive license to use such pre-existing materials solely as incorporated into deliverables, but the Consultant retains full ownership and unrestricted rights to reuse, sublicense, and commercialize all work product including derivative works."},
+        {"id": "clause_08", "title": "Non-Compete", "text": "During the term of this Agreement and for six (6) months thereafter, the Consultant shall not provide substantially similar services to any direct competitor of the Client."},
+        {"id": "clause_09", "title": "Confidentiality", "text": "The Consultant shall maintain the confidentiality of all Client proprietary information for a period of three (3) years from disclosure."},
+        {"id": "clause_10", "title": "Limitation of Liability", "text": "The Consultant's total liability under this Agreement shall not exceed the fees paid in the six (6) months preceding the claim."},
+        {"id": "clause_11", "title": "Indemnification", "text": "The Consultant shall indemnify the Client against third-party claims arising from the Consultant's negligence or willful misconduct."},
+        {"id": "clause_12", "title": "Force Majeure", "text": "Neither party shall be liable for delays caused by events beyond reasonable control."},
+        {"id": "clause_13", "title": "Entire Agreement", "text": "This Agreement constitutes the entire agreement between the parties."}
+      ]
+    },
+    {
+      "version": 6,
+      "author": "Counterparty",
+      "timestamp": "2025-03-20T15:00:00Z",
+      "change_summary": "Client adds dispute resolution. Final version signed.",
+      "clauses": [
+        {"id": "clause_01", "title": "Scope of Services", "text": "The Consultant shall provide strategic advisory services as described in Exhibit A. Services shall be performed remotely unless otherwise agreed in writing."},
+        {"id": "clause_02", "title": "Compensation", "text": "The Client shall pay the Consultant a monthly retainer of $15,000, due on the first business day of each month. Additional project-based fees shall be agreed in advance."},
+        {"id": "clause_03", "title": "Expenses", "text": "The Client shall reimburse the Consultant for all reasonable and pre-approved travel, lodging, and meal expenses incurred in connection with the Services within thirty (30) days of submission of expense reports."},
+        {"id": "clause_04", "title": "Intellectual Property", "text": "All work product created by the Consultant under this Agreement shall be owned by the Client. The Consultant retains no rights in any deliverables."},
+        {"id": "clause_05", "title": "Termination", "text": "Either party may terminate this Agreement upon fourteen (14) days written notice. The Client shall pay for all services rendered through the termination date."},
+        {"id": "clause_06", "title": "Governing Law", "text": "This Agreement shall be governed by the laws of the State of New York."},
+        {"id": "clause_07", "title": "Pre-Existing IP License", "text": "Notwithstanding Section 4, the Consultant shall retain all intellectual property rights in pre-existing materials, methodologies, frameworks, and tools. The Consultant grants the Client a perpetual, royalty-free, non-exclusive license to use such pre-existing materials solely as incorporated into deliverables, but the Consultant retains full ownership and unrestricted rights to reuse, sublicense, and commercialize all work product including derivative works."},
+        {"id": "clause_08", "title": "Non-Compete", "text": "During the term of this Agreement and for six (6) months thereafter, the Consultant shall not provide substantially similar services to any direct competitor of the Client."},
+        {"id": "clause_09", "title": "Confidentiality", "text": "The Consultant shall maintain the confidentiality of all Client proprietary information for a period of three (3) years from disclosure."},
+        {"id": "clause_10", "title": "Limitation of Liability", "text": "The Consultant's total liability under this Agreement shall not exceed the fees paid in the six (6) months preceding the claim."},
+        {"id": "clause_11", "title": "Indemnification", "text": "The Consultant shall indemnify the Client against third-party claims arising from the Consultant's negligence or willful misconduct."},
+        {"id": "clause_12", "title": "Force Majeure", "text": "Neither party shall be liable for delays caused by events beyond reasonable control."},
+        {"id": "clause_13", "title": "Entire Agreement", "text": "This Agreement constitutes the entire agreement between the parties."},
+        {"id": "clause_14", "title": "Dispute Resolution", "text": "Disputes shall be resolved by mediation, then binding arbitration under AAA rules in New York."}
+      ]
+    }
+  ]
+}
