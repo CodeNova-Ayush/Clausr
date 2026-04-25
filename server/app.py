@@ -5,10 +5,13 @@ import json
 from server.environment import ContractFixEnv
 from server.execution_environment import ContractExecutionEnv
 from server.lexmind_environment import LexMindEnv
+from server.adversarial_environment import AdversarialArenaEnv
 from models import (
     ContractAction, ContractObservation, ContractState,
     ExecutionAction, ExecutionObservation, ContractExecutionState,
     LexMindEpisodeAction, LexMindObservation, LexMindState,
+    ForgerAction, ForgerObservation, AuditorAction, AuditorObservation,
+    AdversarialState, OpponentConfig, CheckpointSubmission,
 )
 
 app = FastAPI(
@@ -123,6 +126,76 @@ def lexmind_preview(task_id: str = "lexmind_easy"):
         "drafting_sequence": env.get_stripped_sequence(),
         "total_events": len(env._drafting_sequence),
     }
+
+
+# ── Adversarial Arena Endpoints ──────────────────────────────────────────
+
+_adversarial_env = AdversarialArenaEnv()
+
+
+@app.get("/adversarial/health")
+def adversarial_health():
+    return {"status": "ok", "environment": "AdversarialArena"}
+
+
+@app.post("/adversarial/reset", response_model=ForgerObservation)
+def adversarial_reset(task_id: str = "adversarial_easy"):
+    global _adversarial_env
+    _adversarial_env = AdversarialArenaEnv()
+    return _adversarial_env.reset(task_id=task_id)
+
+
+@app.post("/adversarial/forger_step")
+def adversarial_forger_step(action: ForgerAction, task_id: str = "adversarial_easy", contract_id: str = None):
+    global _adversarial_env
+    if _adversarial_env._phase == "idle":
+        _adversarial_env = AdversarialArenaEnv()
+        if contract_id:
+            _adversarial_env.load_contract_by_id(contract_id)
+        else:
+            _adversarial_env.reset(task_id=task_id)
+    return _adversarial_env.forger_step(action)
+
+
+@app.get("/adversarial/auditor_observation", response_model=AuditorObservation)
+def adversarial_auditor_observation():
+    return _adversarial_env.get_auditor_observation()
+
+
+@app.post("/adversarial/auditor_step")
+def adversarial_auditor_step(action: AuditorAction):
+    return _adversarial_env.auditor_step(action)
+
+
+@app.get("/adversarial/state", response_model=AdversarialState)
+def adversarial_state():
+    return _adversarial_env.state
+
+
+@app.post("/adversarial/configure_opponent")
+def adversarial_configure_opponent(config: OpponentConfig):
+    return _adversarial_env.configure_opponent(config)
+
+
+@app.post("/adversarial/submit_checkpoint")
+def adversarial_submit_checkpoint(checkpoint: CheckpointSubmission):
+    return _adversarial_env.submit_checkpoint(checkpoint.model_dump())
+
+
+@app.post("/adversarial/full_episode")
+def adversarial_full_episode(
+    forger_action: ForgerAction,
+    task_id: str = "adversarial_easy",
+    contract_id: str = None,
+):
+    """Run a complete episode: reset -> forger step -> (auto-auditor or return for manual auditor)."""
+    global _adversarial_env
+    _adversarial_env = AdversarialArenaEnv()
+    if contract_id:
+        _adversarial_env.load_contract_by_id(contract_id)
+    else:
+        _adversarial_env.reset(task_id=task_id)
+    return _adversarial_env.forger_step(forger_action)
 
 
 @app.websocket("/ws")
