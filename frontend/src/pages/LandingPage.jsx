@@ -70,35 +70,7 @@ export default function LandingPage() {
   return (
     <div className="animated-mesh-bg" style={{ color: '#1a1a2e', fontFamily: 'system-ui, sans-serif', minHeight: '100vh', width: '100vw', overflowX: 'hidden' }}>
       
-      {showNav && (
-        <div style={{
-          position: 'fixed', top: 0, left: 0, right: 0,
-          background: 'rgba(255, 255, 255, 0.95)', backdropFilter: 'blur(10px)', WebkitBackdropFilter: 'blur(10px)',
-          borderBottom: '1px solid rgba(108,99,255,0.1)', zIndex: 1000,
-          padding: '14px 28px', display: 'flex', justifyContent: 'space-between', alignItems: 'center',
-          boxShadow: '0 2px 16px rgba(108,99,255,0.05)'
-        }}>
-          <div style={{ color: '#6C63FF', fontWeight: '900', fontSize: '16px', letterSpacing: '-0.02em', display: 'flex', alignItems: 'center', gap: '6px' }}>
-            <svg width="20" height="22" viewBox="0 0 24 28" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" style={{ filter: 'drop-shadow(0 0 8px rgba(108,99,255,0.4))' }}>
-              <path d="M12 2L2 7l10 5 10-5-10-5z" />
-              <path d="M2 17l10 5 10-5" />
-              <path d="M2 12l10 5 10-5" />
-            </svg>
-            Clausr
-          </div>
-          <div style={{ display: 'flex', gap: '24px', fontSize: '13px', fontWeight: '500', color: 'var(--text-secondary)' }}>
-            <span style={{ cursor: 'pointer' }} onClick={() => scrollTo('problem')}>Problem</span>
-            <span style={{ cursor: 'pointer' }} onClick={() => scrollTo('how-it-works')}>How It Works</span>
-            <span style={{ cursor: 'pointer' }} onClick={() => scrollTo('environments')}>Environments</span>
-            <span style={{ cursor: 'pointer' }} onClick={() => scrollTo('contradiction-types')}>Features</span>
-            <span style={{ cursor: 'pointer' }} onClick={() => scrollTo('enter')}>Enter</span>
-          </div>
-          <button onClick={() => navigate('/app')} style={{
-            background: 'transparent', border: '1px solid var(--purple)', color: 'var(--purple)',
-            padding: '6px 14px', borderRadius: '6px', fontSize: '13px', fontWeight: '600', cursor: 'pointer'
-          }}>Enter Clausr →</button>
-        </div>
-      )}
+
 
       {/* 1 - HERO */}
       <section ref={s1} className="reveal" style={{...styles.sectionBase, borderBottom: 'none', background: '#E8EAFB', minHeight: '100vh', justifyContent: 'center', position: 'relative', paddingTop: '120px'}}>
@@ -250,42 +222,30 @@ export default function LandingPage() {
       {/* 4 - ENVIRONMENTS */}
       <section id="environments" ref={s4} className="reveal" style={{...styles.sectionBase, ...styles.bgSurface}}>
         <div style={{...styles.label, textShadow: '0 0 10px rgba(139,127,255,0.4)'}}>Architecture</div>
-        <h2 style={{...styles.heading, fontSize: 'clamp(32px, 4vw, 44px)', fontWeight: '900', background: 'linear-gradient(to right, #1a1a2e, #6C63FF)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent'}}>Triple-Threat Legal Architectures</h2>
-        <p style={{...styles.subheading, fontSize: '17px'}}>Three distinctly engineered environments. Each isolating a specific layer of advanced reasoning.</p>
-        <div style={{ display: 'flex', flexWrap: 'wrap', gap: '24px', maxWidth: '1200px', width: '100%' }}>
-          <div style={{ ...styles.card, flex: '1 1 300px', borderTop: '3px solid var(--green)', position: 'relative', transition: 'all 0.4s cubic-bezier(0.16, 1, 0.3, 1)' }} onMouseEnter={e=>{e.currentTarget.style.transform='scale(1.03) translateY(-4px)'; e.currentTarget.style.boxShadow='0 20px 40px rgba(0,214,143,0.15), 0 0 0 1px rgba(0,214,143,0.3)';}} onMouseLeave={e=>{e.currentTarget.style.transform='scale(1) translateY(0)'; e.currentTarget.style.boxShadow='none';}}>
-            <div style={{ position: 'absolute', top: '16px', right: '16px', background: 'var(--green-dim)', color: 'var(--green)', fontSize: '10px', fontWeight: 900, padding: '4px 10px', borderRadius: '12px', border: '1px solid rgba(0,214,143,0.3)' }}>ENVIRONMENT 1</div>
-            <h3 style={{ fontSize: '20px', color: '#1a1a2e', marginBottom: '6px', marginTop: '14px', fontWeight: 800 }}>Contradiction Detection</h3>
-            <div style={{ color: 'var(--text-muted)', fontSize: '13px', marginBottom: '16px', fontWeight: 600 }}>Static document analysis</div>
-            <p style={{ color: 'var(--text-secondary)', fontSize: '14px', lineHeight: 1.6, marginBottom: '24px' }}>The foundational orchestration environment. The agent executes full-text context capture to identify all contradicting clause pairs. Incorporates five contradiction frameworks and three hyper-realistic legal decoys.</p>
-            <div style={{ fontSize: '12px', color: 'var(--green)', marginBottom: '8px', fontWeight: 600 }}>8–60 clauses · 1–8 contradictions · 3 task levels</div>
-            <div style={{ fontSize: '12px', color: 'var(--text-muted)', marginBottom: '24px' }}>Baseline: <span style={{color:'#1a1a2e', fontWeight: 'bold'}}>Mistral zero-shot: 0.85 mean</span></div>
-            <div style={{ fontFamily: 'monospace', fontSize: '12px', background: '#F0F1FC', borderLeft: '3px solid var(--green)', padding: '12px 14px', borderRadius: '6px', color: '#4a4a68' }}>
-              {`{\n  "finding_id": "c1_c2",\n  "clause_a": "CLAUSE_03",\n  "clause_b": "CLAUSE_07"\n}`}
+        <h2 style={{...styles.heading, fontSize: 'clamp(32px, 4vw, 44px)', fontWeight: '900', background: 'linear-gradient(to right, #1a1a2e, #6C63FF)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent'}}>The Eight Legal Architectures</h2>
+        <p style={{...styles.subheading, fontSize: '17px'}}>Eight distinctly engineered environments. Each isolating a specific layer of advanced legal reasoning.</p>
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '24px', maxWidth: '1200px', width: '100%' }}>
+          {[
+            { id: 1, name: 'Detection', color: 'var(--red)', subtitle: 'Static document analysis', desc: 'The foundational orchestration environment. Identifies explicit text-based logical conflicts across five contradiction frameworks.', metrics: '8–60 clauses · 1–8 contradictions', code: '{\n  "clause_a": "CLAUSE_03",\n  "clause_b": "CLAUSE_07"\n}' },
+            { id: 2, name: 'The Oracle', color: 'var(--amber)', subtitle: 'Contract execution simulator', desc: 'Simulates contract timeline execution. Traces realistic business scenarios to isolate the exact business operation that plunges the agreement into an undefined legal state.', metrics: '3–14 sequential scenarios · Multi-agent core', code: '{\n  "crashes": true,\n  "crash_clauses": ["CLAUSE_04", "CLAUSE_14"]\n}' },
+            { id: 3, name: 'LexMind', color: 'var(--purple)', subtitle: 'Incremental negotiation co-pilot', desc: 'Monitors the contract growing clause by clause during live negotiation and triggers the exact millisecond a vulnerability is embedded.', metrics: '8–40 live events · Institutional memory engine', code: '{\n  "event": "CLAUSE_INSERTION",\n  "contradiction_flag": true\n}' },
+            { id: 4, name: 'Adversarial Arena', color: '#ff0055', subtitle: 'Forger vs Auditor zero-sum game', desc: 'A competitive arena where one agent injects subtle, unnoticeable contradictions while the other agent hunts them down. Tests robustness against adversarial attacks.', metrics: 'Self-play training · Evaluator evasion', code: '{\n  "forgery_detected": true,\n  "stealth_score": 0.04\n}' },
+            { id: 5, name: 'TimeMachine', color: '#00d4aa', subtitle: 'Temporal backtesting', desc: 'Simulates retroactive compliance and temporal overrides. Evaluates if changes in regulation or time-bound clauses create historical conflicts.', metrics: '10-year simulation · Temporal overrides', code: '{\n  "temporal_conflict": true,\n  "year": 2028\n}' },
+            { id: 6, name: 'Federated', color: '#3b82f6', subtitle: 'Multi-party distributed obligations', desc: 'Tracks obligations mapped across multi-party consortium agreements. Detects circular dependencies and undefined accountability gaps across 3+ parties.', metrics: '3–8 parties · Circular dependency detection', code: '{\n  "circular_liability": true,\n  "parties": ["A", "B", "C"]\n}' },
+            { id: 7, name: 'Constitution', color: '#8B4513', subtitle: 'Hierarchical rule sets', desc: 'Tests overriding principles. Checks if lower-level clauses violate core constitutional rules of the contract framework.', metrics: '2-tier hierarchy · Supreme overrides', code: '{\n  "constitutional_violation": true,\n  "violates": "RULE_01"\n}' },
+            { id: 8, name: 'Curriculum', color: '#f97316', subtitle: 'Dynamic difficulty progression', desc: 'Auto-scaling environment that adapts the complexity of the contract and contradictions based on the agents moving success rate.', metrics: 'Adaptive ELO rating · Scaling complexity', code: '{\n  "difficulty_multiplier": 1.4,\n  "agent_elo": 1250\n}' }
+          ].map((env) => (
+            <div key={env.id} style={{ ...styles.card, borderTop: `3px solid ${env.color}`, position: 'relative', transition: 'all 0.4s cubic-bezier(0.16, 1, 0.3, 1)' }} onMouseEnter={e=>{e.currentTarget.style.transform='scale(1.03) translateY(-4px)'; e.currentTarget.style.boxShadow=`0 20px 40px ${env.color}22, 0 0 0 1px ${env.color}44`;}} onMouseLeave={e=>{e.currentTarget.style.transform='scale(1) translateY(0)'; e.currentTarget.style.boxShadow='none';}}>
+              <div style={{ position: 'absolute', top: '16px', right: '16px', background: `${env.color}11`, color: env.color, fontSize: '10px', fontWeight: 900, padding: '4px 10px', borderRadius: '12px', border: `1px solid ${env.color}44` }}>ENVIRONMENT {env.id}</div>
+              <h3 style={{ fontSize: '20px', color: '#1a1a2e', marginBottom: '6px', marginTop: '14px', fontWeight: 800 }}>{env.name}</h3>
+              <div style={{ color: 'var(--text-muted)', fontSize: '13px', marginBottom: '16px', fontWeight: 600 }}>{env.subtitle}</div>
+              <p style={{ color: 'var(--text-secondary)', fontSize: '14px', lineHeight: 1.6, marginBottom: '24px' }}>{env.desc}</p>
+              <div style={{ fontSize: '12px', color: env.color, marginBottom: '16px', fontWeight: 600 }}>{env.metrics}</div>
+              <div style={{ fontFamily: 'monospace', fontSize: '12px', background: '#F0F1FC', borderLeft: `3px solid ${env.color}`, padding: '12px 14px', borderRadius: '6px', color: '#4a4a68', whiteSpace: 'pre-wrap' }}>
+                {env.code}
+              </div>
             </div>
-          </div>
-          <div style={{ ...styles.card, flex: '1 1 300px', borderTop: '3px solid var(--amber)', position: 'relative', transition: 'all 0.4s cubic-bezier(0.16, 1, 0.3, 1)' }} onMouseEnter={e=>{e.currentTarget.style.transform='scale(1.03) translateY(-4px)'; e.currentTarget.style.boxShadow='0 20px 40px rgba(255,184,61,0.15), 0 0 0 1px rgba(255,184,61,0.3)';}} onMouseLeave={e=>{e.currentTarget.style.transform='scale(1) translateY(0)'; e.currentTarget.style.boxShadow='none';}}>
-            <div style={{ position: 'absolute', top: '16px', right: '16px', background: 'var(--amber-dim)', color: 'var(--amber)', fontSize: '10px', fontWeight: 900, padding: '4px 10px', borderRadius: '12px', border: '1px solid rgba(255,184,61,0.3)' }}>ENVIRONMENT 2</div>
-            <h3 style={{ fontSize: '20px', color: '#1a1a2e', marginBottom: '6px', marginTop: '14px', fontWeight: 800 }}>The Oracle</h3>
-            <div style={{ color: 'var(--text-muted)', fontSize: '13px', marginBottom: '16px', fontWeight: 600 }}>Contract execution simulation</div>
-            <p style={{ color: 'var(--text-secondary)', fontSize: '14px', lineHeight: 1.6, marginBottom: '24px' }}>The world's first contract execution simulator. The agent traces realistic business scenarios through the contract logic matrix to isolate the exact business operation that plunges the agreement into an undefined legal state.</p>
-            <div style={{ fontSize: '12px', color: 'var(--amber)', marginBottom: '8px', fontWeight: 600 }}>3–14 sequential scenarios · Multi-agent core</div>
-            <div style={{ fontSize: '12px', color: 'var(--text-muted)', marginBottom: '24px' }}>Baseline: <span style={{color:'#1a1a2e', fontWeight: 'bold'}}>Novel architecture — no prior benchmark</span></div>
-            <div style={{ fontFamily: 'monospace', fontSize: '12px', background: '#F0F1FC', borderLeft: '3px solid var(--amber)', padding: '12px 14px', borderRadius: '6px', color: '#4a4a68' }}>
-              {`{\n  "scenario_trace": [ ... ],\n  "crashes": true,\n  "crash_clauses": ["CLAUSE_04", "CLAUSE_14"]\n}`}
-            </div>
-          </div>
-          <div style={{ ...styles.card, flex: '1 1 300px', borderTop: '3px solid var(--purple)', position: 'relative', transition: 'all 0.4s cubic-bezier(0.16, 1, 0.3, 1)' }} onMouseEnter={e=>{e.currentTarget.style.transform='scale(1.03) translateY(-4px)'; e.currentTarget.style.boxShadow='0 20px 40px rgba(139,127,255,0.15), 0 0 0 1px rgba(139,127,255,0.3)';}} onMouseLeave={e=>{e.currentTarget.style.transform='scale(1) translateY(0)'; e.currentTarget.style.boxShadow='none';}}>
-            <div style={{ position: 'absolute', top: '16px', right: '16px', background: 'var(--purple-dim)', color: 'var(--purple-light)', fontSize: '10px', fontWeight: 900, padding: '4px 10px', borderRadius: '12px', border: '1px solid rgba(139,127,255,0.3)' }}>ENVIRONMENT 3</div>
-            <h3 style={{ fontSize: '20px', color: '#1a1a2e', marginBottom: '6px', marginTop: '14px', fontWeight: 800 }}>LexMind</h3>
-            <div style={{ color: 'var(--text-muted)', fontSize: '13px', marginBottom: '16px', fontWeight: 600 }}>Negotiation intelligence co-pilot</div>
-            <p style={{ color: 'var(--text-secondary)', fontSize: '14px', lineHeight: 1.6, marginBottom: '24px' }}>The first incremental observation framework in the OpenEnv catalog. The agent monitors the contract growing clause by clause during live negotiation and triggers the exact millisecond a vulnerability is embedded.</p>
-            <div style={{ fontSize: '12px', color: 'var(--purple-light)', marginBottom: '8px', fontWeight: 600 }}>8–40 live events · Institutional memory engine</div>
-            <div style={{ fontSize: '12px', color: 'var(--text-muted)', marginBottom: '24px' }}>Baseline: <span style={{color:'#1a1a2e', fontWeight: 'bold'}}>First of its kind globally</span></div>
-            <div style={{ fontFamily: 'monospace', fontSize: '12px', background: '#F0F1FC', borderLeft: '3px solid var(--purple)', padding: '12px 14px', borderRadius: '6px', color: '#4a4a68' }}>
-              {`{\n  "event_type": "CLAUSE_INSERTION",\n  "party": "COUNTERPARTY",\n  "contradiction_flag": true,\n  "conflicts_with": "CLAUSE_03"\n}`}
-            </div>
-          </div>
+          ))}
         </div>
       </section>
 

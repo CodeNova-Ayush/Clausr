@@ -1228,3 +1228,148 @@ mark { background: rgba(239,159,39,0.25); color: var(--amber); border-radius: 2p
   0% { width: 0%; }
   50%, 100% { width: 100%; }
 }
+
+/* Adversarial Arena Animation */
+.anim-adv {
+  height: 120px;
+  background: var(--bg-surface);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  gap: 24px;
+}
+.adv-dot {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  position: relative;
+  animation: clash 2s infinite ease-in-out alternate;
+}
+.adv-dot.red {
+  background: #ff0055;
+  box-shadow: 0 0 12px #ff0055;
+  transform: translateX(-10px);
+}
+.adv-dot.blue {
+  background: #00d4aa;
+  box-shadow: 0 0 12px #00d4aa;
+  transform: translateX(10px);
+}
+@keyframes clash {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(20px); }
+}
+
+/* TimeMachine Animation */
+.anim-time {
+  height: 120px;
+  background: var(--bg-surface);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.clock-face {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  border: 3px solid #00d4aa;
+  position: relative;
+}
+.clock-hand {
+  width: 2px;
+  height: 20px;
+  background: #00d4aa;
+  position: absolute;
+  top: 4px;
+  left: 21px;
+  transform-origin: bottom center;
+  animation: spinback 3s linear infinite backwards;
+}
+@keyframes spinback {
+  from { transform: rotate(360deg); }
+  to { transform: rotate(0deg); }
+}
+
+/* Federated Animation */
+.anim-fed {
+  height: 120px;
+  background: var(--bg-surface);
+  border-radius: 12px;
+  position: relative;
+}
+.node {
+  width: 16px;
+  height: 16px;
+  background: #3b82f6;
+  border-radius: 50%;
+  position: absolute;
+  box-shadow: 0 0 8px #3b82f6;
+  animation: pulseNode 1.5s infinite alternate;
+}
+.n1 { top: 30px; left: 50%; transform: translateX(-50%); }
+.n2 { bottom: 30px; left: 30%; }
+.n3 { bottom: 30px; right: 30%; }
+.line {
+  position: absolute;
+  background: rgba(59, 130, 246, 0.3);
+}
+.l1 { width: 2px; height: 40px; top: 40px; left: 40%; transform: rotate(-30deg); }
+.l2 { width: 2px; height: 40px; top: 40px; right: 40%; transform: rotate(30deg); }
+.l3 { height: 2px; width: 60px; bottom: 38px; left: 50%; transform: translateX(-50%); }
+@keyframes pulseNode {
+  from { transform: scale(1); }
+  to { transform: scale(1.3); }
+}
+
+/* Constitution Animation */
+.anim-const {
+  height: 120px;
+  background: var(--bg-surface);
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+.tier {
+  background: #8B4513;
+  border-radius: 4px;
+  height: 12px;
+  animation: buildPyramid 2s infinite ease-in-out alternate;
+}
+.tier.top { width: 20px; opacity: 1; }
+.tier.mid { width: 40px; opacity: 0.8; animation-delay: 0.2s; }
+.tier.bot { width: 60px; opacity: 0.6; animation-delay: 0.4s; }
+@keyframes buildPyramid {
+  from { transform: translateY(10px); opacity: 0; }
+  to { transform: translateY(0); }
+}
+
+/* Curriculum Animation */
+.anim-curr {
+  height: 120px;
+  background: var(--bg-surface);
+  border-radius: 12px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  gap: 12px;
+  padding-bottom: 30px;
+}
+.bar {
+  width: 16px;
+  background: #f97316;
+  border-radius: 4px 4px 0 0;
+  animation: growBar 2s infinite ease-in-out;
+}
+.b1 { height: 20px; }
+.b2 { height: 40px; animation-delay: 0.2s; }
+.b3 { height: 60px; animation-delay: 0.4s; }
+@keyframes growBar {
+  0%, 100% { transform: scaleY(1); transform-origin: bottom; }
+  50% { transform: scaleY(1.3); transform-origin: bottom; }
+}

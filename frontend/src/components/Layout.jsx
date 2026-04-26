@@ -26,9 +26,10 @@ export function Navbar() {
   return (
     <nav style={{
       position: 'sticky', top: 0, zIndex: 1000,
-      background: 'rgba(10, 10, 15, 0.85)',
+      background: 'rgba(255, 255, 255, 0.95)',
       backdropFilter: 'blur(12px)',
       borderBottom: '1px solid var(--border)',
+      boxShadow: '0 2px 16px rgba(108,99,255,0.05)',
       padding: '16px 32px',
       display: 'flex', justifyContent: 'space-between', alignItems: 'center'
     }}>
@@ -48,7 +49,7 @@ export function Navbar() {
         <Link to="/#environments" style={{ color: 'var(--text-secondary)', transition: 'color 0.2s' }} onMouseOver={e => e.target.style.color='var(--purple)'} onMouseOut={e => e.target.style.color='var(--text-secondary)'}>Environments</Link>
         <a href="https://huggingface.co/spaces/BinaryCoder/Clausr" target="_blank" rel="noreferrer" style={{ color: 'var(--text-secondary)', transition: 'color 0.2s' }} onMouseOver={e => e.target.style.color='var(--purple)'} onMouseOut={e => e.target.style.color='var(--text-secondary)'}>Training</a>
         
-        <div style={{ display: 'flex', alignItems: 'center', gap: '8px', background: 'var(--bg-surface)', padding: '6px 12px', borderRadius: '20px', border: '1px solid var(--border)' }}>
+        <div style={{ display: 'flex', alignItems: 'center', gap: '8px', background: 'var(--bg-card)', padding: '6px 12px', borderRadius: '20px', border: '1px solid var(--border)' }}>
           <div style={{
             width: '8px', height: '8px', borderRadius: '50%',
             background: healthy ? 'var(--green)' : 'var(--red)',

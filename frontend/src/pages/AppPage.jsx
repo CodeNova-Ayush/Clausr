@@ -419,35 +419,36 @@ function LiveScoreDashboard({ serverStatus }) {
 }
 
 function EnvironmentShowcase() {
+  const envs = [
+    { id: 'detect', name: 'Detection', color: 'var(--red)', desc: 'Identifies explicit text-based logical conflicts.', animClass: 'anim-detect',
+      content: <><div className="box doc-box">Clause A</div><div className="box doc-box">Clause B</div><div className="laser"></div></> },
+    { id: 'oracle', name: 'Oracle / Execution', color: 'var(--amber)', desc: 'Simulates contract timeline execution.', animClass: 'anim-timeline',
+      content: <><div className="timeline-dot"></div><div className="timeline-dot"></div><div className="timeline-dot crash"></div></> },
+    { id: 'lexmind', name: 'LexMind', color: 'var(--purple)', desc: 'Incremental negotiation co-pilot.', animClass: 'anim-lex',
+      content: <><div className="check-step"></div><div className="check-step"></div><div className="check-step"></div></> },
+    { id: 'adv', name: 'Adversarial Arena', color: '#ff0055', desc: 'Forger vs Auditor zero-sum game.', animClass: 'anim-adv',
+      content: <><div className="adv-dot red"></div><div className="adv-dot blue"></div></> },
+    { id: 'time', name: 'TimeMachine', color: '#00d4aa', desc: 'Simulates retroactive compliance.', animClass: 'anim-time',
+      content: <><div className="clock-face"><div className="clock-hand"></div></div></> },
+    { id: 'fed', name: 'Federated', color: '#3b82f6', desc: 'Tracks multi-party obligations.', animClass: 'anim-fed',
+      content: <><div className="node n1"></div><div className="node n2"></div><div className="node n3"></div><div className="line l1"></div><div className="line l2"></div><div className="line l3"></div></> },
+    { id: 'const', name: 'Constitution', color: '#8B4513', desc: 'Tests overriding hierarchical principles.', animClass: 'anim-const',
+      content: <><div className="tier top"></div><div className="tier mid"></div><div className="tier bot"></div></> },
+    { id: 'curr', name: 'Curriculum', color: '#f97316', desc: 'Dynamic difficulty progression.', animClass: 'anim-curr',
+      content: <><div className="bar b1"></div><div className="bar b2"></div><div className="bar b3"></div></> }
+  ];
+
   return (
-    <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '24px' }}>
-      <div className="env-card glass">
-        <h3 style={{ color: 'var(--red)', marginBottom: '12px' }}>Detection</h3>
-        <p style={{ fontSize: '13px', color: 'var(--text-secondary)', marginBottom: '24px' }}>Identifies explicit text-based logical conflicts.</p>
-        <div className="anim-detect">
-          <div className="box doc-box">Clause A</div>
-          <div className="box doc-box">Clause B</div>
-          <div className="laser"></div>
+    <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '24px' }}>
+      {envs.map(env => (
+        <div key={env.id} className="env-card glass" style={{ borderTop: `3px solid ${env.color}`, position: 'relative' }}>
+          <h3 style={{ color: env.color, marginBottom: '12px' }}>{env.name}</h3>
+          <p style={{ fontSize: '13px', color: 'var(--text-secondary)', marginBottom: '24px' }}>{env.desc}</p>
+          <div className={env.animClass}>
+            {env.content}
+          </div>
         </div>
-      </div>
-      <div className="env-card glass">
-        <h3 style={{ color: 'var(--amber)', marginBottom: '12px' }}>Oracle / Execution</h3>
-        <p style={{ fontSize: '13px', color: 'var(--text-secondary)', marginBottom: '24px' }}>Simulates contract timeline execution.</p>
-        <div className="anim-timeline">
-          <div className="timeline-dot"></div>
-          <div className="timeline-dot"></div>
-          <div className="timeline-dot crash"></div>
-        </div>
-      </div>
-      <div className="env-card glass">
-        <h3 style={{ color: 'var(--purple)', marginBottom: '12px' }}>LexMind</h3>
-        <p style={{ fontSize: '13px', color: 'var(--text-secondary)', marginBottom: '24px' }}>Multi-step adversarial resolution.</p>
-        <div className="anim-lex">
-          <div className="check-step"></div>
-          <div className="check-step"></div>
-          <div className="check-step"></div>
-        </div>
-      </div>
+      ))}
     </div>
   );
 }
