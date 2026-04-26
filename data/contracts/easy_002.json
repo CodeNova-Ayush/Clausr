@@ -1,0 +1,98 @@
+{
+  "contract_id": "easy_002",
+  "task_id": "easy",
+  "title": "Service Agreement between GlobalTech Inc and SwiftDeliver Ltd",
+  "contract_text": "Parties and Recitals\nThis Service Agreement (\"Agreement\") is entered into by and between GlobalTech Inc, a California corporation with its principal place of business at 2200 Sand Hill Road, Menlo Park, CA 94025 (\"Client\"), and SwiftDeliver Ltd, a limited company registered in Ontario, Canada with offices at 180 Bay Street, Toronto, ON M5J 2T3 (\"Supplier\").\n\nScope of Services\nThe Supplier agrees to provide comprehensive logistics, warehousing, and last-mile delivery services to the Client across all North American territories as more particularly described in Schedule A attached hereto. Services shall commence within thirty (30) days of the Effective Date and shall be performed in accordance with all applicable industry standards and regulations.\n\nDelivery Costs\nThe Supplier shall be solely responsible for all shipping, handling, and delivery costs incurred in performing services under this Agreement, including but not limited to freight charges, customs duties, packaging materials, fuel surcharges, and any incidental transportation expenses.\n\nPayment Terms\nThe Client shall pay the Supplier's invoices for service fees (exclusive of shipping and handling costs addressed elsewhere in this Agreement) within thirty (30) days of receipt of a valid and undisputed invoice. All payments shall be made in United States Dollars by electronic funds transfer.\n\nInsurance Requirements\nThe Supplier shall maintain, at its own cost and expense, comprehensive general liability insurance with a minimum coverage of One Million United States Dollars ($1,000,000) per occurrence and Two Million United States Dollars ($2,000,000) in the aggregate, and shall name the Client as an additional insured on all such policies.\n\nTerm of Agreement\nThis Agreement shall commence on the Effective Date and shall remain in full force and effect for an initial term of one (1) year, unless earlier terminated in accordance with the provisions of this Agreement.\n\nCost Allocation\nAll shipping, handling, and logistics costs arising from services provided hereunder shall be borne exclusively by the Client and reimbursed to the Supplier within ten (10) business days of the Supplier's submission of an itemized invoice for such costs.\n\nDispute Resolution\nAny dispute, controversy, or claim arising out of or relating to this Agreement shall be resolved through binding arbitration administered by the American Arbitration Association in accordance with its Commercial Arbitration Rules. The arbitration shall take place in San Francisco, California, and the decision of the arbitrator shall be final and binding.",
+  "clauses": [
+    {
+      "id": "clause_01",
+      "title": "Parties and Recitals",
+      "text": "This Service Agreement (\"Agreement\") is entered into by and between GlobalTech Inc, a California corporation with its principal place of business at 2200 Sand Hill Road, Menlo Park, CA 94025 (\"Client\"), and SwiftDeliver Ltd, a limited company registered in Ontario, Canada with offices at 180 Bay Street, Toronto, ON M5J 2T3 (\"Supplier\")."
+    },
+    {
+      "id": "clause_02",
+      "title": "Scope of Services",
+      "text": "The Supplier agrees to provide comprehensive logistics, warehousing, and last-mile delivery services to the Client across all North American territories as more particularly described in Schedule A attached hereto. Services shall commence within thirty (30) days of the Effective Date and shall be performed in accordance with all applicable industry standards and regulations."
+    },
+    {
+      "id": "clause_03",
+      "title": "Delivery Costs",
+      "text": "The Supplier shall be solely responsible for all shipping, handling, and delivery costs incurred in performing services under this Agreement, including but not limited to freight charges, customs duties, packaging materials, fuel surcharges, and any incidental transportation expenses."
+    },
+    {
+      "id": "clause_04",
+      "title": "Payment Terms",
+      "text": "The Client shall pay the Supplier's invoices for service fees (exclusive of shipping and handling costs addressed elsewhere in this Agreement) within thirty (30) days of receipt of a valid and undisputed invoice. All payments shall be made in United States Dollars by electronic funds transfer."
+    },
+    {
+      "id": "clause_05",
+      "title": "Insurance Requirements",
+      "text": "The Supplier shall maintain, at its own cost and expense, comprehensive general liability insurance with a minimum coverage of One Million United States Dollars ($1,000,000) per occurrence and Two Million United States Dollars ($2,000,000) in the aggregate, and shall name the Client as an additional insured on all such policies."
+    },
+    {
+      "id": "clause_06",
+      "title": "Term of Agreement",
+      "text": "This Agreement shall commence on the Effective Date and shall remain in full force and effect for an initial term of one (1) year, unless earlier terminated in accordance with the provisions of this Agreement."
+    },
+    {
+      "id": "clause_07",
+      "title": "Cost Allocation",
+      "text": "All shipping, handling, and logistics costs arising from services provided hereunder shall be borne exclusively by the Client and reimbursed to the Supplier within ten (10) business days of the Supplier's submission of an itemized invoice for such costs."
+    },
+    {
+      "id": "clause_08",
+      "title": "Dispute Resolution",
+      "text": "Any dispute, controversy, or claim arising out of or relating to this Agreement shall be resolved through binding arbitration administered by the American Arbitration Association in accordance with its Commercial Arbitration Rules. The arbitration shall take place in San Francisco, California, and the decision of the arbitrator shall be final and binding."
+    }
+  ],
+  "contradictions": [
+    {
+      "clause_a_id": "clause_03",
+      "clause_b_id": "clause_07",
+      "type": "party_obligation",
+      "description": "Clause 03 assigns all shipping/handling costs to the Supplier, but Clause 07 assigns the exact same costs exclusively to the Client."
+    }
+  ],
+  "traps": [],
+  "execution_scenarios": [
+    {
+      "scenario_id": "scenario_01",
+      "title": "SwiftDeliver submits $45K shipping invoice to GlobalTech for reimbursement",
+      "description": "SwiftDeliver completes a large cross-border shipment from Toronto to San Francisco. The logistics team submits an itemized invoice for $45,000 in freight charges, customs duties, and fuel surcharges to GlobalTech for reimbursement, citing the cost allocation clause.",
+      "actor": "Supplier (SwiftDeliver Ltd)",
+      "action_taken": "SwiftDeliver sends itemized shipping cost invoice to GlobalTech requesting full reimbursement",
+      "triggers_clauses": ["clause_03", "clause_07"],
+      "crashes": true,
+      "crash_pair": {"clause_a_id": "clause_03", "clause_b_id": "clause_07"},
+      "crash_description": "Clause 03 states the Supplier is solely responsible for all shipping costs. Clause 07 states all shipping costs shall be borne exclusively by the Client. Both clauses apply to the same costs but assign responsibility to opposite parties. The invoice cannot be processed because neither party can determine who pays.",
+      "financial_exposure": "Disputed invoice of $45,000 with no clear contractual resolution on cost responsibility",
+      "clean_resolution": null
+    },
+    {
+      "scenario_id": "scenario_02",
+      "title": "GlobalTech pays service fee invoice on day 28",
+      "description": "GlobalTech's accounts payable department receives a valid service fee invoice from SwiftDeliver. The invoice excludes shipping costs and covers only the monthly service retainer. The AP team processes payment on day 28 after receipt.",
+      "actor": "Client (GlobalTech Inc)",
+      "action_taken": "GlobalTech remits service fee payment via electronic funds transfer on day 28",
+      "triggers_clauses": ["clause_04"],
+      "crashes": false,
+      "crash_pair": null,
+      "crash_description": null,
+      "financial_exposure": null,
+      "clean_resolution": "Clause 04 requires payment within Net 30 days for service fees. Payment on day 28 is within the required window. No contradiction triggered."
+    },
+    {
+      "scenario_id": "scenario_03",
+      "title": "Dispute arises over damaged goods during transit",
+      "description": "A shipment of electronic components is damaged during last-mile delivery. GlobalTech demands compensation from SwiftDeliver. SwiftDeliver's legal counsel reviews the dispute resolution process to determine the correct forum.",
+      "actor": "Client (GlobalTech Inc)",
+      "action_taken": "GlobalTech files a dispute claim regarding damaged goods and seeks binding resolution",
+      "triggers_clauses": ["clause_08"],
+      "crashes": false,
+      "crash_pair": null,
+      "crash_description": null,
+      "financial_exposure": null,
+      "clean_resolution": "Clause 08 clearly specifies binding arbitration through the American Arbitration Association in San Francisco. The dispute resolution path is unambiguous."
+    }
+  ]
+}

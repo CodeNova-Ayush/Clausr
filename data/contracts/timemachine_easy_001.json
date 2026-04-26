@@ -1,0 +1,154 @@
+{
+  "contract_id": "timemachine_easy_001",
+  "task_id": "timemachine_easy",
+  "title": "Software License Agreement — Revision History",
+  "ground_truth": {
+    "introduced_at_version": 4,
+    "introduced_by": "Counterparty",
+    "clause_a_id": "clause_03",
+    "clause_b_id": "clause_06",
+    "contradiction_type": "numeric"
+  },
+  "version_history": [
+    {
+      "version": 1,
+      "author": "Drafter",
+      "timestamp": "2025-01-10T09:00:00Z",
+      "change_summary": "Initial draft with 6 core clauses covering definitions, license grant, fees, support, term, and governing law.",
+      "clauses": [
+        {"id": "clause_01", "title": "Definitions", "text": "In this Agreement, 'Licensor' means AlphaCode Inc, 'Licensee' means BetaApps LLC, 'Software' means the enterprise resource planning platform described in Exhibit A, and 'License Fee' means the annual fee specified in Section 3."},
+        {"id": "clause_02", "title": "License Grant", "text": "The Licensor grants the Licensee a non-exclusive, non-transferable license to use the Software for the Licensee's internal business operations for the duration of this Agreement."},
+        {"id": "clause_03", "title": "License Fees", "text": "The Licensee shall pay the License Fee of $50,000 per annum, due within thirty (30) days of each anniversary of the Effective Date. Late payments shall accrue interest at 1.5% per month."},
+        {"id": "clause_04", "title": "Technical Support", "text": "The Licensor shall provide Level 1 and Level 2 technical support during business hours (9 AM to 5 PM EST, Monday through Friday) with a maximum initial response time of four (4) hours for critical issues."},
+        {"id": "clause_05", "title": "Term and Termination", "text": "This Agreement shall commence on the Effective Date and continue for an initial term of three (3) years. Either party may terminate this Agreement upon sixty (60) days written notice."},
+        {"id": "clause_06", "title": "Governing Law", "text": "This Agreement shall be governed by and construed in accordance with the laws of the State of Delaware, without regard to its conflict of laws provisions."}
+      ]
+    },
+    {
+      "version": 2,
+      "author": "Counterparty",
+      "timestamp": "2025-01-15T14:30:00Z",
+      "change_summary": "Counterparty requests extended support hours and adds a confidentiality clause.",
+      "clauses": [
+        {"id": "clause_01", "title": "Definitions", "text": "In this Agreement, 'Licensor' means AlphaCode Inc, 'Licensee' means BetaApps LLC, 'Software' means the enterprise resource planning platform described in Exhibit A, and 'License Fee' means the annual fee specified in Section 3."},
+        {"id": "clause_02", "title": "License Grant", "text": "The Licensor grants the Licensee a non-exclusive, non-transferable license to use the Software for the Licensee's internal business operations for the duration of this Agreement."},
+        {"id": "clause_03", "title": "License Fees", "text": "The Licensee shall pay the License Fee of $50,000 per annum, due within thirty (30) days of each anniversary of the Effective Date. Late payments shall accrue interest at 1.5% per month."},
+        {"id": "clause_04", "title": "Technical Support", "text": "The Licensor shall provide Level 1 and Level 2 technical support during extended business hours (8 AM to 8 PM EST, Monday through Friday) with a maximum initial response time of four (4) hours for critical issues."},
+        {"id": "clause_05", "title": "Term and Termination", "text": "This Agreement shall commence on the Effective Date and continue for an initial term of three (3) years. Either party may terminate this Agreement upon sixty (60) days written notice."},
+        {"id": "clause_06", "title": "Governing Law", "text": "This Agreement shall be governed by and construed in accordance with the laws of the State of Delaware, without regard to its conflict of laws provisions."},
+        {"id": "clause_07", "title": "Confidentiality", "text": "Each party shall maintain the confidentiality of all proprietary information received from the other party for a period of five (5) years from disclosure."}
+      ]
+    },
+    {
+      "version": 3,
+      "author": "Drafter",
+      "timestamp": "2025-01-20T10:00:00Z",
+      "change_summary": "Drafter accepts extended support, adds liability limitation clause, and adjusts termination notice period.",
+      "clauses": [
+        {"id": "clause_01", "title": "Definitions", "text": "In this Agreement, 'Licensor' means AlphaCode Inc, 'Licensee' means BetaApps LLC, 'Software' means the enterprise resource planning platform described in Exhibit A, and 'License Fee' means the annual fee specified in Section 3."},
+        {"id": "clause_02", "title": "License Grant", "text": "The Licensor grants the Licensee a non-exclusive, non-transferable license to use the Software for the Licensee's internal business operations for the duration of this Agreement."},
+        {"id": "clause_03", "title": "License Fees", "text": "The Licensee shall pay the License Fee of $50,000 per annum, due within thirty (30) days of each anniversary of the Effective Date. Late payments shall accrue interest at 1.5% per month."},
+        {"id": "clause_04", "title": "Technical Support", "text": "The Licensor shall provide Level 1 and Level 2 technical support during extended business hours (8 AM to 8 PM EST, Monday through Friday) with a maximum initial response time of four (4) hours for critical issues."},
+        {"id": "clause_05", "title": "Term and Termination", "text": "This Agreement shall commence on the Effective Date and continue for an initial term of three (3) years. Either party may terminate this Agreement upon ninety (90) days written notice."},
+        {"id": "clause_06", "title": "Governing Law", "text": "This Agreement shall be governed by and construed in accordance with the laws of the State of Delaware, without regard to its conflict of laws provisions."},
+        {"id": "clause_07", "title": "Confidentiality", "text": "Each party shall maintain the confidentiality of all proprietary information received from the other party for a period of five (5) years from disclosure."},
+        {"id": "clause_08", "title": "Limitation of Liability", "text": "Neither party shall be liable for indirect, incidental, special, or consequential damages. The total aggregate liability of either party shall not exceed the total License Fees paid in the twelve (12) months preceding the claim."}
+      ]
+    },
+    {
+      "version": 4,
+      "author": "Counterparty",
+      "timestamp": "2025-01-25T16:00:00Z",
+      "change_summary": "Counterparty modifies payment terms and adds acceptance testing clause.",
+      "clauses": [
+        {"id": "clause_01", "title": "Definitions", "text": "In this Agreement, 'Licensor' means AlphaCode Inc, 'Licensee' means BetaApps LLC, 'Software' means the enterprise resource planning platform described in Exhibit A, and 'License Fee' means the annual fee specified in Section 3."},
+        {"id": "clause_02", "title": "License Grant", "text": "The Licensor grants the Licensee a non-exclusive, non-transferable license to use the Software for the Licensee's internal business operations for the duration of this Agreement."},
+        {"id": "clause_03", "title": "License Fees", "text": "The Licensee shall pay the License Fee of $50,000 per annum, due within thirty (30) days of each anniversary of the Effective Date. Late payments shall accrue interest at 1.5% per month."},
+        {"id": "clause_04", "title": "Technical Support", "text": "The Licensor shall provide Level 1 and Level 2 technical support during extended business hours (8 AM to 8 PM EST, Monday through Friday) with a maximum initial response time of four (4) hours for critical issues."},
+        {"id": "clause_05", "title": "Term and Termination", "text": "This Agreement shall commence on the Effective Date and continue for an initial term of three (3) years. Either party may terminate this Agreement upon ninety (90) days written notice."},
+        {"id": "clause_06", "title": "Payment Processing", "text": "All invoices issued under this Agreement shall be paid within fourteen (14) business days of receipt. The Licensor shall issue invoices quarterly in advance. Payment shall be made by wire transfer to the account specified in Exhibit B."},
+        {"id": "clause_07", "title": "Confidentiality", "text": "Each party shall maintain the confidentiality of all proprietary information received from the other party for a period of five (5) years from disclosure."},
+        {"id": "clause_08", "title": "Limitation of Liability", "text": "Neither party shall be liable for indirect, incidental, special, or consequential damages. The total aggregate liability of either party shall not exceed the total License Fees paid in the twelve (12) months preceding the claim."},
+        {"id": "clause_09", "title": "Acceptance Testing", "text": "Upon delivery of any Software update or new module, the Licensee shall have fifteen (15) business days to conduct acceptance testing. If the Software fails acceptance testing, the Licensor shall correct deficiencies within ten (10) business days."}
+      ]
+    },
+    {
+      "version": 5,
+      "author": "Drafter",
+      "timestamp": "2025-01-30T11:00:00Z",
+      "change_summary": "Drafter adds warranty clause and modifies support response time.",
+      "clauses": [
+        {"id": "clause_01", "title": "Definitions", "text": "In this Agreement, 'Licensor' means AlphaCode Inc, 'Licensee' means BetaApps LLC, 'Software' means the enterprise resource planning platform described in Exhibit A, and 'License Fee' means the annual fee specified in Section 3."},
+        {"id": "clause_02", "title": "License Grant", "text": "The Licensor grants the Licensee a non-exclusive, non-transferable license to use the Software for the Licensee's internal business operations for the duration of this Agreement."},
+        {"id": "clause_03", "title": "License Fees", "text": "The Licensee shall pay the License Fee of $50,000 per annum, due within thirty (30) days of each anniversary of the Effective Date. Late payments shall accrue interest at 1.5% per month."},
+        {"id": "clause_04", "title": "Technical Support", "text": "The Licensor shall provide Level 1 through Level 3 technical support during extended business hours (8 AM to 8 PM EST, Monday through Friday) with a maximum initial response time of two (2) hours for critical issues and eight (8) hours for non-critical issues."},
+        {"id": "clause_05", "title": "Term and Termination", "text": "This Agreement shall commence on the Effective Date and continue for an initial term of three (3) years. Either party may terminate this Agreement upon ninety (90) days written notice."},
+        {"id": "clause_06", "title": "Payment Processing", "text": "All invoices issued under this Agreement shall be paid within fourteen (14) business days of receipt. The Licensor shall issue invoices quarterly in advance. Payment shall be made by wire transfer to the account specified in Exhibit B."},
+        {"id": "clause_07", "title": "Confidentiality", "text": "Each party shall maintain the confidentiality of all proprietary information received from the other party for a period of five (5) years from disclosure."},
+        {"id": "clause_08", "title": "Limitation of Liability", "text": "Neither party shall be liable for indirect, incidental, special, or consequential damages. The total aggregate liability of either party shall not exceed the total License Fees paid in the twelve (12) months preceding the claim."},
+        {"id": "clause_09", "title": "Acceptance Testing", "text": "Upon delivery of any Software update or new module, the Licensee shall have fifteen (15) business days to conduct acceptance testing. If the Software fails acceptance testing, the Licensor shall correct deficiencies within ten (10) business days."},
+        {"id": "clause_10", "title": "Warranty", "text": "The Licensor warrants that the Software shall perform substantially in accordance with the specifications in Exhibit A for a period of twelve (12) months from delivery."}
+      ]
+    },
+    {
+      "version": 6,
+      "author": "Counterparty",
+      "timestamp": "2025-02-03T09:00:00Z",
+      "change_summary": "Counterparty adds indemnification clause and modifies warranty period.",
+      "clauses": [
+        {"id": "clause_01", "title": "Definitions", "text": "In this Agreement, 'Licensor' means AlphaCode Inc, 'Licensee' means BetaApps LLC, 'Software' means the enterprise resource planning platform described in Exhibit A, and 'License Fee' means the annual fee specified in Section 3."},
+        {"id": "clause_02", "title": "License Grant", "text": "The Licensor grants the Licensee a non-exclusive, non-transferable license to use the Software for the Licensee's internal business operations for the duration of this Agreement."},
+        {"id": "clause_03", "title": "License Fees", "text": "The Licensee shall pay the License Fee of $50,000 per annum, due within thirty (30) days of each anniversary of the Effective Date. Late payments shall accrue interest at 1.5% per month."},
+        {"id": "clause_04", "title": "Technical Support", "text": "The Licensor shall provide Level 1 through Level 3 technical support during extended business hours (8 AM to 8 PM EST, Monday through Friday) with a maximum initial response time of two (2) hours for critical issues and eight (8) hours for non-critical issues."},
+        {"id": "clause_05", "title": "Term and Termination", "text": "This Agreement shall commence on the Effective Date and continue for an initial term of three (3) years. Either party may terminate this Agreement upon ninety (90) days written notice."},
+        {"id": "clause_06", "title": "Payment Processing", "text": "All invoices issued under this Agreement shall be paid within fourteen (14) business days of receipt. The Licensor shall issue invoices quarterly in advance. Payment shall be made by wire transfer to the account specified in Exhibit B."},
+        {"id": "clause_07", "title": "Confidentiality", "text": "Each party shall maintain the confidentiality of all proprietary information received from the other party for a period of five (5) years from disclosure."},
+        {"id": "clause_08", "title": "Limitation of Liability", "text": "Neither party shall be liable for indirect, incidental, special, or consequential damages. The total aggregate liability of either party shall not exceed the total License Fees paid in the twelve (12) months preceding the claim."},
+        {"id": "clause_09", "title": "Acceptance Testing", "text": "Upon delivery of any Software update or new module, the Licensee shall have fifteen (15) business days to conduct acceptance testing. If the Software fails acceptance testing, the Licensor shall correct deficiencies within ten (10) business days."},
+        {"id": "clause_10", "title": "Warranty", "text": "The Licensor warrants that the Software shall perform substantially in accordance with the specifications in Exhibit A for a period of twenty-four (24) months from delivery."},
+        {"id": "clause_11", "title": "Indemnification", "text": "The Licensor shall indemnify and hold harmless the Licensee from any third-party claims arising from the Licensor's breach of this Agreement or infringement of intellectual property rights."}
+      ]
+    },
+    {
+      "version": 7,
+      "author": "Drafter",
+      "timestamp": "2025-02-07T14:00:00Z",
+      "change_summary": "Drafter adds entire agreement clause and accepts final form.",
+      "clauses": [
+        {"id": "clause_01", "title": "Definitions", "text": "In this Agreement, 'Licensor' means AlphaCode Inc, 'Licensee' means BetaApps LLC, 'Software' means the enterprise resource planning platform described in Exhibit A, and 'License Fee' means the annual fee specified in Section 3."},
+        {"id": "clause_02", "title": "License Grant", "text": "The Licensor grants the Licensee a non-exclusive, non-transferable license to use the Software for the Licensee's internal business operations for the duration of this Agreement."},
+        {"id": "clause_03", "title": "License Fees", "text": "The Licensee shall pay the License Fee of $50,000 per annum, due within thirty (30) days of each anniversary of the Effective Date. Late payments shall accrue interest at 1.5% per month."},
+        {"id": "clause_04", "title": "Technical Support", "text": "The Licensor shall provide Level 1 through Level 3 technical support during extended business hours (8 AM to 8 PM EST, Monday through Friday) with a maximum initial response time of two (2) hours for critical issues and eight (8) hours for non-critical issues."},
+        {"id": "clause_05", "title": "Term and Termination", "text": "This Agreement shall commence on the Effective Date and continue for an initial term of three (3) years. Either party may terminate this Agreement upon ninety (90) days written notice."},
+        {"id": "clause_06", "title": "Payment Processing", "text": "All invoices issued under this Agreement shall be paid within fourteen (14) business days of receipt. The Licensor shall issue invoices quarterly in advance. Payment shall be made by wire transfer to the account specified in Exhibit B."},
+        {"id": "clause_07", "title": "Confidentiality", "text": "Each party shall maintain the confidentiality of all proprietary information received from the other party for a period of five (5) years from disclosure."},
+        {"id": "clause_08", "title": "Limitation of Liability", "text": "Neither party shall be liable for indirect, incidental, special, or consequential damages. The total aggregate liability of either party shall not exceed the total License Fees paid in the twelve (12) months preceding the claim."},
+        {"id": "clause_09", "title": "Acceptance Testing", "text": "Upon delivery of any Software update or new module, the Licensee shall have fifteen (15) business days to conduct acceptance testing. If the Software fails acceptance testing, the Licensor shall correct deficiencies within ten (10) business days."},
+        {"id": "clause_10", "title": "Warranty", "text": "The Licensor warrants that the Software shall perform substantially in accordance with the specifications in Exhibit A for a period of twenty-four (24) months from delivery."},
+        {"id": "clause_11", "title": "Indemnification", "text": "The Licensor shall indemnify and hold harmless the Licensee from any third-party claims arising from the Licensor's breach of this Agreement or infringement of intellectual property rights."},
+        {"id": "clause_12", "title": "Entire Agreement", "text": "This Agreement constitutes the entire agreement between the parties and supersedes all prior negotiations, representations, and agreements."}
+      ]
+    },
+    {
+      "version": 8,
+      "author": "Counterparty",
+      "timestamp": "2025-02-10T10:00:00Z",
+      "change_summary": "Final review — Counterparty adds dispute resolution clause. Contract signed.",
+      "clauses": [
+        {"id": "clause_01", "title": "Definitions", "text": "In this Agreement, 'Licensor' means AlphaCode Inc, 'Licensee' means BetaApps LLC, 'Software' means the enterprise resource planning platform described in Exhibit A, and 'License Fee' means the annual fee specified in Section 3."},
+        {"id": "clause_02", "title": "License Grant", "text": "The Licensor grants the Licensee a non-exclusive, non-transferable license to use the Software for the Licensee's internal business operations for the duration of this Agreement."},
+        {"id": "clause_03", "title": "License Fees", "text": "The Licensee shall pay the License Fee of $50,000 per annum, due within thirty (30) days of each anniversary of the Effective Date. Late payments shall accrue interest at 1.5% per month."},
+        {"id": "clause_04", "title": "Technical Support", "text": "The Licensor shall provide Level 1 through Level 3 technical support during extended business hours (8 AM to 8 PM EST, Monday through Friday) with a maximum initial response time of two (2) hours for critical issues and eight (8) hours for non-critical issues."},
+        {"id": "clause_05", "title": "Term and Termination", "text": "This Agreement shall commence on the Effective Date and continue for an initial term of three (3) years. Either party may terminate this Agreement upon ninety (90) days written notice."},
+        {"id": "clause_06", "title": "Payment Processing", "text": "All invoices issued under this Agreement shall be paid within fourteen (14) business days of receipt. The Licensor shall issue invoices quarterly in advance. Payment shall be made by wire transfer to the account specified in Exhibit B."},
+        {"id": "clause_07", "title": "Confidentiality", "text": "Each party shall maintain the confidentiality of all proprietary information received from the other party for a period of five (5) years from disclosure."},
+        {"id": "clause_08", "title": "Limitation of Liability", "text": "Neither party shall be liable for indirect, incidental, special, or consequential damages. The total aggregate liability of either party shall not exceed the total License Fees paid in the twelve (12) months preceding the claim."},
+        {"id": "clause_09", "title": "Acceptance Testing", "text": "Upon delivery of any Software update or new module, the Licensee shall have fifteen (15) business days to conduct acceptance testing. If the Software fails acceptance testing, the Licensor shall correct deficiencies within ten (10) business days."},
+        {"id": "clause_10", "title": "Warranty", "text": "The Licensor warrants that the Software shall perform substantially in accordance with the specifications in Exhibit A for a period of twenty-four (24) months from delivery."},
+        {"id": "clause_11", "title": "Indemnification", "text": "The Licensor shall indemnify and hold harmless the Licensee from any third-party claims arising from the Licensor's breach of this Agreement or infringement of intellectual property rights."},
+        {"id": "clause_12", "title": "Entire Agreement", "text": "This Agreement constitutes the entire agreement between the parties and supersedes all prior negotiations, representations, and agreements."},
+        {"id": "clause_13", "title": "Dispute Resolution", "text": "Any dispute arising under this Agreement shall be resolved by binding arbitration under the rules of the American Arbitration Association in Wilmington, Delaware."}
+      ]
+    }
+  ]
+}

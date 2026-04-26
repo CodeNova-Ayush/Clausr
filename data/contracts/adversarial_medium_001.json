@@ -1,0 +1,237 @@
+{
+  "contract_id": "adversarial_medium_001",
+  "task_id": "adversarial_medium",
+  "title": "Software Licensing Agreement between AlphaCode Systems and MegaBank Financial Group",
+  "contract_text": "Preamble\nThis Software Licensing Agreement (\"Agreement\") is entered into between AlphaCode Systems, a Delaware corporation (\"Licensor\"), and MegaBank Financial Group, a national banking association (\"Licensee\").\n\nDefinitions\n\"Platform\" means the proprietary financial analytics suite. \"Licensed Territory\" means the United States and Canada. \"Authorized Users\" means employees and contractors designated by Licensee.\n\nLicense Grant\nLicensor grants Licensee a non-exclusive, non-transferable license to use the Platform within the Licensed Territory for internal financial analytics and regulatory reporting.\n\nImplementation\nLicensor shall provide implementation services including installation, configuration, data migration, and user acceptance testing within ninety (90) days of the Effective Date.\n\nAnnual License Fee\nLicensee shall pay the annual license fee specified in the Order Form. All fees are non-refundable and payable within Net 30 days of invoice.\n\nSupport Services\nLicensor shall provide Tier 1 through Tier 3 technical support during business hours (8 AM to 6 PM Eastern, Monday through Friday).\n\nUptime Guarantee\nLicensor guarantees Platform availability of 99.95% measured monthly, excluding scheduled maintenance communicated 72 hours in advance.\n\nData Backup\nLicensor shall maintain automated daily backups with thirty (30) day retention and shall restore data from the most recent backup at no charge.\n\nSecurity Standards\nLicensor shall maintain SOC 2 Type II certification and comply with all applicable data protection regulations.\n\nIntellectual Property\nLicensor retains all right, title, and interest in the Platform. Licensee retains rights in Licensee Data.\n\nUse Restrictions\nThe license is strictly limited to Licensee's internal operations. Sublicensing, resale, or provision of access to third parties is expressly prohibited.\n\nConfidentiality\nEach party shall maintain the confidentiality of the other party's proprietary information for five (5) years following termination.\n\nData Retention\nLicensor shall retain all audit logs, transaction records, and system metadata for a minimum of seven (7) years to satisfy regulatory requirements.\n\nTermination for Convenience\nEither party may terminate this Agreement upon ninety (90) days written notice without cause.\n\nTermination for Breach\nEither party may terminate immediately if the other party commits a material breach that remains uncured for thirty (30) days after written notice.\n\nLimitation of Liability\nNeither party's total liability shall exceed the fees paid during the twelve (12) months preceding the claim.\n\nIndemnification\nLicensor shall indemnify Licensee against third-party IP infringement claims arising from use of the Platform.\n\nForce Majeure\nNeither party shall be liable for delays caused by events beyond reasonable control. The affected party must provide notice within 48 hours.\n\nCompliance\nBoth parties shall comply with all applicable federal, state, and local laws and regulations.\n\nInsurance\nLicensor shall maintain professional liability insurance with minimum coverage of Two Million Dollars ($2,000,000).\n\nAudit Rights\nLicensee may audit Licensor's compliance with this Agreement upon thirty (30) days written notice, once per calendar year.\n\nTransition Services\nUpon termination, Licensor shall provide transition assistance for one hundred twenty (120) days.\n\nGoverning Law\nThis Agreement shall be governed by the laws of the State of New York.\n\nDispute Resolution\nDisputes shall be resolved through binding arbitration in New York City under AAA rules.\n\nEntire Agreement\nThis Agreement constitutes the entire agreement and supersedes all prior negotiations and agreements.",
+  "clauses": [
+    {
+      "id": "clause_01",
+      "title": "Preamble",
+      "text": "This Software Licensing Agreement (\"Agreement\") is entered into between AlphaCode Systems, a Delaware corporation (\"Licensor\"), and MegaBank Financial Group, a national banking association (\"Licensee\")."
+    },
+    {
+      "id": "clause_02",
+      "title": "Definitions",
+      "text": "\"Platform\" means the proprietary financial analytics suite. \"Licensed Territory\" means the United States and Canada. \"Authorized Users\" means employees and contractors designated by Licensee."
+    },
+    {
+      "id": "clause_03",
+      "title": "License Grant",
+      "text": "Licensor grants Licensee a non-exclusive, non-transferable license to use the Platform within the Licensed Territory for internal financial analytics and regulatory reporting."
+    },
+    {
+      "id": "clause_04",
+      "title": "Implementation",
+      "text": "Licensor shall provide implementation services including installation, configuration, data migration, and user acceptance testing within ninety (90) days of the Effective Date."
+    },
+    {
+      "id": "clause_05",
+      "title": "Annual License Fee",
+      "text": "Licensee shall pay the annual license fee specified in the Order Form. All fees are non-refundable and payable within Net 30 days of invoice."
+    },
+    {
+      "id": "clause_06",
+      "title": "Support Services",
+      "text": "Licensor shall provide Tier 1 through Tier 3 technical support during business hours (8 AM to 6 PM Eastern, Monday through Friday)."
+    },
+    {
+      "id": "clause_07",
+      "title": "Uptime Guarantee",
+      "text": "Licensor guarantees Platform availability of 99.95% measured monthly, excluding scheduled maintenance communicated 72 hours in advance."
+    },
+    {
+      "id": "clause_08",
+      "title": "Data Backup",
+      "text": "Licensor shall maintain automated daily backups with thirty (30) day retention and shall restore data from the most recent backup at no charge."
+    },
+    {
+      "id": "clause_09",
+      "title": "Security Standards",
+      "text": "Licensor shall maintain SOC 2 Type II certification and comply with all applicable data protection regulations."
+    },
+    {
+      "id": "clause_10",
+      "title": "Intellectual Property",
+      "text": "Licensor retains all right, title, and interest in the Platform. Licensee retains rights in Licensee Data."
+    },
+    {
+      "id": "clause_11",
+      "title": "Use Restrictions",
+      "text": "The license is strictly limited to Licensee's internal operations. Sublicensing, resale, or provision of access to third parties is expressly prohibited."
+    },
+    {
+      "id": "clause_12",
+      "title": "Confidentiality",
+      "text": "Each party shall maintain the confidentiality of the other party's proprietary information for five (5) years following termination."
+    },
+    {
+      "id": "clause_13",
+      "title": "Data Retention",
+      "text": "Licensor shall retain all audit logs, transaction records, and system metadata for a minimum of seven (7) years to satisfy regulatory requirements."
+    },
+    {
+      "id": "clause_14",
+      "title": "Termination for Convenience",
+      "text": "Either party may terminate this Agreement upon ninety (90) days written notice without cause."
+    },
+    {
+      "id": "clause_15",
+      "title": "Termination for Breach",
+      "text": "Either party may terminate immediately if the other party commits a material breach that remains uncured for thirty (30) days after written notice."
+    },
+    {
+      "id": "clause_16",
+      "title": "Limitation of Liability",
+      "text": "Neither party's total liability shall exceed the fees paid during the twelve (12) months preceding the claim."
+    },
+    {
+      "id": "clause_17",
+      "title": "Indemnification",
+      "text": "Licensor shall indemnify Licensee against third-party IP infringement claims arising from use of the Platform."
+    },
+    {
+      "id": "clause_18",
+      "title": "Force Majeure",
+      "text": "Neither party shall be liable for delays caused by events beyond reasonable control. The affected party must provide notice within 48 hours."
+    },
+    {
+      "id": "clause_19",
+      "title": "Compliance",
+      "text": "Both parties shall comply with all applicable federal, state, and local laws and regulations."
+    },
+    {
+      "id": "clause_20",
+      "title": "Insurance",
+      "text": "Licensor shall maintain professional liability insurance with minimum coverage of Two Million Dollars ($2,000,000)."
+    },
+    {
+      "id": "clause_21",
+      "title": "Audit Rights",
+      "text": "Licensee may audit Licensor's compliance with this Agreement upon thirty (30) days written notice, once per calendar year."
+    },
+    {
+      "id": "clause_22",
+      "title": "Transition Services",
+      "text": "Upon termination, Licensor shall provide transition assistance for one hundred twenty (120) days."
+    },
+    {
+      "id": "clause_23",
+      "title": "Governing Law",
+      "text": "This Agreement shall be governed by the laws of the State of New York."
+    },
+    {
+      "id": "clause_24",
+      "title": "Dispute Resolution",
+      "text": "Disputes shall be resolved through binding arbitration in New York City under AAA rules."
+    },
+    {
+      "id": "clause_25",
+      "title": "Entire Agreement",
+      "text": "This Agreement constitutes the entire agreement and supersedes all prior negotiations and agreements."
+    }
+  ],
+  "obligation_taxonomy": [
+    {
+      "clause_id": "clause_03",
+      "obligations": [
+        "ip_rights"
+      ]
+    },
+    {
+      "clause_id": "clause_05",
+      "obligations": [
+        "payment"
+      ]
+    },
+    {
+      "clause_id": "clause_06",
+      "obligations": [
+        "delivery"
+      ]
+    },
+    {
+      "clause_id": "clause_07",
+      "obligations": [
+        "delivery"
+      ]
+    },
+    {
+      "clause_id": "clause_08",
+      "obligations": [
+        "delivery",
+        "liability"
+      ]
+    },
+    {
+      "clause_id": "clause_10",
+      "obligations": [
+        "ip_rights"
+      ]
+    },
+    {
+      "clause_id": "clause_11",
+      "obligations": [
+        "ip_rights"
+      ]
+    },
+    {
+      "clause_id": "clause_12",
+      "obligations": [
+        "confidentiality"
+      ]
+    },
+    {
+      "clause_id": "clause_13",
+      "obligations": [
+        "confidentiality",
+        "delivery"
+      ]
+    },
+    {
+      "clause_id": "clause_14",
+      "obligations": [
+        "termination"
+      ]
+    },
+    {
+      "clause_id": "clause_15",
+      "obligations": [
+        "termination"
+      ]
+    },
+    {
+      "clause_id": "clause_16",
+      "obligations": [
+        "liability"
+      ]
+    },
+    {
+      "clause_id": "clause_17",
+      "obligations": [
+        "liability"
+      ]
+    },
+    {
+      "clause_id": "clause_20",
+      "obligations": [
+        "liability"
+      ]
+    },
+    {
+      "clause_id": "clause_21",
+      "obligations": [
+        "confidentiality"
+      ]
+    }
+  ],
+  "forbidden_lexical_patterns": [
+    "day",
+    "month",
+    "year",
+    "net",
+    "percent",
+    "uptime"
+  ],
+  "contradictions": [],
+  "auditor_history": null
+}

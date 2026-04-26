@@ -1,0 +1,346 @@
+[START] task=easy env=clausr model=llama-3.1-8b-instant
+Loaded 8 clauses. IDs: ['clause_01', 'clause_02', 'clause_03', 'clause_04', 'clause_05', 'clause_06', 'clause_07', 'clause_08']
+RAW LLM RESPONSE: [
+  {
+    "clause_a_id": "clause_03",
+    "clause_b_id": "clause_07",
+    "explanation": "clause_03 specifies that the Supplier shall be solely responsible for all shipping, handling, and delivery costs, but clause_07 states that the Client shall bear all shipping, handling, and logistics costs and reimburse the Supplier"
+  }
+]
+
+[DEBUG] SUBMITTING 1 FINDINGS for easy: [
+  {
+    "clause_a_id": "clause_03",
+    "clause_b_id": "clause_07",
+    "explanation": "clause_03 specifies that the Supplier shall be solely responsible for all shipping, handling, and delivery costs, but clause_07 states that the Client shall bear all shipping, handling, and logistics costs and reimburse the Supplier"
+  }
+]
+
+[STEP] step=1 action=submitted_1_findings reward=1.00 done=true error=null
+[END] success=true steps=1 score=0.999 rewards=1.00
+
+[START] task=medium env=clausr model=llama-3.1-8b-instant
+Loaded 25 clauses. IDs: ['clause_01', 'clause_02', 'clause_03', 'clause_04', 'clause_05', 'clause_06', 'clause_07', 'clause_08', 'clause_09', 'clause_10', 'clause_11', 'clause_12', 'clause_13', 'clause_14', 'clause_15', 'clause_16', 'clause_17', 'clause_18', 'clause_19', 'clause_20', 'clause_21', 'clause_22', 'clause_23', 'clause_24', 'clause_25']
+
+[DEBUG] SUBMITTING 6 FINDINGS for medium: [
+  {
+    "clause_a_id": "clause_04",
+    "clause_b_id": "clause_05",
+    "explanation": "clause_04 specifies payment via wire transfer or ACH, but clause_05 does not mention any specific payment method"
+  },
+  {
+    "clause_a_id": "clause_08",
+    "clause_b_id": "clause_09",
+    "explanation": "clause_08 requires Vendor to retain backups for 30 days, but clause_09 does not specify any data retention period"
+  },
+  {
+    "clause_a_id": "clause_10",
+    "clause_b_id": "clause_11",
+    "explanation": "clause_10 grants Vendor all rights to the Platform, but clause_11 restricts the license to internal business operations only"
+  },
+  {
+    "clause_a_id": "clause_12",
+    "clause_b_id": "clause_03",
+    "explanation": "clause_12 allows termination with 30 days notice, but clause_03 requires Vendor to complete onboarding within 60 days of the Effective Date, which may not be possible if the Agreement is terminated early"
+  },
+  {
+    "clause_a_id": "clause_11",
+    "clause_b_id": "clause_12",
+    "explanation": "clause_11 prohibits resale or sublicensing without consent, but clause_12 allows either party to terminate the Agreement at any time without cause, which could imply resale or sublicensing is allowed"
+  },
+  {
+    "clause_a_id": "clause_14",
+    "clause_b_id": "clause_16",
+    "explanation": "clause_14 imposes a late payment penalty of 2% per month, but clause_16 limits liability to fees paid during the 12 months preceding the claim, which could be less than the total amount owed due to late payment penalties"
+  }
+]
+
+[STEP] step=1 action=submitted_6_findings reward=0.00 done=true error=null
+[END] success=false steps=1 score=0.001 rewards=0.00
+
+[START] task=hard env=clausr model=llama-3.1-8b-instant
+Loaded 60 clauses. IDs: ['clause_01', 'clause_02', 'clause_03', 'clause_04', 'clause_05', 'clause_06', 'clause_07', 'clause_08', 'clause_09', 'clause_10', 'clause_11', 'clause_12', 'clause_13', 'clause_14', 'clause_15', 'clause_16', 'clause_17', 'clause_18', 'clause_19', 'clause_20', 'clause_21', 'clause_22', 'clause_23', 'clause_24', 'clause_25', 'clause_26', 'clause_27', 'clause_28', 'clause_29', 'clause_30', 'clause_31', 'clause_32', 'clause_33', 'clause_34', 'clause_35', 'clause_36', 'clause_37', 'clause_38', 'clause_39', 'clause_40', 'clause_41', 'clause_42', 'clause_43', 'clause_44', 'clause_45', 'clause_46', 'clause_47', 'clause_48', 'clause_49', 'clause_50', 'clause_51', 'clause_52', 'clause_53', 'clause_54', 'clause_55', 'clause_56', 'clause_57', 'clause_58', 'clause_59', 'clause_60']
+
+==================================================
+CONTRACT DNA RISK FINGERPRINT (PRE-AGENT)
+==================================================
+Overall Risk: 0.51 (HIGH)
+Dominant Risk: Party-Obligation Risk
+Numeric: 0.83 | Temporal: 0.233
+Party Obligation: 1.0 | Termination: 0.07
+Conditional: 0.222
+==================================================
+
+Rate limited. Sleeping for 20s... (Attempt 1/3)
+Rate limited. Sleeping for 20s... (Attempt 2/3)
+Chunk processing error: Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.1-8b-instant` in organization `org_01kq22c6k0fzfrxqvvx248xzdz` service tier `on_demand` on tokens per minute (TPM): Limit 6000, Used 4969, Requested 1862. Please try again in 8.31s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}
+Rate limited. Sleeping for 20s... (Attempt 1/3)
+Rate limited. Sleeping for 20s... (Attempt 2/3)
+
+[DEBUG] SUBMITTING 10 FINDINGS for hard: [
+  {
+    "clause_a_id": "clause_03",
+    "clause_b_id": "clause_12",
+    "explanation": "clause_03 specifies a 12-month data retention period, while clause_12 requires a 5-year data retention period for the same records"
+  },
+  {
+    "clause_a_id": "clause_04",
+    "clause_b_id": "clause_05",
+    "explanation": "clause_04 grants a license to use the Platform for processing financial transactions, while clause_05 excludes transactional data from the definition of Confidential Information"
+  },
+  {
+    "clause_a_id": "clause_06",
+    "clause_b_id": "clause_06",
+    "explanation": "clause_06 states that all fees are non-refundable, but does not specify any conditions under which fees might be refundable"
+  },
+  {
+    "clause_a_id": "clause_07",
+    "clause_b_id": "clause_07",
+    "explanation": "clause_07 specifies a 120-day implementation services period, but does not specify any conditions under which this period might be extended"
+  },
+  {
+    "clause_a_id": "clause_08",
+    "clause_b_id": "clause_08",
+    "explanation": "clause_08 requires a 99.9% uptime rate, but does not specify any conditions under which this rate might be adjusted"
+  },
+  {
+    "clause_a_id": "clause_09",
+    "clause_b_id": "clause_09",
+    "explanation": "clause_09 specifies three tiers of technical support, but does not specify any conditions under which these tiers might be modified"
+  },
+  {
+    "clause_a_id": "clause_10",
+    "clause_b_id": "clause_10",
+    "explanation": "clause_10 requires the source code to be deposited into escrow within 30 days, but does not specify any conditions under which this deadline might be extended"
+  },
+  {
+    "clause_a_id": "clause_11",
+    "clause_b_id": "clause_12",
+    "explanation": "clause_11 specifies a 30-day acceptance testing period, while clause_12 requires continuous preservation of system logs for 5 years, which cannot be satisfied within the 30-day acceptance testing period"
+  },
+  {
+    "clause_a_id": "clause_13",
+    "clause_b_id": "clause_14",
+    "explanation": "clause_13 limits base support to Severity Level 3 and 4 tickets, while clause_14 requires following ITIL-aligned change management process for all changes to the production environment, which may include Severity Level 1 and 2 tickets"
+  },
+  {
+    "clause_a_id": "clause_15",
+    "clause_b_id": "clause_16",
+    "explanation": "clause_15 allows Licensee to deploy the Platform across multiple public cloud architectures, while clause_16 requires automatic pushing of major feature releases and version upgrades to all designated sandbox and development environments, which may not be feasible across all cloud architectures"
+  }
+]
+
+[STEP] step=1 action=submitted_10_findings reward=0.00 done=true error=null
+
+==================================================
+CONTRACT DNA RISK FINGERPRINT (POST-AGENT)
+==================================================
+Overall Risk: 0.51 (HIGH)
+Dominant Risk: Party-Obligation Risk
+Numeric: 0.83 | Temporal: 0.233
+Party Obligation: 1.0 | Termination: 0.07
+Conditional: 0.222
+
+--- DELTA ANALYSIS ---
+Most changed dimension: Numeric Risk
+Magnitude: 0.0
+Attack detected: False
+==================================================
+
+[END] success=false steps=1 score=0.001 rewards=0.00
+
+[START] task=execution_easy env=clausr model=llama-3.1-8b-instant
+[STEP] step=1 action=error reward=0.00 done=true error=500 Server Error: Internal Server Error for url: http://localhost:7860/reset?task_id=execution_easy
+[END] success=false steps=1 score=0.001 rewards=0.00
+
+[START] task=execution_medium env=clausr model=llama-3.1-8b-instant
+[STEP] step=1 action=error reward=0.00 done=true error=500 Server Error: Internal Server Error for url: http://localhost:7860/reset?task_id=execution_medium
+[END] success=false steps=1 score=0.001 rewards=0.00
+
+[START] task=execution_hard env=clausr model=llama-3.1-8b-instant
+[STEP] step=1 action=error reward=0.00 done=true error=500 Server Error: Internal Server Error for url: http://localhost:7860/reset?task_id=execution_hard
+[END] success=false steps=1 score=0.001 rewards=0.00
+
+[START] task=lexmind_easy env=clausr model=llama-3.1-8b-instant
+[STEP] step=1 action=error reward=0.00 done=true error=500 Server Error: Internal Server Error for url: http://localhost:7860/reset?task_id=lexmind_easy
+[END] success=false steps=1 score=0.001 rewards=0.00
+
+[START] task=lexmind_medium env=clausr model=llama-3.1-8b-instant
+[STEP] step=1 action=error reward=0.00 done=true error=500 Server Error: Internal Server Error for url: http://localhost:7860/reset?task_id=lexmind_medium
+[END] success=false steps=1 score=0.001 rewards=0.00
+
+[START] task=lexmind_hard env=clausr model=llama-3.1-8b-instant
+[STEP] step=1 action=error reward=0.00 done=true error=500 Server Error: Internal Server Error for url: http://localhost:7860/reset?task_id=lexmind_hard
+[END] success=false steps=1 score=0.001 rewards=0.00
+
+[START] task=adversarial_easy env=clausr model=llama-3.1-8b-instant
+Loaded 8 clauses. IDs: ['clause_01', 'clause_02', 'clause_03', 'clause_04', 'clause_05', 'clause_06', 'clause_07', 'clause_08']
+RAW LLM RESPONSE: []
+
+[DEBUG] SUBMITTING 0 FINDINGS for adversarial_easy: []
+
+[STEP] step=1 action=submitted_0_findings reward=0.00 done=true error=null
+[END] success=false steps=1 score=0.001 rewards=0.00
+
+[START] task=adversarial_medium env=clausr model=llama-3.1-8b-instant
+Loaded 25 clauses. IDs: ['clause_01', 'clause_02', 'clause_03', 'clause_04', 'clause_05', 'clause_06', 'clause_07', 'clause_08', 'clause_09', 'clause_10', 'clause_11', 'clause_12', 'clause_13', 'clause_14', 'clause_15', 'clause_16', 'clause_17', 'clause_18', 'clause_19', 'clause_20', 'clause_21', 'clause_22', 'clause_23', 'clause_24', 'clause_25']
+Rate limited. Sleeping for 20s... (Attempt 1/3)
+
+[DEBUG] SUBMITTING 0 FINDINGS for adversarial_medium: []
+
+[STEP] step=1 action=submitted_0_findings reward=0.00 done=true error=null
+[END] success=false steps=1 score=0.001 rewards=0.00
+
+[START] task=adversarial_hard env=clausr model=llama-3.1-8b-instant
+Loaded 60 clauses. IDs: ['clause_01', 'clause_02', 'clause_03', 'clause_04', 'clause_05', 'clause_06', 'clause_07', 'clause_08', 'clause_09', 'clause_10', 'clause_11', 'clause_12', 'clause_13', 'clause_14', 'clause_15', 'clause_16', 'clause_17', 'clause_18', 'clause_19', 'clause_20', 'clause_21', 'clause_22', 'clause_23', 'clause_24', 'clause_25', 'clause_26', 'clause_27', 'clause_28', 'clause_29', 'clause_30', 'clause_31', 'clause_32', 'clause_33', 'clause_34', 'clause_35', 'clause_36', 'clause_37', 'clause_38', 'clause_39', 'clause_40', 'clause_41', 'clause_42', 'clause_43', 'clause_44', 'clause_45', 'clause_46', 'clause_47', 'clause_48', 'clause_49', 'clause_50', 'clause_51', 'clause_52', 'clause_53', 'clause_54', 'clause_55', 'clause_56', 'clause_57', 'clause_58', 'clause_59', 'clause_60']
+
+[DEBUG] SUBMITTING 0 FINDINGS for adversarial_hard: []
+
+[STEP] step=1 action=submitted_0_findings reward=0.00 done=true error=null
+[END] success=false steps=1 score=0.001 rewards=0.00
+
+[START] task=adversarial_selfplay env=clausr model=llama-3.1-8b-instant
+[STEP] step=1 action=error reward=0.00 done=true error=500 Server Error: Internal Server Error for url: http://localhost:7860/reset?task_id=adversarial_selfplay
+[END] success=false steps=1 score=0.001 rewards=0.00
+
+[START] task=curriculum_adaptive env=clausr model=llama-3.1-8b-instant
+[STEP] step=1 action=error reward=0.00 done=true error=500 Server Error: Internal Server Error for url: http://localhost:7860/reset?task_id=curriculum_adaptive
+[END] success=false steps=1 score=0.001 rewards=0.00
+
+[START] task=constitution_easy env=clausr model=llama-3.1-8b-instant
+Rate limited. Sleeping for 20s... (Attempt 1/3)
+Rate limited. Sleeping for 20s... (Attempt 2/3)
+[STEP] step=1 action=error reward=0.00 done=true error=Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.1-8b-instant` in organization `org_01kq22c6k0fzfrxqvvx248xzdz` service tier `on_demand` on tokens per minute (TPM): Limit 6000, Used 5245, Requested 2396. Please try again in 16.41s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}
+[END] success=false steps=1 score=0.001 rewards=0.00
+
+[START] task=constitution_medium env=clausr model=llama-3.1-8b-instant
+Rate limited. Sleeping for 20s... (Attempt 1/3)
+Rate limited. Sleeping for 20s... (Attempt 2/3)
+[STEP] step=1 action=error reward=0.00 done=true error=Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.1-8b-instant` in organization `org_01kq22c6k0fzfrxqvvx248xzdz` service tier `on_demand` on tokens per minute (TPM): Limit 6000, Used 4675, Requested 2579. Please try again in 12.54s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}
+[END] success=false steps=1 score=0.001 rewards=0.00
+
+[START] task=constitution_hard env=clausr model=llama-3.1-8b-instant
+Rate limited. Sleeping for 20s... (Attempt 1/3)
+Rate limited. Sleeping for 20s... (Attempt 2/3)
+[STEP] step=1 action=error reward=0.00 done=true error=Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.1-8b-instant` in organization `org_01kq22c6k0fzfrxqvvx248xzdz` service tier `on_demand` on tokens per minute (TPM): Limit 6000, Used 4878, Requested 2862. Please try again in 17.4s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}
+[END] success=false steps=1 score=0.001 rewards=0.00
+
+[START] task=federated_easy env=clausr model=llama-3.1-8b-instant
+FederatedArena: 3 rounds, frameworks: GDPR
+RAW LLM RESPONSE: {
+  "clause_text": "The Provider shall have the right to suspend performance of the Services or delivery of the Deliverables upon written notice to the Client in the event of a material change in the Client's business operations, including but not limited to a change in control, merger, or acquisition, that could reasonably be expected to impact the Provider's ability to perform the Services or deliver the Deliverables in accordance with the terms of this Agreement.",
+  "commercial_intent_label": "SELLER_FAVORABLE"
+}
+[STEP] step=1 action=seller_inject_r1 reward=0.00 done=false error=null
+Rate limited. Sleeping for 20s... (Attempt 1/3)
+RAW LLM RESPONSE: {
+  "clause_text": "The Provider shall maintain a comprehensive audit trail of all Deliverables, including source code, documentation, and testing records, for a period of two (2) years from delivery. The Client shall have the right to inspect and copy such records upon written request, provided that the Client shall not disclose such information to any third party without prior written consent.",
+  "commercial_intent_label": "BUYER_FAVORABLE"
+}
+[STEP] step=2 action=buyer_inject_r1 reward=0.00 done=false error=null
+Rate limited. Sleeping for 20s... (Attempt 1/3)
+Rate limited. Sleeping for 20s... (Attempt 2/3)
+RAW LLM RESPONSE: {
+  "flags": [
+    {
+      "clause_id": "clause_06",
+      "violation_type": "GDPR",
+      "explanation": "The Provider may process, transfer, and share all data received from the Client, including personal data of the Client's customers, with any third-party subprocessors, affiliates, or business partners without requiring additional consent or notification, which is a GDPR violation for unauthorized data sharing."
+    },
+    {
+      "clause_id": "clause_11",
+      "violation_type": "GDPR",
+      "explanation": "The Provider shall retain all personal data, customer records, and transaction logs indefinitely in its archival systems, which is a GDPR violation for indefinite data retention."
+    }
+  ]
+}
+[STEP] step=3 action=error reward=0.00 done=true error='NoneType' object has no attribute 'get'
+[END] success=false steps=3 score=0.001 rewards=0.00
+
+[START] task=federated_medium env=clausr model=llama-3.1-8b-instant
+FederatedArena: 3 rounds, frameworks: GDPR, SOX
+[STEP] step=1 action=seller_inject_r1 reward=0.00 done=false error=null
+Rate limited. Sleeping for 20s... (Attempt 1/3)
+[STEP] step=2 action=buyer_inject_r1 reward=0.00 done=false error=null
+[STEP] step=3 action=regulator_flag_r1 reward=4.00 done=false error=null
+[STEP] step=4 action=seller_inject_r2 reward=0.00 done=false error=null
+Rate limited. Sleeping for 20s... (Attempt 1/3)
+[STEP] step=5 action=buyer_inject_r2 reward=0.00 done=false error=null
+[STEP] step=6 action=regulator_flag_r2 reward=4.00 done=false error=null
+[STEP] step=7 action=seller_inject_r3 reward=0.00 done=false error=null
+[STEP] step=8 action=buyer_inject_r3 reward=0.00 done=false error=null
+[STEP] step=9 action=regulator_flag_r3 reward=3.70 done=false error=null
+
+==================================================
+FEDERATED ARENA RESULTS — FEDERATED_MEDIUM
+==================================================
+Seller Score:  0.0010
+Buyer Score:   0.0789
+Regulator:     0.9990
+Commercial:    0.1579
+Compliance:    0.8000
+Violations:    4/5
+False Pos:     1
+==================================================
+
+[END] success=true steps=9 score=0.360 rewards=4.00,4.00,3.70
+
+[START] task=federated_hard env=clausr model=llama-3.1-8b-instant
+FederatedArena: 5 rounds, frameworks: GDPR, SOX, EXPORT_CONTROL, ANTI_BRIBERY
+[STEP] step=1 action=seller_inject_r1 reward=0.00 done=false error=null
+[STEP] step=2 action=buyer_inject_r1 reward=0.00 done=false error=null
+[STEP] step=3 action=regulator_flag_r1 reward=6.70 done=false error=null
+[STEP] step=4 action=seller_inject_r2 reward=0.00 done=false error=null
+[STEP] step=5 action=buyer_inject_r2 reward=0.00 done=false error=null
+[STEP] step=6 action=regulator_flag_r2 reward=4.10 done=false error=null
+[STEP] step=7 action=seller_inject_r3 reward=0.00 done=false error=null
+[STEP] step=8 action=buyer_inject_r3 reward=0.00 done=false error=null
+[STEP] step=9 action=regulator_flag_r3 reward=3.10 done=false error=null
+[STEP] step=10 action=seller_inject_r4 reward=0.00 done=false error=null
+[STEP] step=11 action=buyer_inject_r4 reward=0.00 done=false error=null
+[STEP] step=12 action=regulator_flag_r4 reward=4.40 done=false error=null
+[STEP] step=13 action=seller_inject_r5 reward=0.00 done=false error=null
+[STEP] step=14 action=buyer_inject_r5 reward=0.00 done=false error=null
+[STEP] step=14 action=error reward=0.00 done=true error=404 Client Error: Not Found for url: http://localhost:7860/federated/step
+[END] success=false steps=14 score=0.001 rewards=6.70,4.10,3.10,4.40
+
+[START] task=timemachine_easy env=clausr model=llama-3.1-8b-instant
+[STEP] step=1 action=error reward=0.00 done=true error=404 Client Error: Not Found for url: http://localhost:7860/timemachine/reset?task_id=timemachine_easy
+[END] success=false steps=1 score=0.001 rewards=0.00
+
+[START] task=timemachine_medium env=clausr model=llama-3.1-8b-instant
+[STEP] step=1 action=error reward=0.00 done=true error=404 Client Error: Not Found for url: http://localhost:7860/timemachine/reset?task_id=timemachine_medium
+[END] success=false steps=1 score=0.001 rewards=0.00
+
+[START] task=timemachine_hard env=clausr model=llama-3.1-8b-instant
+[STEP] step=1 action=error reward=0.00 done=true error=404 Client Error: Not Found for url: http://localhost:7860/timemachine/reset?task_id=timemachine_hard
+[END] success=false steps=1 score=0.001 rewards=0.00
+
+==================================================
+CLAUSR INFERENCE RESULTS
+==================================================
+EASY                      0.9990
+MEDIUM                    0.0010
+HARD                      0.0010
+EXECUTION_EASY            0.0010
+EXECUTION_MEDIUM          0.0010
+EXECUTION_HARD            0.0010
+LEXMIND_EASY              0.0010
+LEXMIND_MEDIUM            0.0010
+LEXMIND_HARD              0.0010
+ADVERSARIAL_EASY          0.0010
+ADVERSARIAL_MEDIUM        0.0010
+ADVERSARIAL_HARD          0.0010
+ADVERSARIAL_SELFPLAY      0.0010
+CURRICULUM_ADAPTIVE       0.0010
+CONSTITUTION_EASY         0.0010
+CONSTITUTION_MEDIUM       0.0010
+CONSTITUTION_HARD         0.0010
+FEDERATED_EASY            0.0010
+FEDERATED_MEDIUM          0.3596
+FEDERATED_HARD            0.0010
+TIMEMACHINE_EASY          0.0010
+TIMEMACHINE_MEDIUM        0.0010
+TIMEMACHINE_HARD          0.0010
+MEAN                      0.0600
+==================================================

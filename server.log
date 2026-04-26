@@ -1,0 +1,38 @@
+INFO:     Started server process [15262]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://0.0.0.0:7860 (Press CTRL+C to quit)
+INFO:     127.0.0.1:59886 - "POST /reset?task_id=easy HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59887 - "POST /step?task_id=easy&contract_id=easy_002 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59888 - "POST /reset?task_id=medium HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59889 - "POST /step?task_id=medium&contract_id=medium_002 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59890 - "POST /reset?task_id=hard HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59891 - "POST /step?task_id=hard&contract_id=hard_001 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59892 - "POST /execution/reset?task_id=execution_easy HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59893 - "POST /execution/step?task_id=execution_easy&contract_id=easy_002 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59894 - "POST /execution/reset?task_id=execution_medium HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59895 - "POST /execution/step?task_id=execution_medium&contract_id=medium_002 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59896 - "POST /execution/reset?task_id=execution_hard HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59897 - "POST /execution/step?task_id=execution_hard&contract_id=hard_002 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59898 - "POST /lexmind/reset?task_id=lexmind_easy HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59899 - "POST /lexmind/step?task_id=lexmind_easy&contract_id=lexmind_easy_001 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59900 - "POST /lexmind/reset?task_id=lexmind_medium HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59901 - "POST /lexmind/step?task_id=lexmind_medium&contract_id=lexmind_medium_002 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59902 - "POST /lexmind/reset?task_id=lexmind_hard HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59903 - "POST /lexmind/step?task_id=lexmind_hard&contract_id=lexmind_hard_001 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60078 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60078 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60078 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60078 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60090 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60090 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60111 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60111 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60122 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60122 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60136 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60136 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60136 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60136 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60152 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60152 - "GET /health HTTP/1.1" 200 OK

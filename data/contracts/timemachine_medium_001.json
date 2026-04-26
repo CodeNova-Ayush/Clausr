@@ -1,0 +1,513 @@
+{
+  "contract_id": "timemachine_medium_001",
+  "task_id": "timemachine_medium",
+  "title": "Cloud Hosting Services Agreement \u2014 Revision History",
+  "ground_truth": {
+    "introduced_at_version": 6,
+    "introduced_by": "Counterparty",
+    "clause_a_id": "clause_05",
+    "clause_b_id": "clause_12",
+    "contradiction_type": "temporal"
+  },
+  "version_history": [
+    {
+      "version": 1,
+      "author": "Drafter",
+      "timestamp": "2025-02-01T09:00:00Z",
+      "change_summary": "Initial draft with 6 clauses.",
+      "clauses": [
+        {
+          "id": "clause_01",
+          "title": "Service Description",
+          "text": "The Provider shall deliver managed cloud hosting services including dedicated virtual servers, automated daily backups, load balancing, and 24/7 monitoring as described in Schedule A."
+        },
+        {
+          "id": "clause_02",
+          "title": "SLA",
+          "text": "The Provider guarantees 99.9% monthly uptime. Scheduled maintenance windows of up to four (4) hours per month shall be excluded from uptime calculations."
+        },
+        {
+          "id": "clause_03",
+          "title": "Pricing",
+          "text": "The Client shall pay monthly hosting fees of $8,500 by the fifteenth of each month. Annual price adjustments shall not exceed 5%."
+        },
+        {
+          "id": "clause_04",
+          "title": "Security",
+          "text": "The Provider shall implement encryption at rest and in transit, multi-factor authentication, and quarterly penetration testing per SOC 2 Type II."
+        },
+        {
+          "id": "clause_05",
+          "title": "Term",
+          "text": "This Agreement shall have an initial term of two (2) years, automatically renewing for successive one-year periods unless either party provides ninety (90) days written notice of non-renewal prior to the end of the then-current term."
+        },
+        {
+          "id": "clause_06",
+          "title": "Governing Law",
+          "text": "This Agreement shall be governed by the laws of the State of Virginia."
+        }
+      ]
+    },
+    {
+      "version": 2,
+      "author": "Counterparty",
+      "timestamp": "2025-02-05T14:00:00Z",
+      "change_summary": "Client adds disaster recovery provisions.",
+      "clauses": [
+        {
+          "id": "clause_01",
+          "title": "Service Description",
+          "text": "The Provider shall deliver managed cloud hosting services including dedicated virtual servers, automated daily backups, load balancing, and 24/7 monitoring as described in Schedule A."
+        },
+        {
+          "id": "clause_02",
+          "title": "SLA",
+          "text": "The Provider guarantees 99.9% monthly uptime. Scheduled maintenance windows of up to four (4) hours per month shall be excluded from uptime calculations."
+        },
+        {
+          "id": "clause_03",
+          "title": "Pricing",
+          "text": "The Client shall pay monthly hosting fees of $8,500 by the fifteenth of each month. Annual price adjustments shall not exceed 5%."
+        },
+        {
+          "id": "clause_04",
+          "title": "Security",
+          "text": "The Provider shall implement encryption at rest and in transit, multi-factor authentication, and quarterly penetration testing per SOC 2 Type II."
+        },
+        {
+          "id": "clause_05",
+          "title": "Term",
+          "text": "This Agreement shall have an initial term of two (2) years, automatically renewing for successive one-year periods unless either party provides ninety (90) days written notice of non-renewal prior to the end of the then-current term."
+        },
+        {
+          "id": "clause_06",
+          "title": "Governing Law",
+          "text": "This Agreement shall be governed by the laws of the State of Virginia."
+        },
+        {
+          "id": "clause_07",
+          "title": "Disaster Recovery",
+          "text": "The Provider shall maintain a disaster recovery plan with RTO of four hours and RPO of one hour."
+        }
+      ]
+    },
+    {
+      "version": 3,
+      "author": "Drafter",
+      "timestamp": "2025-02-10T10:00:00Z",
+      "change_summary": "Provider adds data ownership, IP, liability.",
+      "clauses": [
+        {
+          "id": "clause_01",
+          "title": "Service Description",
+          "text": "The Provider shall deliver managed cloud hosting services including dedicated virtual servers, automated daily backups, load balancing, and 24/7 monitoring as described in Schedule A."
+        },
+        {
+          "id": "clause_02",
+          "title": "SLA",
+          "text": "The Provider guarantees 99.9% monthly uptime. Scheduled maintenance windows of up to four (4) hours per month shall be excluded from uptime calculations."
+        },
+        {
+          "id": "clause_03",
+          "title": "Pricing",
+          "text": "The Client shall pay monthly hosting fees of $8,500 by the fifteenth of each month. Annual price adjustments shall not exceed 5%."
+        },
+        {
+          "id": "clause_04",
+          "title": "Security",
+          "text": "The Provider shall implement encryption at rest and in transit, multi-factor authentication, and quarterly penetration testing per SOC 2 Type II."
+        },
+        {
+          "id": "clause_05",
+          "title": "Term",
+          "text": "This Agreement shall have an initial term of two (2) years, automatically renewing for successive one-year periods unless either party provides ninety (90) days written notice of non-renewal prior to the end of the then-current term."
+        },
+        {
+          "id": "clause_06",
+          "title": "Governing Law",
+          "text": "This Agreement shall be governed by the laws of the State of Virginia."
+        },
+        {
+          "id": "clause_07",
+          "title": "Disaster Recovery",
+          "text": "The Provider shall maintain a disaster recovery plan with RTO of four hours and RPO of one hour."
+        },
+        {
+          "id": "clause_08",
+          "title": "Data Ownership",
+          "text": "All Client data remains exclusive property of the Client."
+        },
+        {
+          "id": "clause_09",
+          "title": "IP",
+          "text": "The Provider retains all IP rights in its platform and tools."
+        },
+        {
+          "id": "clause_10",
+          "title": "Liability Limitation",
+          "text": "Provider total liability shall not exceed twelve months of hosting fees."
+        }
+      ]
+    },
+    {
+      "version": 4,
+      "author": "Counterparty",
+      "timestamp": "2025-02-14T11:00:00Z",
+      "change_summary": "Client adds data migration assistance.",
+      "clauses": [
+        {
+          "id": "clause_01",
+          "title": "Service Description",
+          "text": "The Provider shall deliver managed cloud hosting services including dedicated virtual servers, automated daily backups, load balancing, and 24/7 monitoring as described in Schedule A."
+        },
+        {
+          "id": "clause_02",
+          "title": "SLA",
+          "text": "The Provider guarantees 99.9% monthly uptime. Scheduled maintenance windows of up to four (4) hours per month shall be excluded from uptime calculations."
+        },
+        {
+          "id": "clause_03",
+          "title": "Pricing",
+          "text": "The Client shall pay monthly hosting fees of $8,500 by the fifteenth of each month. Annual price adjustments shall not exceed 5%."
+        },
+        {
+          "id": "clause_04",
+          "title": "Security",
+          "text": "The Provider shall implement encryption at rest and in transit, multi-factor authentication, and quarterly penetration testing per SOC 2 Type II."
+        },
+        {
+          "id": "clause_05",
+          "title": "Term",
+          "text": "This Agreement shall have an initial term of two (2) years, automatically renewing for successive one-year periods unless either party provides ninety (90) days written notice of non-renewal prior to the end of the then-current term."
+        },
+        {
+          "id": "clause_06",
+          "title": "Governing Law",
+          "text": "This Agreement shall be governed by the laws of the State of Virginia."
+        },
+        {
+          "id": "clause_07",
+          "title": "Disaster Recovery",
+          "text": "The Provider shall maintain a disaster recovery plan with RTO of four hours and RPO of one hour."
+        },
+        {
+          "id": "clause_08",
+          "title": "Data Ownership",
+          "text": "All Client data remains exclusive property of the Client."
+        },
+        {
+          "id": "clause_09",
+          "title": "IP",
+          "text": "The Provider retains all IP rights in its platform and tools."
+        },
+        {
+          "id": "clause_10",
+          "title": "Liability Limitation",
+          "text": "Provider total liability shall not exceed twelve months of hosting fees."
+        },
+        {
+          "id": "clause_11",
+          "title": "Data Migration",
+          "text": "Upon termination, Provider shall provide data migration assistance for thirty (30) days at no charge."
+        }
+      ]
+    },
+    {
+      "version": 5,
+      "author": "Drafter",
+      "timestamp": "2025-02-18T09:00:00Z",
+      "change_summary": "Provider increases annual price adjustment cap to 8%.",
+      "clauses": [
+        {
+          "id": "clause_01",
+          "title": "Service Description",
+          "text": "The Provider shall deliver managed cloud hosting services including dedicated virtual servers, automated daily backups, load balancing, and 24/7 monitoring as described in Schedule A."
+        },
+        {
+          "id": "clause_02",
+          "title": "SLA",
+          "text": "The Provider guarantees 99.9% monthly uptime. Scheduled maintenance windows of up to four (4) hours per month shall be excluded from uptime calculations."
+        },
+        {
+          "id": "clause_03",
+          "title": "Pricing",
+          "text": "The Client shall pay monthly hosting fees of $8,500 by the fifteenth of each month. Annual price adjustments shall not exceed 8%."
+        },
+        {
+          "id": "clause_04",
+          "title": "Security",
+          "text": "The Provider shall implement encryption at rest and in transit, multi-factor authentication, and quarterly penetration testing per SOC 2 Type II."
+        },
+        {
+          "id": "clause_05",
+          "title": "Term",
+          "text": "This Agreement shall have an initial term of two (2) years, automatically renewing for successive one-year periods unless either party provides ninety (90) days written notice of non-renewal prior to the end of the then-current term."
+        },
+        {
+          "id": "clause_06",
+          "title": "Governing Law",
+          "text": "This Agreement shall be governed by the laws of the State of Virginia."
+        },
+        {
+          "id": "clause_07",
+          "title": "Disaster Recovery",
+          "text": "The Provider shall maintain a disaster recovery plan with RTO of four hours and RPO of one hour."
+        },
+        {
+          "id": "clause_08",
+          "title": "Data Ownership",
+          "text": "All Client data remains exclusive property of the Client."
+        },
+        {
+          "id": "clause_09",
+          "title": "IP",
+          "text": "The Provider retains all IP rights in its platform and tools."
+        },
+        {
+          "id": "clause_10",
+          "title": "Liability Limitation",
+          "text": "Provider total liability shall not exceed twelve months of hosting fees."
+        },
+        {
+          "id": "clause_11",
+          "title": "Data Migration",
+          "text": "Upon termination, Provider shall provide data migration assistance for thirty (30) days at no charge."
+        }
+      ]
+    },
+    {
+      "version": 6,
+      "author": "Counterparty",
+      "timestamp": "2025-02-22T14:00:00Z",
+      "change_summary": "Client adds termination for convenience and confidentiality.",
+      "clauses": [
+        {
+          "id": "clause_01",
+          "title": "Service Description",
+          "text": "The Provider shall deliver managed cloud hosting services including dedicated virtual servers, automated daily backups, load balancing, and 24/7 monitoring as described in Schedule A."
+        },
+        {
+          "id": "clause_02",
+          "title": "SLA",
+          "text": "The Provider guarantees 99.9% monthly uptime. Scheduled maintenance windows of up to four (4) hours per month shall be excluded from uptime calculations."
+        },
+        {
+          "id": "clause_03",
+          "title": "Pricing",
+          "text": "The Client shall pay monthly hosting fees of $8,500 by the fifteenth of each month. Annual price adjustments shall not exceed 8%."
+        },
+        {
+          "id": "clause_04",
+          "title": "Security",
+          "text": "The Provider shall implement encryption at rest and in transit, multi-factor authentication, and quarterly penetration testing per SOC 2 Type II."
+        },
+        {
+          "id": "clause_05",
+          "title": "Term",
+          "text": "This Agreement shall have an initial term of two (2) years, automatically renewing for successive one-year periods unless either party provides ninety (90) days written notice of non-renewal prior to the end of the then-current term."
+        },
+        {
+          "id": "clause_06",
+          "title": "Governing Law",
+          "text": "This Agreement shall be governed by the laws of the State of Virginia."
+        },
+        {
+          "id": "clause_07",
+          "title": "Disaster Recovery",
+          "text": "The Provider shall maintain a disaster recovery plan with RTO of four hours and RPO of one hour."
+        },
+        {
+          "id": "clause_08",
+          "title": "Data Ownership",
+          "text": "All Client data remains exclusive property of the Client."
+        },
+        {
+          "id": "clause_09",
+          "title": "IP",
+          "text": "The Provider retains all IP rights in its platform and tools."
+        },
+        {
+          "id": "clause_10",
+          "title": "Liability Limitation",
+          "text": "Provider total liability shall not exceed twelve months of hosting fees."
+        },
+        {
+          "id": "clause_11",
+          "title": "Data Migration",
+          "text": "Upon termination, Provider shall provide data migration assistance for thirty (30) days at no charge."
+        },
+        {
+          "id": "clause_12",
+          "title": "Termination for Convenience",
+          "text": "The Client may terminate this Agreement at any time for convenience upon seven (7) days written notice, effective immediately upon the expiration of such notice period, without regard to the remaining term or any auto-renewal provisions."
+        },
+        {
+          "id": "clause_13",
+          "title": "Confidentiality",
+          "text": "Each party shall protect the other confidential information with reasonable care for five (5) years from disclosure."
+        }
+      ]
+    },
+    {
+      "version": 7,
+      "author": "Drafter",
+      "timestamp": "2025-02-26T10:00:00Z",
+      "change_summary": "Provider adds force majeure.",
+      "clauses": [
+        {
+          "id": "clause_01",
+          "title": "Service Description",
+          "text": "The Provider shall deliver managed cloud hosting services including dedicated virtual servers, automated daily backups, load balancing, and 24/7 monitoring as described in Schedule A."
+        },
+        {
+          "id": "clause_02",
+          "title": "SLA",
+          "text": "The Provider guarantees 99.9% monthly uptime. Scheduled maintenance windows of up to four (4) hours per month shall be excluded from uptime calculations."
+        },
+        {
+          "id": "clause_03",
+          "title": "Pricing",
+          "text": "The Client shall pay monthly hosting fees of $8,500 by the fifteenth of each month. Annual price adjustments shall not exceed 8%."
+        },
+        {
+          "id": "clause_04",
+          "title": "Security",
+          "text": "The Provider shall implement encryption at rest and in transit, multi-factor authentication, and quarterly penetration testing per SOC 2 Type II."
+        },
+        {
+          "id": "clause_05",
+          "title": "Term",
+          "text": "This Agreement shall have an initial term of two (2) years, automatically renewing for successive one-year periods unless either party provides ninety (90) days written notice of non-renewal prior to the end of the then-current term."
+        },
+        {
+          "id": "clause_06",
+          "title": "Governing Law",
+          "text": "This Agreement shall be governed by the laws of the State of Virginia."
+        },
+        {
+          "id": "clause_07",
+          "title": "Disaster Recovery",
+          "text": "The Provider shall maintain a disaster recovery plan with RTO of four hours and RPO of one hour."
+        },
+        {
+          "id": "clause_08",
+          "title": "Data Ownership",
+          "text": "All Client data remains exclusive property of the Client."
+        },
+        {
+          "id": "clause_09",
+          "title": "IP",
+          "text": "The Provider retains all IP rights in its platform and tools."
+        },
+        {
+          "id": "clause_10",
+          "title": "Liability Limitation",
+          "text": "Provider total liability shall not exceed twelve months of hosting fees."
+        },
+        {
+          "id": "clause_11",
+          "title": "Data Migration",
+          "text": "Upon termination, Provider shall provide data migration assistance for thirty (30) days at no charge."
+        },
+        {
+          "id": "clause_12",
+          "title": "Termination for Convenience",
+          "text": "The Client may terminate this Agreement at any time for convenience upon seven (7) days written notice, effective immediately upon the expiration of such notice period, without regard to the remaining term or any auto-renewal provisions."
+        },
+        {
+          "id": "clause_13",
+          "title": "Confidentiality",
+          "text": "Each party shall protect the other confidential information with reasonable care for five (5) years from disclosure."
+        },
+        {
+          "id": "clause_14",
+          "title": "Force Majeure",
+          "text": "Neither party shall be liable for delays caused by force majeure events beyond reasonable control."
+        }
+      ]
+    },
+    {
+      "version": 8,
+      "author": "Counterparty",
+      "timestamp": "2025-03-01T11:00:00Z",
+      "change_summary": "Client adds indemnification. Final version.",
+      "clauses": [
+        {
+          "id": "clause_01",
+          "title": "Service Description",
+          "text": "The Provider shall deliver managed cloud hosting services including dedicated virtual servers, automated daily backups, load balancing, and 24/7 monitoring as described in Schedule A."
+        },
+        {
+          "id": "clause_02",
+          "title": "SLA",
+          "text": "The Provider guarantees 99.9% monthly uptime. Scheduled maintenance windows of up to four (4) hours per month shall be excluded from uptime calculations."
+        },
+        {
+          "id": "clause_03",
+          "title": "Pricing",
+          "text": "The Client shall pay monthly hosting fees of $8,500 by the fifteenth of each month. Annual price adjustments shall not exceed 8%."
+        },
+        {
+          "id": "clause_04",
+          "title": "Security",
+          "text": "The Provider shall implement encryption at rest and in transit, multi-factor authentication, and quarterly penetration testing per SOC 2 Type II."
+        },
+        {
+          "id": "clause_05",
+          "title": "Term",
+          "text": "This Agreement shall have an initial term of two (2) years, automatically renewing for successive one-year periods unless either party provides ninety (90) days written notice of non-renewal prior to the end of the then-current term."
+        },
+        {
+          "id": "clause_06",
+          "title": "Governing Law",
+          "text": "This Agreement shall be governed by the laws of the State of Virginia."
+        },
+        {
+          "id": "clause_07",
+          "title": "Disaster Recovery",
+          "text": "The Provider shall maintain a disaster recovery plan with RTO of four hours and RPO of one hour."
+        },
+        {
+          "id": "clause_08",
+          "title": "Data Ownership",
+          "text": "All Client data remains exclusive property of the Client."
+        },
+        {
+          "id": "clause_09",
+          "title": "IP",
+          "text": "The Provider retains all IP rights in its platform and tools."
+        },
+        {
+          "id": "clause_10",
+          "title": "Liability Limitation",
+          "text": "Provider total liability shall not exceed twelve months of hosting fees."
+        },
+        {
+          "id": "clause_11",
+          "title": "Data Migration",
+          "text": "Upon termination, Provider shall provide data migration assistance for thirty (30) days at no charge."
+        },
+        {
+          "id": "clause_12",
+          "title": "Termination for Convenience",
+          "text": "The Client may terminate this Agreement at any time for convenience upon seven (7) days written notice, effective immediately upon the expiration of such notice period, without regard to the remaining term or any auto-renewal provisions."
+        },
+        {
+          "id": "clause_13",
+          "title": "Confidentiality",
+          "text": "Each party shall protect the other confidential information with reasonable care for five (5) years from disclosure."
+        },
+        {
+          "id": "clause_14",
+          "title": "Force Majeure",
+          "text": "Neither party shall be liable for delays caused by force majeure events beyond reasonable control."
+        },
+        {
+          "id": "clause_15",
+          "title": "Indemnification",
+          "text": "Provider shall indemnify Client against data breach claims arising from Provider failure to meet security obligations."
+        }
+      ]
+    }
+  ]
+}

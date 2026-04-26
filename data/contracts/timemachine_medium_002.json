@@ -1,0 +1,865 @@
+{
+  "contract_id": "timemachine_medium_002",
+  "task_id": "timemachine_medium",
+  "title": "Master Services Agreement \u2014 Revision History",
+  "ground_truth": {
+    "introduced_at_version": 7,
+    "introduced_by": "Drafter",
+    "clause_a_id": "clause_04",
+    "clause_b_id": "clause_14",
+    "contradiction_type": "party_obligation"
+  },
+  "version_history": [
+    {
+      "version": 1,
+      "author": "Drafter",
+      "timestamp": "2025-03-01T10:00:00Z",
+      "change_summary": "Initial draft.",
+      "clauses": [
+        {
+          "id": "clause_01",
+          "title": "Definitions",
+          "text": "Provider means TechServ Inc. Client means RetailMax Corp. Services means the IT managed services in Schedule A."
+        },
+        {
+          "id": "clause_02",
+          "title": "Scope",
+          "text": "Provider shall deliver the Services in accordance with the specifications and timelines in Schedule A."
+        },
+        {
+          "id": "clause_03",
+          "title": "Fees",
+          "text": "Client shall pay monthly service fees of $25,000 within thirty (30) days of invoice."
+        },
+        {
+          "id": "clause_04",
+          "title": "Data Obligations",
+          "text": "The Client shall be solely responsible for maintaining backups of all Client data. The Provider assumes no responsibility for Client data loss, corruption, or unauthorized access."
+        },
+        {
+          "id": "clause_05",
+          "title": "Term",
+          "text": "Initial term of three (3) years with automatic annual renewal."
+        },
+        {
+          "id": "clause_06",
+          "title": "Governing Law",
+          "text": "Laws of the State of Texas."
+        }
+      ]
+    },
+    {
+      "version": 2,
+      "author": "Counterparty",
+      "timestamp": "2025-03-02T10:00:00Z",
+      "change_summary": "Revision 2.",
+      "clauses": [
+        {
+          "id": "clause_01",
+          "title": "Definitions",
+          "text": "Provider means TechServ Inc. Client means RetailMax Corp. Services means the IT managed services in Schedule A."
+        },
+        {
+          "id": "clause_02",
+          "title": "Scope",
+          "text": "Provider shall deliver the Services in accordance with the specifications and timelines in Schedule A."
+        },
+        {
+          "id": "clause_03",
+          "title": "Fees",
+          "text": "Client shall pay monthly service fees of $25,000 within thirty (30) days of invoice."
+        },
+        {
+          "id": "clause_04",
+          "title": "Data Obligations",
+          "text": "The Client shall be solely responsible for maintaining backups of all Client data. The Provider assumes no responsibility for Client data loss, corruption, or unauthorized access."
+        },
+        {
+          "id": "clause_05",
+          "title": "Term",
+          "text": "Initial term of three (3) years with automatic annual renewal."
+        },
+        {
+          "id": "clause_06",
+          "title": "Governing Law",
+          "text": "Laws of the State of Texas."
+        },
+        {
+          "id": "clause_07",
+          "title": "Confidentiality",
+          "text": "Both parties shall protect confidential information for three (3) years."
+        }
+      ]
+    },
+    {
+      "version": 3,
+      "author": "Drafter",
+      "timestamp": "2025-03-03T10:00:00Z",
+      "change_summary": "Revision 3.",
+      "clauses": [
+        {
+          "id": "clause_01",
+          "title": "Definitions",
+          "text": "Provider means TechServ Inc. Client means RetailMax Corp. Services means the IT managed services in Schedule A."
+        },
+        {
+          "id": "clause_02",
+          "title": "Scope",
+          "text": "Provider shall deliver the Services in accordance with the specifications and timelines in Schedule A."
+        },
+        {
+          "id": "clause_03",
+          "title": "Fees",
+          "text": "Client shall pay monthly service fees of $25,000 within thirty (30) days of invoice."
+        },
+        {
+          "id": "clause_04",
+          "title": "Data Obligations",
+          "text": "The Client shall be solely responsible for maintaining backups of all Client data. The Provider assumes no responsibility for Client data loss, corruption, or unauthorized access."
+        },
+        {
+          "id": "clause_05",
+          "title": "Term",
+          "text": "Initial term of three (3) years with automatic annual renewal."
+        },
+        {
+          "id": "clause_06",
+          "title": "Governing Law",
+          "text": "Laws of the State of Texas."
+        },
+        {
+          "id": "clause_07",
+          "title": "Confidentiality",
+          "text": "Both parties shall protect confidential information for three (3) years."
+        },
+        {
+          "id": "clause_08",
+          "title": "SLA",
+          "text": "Provider guarantees 99.95% uptime with 4-hour response for P1 issues."
+        }
+      ]
+    },
+    {
+      "version": 4,
+      "author": "Counterparty",
+      "timestamp": "2025-03-04T10:00:00Z",
+      "change_summary": "Revision 4.",
+      "clauses": [
+        {
+          "id": "clause_01",
+          "title": "Definitions",
+          "text": "Provider means TechServ Inc. Client means RetailMax Corp. Services means the IT managed services in Schedule A."
+        },
+        {
+          "id": "clause_02",
+          "title": "Scope",
+          "text": "Provider shall deliver the Services in accordance with the specifications and timelines in Schedule A."
+        },
+        {
+          "id": "clause_03",
+          "title": "Fees",
+          "text": "Client shall pay monthly service fees of $25,000 within thirty (30) days of invoice."
+        },
+        {
+          "id": "clause_04",
+          "title": "Data Obligations",
+          "text": "The Client shall be solely responsible for maintaining backups of all Client data. The Provider assumes no responsibility for Client data loss, corruption, or unauthorized access."
+        },
+        {
+          "id": "clause_05",
+          "title": "Term",
+          "text": "Initial term of three (3) years with automatic annual renewal."
+        },
+        {
+          "id": "clause_06",
+          "title": "Governing Law",
+          "text": "Laws of the State of Texas."
+        },
+        {
+          "id": "clause_07",
+          "title": "Confidentiality",
+          "text": "Both parties shall protect confidential information for three (3) years."
+        },
+        {
+          "id": "clause_08",
+          "title": "SLA",
+          "text": "Provider guarantees 99.95% uptime with 4-hour response for P1 issues."
+        },
+        {
+          "id": "clause_09",
+          "title": "IP Rights",
+          "text": "Provider retains all IP in tools and methodologies. Client retains IP in its data and content."
+        }
+      ]
+    },
+    {
+      "version": 5,
+      "author": "Drafter",
+      "timestamp": "2025-03-05T10:00:00Z",
+      "change_summary": "Revision 5.",
+      "clauses": [
+        {
+          "id": "clause_01",
+          "title": "Definitions",
+          "text": "Provider means TechServ Inc. Client means RetailMax Corp. Services means the IT managed services in Schedule A."
+        },
+        {
+          "id": "clause_02",
+          "title": "Scope",
+          "text": "Provider shall deliver the Services in accordance with the specifications and timelines in Schedule A."
+        },
+        {
+          "id": "clause_03",
+          "title": "Fees",
+          "text": "Client shall pay monthly service fees of $25,000 within thirty (30) days of invoice."
+        },
+        {
+          "id": "clause_04",
+          "title": "Data Obligations",
+          "text": "The Client shall be solely responsible for maintaining backups of all Client data. The Provider assumes no responsibility for Client data loss, corruption, or unauthorized access."
+        },
+        {
+          "id": "clause_05",
+          "title": "Term",
+          "text": "Initial term of three (3) years with automatic annual renewal."
+        },
+        {
+          "id": "clause_06",
+          "title": "Governing Law",
+          "text": "Laws of the State of Texas."
+        },
+        {
+          "id": "clause_07",
+          "title": "Confidentiality",
+          "text": "Both parties shall protect confidential information for three (3) years."
+        },
+        {
+          "id": "clause_08",
+          "title": "SLA",
+          "text": "Provider guarantees 99.95% uptime with 4-hour response for P1 issues."
+        },
+        {
+          "id": "clause_09",
+          "title": "IP Rights",
+          "text": "Provider retains all IP in tools and methodologies. Client retains IP in its data and content."
+        },
+        {
+          "id": "clause_10",
+          "title": "Liability Cap",
+          "text": "Total liability capped at fees paid in preceding 12 months."
+        }
+      ]
+    },
+    {
+      "version": 6,
+      "author": "Counterparty",
+      "timestamp": "2025-03-06T10:00:00Z",
+      "change_summary": "Revision 6.",
+      "clauses": [
+        {
+          "id": "clause_01",
+          "title": "Definitions",
+          "text": "Provider means TechServ Inc. Client means RetailMax Corp. Services means the IT managed services in Schedule A."
+        },
+        {
+          "id": "clause_02",
+          "title": "Scope",
+          "text": "Provider shall deliver the Services in accordance with the specifications and timelines in Schedule A."
+        },
+        {
+          "id": "clause_03",
+          "title": "Fees",
+          "text": "Client shall pay monthly service fees of $25,000 within thirty (30) days of invoice."
+        },
+        {
+          "id": "clause_04",
+          "title": "Data Obligations",
+          "text": "The Client shall be solely responsible for maintaining backups of all Client data. The Provider assumes no responsibility for Client data loss, corruption, or unauthorized access."
+        },
+        {
+          "id": "clause_05",
+          "title": "Term",
+          "text": "Initial term of three (3) years with automatic annual renewal."
+        },
+        {
+          "id": "clause_06",
+          "title": "Governing Law",
+          "text": "Laws of the State of Texas."
+        },
+        {
+          "id": "clause_07",
+          "title": "Confidentiality",
+          "text": "Both parties shall protect confidential information for three (3) years."
+        },
+        {
+          "id": "clause_08",
+          "title": "SLA",
+          "text": "Provider guarantees 99.95% uptime with 4-hour response for P1 issues."
+        },
+        {
+          "id": "clause_09",
+          "title": "IP Rights",
+          "text": "Provider retains all IP in tools and methodologies. Client retains IP in its data and content."
+        },
+        {
+          "id": "clause_10",
+          "title": "Liability Cap",
+          "text": "Total liability capped at fees paid in preceding 12 months."
+        },
+        {
+          "id": "clause_11",
+          "title": "Termination",
+          "text": "Either party may terminate with 60 days notice for material breach."
+        },
+        {
+          "id": "clause_12",
+          "title": "Force Majeure",
+          "text": "Neither party liable for force majeure delays."
+        }
+      ]
+    },
+    {
+      "version": 7,
+      "author": "Drafter",
+      "timestamp": "2025-03-07T10:00:00Z",
+      "change_summary": "Provider adds indemnification and comprehensive data protection guarantee.",
+      "clauses": [
+        {
+          "id": "clause_01",
+          "title": "Definitions",
+          "text": "Provider means TechServ Inc. Client means RetailMax Corp. Services means the IT managed services in Schedule A."
+        },
+        {
+          "id": "clause_02",
+          "title": "Scope",
+          "text": "Provider shall deliver the Services in accordance with the specifications and timelines in Schedule A."
+        },
+        {
+          "id": "clause_03",
+          "title": "Fees",
+          "text": "Client shall pay monthly service fees of $25,000 within thirty (30) days of invoice."
+        },
+        {
+          "id": "clause_04",
+          "title": "Data Obligations",
+          "text": "The Client shall be solely responsible for maintaining backups of all Client data. The Provider assumes no responsibility for Client data loss, corruption, or unauthorized access."
+        },
+        {
+          "id": "clause_05",
+          "title": "Term",
+          "text": "Initial term of three (3) years with automatic annual renewal."
+        },
+        {
+          "id": "clause_06",
+          "title": "Governing Law",
+          "text": "Laws of the State of Texas."
+        },
+        {
+          "id": "clause_07",
+          "title": "Confidentiality",
+          "text": "Both parties shall protect confidential information for three (3) years."
+        },
+        {
+          "id": "clause_08",
+          "title": "SLA",
+          "text": "Provider guarantees 99.95% uptime with 4-hour response for P1 issues."
+        },
+        {
+          "id": "clause_09",
+          "title": "IP Rights",
+          "text": "Provider retains all IP in tools and methodologies. Client retains IP in its data and content."
+        },
+        {
+          "id": "clause_10",
+          "title": "Liability Cap",
+          "text": "Total liability capped at fees paid in preceding 12 months."
+        },
+        {
+          "id": "clause_11",
+          "title": "Termination",
+          "text": "Either party may terminate with 60 days notice for material breach."
+        },
+        {
+          "id": "clause_12",
+          "title": "Force Majeure",
+          "text": "Neither party liable for force majeure delays."
+        },
+        {
+          "id": "clause_13",
+          "title": "Indemnification",
+          "text": "Provider shall indemnify Client against third-party IP claims."
+        },
+        {
+          "id": "clause_14",
+          "title": "Provider Data Protection Guarantee",
+          "text": "The Provider shall be fully responsible for the security, integrity, backup, and disaster recovery of all Client data at all times. The Provider guarantees zero data loss and shall bear all costs associated with data recovery in the event of any data corruption or loss."
+        }
+      ]
+    },
+    {
+      "version": 8,
+      "author": "Counterparty",
+      "timestamp": "2025-03-08T10:00:00Z",
+      "change_summary": "Provider adds indemnification and comprehensive data protection guarantee.",
+      "clauses": [
+        {
+          "id": "clause_01",
+          "title": "Definitions",
+          "text": "Provider means TechServ Inc. Client means RetailMax Corp. Services means the IT managed services in Schedule A."
+        },
+        {
+          "id": "clause_02",
+          "title": "Scope",
+          "text": "Provider shall deliver the Services in accordance with the specifications and timelines in Schedule A."
+        },
+        {
+          "id": "clause_03",
+          "title": "Fees",
+          "text": "Client shall pay monthly service fees of $25,000 within thirty (30) days of invoice."
+        },
+        {
+          "id": "clause_04",
+          "title": "Data Obligations",
+          "text": "The Client shall be solely responsible for maintaining backups of all Client data. The Provider assumes no responsibility for Client data loss, corruption, or unauthorized access."
+        },
+        {
+          "id": "clause_05",
+          "title": "Term",
+          "text": "Initial term of three (3) years with automatic annual renewal."
+        },
+        {
+          "id": "clause_06",
+          "title": "Governing Law",
+          "text": "Laws of the State of Texas."
+        },
+        {
+          "id": "clause_07",
+          "title": "Confidentiality",
+          "text": "Both parties shall protect confidential information for three (3) years."
+        },
+        {
+          "id": "clause_08",
+          "title": "SLA",
+          "text": "Provider guarantees 99.95% uptime with 4-hour response for P1 issues."
+        },
+        {
+          "id": "clause_09",
+          "title": "IP Rights",
+          "text": "Provider retains all IP in tools and methodologies. Client retains IP in its data and content."
+        },
+        {
+          "id": "clause_10",
+          "title": "Liability Cap",
+          "text": "Total liability capped at fees paid in preceding 12 months."
+        },
+        {
+          "id": "clause_11",
+          "title": "Termination",
+          "text": "Either party may terminate with 60 days notice for material breach."
+        },
+        {
+          "id": "clause_12",
+          "title": "Force Majeure",
+          "text": "Neither party liable for force majeure delays."
+        },
+        {
+          "id": "clause_13",
+          "title": "Indemnification",
+          "text": "Provider shall indemnify Client against third-party IP claims."
+        },
+        {
+          "id": "clause_14",
+          "title": "Provider Data Protection Guarantee",
+          "text": "The Provider shall be fully responsible for the security, integrity, backup, and disaster recovery of all Client data at all times. The Provider guarantees zero data loss and shall bear all costs associated with data recovery in the event of any data corruption or loss."
+        },
+        {
+          "id": "clause_15",
+          "title": "Audit Rights",
+          "text": "Client may audit Provider facilities and records annually."
+        }
+      ]
+    },
+    {
+      "version": 9,
+      "author": "Drafter",
+      "timestamp": "2025-03-09T10:00:00Z",
+      "change_summary": "Provider adds indemnification and comprehensive data protection guarantee.",
+      "clauses": [
+        {
+          "id": "clause_01",
+          "title": "Definitions",
+          "text": "Provider means TechServ Inc. Client means RetailMax Corp. Services means the IT managed services in Schedule A."
+        },
+        {
+          "id": "clause_02",
+          "title": "Scope",
+          "text": "Provider shall deliver the Services in accordance with the specifications and timelines in Schedule A."
+        },
+        {
+          "id": "clause_03",
+          "title": "Fees",
+          "text": "Client shall pay monthly service fees of $25,000 within thirty (30) days of invoice."
+        },
+        {
+          "id": "clause_04",
+          "title": "Data Obligations",
+          "text": "The Client shall be solely responsible for maintaining backups of all Client data. The Provider assumes no responsibility for Client data loss, corruption, or unauthorized access."
+        },
+        {
+          "id": "clause_05",
+          "title": "Term",
+          "text": "Initial term of three (3) years with automatic annual renewal."
+        },
+        {
+          "id": "clause_06",
+          "title": "Governing Law",
+          "text": "Laws of the State of Texas."
+        },
+        {
+          "id": "clause_07",
+          "title": "Confidentiality",
+          "text": "Both parties shall protect confidential information for three (3) years."
+        },
+        {
+          "id": "clause_08",
+          "title": "SLA",
+          "text": "Provider guarantees 99.95% uptime with 4-hour response for P1 issues."
+        },
+        {
+          "id": "clause_09",
+          "title": "IP Rights",
+          "text": "Provider retains all IP in tools and methodologies. Client retains IP in its data and content."
+        },
+        {
+          "id": "clause_10",
+          "title": "Liability Cap",
+          "text": "Total liability capped at fees paid in preceding 12 months."
+        },
+        {
+          "id": "clause_11",
+          "title": "Termination",
+          "text": "Either party may terminate with 60 days notice for material breach."
+        },
+        {
+          "id": "clause_12",
+          "title": "Force Majeure",
+          "text": "Neither party liable for force majeure delays."
+        },
+        {
+          "id": "clause_13",
+          "title": "Indemnification",
+          "text": "Provider shall indemnify Client against third-party IP claims."
+        },
+        {
+          "id": "clause_14",
+          "title": "Provider Data Protection Guarantee",
+          "text": "The Provider shall be fully responsible for the security, integrity, backup, and disaster recovery of all Client data at all times. The Provider guarantees zero data loss and shall bear all costs associated with data recovery in the event of any data corruption or loss."
+        },
+        {
+          "id": "clause_15",
+          "title": "Audit Rights",
+          "text": "Client may audit Provider facilities and records annually."
+        },
+        {
+          "id": "clause_16",
+          "title": "Insurance",
+          "text": "Provider shall maintain E&O insurance of at least $5M."
+        }
+      ]
+    },
+    {
+      "version": 10,
+      "author": "Counterparty",
+      "timestamp": "2025-03-10T10:00:00Z",
+      "change_summary": "Provider adds indemnification and comprehensive data protection guarantee.",
+      "clauses": [
+        {
+          "id": "clause_01",
+          "title": "Definitions",
+          "text": "Provider means TechServ Inc. Client means RetailMax Corp. Services means the IT managed services in Schedule A."
+        },
+        {
+          "id": "clause_02",
+          "title": "Scope",
+          "text": "Provider shall deliver the Services in accordance with the specifications and timelines in Schedule A."
+        },
+        {
+          "id": "clause_03",
+          "title": "Fees",
+          "text": "Client shall pay monthly service fees of $25,000 within thirty (30) days of invoice."
+        },
+        {
+          "id": "clause_04",
+          "title": "Data Obligations",
+          "text": "The Client shall be solely responsible for maintaining backups of all Client data. The Provider assumes no responsibility for Client data loss, corruption, or unauthorized access."
+        },
+        {
+          "id": "clause_05",
+          "title": "Term",
+          "text": "Initial term of three (3) years with automatic annual renewal."
+        },
+        {
+          "id": "clause_06",
+          "title": "Governing Law",
+          "text": "Laws of the State of Texas."
+        },
+        {
+          "id": "clause_07",
+          "title": "Confidentiality",
+          "text": "Both parties shall protect confidential information for three (3) years."
+        },
+        {
+          "id": "clause_08",
+          "title": "SLA",
+          "text": "Provider guarantees 99.95% uptime with 4-hour response for P1 issues."
+        },
+        {
+          "id": "clause_09",
+          "title": "IP Rights",
+          "text": "Provider retains all IP in tools and methodologies. Client retains IP in its data and content."
+        },
+        {
+          "id": "clause_10",
+          "title": "Liability Cap",
+          "text": "Total liability capped at fees paid in preceding 12 months."
+        },
+        {
+          "id": "clause_11",
+          "title": "Termination",
+          "text": "Either party may terminate with 60 days notice for material breach."
+        },
+        {
+          "id": "clause_12",
+          "title": "Force Majeure",
+          "text": "Neither party liable for force majeure delays."
+        },
+        {
+          "id": "clause_13",
+          "title": "Indemnification",
+          "text": "Provider shall indemnify Client against third-party IP claims."
+        },
+        {
+          "id": "clause_14",
+          "title": "Provider Data Protection Guarantee",
+          "text": "The Provider shall be fully responsible for the security, integrity, backup, and disaster recovery of all Client data at all times. The Provider guarantees zero data loss and shall bear all costs associated with data recovery in the event of any data corruption or loss."
+        },
+        {
+          "id": "clause_15",
+          "title": "Audit Rights",
+          "text": "Client may audit Provider facilities and records annually."
+        },
+        {
+          "id": "clause_16",
+          "title": "Insurance",
+          "text": "Provider shall maintain E&O insurance of at least $5M."
+        },
+        {
+          "id": "clause_17",
+          "title": "Dispute Resolution",
+          "text": "Disputes resolved by mediation then arbitration in Dallas, TX."
+        }
+      ]
+    },
+    {
+      "version": 11,
+      "author": "Drafter",
+      "timestamp": "2025-03-11T10:00:00Z",
+      "change_summary": "Provider adds indemnification and comprehensive data protection guarantee.",
+      "clauses": [
+        {
+          "id": "clause_01",
+          "title": "Definitions",
+          "text": "Provider means TechServ Inc. Client means RetailMax Corp. Services means the IT managed services in Schedule A."
+        },
+        {
+          "id": "clause_02",
+          "title": "Scope",
+          "text": "Provider shall deliver the Services in accordance with the specifications and timelines in Schedule A."
+        },
+        {
+          "id": "clause_03",
+          "title": "Fees",
+          "text": "Client shall pay monthly service fees of $25,000 within thirty (30) days of invoice."
+        },
+        {
+          "id": "clause_04",
+          "title": "Data Obligations",
+          "text": "The Client shall be solely responsible for maintaining backups of all Client data. The Provider assumes no responsibility for Client data loss, corruption, or unauthorized access."
+        },
+        {
+          "id": "clause_05",
+          "title": "Term",
+          "text": "Initial term of three (3) years with automatic annual renewal."
+        },
+        {
+          "id": "clause_06",
+          "title": "Governing Law",
+          "text": "Laws of the State of Texas."
+        },
+        {
+          "id": "clause_07",
+          "title": "Confidentiality",
+          "text": "Both parties shall protect confidential information for three (3) years."
+        },
+        {
+          "id": "clause_08",
+          "title": "SLA",
+          "text": "Provider guarantees 99.95% uptime with 4-hour response for P1 issues."
+        },
+        {
+          "id": "clause_09",
+          "title": "IP Rights",
+          "text": "Provider retains all IP in tools and methodologies. Client retains IP in its data and content."
+        },
+        {
+          "id": "clause_10",
+          "title": "Liability Cap",
+          "text": "Total liability capped at fees paid in preceding 12 months."
+        },
+        {
+          "id": "clause_11",
+          "title": "Termination",
+          "text": "Either party may terminate with 60 days notice for material breach."
+        },
+        {
+          "id": "clause_12",
+          "title": "Force Majeure",
+          "text": "Neither party liable for force majeure delays."
+        },
+        {
+          "id": "clause_13",
+          "title": "Indemnification",
+          "text": "Provider shall indemnify Client against third-party IP claims."
+        },
+        {
+          "id": "clause_14",
+          "title": "Provider Data Protection Guarantee",
+          "text": "The Provider shall be fully responsible for the security, integrity, backup, and disaster recovery of all Client data at all times. The Provider guarantees zero data loss and shall bear all costs associated with data recovery in the event of any data corruption or loss."
+        },
+        {
+          "id": "clause_15",
+          "title": "Audit Rights",
+          "text": "Client may audit Provider facilities and records annually."
+        },
+        {
+          "id": "clause_16",
+          "title": "Insurance",
+          "text": "Provider shall maintain E&O insurance of at least $5M."
+        },
+        {
+          "id": "clause_17",
+          "title": "Dispute Resolution",
+          "text": "Disputes resolved by mediation then arbitration in Dallas, TX."
+        },
+        {
+          "id": "clause_18",
+          "title": "Entire Agreement",
+          "text": "This Agreement constitutes the entire agreement between the parties."
+        }
+      ]
+    },
+    {
+      "version": 12,
+      "author": "Counterparty",
+      "timestamp": "2025-03-12T10:00:00Z",
+      "change_summary": "Final version signed.",
+      "clauses": [
+        {
+          "id": "clause_01",
+          "title": "Definitions",
+          "text": "Provider means TechServ Inc. Client means RetailMax Corp. Services means the IT managed services in Schedule A."
+        },
+        {
+          "id": "clause_02",
+          "title": "Scope",
+          "text": "Provider shall deliver the Services in accordance with the specifications and timelines in Schedule A."
+        },
+        {
+          "id": "clause_03",
+          "title": "Fees",
+          "text": "Client shall pay monthly service fees of $25,000 within thirty (30) days of invoice."
+        },
+        {
+          "id": "clause_04",
+          "title": "Data Obligations",
+          "text": "The Client shall be solely responsible for maintaining backups of all Client data. The Provider assumes no responsibility for Client data loss, corruption, or unauthorized access."
+        },
+        {
+          "id": "clause_05",
+          "title": "Term",
+          "text": "Initial term of three (3) years with automatic annual renewal."
+        },
+        {
+          "id": "clause_06",
+          "title": "Governing Law",
+          "text": "Laws of the State of Texas."
+        },
+        {
+          "id": "clause_07",
+          "title": "Confidentiality",
+          "text": "Both parties shall protect confidential information for three (3) years."
+        },
+        {
+          "id": "clause_08",
+          "title": "SLA",
+          "text": "Provider guarantees 99.95% uptime with 4-hour response for P1 issues."
+        },
+        {
+          "id": "clause_09",
+          "title": "IP Rights",
+          "text": "Provider retains all IP in tools and methodologies. Client retains IP in its data and content."
+        },
+        {
+          "id": "clause_10",
+          "title": "Liability Cap",
+          "text": "Total liability capped at fees paid in preceding 12 months."
+        },
+        {
+          "id": "clause_11",
+          "title": "Termination",
+          "text": "Either party may terminate with 60 days notice for material breach."
+        },
+        {
+          "id": "clause_12",
+          "title": "Force Majeure",
+          "text": "Neither party liable for force majeure delays."
+        },
+        {
+          "id": "clause_13",
+          "title": "Indemnification",
+          "text": "Provider shall indemnify Client against third-party IP claims."
+        },
+        {
+          "id": "clause_14",
+          "title": "Provider Data Protection Guarantee",
+          "text": "The Provider shall be fully responsible for the security, integrity, backup, and disaster recovery of all Client data at all times. The Provider guarantees zero data loss and shall bear all costs associated with data recovery in the event of any data corruption or loss."
+        },
+        {
+          "id": "clause_15",
+          "title": "Audit Rights",
+          "text": "Client may audit Provider facilities and records annually."
+        },
+        {
+          "id": "clause_16",
+          "title": "Insurance",
+          "text": "Provider shall maintain E&O insurance of at least $5M."
+        },
+        {
+          "id": "clause_17",
+          "title": "Dispute Resolution",
+          "text": "Disputes resolved by mediation then arbitration in Dallas, TX."
+        },
+        {
+          "id": "clause_18",
+          "title": "Entire Agreement",
+          "text": "This Agreement constitutes the entire agreement between the parties."
+        },
+        {
+          "id": "clause_19",
+          "title": "Counterparts",
+          "text": "This Agreement may be executed in counterparts."
+        }
+      ]
+    }
+  ]
+}

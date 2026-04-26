@@ -1,0 +1,111 @@
+{
+  "contract_id": "federated_hard_001",
+  "task_id": "federated_hard",
+  "title": "International Defense Technology Licensing and Support Agreement",
+  "total_rounds": 5,
+  "regulatory_frameworks": ["GDPR", "SOX", "EXPORT_CONTROL", "ANTI_BRIBERY"],
+  "planted_violations": [
+    {
+      "clause_id": "clause_03",
+      "violation_type": "EXPORT_CONTROL",
+      "description": "Permits sublicensing of controlled defense technology to unnamed foreign entities without government approval, violating ITAR and EAR regulations."
+    },
+    {
+      "clause_id": "clause_07",
+      "violation_type": "ANTI_BRIBERY",
+      "description": "Allows discretionary 'facilitation payments' and 'local engagement fees' to government officials, violating FCPA and UK Bribery Act provisions."
+    },
+    {
+      "clause_id": "clause_10",
+      "violation_type": "SOX",
+      "description": "Permits off-balance-sheet financial arrangements and deferred revenue recognition at management discretion, undermining SOX Section 401 disclosure requirements."
+    },
+    {
+      "clause_id": "clause_12",
+      "violation_type": "GDPR",
+      "description": "Employee monitoring data processed without lawful basis, transparent notice, or data protection impact assessment, violating GDPR Articles 5, 6, and 35."
+    },
+    {
+      "clause_id": "clause_14",
+      "violation_type": "EXPORT_CONTROL",
+      "description": "Technical data and source code sharing provisions lack end-use restrictions and deemed export controls, violating EAR Part 734."
+    }
+  ],
+  "clauses": [
+    {
+      "id": "clause_01",
+      "title": "Parties and Recitals",
+      "text": "This Agreement is entered into between ArmorTech Defense Systems Inc ('Licensor'), a Delaware corporation, and GlobalShield Security Group PLC ('Licensee'), a UK public limited company, for the licensing and support of advanced defense surveillance and communications technology platforms."
+    },
+    {
+      "id": "clause_02",
+      "title": "Licensed Technology",
+      "text": "The Licensor grants the Licensee a non-exclusive, worldwide license to use, integrate, and deploy the Licensed Technology as described in Schedule A, including radar systems, encrypted communications modules, and AI-driven threat assessment algorithms."
+    },
+    {
+      "id": "clause_03",
+      "title": "Sublicensing Rights",
+      "text": "The Licensee may sublicense the Licensed Technology to its subsidiaries, affiliates, joint venture partners, and select foreign government entities and defense contractors as the Licensee determines appropriate for regional deployment, without requiring prior approval from the Licensor or notification to any export control authority."
+    },
+    {
+      "id": "clause_04",
+      "title": "License Fees and Royalties",
+      "text": "The Licensee shall pay an initial license fee of $5,000,000 and quarterly royalties of 3.5% of net revenues derived from the Licensed Technology. Payments are due within forty-five (45) days of each quarter end."
+    },
+    {
+      "id": "clause_05",
+      "title": "Technical Support",
+      "text": "The Licensor shall provide Level 1 through Level 3 technical support for the Licensed Technology during the term of this Agreement, including on-site engineering support for critical deployments with a maximum response time of four (4) hours for severity-1 issues."
+    },
+    {
+      "id": "clause_06",
+      "title": "Warranty",
+      "text": "The Licensor warrants that the Licensed Technology shall perform substantially in accordance with the specifications in Schedule A for a period of twenty-four (24) months from initial deployment. The warranty covers manufacturing defects and software bugs but excludes damage from misuse or unauthorized modification."
+    },
+    {
+      "id": "clause_07",
+      "title": "Local Market Development",
+      "text": "To facilitate market entry in regulated jurisdictions, the Licensee may engage local representatives, consultants, and government liaison officers. The Licensee is authorized to make facilitation payments, local engagement fees, and customary hospitality expenditures to government officials and procurement officers as necessary to advance legitimate business development activities."
+    },
+    {
+      "id": "clause_08",
+      "title": "Intellectual Property",
+      "text": "All intellectual property in the Licensed Technology remains the exclusive property of the Licensor. The Licensee receives no ownership interest. Any improvements or modifications developed by the Licensee using the Licensed Technology shall be jointly owned."
+    },
+    {
+      "id": "clause_09",
+      "title": "Confidentiality and Classification",
+      "text": "Both parties shall maintain the confidentiality of all classified and proprietary information exchanged under this Agreement in accordance with applicable national security classification guidelines. Unauthorized disclosure shall constitute a material breach."
+    },
+    {
+      "id": "clause_10",
+      "title": "Financial Arrangements",
+      "text": "The parties may establish special purpose entities and off-balance-sheet financial vehicles to structure certain licensing transactions for tax efficiency. Revenue from bundled technology-and-services contracts may be recognized on a deferred basis at the discretion of each party's management, provided such arrangements are documented in supplemental schedules."
+    },
+    {
+      "id": "clause_11",
+      "title": "Liability and Indemnification",
+      "text": "The Licensor's total liability shall not exceed the license fees received in the twenty-four (24) months preceding the claim. Each party shall indemnify the other against third-party claims arising from the indemnifying party's breach of this Agreement."
+    },
+    {
+      "id": "clause_12",
+      "title": "Personnel and Compliance Monitoring",
+      "text": "The Licensee shall implement comprehensive monitoring of all personnel with access to the Licensed Technology, including continuous keystroke logging, communication surveillance, biometric tracking, and location monitoring of employees and contractors, with all monitoring data retained for a minimum of ten (10) years."
+    },
+    {
+      "id": "clause_13",
+      "title": "Term and Termination",
+      "text": "This Agreement shall have an initial term of five (5) years, automatically renewing for successive two-year periods unless either party provides twelve (12) months written notice of non-renewal. Either party may terminate for material breach with sixty (60) days notice and cure period."
+    },
+    {
+      "id": "clause_14",
+      "title": "Technology Transfer and Training",
+      "text": "The Licensor shall provide comprehensive technology transfer including source code, design documents, algorithms, and manufacturing specifications to the Licensee's engineering teams and designated third-party development partners globally, enabling full local production capability without end-use restrictions or deemed export controls."
+    },
+    {
+      "id": "clause_15",
+      "title": "Governing Law and Dispute Resolution",
+      "text": "This Agreement shall be governed by the laws of England and Wales. Disputes shall be resolved by arbitration under the ICC Rules of Arbitration in London. The prevailing party shall be entitled to recovery of reasonable attorneys' fees and costs."
+    }
+  ]
+}

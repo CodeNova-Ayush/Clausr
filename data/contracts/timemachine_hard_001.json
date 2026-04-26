@@ -1,0 +1,1274 @@
+{
+  "contract_id": "timemachine_hard_001",
+  "task_id": "timemachine_hard",
+  "title": "International Technology Licensing Agreement \u2014 Revision History",
+  "ground_truth": {
+    "introduced_at_version": 8,
+    "introduced_by": "Counterparty",
+    "clause_a_id": "clause_05",
+    "clause_b_id": "clause_16",
+    "contradiction_type": "termination"
+  },
+  "version_history": [
+    {
+      "version": 1,
+      "author": "Drafter",
+      "timestamp": "2025-01-01T10:00:00Z",
+      "change_summary": "Initial draft with 6 core clauses.",
+      "clauses": [
+        {
+          "id": "clause_01",
+          "title": "Definitions",
+          "text": "Licensor means GlobalTech Corp. Licensee means AsiaNet Holdings Ltd. Licensed Technology means the platform described in Schedule A."
+        },
+        {
+          "id": "clause_02",
+          "title": "License Grant",
+          "text": "Licensor grants Licensee a non-exclusive worldwide license to use the Licensed Technology."
+        },
+        {
+          "id": "clause_03",
+          "title": "Fees",
+          "text": "Licensee shall pay an initial fee of $2M and quarterly royalties of 4% of net revenue."
+        },
+        {
+          "id": "clause_04",
+          "title": "Support",
+          "text": "Licensor shall provide 24/7 technical support with 2-hour SLA for critical issues."
+        },
+        {
+          "id": "clause_05",
+          "title": "Term and Renewal",
+          "text": "This Agreement has an initial term of five (5) years. It shall automatically renew for successive two-year periods unless either party gives written notice of non-renewal at least one hundred eighty (180) days before the end of the then-current term. Early termination is not permitted during any renewal period."
+        },
+        {
+          "id": "clause_06",
+          "title": "Governing Law",
+          "text": "Laws of England and Wales. Arbitration under ICC rules in London."
+        }
+      ]
+    },
+    {
+      "version": 2,
+      "author": "Counterparty",
+      "timestamp": "2025-01-02T10:00:00Z",
+      "change_summary": "Version 2.",
+      "clauses": [
+        {
+          "id": "clause_01",
+          "title": "Definitions",
+          "text": "Licensor means GlobalTech Corp. Licensee means AsiaNet Holdings Ltd. Licensed Technology means the platform described in Schedule A."
+        },
+        {
+          "id": "clause_02",
+          "title": "License Grant",
+          "text": "Licensor grants Licensee a non-exclusive worldwide license to use the Licensed Technology."
+        },
+        {
+          "id": "clause_03",
+          "title": "Fees",
+          "text": "Licensee shall pay an initial fee of $2M and quarterly royalties of 4% of net revenue."
+        },
+        {
+          "id": "clause_04",
+          "title": "Support",
+          "text": "Licensor shall provide 24/7 technical support with 2-hour SLA for critical issues."
+        },
+        {
+          "id": "clause_05",
+          "title": "Term and Renewal",
+          "text": "This Agreement has an initial term of five (5) years. It shall automatically renew for successive two-year periods unless either party gives written notice of non-renewal at least one hundred eighty (180) days before the end of the then-current term. Early termination is not permitted during any renewal period."
+        },
+        {
+          "id": "clause_06",
+          "title": "Governing Law",
+          "text": "Laws of England and Wales. Arbitration under ICC rules in London."
+        },
+        {
+          "id": "clause_07",
+          "title": "Confidentiality",
+          "text": "Both parties shall protect confidential information for ten (10) years from disclosure."
+        }
+      ]
+    },
+    {
+      "version": 3,
+      "author": "Drafter",
+      "timestamp": "2025-01-03T10:00:00Z",
+      "change_summary": "Version 3.",
+      "clauses": [
+        {
+          "id": "clause_01",
+          "title": "Definitions",
+          "text": "Licensor means GlobalTech Corp. Licensee means AsiaNet Holdings Ltd. Licensed Technology means the platform described in Schedule A."
+        },
+        {
+          "id": "clause_02",
+          "title": "License Grant",
+          "text": "Licensor grants Licensee a non-exclusive worldwide license to use the Licensed Technology."
+        },
+        {
+          "id": "clause_03",
+          "title": "Fees",
+          "text": "Licensee shall pay an initial fee of $2M and quarterly royalties of 4% of net revenue."
+        },
+        {
+          "id": "clause_04",
+          "title": "Support",
+          "text": "Licensor shall provide 24/7 technical support with 2-hour SLA for critical issues."
+        },
+        {
+          "id": "clause_05",
+          "title": "Term and Renewal",
+          "text": "This Agreement has an initial term of five (5) years. It shall automatically renew for successive two-year periods unless either party gives written notice of non-renewal at least one hundred eighty (180) days before the end of the then-current term. Early termination is not permitted during any renewal period."
+        },
+        {
+          "id": "clause_06",
+          "title": "Governing Law",
+          "text": "Laws of England and Wales. Arbitration under ICC rules in London."
+        },
+        {
+          "id": "clause_07",
+          "title": "Confidentiality",
+          "text": "Both parties shall protect confidential information for ten (10) years from disclosure."
+        },
+        {
+          "id": "clause_08",
+          "title": "IP Ownership",
+          "text": "All IP in Licensed Technology remains with Licensor. Improvements by Licensee are jointly owned."
+        }
+      ]
+    },
+    {
+      "version": 4,
+      "author": "Counterparty",
+      "timestamp": "2025-01-04T10:00:00Z",
+      "change_summary": "Version 4.",
+      "clauses": [
+        {
+          "id": "clause_01",
+          "title": "Definitions",
+          "text": "Licensor means GlobalTech Corp. Licensee means AsiaNet Holdings Ltd. Licensed Technology means the platform described in Schedule A."
+        },
+        {
+          "id": "clause_02",
+          "title": "License Grant",
+          "text": "Licensor grants Licensee a non-exclusive worldwide license to use the Licensed Technology."
+        },
+        {
+          "id": "clause_03",
+          "title": "Fees",
+          "text": "Licensee shall pay an initial fee of $2M and quarterly royalties of 4% of net revenue."
+        },
+        {
+          "id": "clause_04",
+          "title": "Support",
+          "text": "Licensor shall provide 24/7 technical support with 2-hour SLA for critical issues."
+        },
+        {
+          "id": "clause_05",
+          "title": "Term and Renewal",
+          "text": "This Agreement has an initial term of five (5) years. It shall automatically renew for successive two-year periods unless either party gives written notice of non-renewal at least one hundred eighty (180) days before the end of the then-current term. Early termination is not permitted during any renewal period."
+        },
+        {
+          "id": "clause_06",
+          "title": "Governing Law",
+          "text": "Laws of England and Wales. Arbitration under ICC rules in London."
+        },
+        {
+          "id": "clause_07",
+          "title": "Confidentiality",
+          "text": "Both parties shall protect confidential information for ten (10) years from disclosure."
+        },
+        {
+          "id": "clause_08",
+          "title": "IP Ownership",
+          "text": "All IP in Licensed Technology remains with Licensor. Improvements by Licensee are jointly owned."
+        },
+        {
+          "id": "clause_09",
+          "title": "Warranty",
+          "text": "Licensed Technology shall conform to specs for 24 months from deployment."
+        },
+        {
+          "id": "clause_10",
+          "title": "Warranty Disclaimer",
+          "text": "EXCEPT AS SET FORTH IN THE WARRANTY CLAUSE, ALL WARRANTIES ARE DISCLAIMED INCLUDING MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE."
+        }
+      ]
+    },
+    {
+      "version": 5,
+      "author": "Drafter",
+      "timestamp": "2025-01-05T10:00:00Z",
+      "change_summary": "Version 5.",
+      "clauses": [
+        {
+          "id": "clause_01",
+          "title": "Definitions",
+          "text": "Licensor means GlobalTech Corp. Licensee means AsiaNet Holdings Ltd. Licensed Technology means the platform described in Schedule A."
+        },
+        {
+          "id": "clause_02",
+          "title": "License Grant",
+          "text": "Licensor grants Licensee a non-exclusive worldwide license to use the Licensed Technology."
+        },
+        {
+          "id": "clause_03",
+          "title": "Fees",
+          "text": "Licensee shall pay an initial fee of $2M and quarterly royalties of 4% of net revenue."
+        },
+        {
+          "id": "clause_04",
+          "title": "Support",
+          "text": "Licensor shall provide 24/7 technical support with 2-hour SLA for critical issues."
+        },
+        {
+          "id": "clause_05",
+          "title": "Term and Renewal",
+          "text": "This Agreement has an initial term of five (5) years. It shall automatically renew for successive two-year periods unless either party gives written notice of non-renewal at least one hundred eighty (180) days before the end of the then-current term. Early termination is not permitted during any renewal period."
+        },
+        {
+          "id": "clause_06",
+          "title": "Governing Law",
+          "text": "Laws of England and Wales. Arbitration under ICC rules in London."
+        },
+        {
+          "id": "clause_07",
+          "title": "Confidentiality",
+          "text": "Both parties shall protect confidential information for ten (10) years from disclosure."
+        },
+        {
+          "id": "clause_08",
+          "title": "IP Ownership",
+          "text": "All IP in Licensed Technology remains with Licensor. Improvements by Licensee are jointly owned."
+        },
+        {
+          "id": "clause_09",
+          "title": "Warranty",
+          "text": "Licensed Technology shall conform to specs for 24 months from deployment."
+        },
+        {
+          "id": "clause_10",
+          "title": "Warranty Disclaimer",
+          "text": "EXCEPT AS SET FORTH IN THE WARRANTY CLAUSE, ALL WARRANTIES ARE DISCLAIMED INCLUDING MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE."
+        },
+        {
+          "id": "clause_11",
+          "title": "Liability Cap",
+          "text": "Total liability capped at fees paid in preceding 24 months."
+        },
+        {
+          "id": "clause_12",
+          "title": "Indemnification",
+          "text": "Licensor indemnifies Licensee against IP infringement claims."
+        }
+      ]
+    },
+    {
+      "version": 6,
+      "author": "Counterparty",
+      "timestamp": "2025-01-06T10:00:00Z",
+      "change_summary": "Version 6.",
+      "clauses": [
+        {
+          "id": "clause_01",
+          "title": "Definitions",
+          "text": "Licensor means GlobalTech Corp. Licensee means AsiaNet Holdings Ltd. Licensed Technology means the platform described in Schedule A."
+        },
+        {
+          "id": "clause_02",
+          "title": "License Grant",
+          "text": "Licensor grants Licensee a non-exclusive worldwide license to use the Licensed Technology."
+        },
+        {
+          "id": "clause_03",
+          "title": "Fees",
+          "text": "Licensee shall pay an initial fee of $2M and quarterly royalties of 4% of net revenue."
+        },
+        {
+          "id": "clause_04",
+          "title": "Support",
+          "text": "Licensor shall provide 24/7 technical support with 2-hour SLA for critical issues."
+        },
+        {
+          "id": "clause_05",
+          "title": "Term and Renewal",
+          "text": "This Agreement has an initial term of five (5) years. It shall automatically renew for successive two-year periods unless either party gives written notice of non-renewal at least one hundred eighty (180) days before the end of the then-current term. Early termination is not permitted during any renewal period."
+        },
+        {
+          "id": "clause_06",
+          "title": "Governing Law",
+          "text": "Laws of England and Wales. Arbitration under ICC rules in London."
+        },
+        {
+          "id": "clause_07",
+          "title": "Confidentiality",
+          "text": "Both parties shall protect confidential information for ten (10) years from disclosure."
+        },
+        {
+          "id": "clause_08",
+          "title": "IP Ownership",
+          "text": "All IP in Licensed Technology remains with Licensor. Improvements by Licensee are jointly owned."
+        },
+        {
+          "id": "clause_09",
+          "title": "Warranty",
+          "text": "Licensed Technology shall conform to specs for 24 months from deployment."
+        },
+        {
+          "id": "clause_10",
+          "title": "Warranty Disclaimer",
+          "text": "EXCEPT AS SET FORTH IN THE WARRANTY CLAUSE, ALL WARRANTIES ARE DISCLAIMED INCLUDING MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE."
+        },
+        {
+          "id": "clause_11",
+          "title": "Liability Cap",
+          "text": "Total liability capped at fees paid in preceding 24 months."
+        },
+        {
+          "id": "clause_12",
+          "title": "Indemnification",
+          "text": "Licensor indemnifies Licensee against IP infringement claims."
+        },
+        {
+          "id": "clause_13",
+          "title": "Export Controls",
+          "text": "Licensee shall comply with all applicable export control laws and regulations."
+        },
+        {
+          "id": "clause_14",
+          "title": "Data Localization",
+          "text": "All data processing shall occur within the EU unless otherwise required by the regulatory framework."
+        }
+      ]
+    },
+    {
+      "version": 7,
+      "author": "Drafter",
+      "timestamp": "2025-01-07T10:00:00Z",
+      "change_summary": "Version 7.",
+      "clauses": [
+        {
+          "id": "clause_01",
+          "title": "Definitions",
+          "text": "Licensor means GlobalTech Corp. Licensee means AsiaNet Holdings Ltd. Licensed Technology means the platform described in Schedule A."
+        },
+        {
+          "id": "clause_02",
+          "title": "License Grant",
+          "text": "Licensor grants Licensee a non-exclusive worldwide license to use the Licensed Technology."
+        },
+        {
+          "id": "clause_03",
+          "title": "Fees",
+          "text": "Licensee shall pay an initial fee of $2M and quarterly royalties of 4% of net revenue."
+        },
+        {
+          "id": "clause_04",
+          "title": "Support",
+          "text": "Licensor shall provide 24/7 technical support with 2-hour SLA for critical issues."
+        },
+        {
+          "id": "clause_05",
+          "title": "Term and Renewal",
+          "text": "This Agreement has an initial term of five (5) years. It shall automatically renew for successive two-year periods unless either party gives written notice of non-renewal at least one hundred eighty (180) days before the end of the then-current term. Early termination is not permitted during any renewal period."
+        },
+        {
+          "id": "clause_06",
+          "title": "Governing Law",
+          "text": "Laws of England and Wales. Arbitration under ICC rules in London."
+        },
+        {
+          "id": "clause_07",
+          "title": "Confidentiality",
+          "text": "Both parties shall protect confidential information for ten (10) years from disclosure."
+        },
+        {
+          "id": "clause_08",
+          "title": "IP Ownership",
+          "text": "All IP in Licensed Technology remains with Licensor. Improvements by Licensee are jointly owned."
+        },
+        {
+          "id": "clause_09",
+          "title": "Warranty",
+          "text": "Licensed Technology shall conform to specs for 24 months from deployment."
+        },
+        {
+          "id": "clause_10",
+          "title": "Warranty Disclaimer",
+          "text": "EXCEPT AS SET FORTH IN THE WARRANTY CLAUSE, ALL WARRANTIES ARE DISCLAIMED INCLUDING MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE."
+        },
+        {
+          "id": "clause_11",
+          "title": "Liability Cap",
+          "text": "Total liability capped at fees paid in preceding 24 months."
+        },
+        {
+          "id": "clause_12",
+          "title": "Indemnification",
+          "text": "Licensor indemnifies Licensee against IP infringement claims."
+        },
+        {
+          "id": "clause_13",
+          "title": "Export Controls",
+          "text": "Licensee shall comply with all applicable export control laws and regulations."
+        },
+        {
+          "id": "clause_14",
+          "title": "Data Localization",
+          "text": "All data processing shall occur within the EU unless otherwise required by the regulatory framework."
+        },
+        {
+          "id": "clause_15",
+          "title": "Insurance",
+          "text": "Licensee shall maintain professional liability insurance of at least $10M."
+        }
+      ]
+    },
+    {
+      "version": 8,
+      "author": "Counterparty",
+      "timestamp": "2025-01-08T10:00:00Z",
+      "change_summary": "Version 8.",
+      "clauses": [
+        {
+          "id": "clause_01",
+          "title": "Definitions",
+          "text": "Licensor means GlobalTech Corp. Licensee means AsiaNet Holdings Ltd. Licensed Technology means the platform described in Schedule A."
+        },
+        {
+          "id": "clause_02",
+          "title": "License Grant",
+          "text": "Licensor grants Licensee a non-exclusive worldwide license to use the Licensed Technology."
+        },
+        {
+          "id": "clause_03",
+          "title": "Fees",
+          "text": "Licensee shall pay an initial fee of $2M and quarterly royalties of 4% of net revenue."
+        },
+        {
+          "id": "clause_04",
+          "title": "Support",
+          "text": "Licensor shall provide 24/7 technical support with 2-hour SLA for critical issues."
+        },
+        {
+          "id": "clause_05",
+          "title": "Term and Renewal",
+          "text": "This Agreement has an initial term of five (5) years. It shall automatically renew for successive two-year periods unless either party gives written notice of non-renewal at least one hundred eighty (180) days before the end of the then-current term. Early termination is not permitted during any renewal period."
+        },
+        {
+          "id": "clause_06",
+          "title": "Governing Law",
+          "text": "Laws of England and Wales. Arbitration under ICC rules in London."
+        },
+        {
+          "id": "clause_07",
+          "title": "Confidentiality",
+          "text": "Both parties shall protect confidential information for ten (10) years from disclosure."
+        },
+        {
+          "id": "clause_08",
+          "title": "IP Ownership",
+          "text": "All IP in Licensed Technology remains with Licensor. Improvements by Licensee are jointly owned."
+        },
+        {
+          "id": "clause_09",
+          "title": "Warranty",
+          "text": "Licensed Technology shall conform to specs for 24 months from deployment."
+        },
+        {
+          "id": "clause_10",
+          "title": "Warranty Disclaimer",
+          "text": "EXCEPT AS SET FORTH IN THE WARRANTY CLAUSE, ALL WARRANTIES ARE DISCLAIMED INCLUDING MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE."
+        },
+        {
+          "id": "clause_11",
+          "title": "Liability Cap",
+          "text": "Total liability capped at fees paid in preceding 24 months."
+        },
+        {
+          "id": "clause_12",
+          "title": "Indemnification",
+          "text": "Licensor indemnifies Licensee against IP infringement claims."
+        },
+        {
+          "id": "clause_13",
+          "title": "Export Controls",
+          "text": "Licensee shall comply with all applicable export control laws and regulations."
+        },
+        {
+          "id": "clause_14",
+          "title": "Data Localization",
+          "text": "All data processing shall occur within the EU unless otherwise required by the regulatory framework."
+        },
+        {
+          "id": "clause_15",
+          "title": "Insurance",
+          "text": "Licensee shall maintain professional liability insurance of at least $10M."
+        },
+        {
+          "id": "clause_16",
+          "title": "Convenience Exit Mechanism",
+          "text": "Notwithstanding any other provision of this Agreement, either party shall have the unconditional and irrevocable right to terminate this Agreement at any time, for any reason or no reason, upon providing thirty (30) calendar days advance written notification, and such termination shall take effect regardless of the status of the current term, including during any renewal period."
+        }
+      ]
+    },
+    {
+      "version": 9,
+      "author": "Drafter",
+      "timestamp": "2025-01-09T10:00:00Z",
+      "change_summary": "Version 9.",
+      "clauses": [
+        {
+          "id": "clause_01",
+          "title": "Definitions",
+          "text": "Licensor means GlobalTech Corp. Licensee means AsiaNet Holdings Ltd. Licensed Technology means the platform described in Schedule A."
+        },
+        {
+          "id": "clause_02",
+          "title": "License Grant",
+          "text": "Licensor grants Licensee a non-exclusive worldwide license to use the Licensed Technology."
+        },
+        {
+          "id": "clause_03",
+          "title": "Fees",
+          "text": "Licensee shall pay an initial fee of $2M and quarterly royalties of 4% of net revenue."
+        },
+        {
+          "id": "clause_04",
+          "title": "Support",
+          "text": "Licensor shall provide 24/7 technical support with 2-hour SLA for critical issues."
+        },
+        {
+          "id": "clause_05",
+          "title": "Term and Renewal",
+          "text": "This Agreement has an initial term of five (5) years. It shall automatically renew for successive two-year periods unless either party gives written notice of non-renewal at least one hundred eighty (180) days before the end of the then-current term. Early termination is not permitted during any renewal period."
+        },
+        {
+          "id": "clause_06",
+          "title": "Governing Law",
+          "text": "Laws of England and Wales. Arbitration under ICC rules in London."
+        },
+        {
+          "id": "clause_07",
+          "title": "Confidentiality",
+          "text": "Both parties shall protect confidential information for ten (10) years from disclosure."
+        },
+        {
+          "id": "clause_08",
+          "title": "IP Ownership",
+          "text": "All IP in Licensed Technology remains with Licensor. Improvements by Licensee are jointly owned."
+        },
+        {
+          "id": "clause_09",
+          "title": "Warranty",
+          "text": "Licensed Technology shall conform to specs for 24 months from deployment."
+        },
+        {
+          "id": "clause_10",
+          "title": "Warranty Disclaimer",
+          "text": "EXCEPT AS SET FORTH IN THE WARRANTY CLAUSE, ALL WARRANTIES ARE DISCLAIMED INCLUDING MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE."
+        },
+        {
+          "id": "clause_11",
+          "title": "Liability Cap",
+          "text": "Total liability capped at fees paid in preceding 24 months."
+        },
+        {
+          "id": "clause_12",
+          "title": "Indemnification",
+          "text": "Licensor indemnifies Licensee against IP infringement claims."
+        },
+        {
+          "id": "clause_13",
+          "title": "Export Controls",
+          "text": "Licensee shall comply with all applicable export control laws and regulations."
+        },
+        {
+          "id": "clause_14",
+          "title": "Data Localization",
+          "text": "All data processing shall occur within the EU unless otherwise required by the regulatory framework."
+        },
+        {
+          "id": "clause_15",
+          "title": "Insurance",
+          "text": "Licensee shall maintain professional liability insurance of at least $10M."
+        },
+        {
+          "id": "clause_16",
+          "title": "Convenience Exit Mechanism",
+          "text": "Notwithstanding any other provision of this Agreement, either party shall have the unconditional and irrevocable right to terminate this Agreement at any time, for any reason or no reason, upon providing thirty (30) calendar days advance written notification, and such termination shall take effect regardless of the status of the current term, including during any renewal period."
+        },
+        {
+          "id": "clause_17",
+          "title": "Force Majeure",
+          "text": "Neither party liable for force majeure events lasting less than 90 days."
+        }
+      ]
+    },
+    {
+      "version": 10,
+      "author": "Counterparty",
+      "timestamp": "2025-01-10T10:00:00Z",
+      "change_summary": "Version 10.",
+      "clauses": [
+        {
+          "id": "clause_01",
+          "title": "Definitions",
+          "text": "Licensor means GlobalTech Corp. Licensee means AsiaNet Holdings Ltd. Licensed Technology means the platform described in Schedule A."
+        },
+        {
+          "id": "clause_02",
+          "title": "License Grant",
+          "text": "Licensor grants Licensee a non-exclusive worldwide license to use the Licensed Technology."
+        },
+        {
+          "id": "clause_03",
+          "title": "Fees",
+          "text": "Licensee shall pay an initial fee of $2M and quarterly royalties of 4% of net revenue."
+        },
+        {
+          "id": "clause_04",
+          "title": "Support",
+          "text": "Licensor shall provide 24/7 technical support with 2-hour SLA for critical issues."
+        },
+        {
+          "id": "clause_05",
+          "title": "Term and Renewal",
+          "text": "This Agreement has an initial term of five (5) years. It shall automatically renew for successive two-year periods unless either party gives written notice of non-renewal at least one hundred eighty (180) days before the end of the then-current term. Early termination is not permitted during any renewal period."
+        },
+        {
+          "id": "clause_06",
+          "title": "Governing Law",
+          "text": "Laws of England and Wales. Arbitration under ICC rules in London."
+        },
+        {
+          "id": "clause_07",
+          "title": "Confidentiality",
+          "text": "Both parties shall protect confidential information for ten (10) years from disclosure."
+        },
+        {
+          "id": "clause_08",
+          "title": "IP Ownership",
+          "text": "All IP in Licensed Technology remains with Licensor. Improvements by Licensee are jointly owned."
+        },
+        {
+          "id": "clause_09",
+          "title": "Warranty",
+          "text": "Licensed Technology shall conform to specs for 24 months from deployment."
+        },
+        {
+          "id": "clause_10",
+          "title": "Warranty Disclaimer",
+          "text": "EXCEPT AS SET FORTH IN THE WARRANTY CLAUSE, ALL WARRANTIES ARE DISCLAIMED INCLUDING MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE."
+        },
+        {
+          "id": "clause_11",
+          "title": "Liability Cap",
+          "text": "Total liability capped at fees paid in preceding 24 months."
+        },
+        {
+          "id": "clause_12",
+          "title": "Indemnification",
+          "text": "Licensor indemnifies Licensee against IP infringement claims."
+        },
+        {
+          "id": "clause_13",
+          "title": "Export Controls",
+          "text": "Licensee shall comply with all applicable export control laws and regulations."
+        },
+        {
+          "id": "clause_14",
+          "title": "Data Localization",
+          "text": "All data processing shall occur within the EU unless otherwise required by the regulatory framework."
+        },
+        {
+          "id": "clause_15",
+          "title": "Insurance",
+          "text": "Licensee shall maintain professional liability insurance of at least $10M."
+        },
+        {
+          "id": "clause_16",
+          "title": "Convenience Exit Mechanism",
+          "text": "Notwithstanding any other provision of this Agreement, either party shall have the unconditional and irrevocable right to terminate this Agreement at any time, for any reason or no reason, upon providing thirty (30) calendar days advance written notification, and such termination shall take effect regardless of the status of the current term, including during any renewal period."
+        },
+        {
+          "id": "clause_17",
+          "title": "Force Majeure",
+          "text": "Neither party liable for force majeure events lasting less than 90 days."
+        },
+        {
+          "id": "clause_18",
+          "title": "Audit Rights",
+          "text": "Licensor may audit Licensee royalty calculations annually."
+        }
+      ]
+    },
+    {
+      "version": 11,
+      "author": "Drafter",
+      "timestamp": "2025-01-11T10:00:00Z",
+      "change_summary": "Version 11.",
+      "clauses": [
+        {
+          "id": "clause_01",
+          "title": "Definitions",
+          "text": "Licensor means GlobalTech Corp. Licensee means AsiaNet Holdings Ltd. Licensed Technology means the platform described in Schedule A."
+        },
+        {
+          "id": "clause_02",
+          "title": "License Grant",
+          "text": "Licensor grants Licensee a non-exclusive worldwide license to use the Licensed Technology."
+        },
+        {
+          "id": "clause_03",
+          "title": "Fees",
+          "text": "Licensee shall pay an initial fee of $2M and quarterly royalties of 4% of net revenue."
+        },
+        {
+          "id": "clause_04",
+          "title": "Support",
+          "text": "Licensor shall provide 24/7 technical support with 2-hour SLA for critical issues."
+        },
+        {
+          "id": "clause_05",
+          "title": "Term and Renewal",
+          "text": "This Agreement has an initial term of five (5) years. It shall automatically renew for successive two-year periods unless either party gives written notice of non-renewal at least one hundred eighty (180) days before the end of the then-current term. Early termination is not permitted during any renewal period."
+        },
+        {
+          "id": "clause_06",
+          "title": "Governing Law",
+          "text": "Laws of England and Wales. Arbitration under ICC rules in London."
+        },
+        {
+          "id": "clause_07",
+          "title": "Confidentiality",
+          "text": "Both parties shall protect confidential information for ten (10) years from disclosure."
+        },
+        {
+          "id": "clause_08",
+          "title": "IP Ownership",
+          "text": "All IP in Licensed Technology remains with Licensor. Improvements by Licensee are jointly owned."
+        },
+        {
+          "id": "clause_09",
+          "title": "Warranty",
+          "text": "Licensed Technology shall conform to specs for 24 months from deployment."
+        },
+        {
+          "id": "clause_10",
+          "title": "Warranty Disclaimer",
+          "text": "EXCEPT AS SET FORTH IN THE WARRANTY CLAUSE, ALL WARRANTIES ARE DISCLAIMED INCLUDING MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE."
+        },
+        {
+          "id": "clause_11",
+          "title": "Liability Cap",
+          "text": "Total liability capped at fees paid in preceding 24 months."
+        },
+        {
+          "id": "clause_12",
+          "title": "Indemnification",
+          "text": "Licensor indemnifies Licensee against IP infringement claims."
+        },
+        {
+          "id": "clause_13",
+          "title": "Export Controls",
+          "text": "Licensee shall comply with all applicable export control laws and regulations."
+        },
+        {
+          "id": "clause_14",
+          "title": "Data Localization",
+          "text": "All data processing shall occur within the EU unless otherwise required by the regulatory framework."
+        },
+        {
+          "id": "clause_15",
+          "title": "Insurance",
+          "text": "Licensee shall maintain professional liability insurance of at least $10M."
+        },
+        {
+          "id": "clause_16",
+          "title": "Convenience Exit Mechanism",
+          "text": "Notwithstanding any other provision of this Agreement, either party shall have the unconditional and irrevocable right to terminate this Agreement at any time, for any reason or no reason, upon providing thirty (30) calendar days advance written notification, and such termination shall take effect regardless of the status of the current term, including during any renewal period."
+        },
+        {
+          "id": "clause_17",
+          "title": "Force Majeure",
+          "text": "Neither party liable for force majeure events lasting less than 90 days."
+        },
+        {
+          "id": "clause_18",
+          "title": "Audit Rights",
+          "text": "Licensor may audit Licensee royalty calculations annually."
+        },
+        {
+          "id": "clause_19",
+          "title": "Non-Solicitation",
+          "text": "Neither party shall solicit the other employees during the term and for 12 months after."
+        }
+      ]
+    },
+    {
+      "version": 12,
+      "author": "Counterparty",
+      "timestamp": "2025-01-12T10:00:00Z",
+      "change_summary": "Version 12.",
+      "clauses": [
+        {
+          "id": "clause_01",
+          "title": "Definitions",
+          "text": "Licensor means GlobalTech Corp. Licensee means AsiaNet Holdings Ltd. Licensed Technology means the platform described in Schedule A."
+        },
+        {
+          "id": "clause_02",
+          "title": "License Grant",
+          "text": "Licensor grants Licensee a non-exclusive worldwide license to use the Licensed Technology."
+        },
+        {
+          "id": "clause_03",
+          "title": "Fees",
+          "text": "Licensee shall pay an initial fee of $2M and quarterly royalties of 4% of net revenue."
+        },
+        {
+          "id": "clause_04",
+          "title": "Support",
+          "text": "Licensor shall provide 24/7 technical support with 2-hour SLA for critical issues."
+        },
+        {
+          "id": "clause_05",
+          "title": "Term and Renewal",
+          "text": "This Agreement has an initial term of five (5) years. It shall automatically renew for successive two-year periods unless either party gives written notice of non-renewal at least one hundred eighty (180) days before the end of the then-current term. Early termination is not permitted during any renewal period."
+        },
+        {
+          "id": "clause_06",
+          "title": "Governing Law",
+          "text": "Laws of England and Wales. Arbitration under ICC rules in London."
+        },
+        {
+          "id": "clause_07",
+          "title": "Confidentiality",
+          "text": "Both parties shall protect confidential information for ten (10) years from disclosure."
+        },
+        {
+          "id": "clause_08",
+          "title": "IP Ownership",
+          "text": "All IP in Licensed Technology remains with Licensor. Improvements by Licensee are jointly owned."
+        },
+        {
+          "id": "clause_09",
+          "title": "Warranty",
+          "text": "Licensed Technology shall conform to specs for 24 months from deployment."
+        },
+        {
+          "id": "clause_10",
+          "title": "Warranty Disclaimer",
+          "text": "EXCEPT AS SET FORTH IN THE WARRANTY CLAUSE, ALL WARRANTIES ARE DISCLAIMED INCLUDING MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE."
+        },
+        {
+          "id": "clause_11",
+          "title": "Liability Cap",
+          "text": "Total liability capped at fees paid in preceding 24 months."
+        },
+        {
+          "id": "clause_12",
+          "title": "Indemnification",
+          "text": "Licensor indemnifies Licensee against IP infringement claims."
+        },
+        {
+          "id": "clause_13",
+          "title": "Export Controls",
+          "text": "Licensee shall comply with all applicable export control laws and regulations."
+        },
+        {
+          "id": "clause_14",
+          "title": "Data Localization",
+          "text": "All data processing shall occur within the EU unless otherwise required by the regulatory framework."
+        },
+        {
+          "id": "clause_15",
+          "title": "Insurance",
+          "text": "Licensee shall maintain professional liability insurance of at least $10M."
+        },
+        {
+          "id": "clause_16",
+          "title": "Convenience Exit Mechanism",
+          "text": "Notwithstanding any other provision of this Agreement, either party shall have the unconditional and irrevocable right to terminate this Agreement at any time, for any reason or no reason, upon providing thirty (30) calendar days advance written notification, and such termination shall take effect regardless of the status of the current term, including during any renewal period."
+        },
+        {
+          "id": "clause_17",
+          "title": "Force Majeure",
+          "text": "Neither party liable for force majeure events lasting less than 90 days."
+        },
+        {
+          "id": "clause_18",
+          "title": "Audit Rights",
+          "text": "Licensor may audit Licensee royalty calculations annually."
+        },
+        {
+          "id": "clause_19",
+          "title": "Non-Solicitation",
+          "text": "Neither party shall solicit the other employees during the term and for 12 months after."
+        },
+        {
+          "id": "clause_20",
+          "title": "Public Information",
+          "text": "Nothing in this Agreement restricts either party from disclosing information that is publicly available, independently developed, or required by law."
+        }
+      ]
+    },
+    {
+      "version": 13,
+      "author": "Drafter",
+      "timestamp": "2025-01-13T10:00:00Z",
+      "change_summary": "Version 13.",
+      "clauses": [
+        {
+          "id": "clause_01",
+          "title": "Definitions",
+          "text": "Licensor means GlobalTech Corp. Licensee means AsiaNet Holdings Ltd. Licensed Technology means the platform described in Schedule A."
+        },
+        {
+          "id": "clause_02",
+          "title": "License Grant",
+          "text": "Licensor grants Licensee a non-exclusive worldwide license to use the Licensed Technology."
+        },
+        {
+          "id": "clause_03",
+          "title": "Fees",
+          "text": "Licensee shall pay an initial fee of $2M and quarterly royalties of 4% of net revenue."
+        },
+        {
+          "id": "clause_04",
+          "title": "Support",
+          "text": "Licensor shall provide 24/7 technical support with 2-hour SLA for critical issues."
+        },
+        {
+          "id": "clause_05",
+          "title": "Term and Renewal",
+          "text": "This Agreement has an initial term of five (5) years. It shall automatically renew for successive two-year periods unless either party gives written notice of non-renewal at least one hundred eighty (180) days before the end of the then-current term. Early termination is not permitted during any renewal period."
+        },
+        {
+          "id": "clause_06",
+          "title": "Governing Law",
+          "text": "Laws of England and Wales. Arbitration under ICC rules in London."
+        },
+        {
+          "id": "clause_07",
+          "title": "Confidentiality",
+          "text": "Both parties shall protect confidential information for ten (10) years from disclosure."
+        },
+        {
+          "id": "clause_08",
+          "title": "IP Ownership",
+          "text": "All IP in Licensed Technology remains with Licensor. Improvements by Licensee are jointly owned."
+        },
+        {
+          "id": "clause_09",
+          "title": "Warranty",
+          "text": "Licensed Technology shall conform to specs for 24 months from deployment."
+        },
+        {
+          "id": "clause_10",
+          "title": "Warranty Disclaimer",
+          "text": "EXCEPT AS SET FORTH IN THE WARRANTY CLAUSE, ALL WARRANTIES ARE DISCLAIMED INCLUDING MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE."
+        },
+        {
+          "id": "clause_11",
+          "title": "Liability Cap",
+          "text": "Total liability capped at fees paid in preceding 24 months."
+        },
+        {
+          "id": "clause_12",
+          "title": "Indemnification",
+          "text": "Licensor indemnifies Licensee against IP infringement claims."
+        },
+        {
+          "id": "clause_13",
+          "title": "Export Controls",
+          "text": "Licensee shall comply with all applicable export control laws and regulations."
+        },
+        {
+          "id": "clause_14",
+          "title": "Data Localization",
+          "text": "All data processing shall occur within the EU unless otherwise required by the regulatory framework."
+        },
+        {
+          "id": "clause_15",
+          "title": "Insurance",
+          "text": "Licensee shall maintain professional liability insurance of at least $10M."
+        },
+        {
+          "id": "clause_16",
+          "title": "Convenience Exit Mechanism",
+          "text": "Notwithstanding any other provision of this Agreement, either party shall have the unconditional and irrevocable right to terminate this Agreement at any time, for any reason or no reason, upon providing thirty (30) calendar days advance written notification, and such termination shall take effect regardless of the status of the current term, including during any renewal period."
+        },
+        {
+          "id": "clause_17",
+          "title": "Force Majeure",
+          "text": "Neither party liable for force majeure events lasting less than 90 days."
+        },
+        {
+          "id": "clause_18",
+          "title": "Audit Rights",
+          "text": "Licensor may audit Licensee royalty calculations annually."
+        },
+        {
+          "id": "clause_19",
+          "title": "Non-Solicitation",
+          "text": "Neither party shall solicit the other employees during the term and for 12 months after."
+        },
+        {
+          "id": "clause_20",
+          "title": "Public Information",
+          "text": "Nothing in this Agreement restricts either party from disclosing information that is publicly available, independently developed, or required by law."
+        },
+        {
+          "id": "clause_21",
+          "title": "Assignment",
+          "text": "Neither party may assign without prior written consent, except to an affiliate."
+        }
+      ]
+    },
+    {
+      "version": 14,
+      "author": "Counterparty",
+      "timestamp": "2025-01-14T10:00:00Z",
+      "change_summary": "Version 14.",
+      "clauses": [
+        {
+          "id": "clause_01",
+          "title": "Definitions",
+          "text": "Licensor means GlobalTech Corp. Licensee means AsiaNet Holdings Ltd. Licensed Technology means the platform described in Schedule A."
+        },
+        {
+          "id": "clause_02",
+          "title": "License Grant",
+          "text": "Licensor grants Licensee a non-exclusive worldwide license to use the Licensed Technology."
+        },
+        {
+          "id": "clause_03",
+          "title": "Fees",
+          "text": "Licensee shall pay an initial fee of $2M and quarterly royalties of 4% of net revenue."
+        },
+        {
+          "id": "clause_04",
+          "title": "Support",
+          "text": "Licensor shall provide 24/7 technical support with 2-hour SLA for critical issues."
+        },
+        {
+          "id": "clause_05",
+          "title": "Term and Renewal",
+          "text": "This Agreement has an initial term of five (5) years. It shall automatically renew for successive two-year periods unless either party gives written notice of non-renewal at least one hundred eighty (180) days before the end of the then-current term. Early termination is not permitted during any renewal period."
+        },
+        {
+          "id": "clause_06",
+          "title": "Governing Law",
+          "text": "Laws of England and Wales. Arbitration under ICC rules in London."
+        },
+        {
+          "id": "clause_07",
+          "title": "Confidentiality",
+          "text": "Both parties shall protect confidential information for ten (10) years from disclosure."
+        },
+        {
+          "id": "clause_08",
+          "title": "IP Ownership",
+          "text": "All IP in Licensed Technology remains with Licensor. Improvements by Licensee are jointly owned."
+        },
+        {
+          "id": "clause_09",
+          "title": "Warranty",
+          "text": "Licensed Technology shall conform to specs for 24 months from deployment."
+        },
+        {
+          "id": "clause_10",
+          "title": "Warranty Disclaimer",
+          "text": "EXCEPT AS SET FORTH IN THE WARRANTY CLAUSE, ALL WARRANTIES ARE DISCLAIMED INCLUDING MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE."
+        },
+        {
+          "id": "clause_11",
+          "title": "Liability Cap",
+          "text": "Total liability capped at fees paid in preceding 24 months."
+        },
+        {
+          "id": "clause_12",
+          "title": "Indemnification",
+          "text": "Licensor indemnifies Licensee against IP infringement claims."
+        },
+        {
+          "id": "clause_13",
+          "title": "Export Controls",
+          "text": "Licensee shall comply with all applicable export control laws and regulations."
+        },
+        {
+          "id": "clause_14",
+          "title": "Data Localization",
+          "text": "All data processing shall occur within the EU unless otherwise required by the regulatory framework."
+        },
+        {
+          "id": "clause_15",
+          "title": "Insurance",
+          "text": "Licensee shall maintain professional liability insurance of at least $10M."
+        },
+        {
+          "id": "clause_16",
+          "title": "Convenience Exit Mechanism",
+          "text": "Notwithstanding any other provision of this Agreement, either party shall have the unconditional and irrevocable right to terminate this Agreement at any time, for any reason or no reason, upon providing thirty (30) calendar days advance written notification, and such termination shall take effect regardless of the status of the current term, including during any renewal period."
+        },
+        {
+          "id": "clause_17",
+          "title": "Force Majeure",
+          "text": "Neither party liable for force majeure events lasting less than 90 days."
+        },
+        {
+          "id": "clause_18",
+          "title": "Audit Rights",
+          "text": "Licensor may audit Licensee royalty calculations annually."
+        },
+        {
+          "id": "clause_19",
+          "title": "Non-Solicitation",
+          "text": "Neither party shall solicit the other employees during the term and for 12 months after."
+        },
+        {
+          "id": "clause_20",
+          "title": "Public Information",
+          "text": "Nothing in this Agreement restricts either party from disclosing information that is publicly available, independently developed, or required by law."
+        },
+        {
+          "id": "clause_21",
+          "title": "Assignment",
+          "text": "Neither party may assign without prior written consent, except to an affiliate."
+        },
+        {
+          "id": "clause_22",
+          "title": "Entire Agreement",
+          "text": "This Agreement constitutes the entire agreement and supersedes all prior agreements."
+        }
+      ]
+    },
+    {
+      "version": 15,
+      "author": "Drafter",
+      "timestamp": "2025-01-15T10:00:00Z",
+      "change_summary": "Final version executed.",
+      "clauses": [
+        {
+          "id": "clause_01",
+          "title": "Definitions",
+          "text": "Licensor means GlobalTech Corp. Licensee means AsiaNet Holdings Ltd. Licensed Technology means the platform described in Schedule A."
+        },
+        {
+          "id": "clause_02",
+          "title": "License Grant",
+          "text": "Licensor grants Licensee a non-exclusive worldwide license to use the Licensed Technology."
+        },
+        {
+          "id": "clause_03",
+          "title": "Fees",
+          "text": "Licensee shall pay an initial fee of $2M and quarterly royalties of 4% of net revenue."
+        },
+        {
+          "id": "clause_04",
+          "title": "Support",
+          "text": "Licensor shall provide 24/7 technical support with 2-hour SLA for critical issues."
+        },
+        {
+          "id": "clause_05",
+          "title": "Term and Renewal",
+          "text": "This Agreement has an initial term of five (5) years. It shall automatically renew for successive two-year periods unless either party gives written notice of non-renewal at least one hundred eighty (180) days before the end of the then-current term. Early termination is not permitted during any renewal period."
+        },
+        {
+          "id": "clause_06",
+          "title": "Governing Law",
+          "text": "Laws of England and Wales. Arbitration under ICC rules in London."
+        },
+        {
+          "id": "clause_07",
+          "title": "Confidentiality",
+          "text": "Both parties shall protect confidential information for ten (10) years from disclosure."
+        },
+        {
+          "id": "clause_08",
+          "title": "IP Ownership",
+          "text": "All IP in Licensed Technology remains with Licensor. Improvements by Licensee are jointly owned."
+        },
+        {
+          "id": "clause_09",
+          "title": "Warranty",
+          "text": "Licensed Technology shall conform to specs for 24 months from deployment."
+        },
+        {
+          "id": "clause_10",
+          "title": "Warranty Disclaimer",
+          "text": "EXCEPT AS SET FORTH IN THE WARRANTY CLAUSE, ALL WARRANTIES ARE DISCLAIMED INCLUDING MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE."
+        },
+        {
+          "id": "clause_11",
+          "title": "Liability Cap",
+          "text": "Total liability capped at fees paid in preceding 24 months."
+        },
+        {
+          "id": "clause_12",
+          "title": "Indemnification",
+          "text": "Licensor indemnifies Licensee against IP infringement claims."
+        },
+        {
+          "id": "clause_13",
+          "title": "Export Controls",
+          "text": "Licensee shall comply with all applicable export control laws and regulations."
+        },
+        {
+          "id": "clause_14",
+          "title": "Data Localization",
+          "text": "All data processing shall occur within the EU unless otherwise required by the regulatory framework."
+        },
+        {
+          "id": "clause_15",
+          "title": "Insurance",
+          "text": "Licensee shall maintain professional liability insurance of at least $10M."
+        },
+        {
+          "id": "clause_16",
+          "title": "Convenience Exit Mechanism",
+          "text": "Notwithstanding any other provision of this Agreement, either party shall have the unconditional and irrevocable right to terminate this Agreement at any time, for any reason or no reason, upon providing thirty (30) calendar days advance written notification, and such termination shall take effect regardless of the status of the current term, including during any renewal period."
+        },
+        {
+          "id": "clause_17",
+          "title": "Force Majeure",
+          "text": "Neither party liable for force majeure events lasting less than 90 days."
+        },
+        {
+          "id": "clause_18",
+          "title": "Audit Rights",
+          "text": "Licensor may audit Licensee royalty calculations annually."
+        },
+        {
+          "id": "clause_19",
+          "title": "Non-Solicitation",
+          "text": "Neither party shall solicit the other employees during the term and for 12 months after."
+        },
+        {
+          "id": "clause_20",
+          "title": "Public Information",
+          "text": "Nothing in this Agreement restricts either party from disclosing information that is publicly available, independently developed, or required by law."
+        },
+        {
+          "id": "clause_21",
+          "title": "Assignment",
+          "text": "Neither party may assign without prior written consent, except to an affiliate."
+        },
+        {
+          "id": "clause_22",
+          "title": "Entire Agreement",
+          "text": "This Agreement constitutes the entire agreement and supersedes all prior agreements."
+        },
+        {
+          "id": "clause_23",
+          "title": "Counterparts",
+          "text": "May be executed in counterparts, each deemed an original."
+        }
+      ]
+    }
+  ]
+}

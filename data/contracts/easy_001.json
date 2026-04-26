@@ -1,0 +1,98 @@
+{
+  "contract_id": "easy_001",
+  "task_id": "easy",
+  "title": "Non-Disclosure Agreement between Acme Corp and Beta Ltd",
+  "contract_text": "Parties\nThis Non-Disclosure Agreement (\"Agreement\") is entered into as of the date last signed below by and between Acme Corp, a Delaware corporation with its principal offices at 100 Innovation Drive, Wilmington, DE 19801 (\"Disclosing Party\"), and Beta Ltd, a company incorporated in England and Wales with its registered office at 45 Kensington High Street, London W8 5NP (\"Receiving Party\").\n\nPurpose\nThe parties wish to explore a potential business relationship (the \"Purpose\") in connection with which the Disclosing Party may disclose to the Receiving Party certain proprietary and confidential information relating to its products, technology, business plans, financial data, and strategic initiatives.\n\nConfidentiality Period\nThe Receiving Party shall maintain the confidentiality of all Confidential Information disclosed under this Agreement for a period of two (2) years from the date of each such disclosure, after which the obligations of confidentiality shall expire.\n\nPermitted Disclosures\nThe Receiving Party may disclose Confidential Information only to its directors, officers, employees, and professional advisors who have a bona fide need to know such information for the Purpose and who are bound by written obligations of confidentiality no less restrictive than those contained herein.\n\nExclusions from Confidentiality\nConfidential Information shall not include information that: (a) is or becomes publicly available through no fault or action of the Receiving Party; (b) was already in the Receiving Party's possession prior to disclosure; (c) is independently developed by the Receiving Party without use of or reference to the Confidential Information; or (d) is received from a third party who is not under any obligation of confidentiality with respect to such information.\n\nReturn or Destruction of Information\nUpon the earlier of (i) termination of this Agreement or (ii) written request by the Disclosing Party, the Receiving Party shall promptly return or destroy all tangible materials containing Confidential Information and shall certify in writing that it has done so within fifteen (15) business days.\n\nObligations Upon Termination\nUpon termination of this Agreement for any reason, all confidentiality obligations set forth herein shall remain in full force and effect for a period of thirty-six (36) months from the effective date of termination, during which the Receiving Party shall continue to protect all previously disclosed Confidential Information.\n\nGoverning Law\nThis Agreement shall be governed by and construed in accordance with the laws of the State of Delaware, United States of America, without regard to its conflict of laws principles. Any dispute arising out of or in connection with this Agreement shall be submitted to the exclusive jurisdiction of the state and federal courts located in Wilmington, Delaware.",
+  "clauses": [
+    {
+      "id": "clause_01",
+      "title": "Parties",
+      "text": "This Non-Disclosure Agreement (\"Agreement\") is entered into as of the date last signed below by and between Acme Corp, a Delaware corporation with its principal offices at 100 Innovation Drive, Wilmington, DE 19801 (\"Disclosing Party\"), and Beta Ltd, a company incorporated in England and Wales with its registered office at 45 Kensington High Street, London W8 5NP (\"Receiving Party\")."
+    },
+    {
+      "id": "clause_02",
+      "title": "Purpose",
+      "text": "The parties wish to explore a potential business relationship (the \"Purpose\") in connection with which the Disclosing Party may disclose to the Receiving Party certain proprietary and confidential information relating to its products, technology, business plans, financial data, and strategic initiatives."
+    },
+    {
+      "id": "clause_03",
+      "title": "Confidentiality Period",
+      "text": "The Receiving Party shall maintain the confidentiality of all Confidential Information disclosed under this Agreement for a period of two (2) years from the date of each such disclosure, after which the obligations of confidentiality shall expire."
+    },
+    {
+      "id": "clause_04",
+      "title": "Permitted Disclosures",
+      "text": "The Receiving Party may disclose Confidential Information only to its directors, officers, employees, and professional advisors who have a bona fide need to know such information for the Purpose and who are bound by written obligations of confidentiality no less restrictive than those contained herein."
+    },
+    {
+      "id": "clause_05",
+      "title": "Exclusions from Confidentiality",
+      "text": "Confidential Information shall not include information that: (a) is or becomes publicly available through no fault or action of the Receiving Party; (b) was already in the Receiving Party's possession prior to disclosure; (c) is independently developed by the Receiving Party without use of or reference to the Confidential Information; or (d) is received from a third party who is not under any obligation of confidentiality with respect to such information."
+    },
+    {
+      "id": "clause_06",
+      "title": "Return or Destruction of Information",
+      "text": "Upon the earlier of (i) termination of this Agreement or (ii) written request by the Disclosing Party, the Receiving Party shall promptly return or destroy all tangible materials containing Confidential Information and shall certify in writing that it has done so within fifteen (15) business days."
+    },
+    {
+      "id": "clause_07",
+      "title": "Obligations Upon Termination",
+      "text": "Upon termination of this Agreement for any reason, all confidentiality obligations set forth herein shall remain in full force and effect for a period of thirty-six (36) months from the effective date of termination, during which the Receiving Party shall continue to protect all previously disclosed Confidential Information."
+    },
+    {
+      "id": "clause_08",
+      "title": "Governing Law",
+      "text": "This Agreement shall be governed by and construed in accordance with the laws of the State of Delaware, United States of America, without regard to its conflict of laws principles. Any dispute arising out of or in connection with this Agreement shall be submitted to the exclusive jurisdiction of the state and federal courts located in Wilmington, Delaware."
+    }
+  ],
+  "contradictions": [
+    {
+      "clause_a_id": "clause_03",
+      "clause_b_id": "clause_07",
+      "type": "temporal",
+      "description": "Clause 03 states confidentiality lasts 2 years (24 months) from disclosure, but Clause 07 states obligations continue for 36 months from termination \u2014 conflicting durations for the same confidentiality obligation."
+    }
+  ],
+  "traps": [],
+  "execution_scenarios": [
+    {
+      "scenario_id": "scenario_01",
+      "title": "Beta Ltd employee shares confidential data 18 months after disclosure",
+      "description": "A Beta Ltd engineer received proprietary product schematics from Acme Corp 18 months ago. The engineer now needs to share these schematics with a new subcontractor for a joint project evaluation. The engineer checks the agreement to determine if the information is still protected.",
+      "actor": "Receiving Party (Beta Ltd)",
+      "action_taken": "Beta Ltd engineer attempts to share 18-month-old confidential schematics with a third-party subcontractor",
+      "triggers_clauses": ["clause_03", "clause_04", "clause_07"],
+      "crashes": true,
+      "crash_pair": {"clause_a_id": "clause_03", "clause_b_id": "clause_07"},
+      "crash_description": "Clause 03 says confidentiality expires after 2 years from disclosure, meaning the data is still protected for another 6 months. But Clause 07 says obligations continue for 36 months from termination. If the agreement has not been terminated, one clause suggests a fixed expiry while the other extends protection tied to termination. The employee cannot determine the actual protection period.",
+      "financial_exposure": "Potential breach of confidentiality claim if shared data was still protected under the longer obligation period",
+      "clean_resolution": null
+    },
+    {
+      "scenario_id": "scenario_02",
+      "title": "Acme Corp requests return of materials after agreement ends",
+      "description": "The NDA expired naturally after one year. Acme Corp's legal team sends a formal letter requesting Beta Ltd return or destroy all confidential materials and provide written certification within the contractual timeframe.",
+      "actor": "Disclosing Party (Acme Corp)",
+      "action_taken": "Acme Corp sends written request for return or destruction of all confidential materials post-expiry",
+      "triggers_clauses": ["clause_06"],
+      "crashes": false,
+      "crash_pair": null,
+      "crash_description": null,
+      "financial_exposure": null,
+      "clean_resolution": "Clause 06 clearly states that upon termination or written request, Beta Ltd must return or destroy materials within 15 business days and certify in writing. No contradiction triggered."
+    },
+    {
+      "scenario_id": "scenario_03",
+      "title": "Beta Ltd independently develops similar technology",
+      "description": "Beta Ltd's R&D team independently develops a product feature that is remarkably similar to Acme Corp's confidential technology. Acme Corp alleges that Beta Ltd used their confidential information. Beta Ltd claims the development was independent.",
+      "actor": "Receiving Party (Beta Ltd)",
+      "action_taken": "Beta Ltd claims independent development defense for similar technology",
+      "triggers_clauses": ["clause_05"],
+      "crashes": false,
+      "crash_pair": null,
+      "crash_description": null,
+      "financial_exposure": null,
+      "clean_resolution": "Clause 05(c) explicitly excludes independently developed information from confidentiality obligations. The contract cleanly resolves this scenario if Beta Ltd can demonstrate independent development."
+    }
+  ]
+}

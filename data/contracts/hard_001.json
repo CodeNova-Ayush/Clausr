@@ -1,0 +1,622 @@
+{
+  "contract_id": "hard_001",
+  "task_id": "hard",
+  "title": "Master Service Agreement between Apex Systems Corp and MegaRetail Group",
+  "contract_text": "Parties and Recitals\nThis Master Service Agreement (\"MSA\") is entered into between Apex Systems Corp, a Delaware corporation (\"Vendor\"), and MegaRetail Group, a multinational retail enterprise headquartered in New York (\"Client\"). The parties wish to establish the terms governing the provision of enterprise technology services.\n\nDefinitions\nIn this Agreement: \"Business Day\" means any day that is not a Saturday, Sunday, or public holiday in the State of Delaware. \"Confidential Information\" means all non-public information disclosed by one party to the other. \"Deliverables\" means all work product created under a Statement of Work. \"Services\" means the professional, technical, and managed services provided by Vendor.\n\nScope of Services\nVendor shall provide the technology consulting, systems integration, managed infrastructure, and application development services described in each Statement of Work executed under this MSA.\n\nStatements of Work\nEach engagement shall be governed by a separate Statement of Work that references this MSA, describes the scope of services, timeline, milestones, and applicable fees.\n\nPayment Terms\nAll validated invoices issued by Vendor under any Statement of Work are strictly payable within Net 30 days of receipt by the Client. Late payments shall accrue interest at 1.5% per month.\n\nPersonnel and Staffing\nVendor shall assign qualified personnel with sufficient experience and expertise to perform the services. Client may request replacement of any assigned personnel upon reasonable written notice.\n\nLicense Grant\nVendor hereby grants Client a perpetual, worldwide, unrestricted, royalty-free license to use, modify, reproduce, and create derivative works from all Deliverables produced under this Agreement.\n\nStandard Payment\nStandard payment terms for recurring managed services invoices are Net 45 days from the date of invoice.\n\nLimitation of Liability\nUnder no circumstances shall Vendor's total aggregate liability arising out of or relating to this Agreement or any Statement of Work exceed Five Hundred Thousand United States Dollars ($500,000).\n\nWarranties\nVendor warrants that all Services shall be performed in a professional and workmanlike manner consistent with generally accepted industry standards and practices.\n\nIndemnification by Vendor\nVendor shall indemnify, defend, and hold harmless Client and its affiliates, officers, directors, and employees from and against any and all third-party claims, damages, losses, costs, and expenses (including reasonable attorney fees) arising from Vendor's negligence or willful misconduct in performing the Services.\n\nConfidentiality\nEach party shall maintain the confidentiality of the other party's Confidential Information using at least the same degree of care it uses to protect its own confidential information, but in no event less than reasonable care.\n\nAudit Rights\nClient is granted the express right to audit Vendor's systems, records, processes, and facilities related to the Services at any time upon providing five (5) Business Days' prior written notice. Vendor shall reasonably cooperate with such audits.\n\nPrimary Data Processing\nAll primary data processing activities shall occur within facilities physically located in the Territory, defined as the United States of America and Canada.\n\nData Protection\nVendor shall comply with all applicable data protection laws including CCPA, GDPR where applicable, and relevant state privacy statutes. All Client personal data shall be encrypted at rest and in transit.\n\nInsurance Requirements\nVendor shall obtain and maintain comprehensive general liability insurance with minimum coverage of Two Million United States Dollars ($2,000,000) per occurrence and shall name Client as an additional insured on all such policies throughout the term of this Agreement.\n\nCompliance with Laws\nBoth parties shall comply with all applicable federal, state, and local laws, regulations, and ordinances in the performance of their obligations under this Agreement.\n\nIntellectual Property Restrictions\nUnder no circumstances may Client modify, alter, adapt, reverse engineer, decompile, or create derivative works from any Deliverables, software tools, or proprietary materials provided by Vendor without prior written approval from Vendor.\n\nNon-Solicitation\nDuring the term and for twelve (12) months after termination, neither party shall directly or indirectly solicit or hire any employee of the other party who was involved in performing or receiving Services under this Agreement.\n\nTermination for Convenience\nEither party may terminate this Agreement or any Statement of Work without cause at any time by providing thirty (30) days' prior written notice to the other party.\n\nTermination for Material Breach\nEither party may terminate this Agreement immediately upon written notice if the other party commits a material breach that remains uncured for thirty (30) days after receipt of written notice describing the breach.\n\nInvoice Processing\nClient's established accounts payable processing cycle requires a minimum of sixty (60) days from the date of invoice receipt before any payment can be issued. Vendor acknowledges and accepts this processing timeline.\n\nTransition Services\nUpon expiration or termination, Vendor shall provide transition services for a period of ninety (90) days to ensure orderly migration of services to Client or its designated successor vendor.\n\nChange Management\nAny changes to the scope, schedule, or fees of a Statement of Work must be documented in a written Change Order signed by authorized representatives of both parties.\n\nTermination for Cause\nIn the event of a material breach by either party, the non-breaching party may terminate this Agreement immediately upon providing fourteen (14) calendar days' written notice and an opportunity to cure.\n\nGoverning Law\nThis Agreement shall be governed by and construed in accordance with the laws of the State of Delaware, without regard to its conflict of laws provisions.\n\nDispute Resolution\nAny dispute arising under this Agreement shall first be escalated to senior management of both parties for resolution. If unresolved within thirty (30) days, the dispute shall be submitted to binding arbitration under AAA Commercial Rules in Wilmington, Delaware.\n\nStrategic Account Exception\nNotwithstanding the payment terms set forth in clause_08, strategic enterprise accounts that have been designated in writing by Vendor's Chief Financial Officer shall be eligible for extended Net 90 payment terms.\n\nSubcontracting\nVendor may subcontract portions of the Services to qualified third-party providers, subject to Client's prior written consent, which shall not be unreasonably withheld.\n\nService Levels\nVendor shall meet the service level targets specified in each Statement of Work. Failure to meet service levels for three (3) consecutive months shall entitle Client to service credits as defined in the applicable SLA schedule.\n\nIndemnification Cap\nThe maximum aggregate liability of either party under this Agreement, including all indemnification obligations, contributions, and damages of any kind, shall not exceed One Million United States Dollars ($1,000,000).\n\nExport Controls\nNeither party shall export or re-export any technical data, software, or deliverables in violation of United States export control laws and regulations.\n\nAnti-Corruption\nEach party represents and warrants that it has not and shall not offer, pay, or accept bribes or kickbacks in connection with this Agreement, in compliance with the Foreign Corrupt Practices Act and applicable local laws.\n\nRecords Retention\nEach party shall maintain complete and accurate records related to the performance of this Agreement for a period of five (5) years following termination.\n\nMutual Indemnification\nEach party shall be solely responsible for defending itself against any and all third-party claims arising from this Agreement. Neither party shall have any obligation to indemnify, defend, or hold harmless the other party for any claims, damages, or losses whatsoever.\n\nPublicity and Marketing\nNeither party shall issue any press release or public statement regarding this Agreement without the prior written approval of the other party.\n\nIndependent Contractors\nThe relationship between the parties is that of independent contractors. Nothing in this Agreement shall be construed to create a partnership, joint venture, agency, or employment relationship.\n\nResponse Time SLA\nVendor shall respond to Priority 1 incidents within four (4) Business Hours, where Business Hours means any hour between 8:00 AM and 8:00 PM Eastern Time, including Saturdays but excluding Sundays and public holidays observed by the Federal Reserve.\n\nBackground Checks\nAll Vendor personnel assigned to perform Services at Client facilities shall be subject to background screening consistent with Client's security policies.\n\nConfidentiality of Operations\nVendor's internal systems, processes, operational methodologies, and records are strictly proprietary and confidential. Client shall have no right to inspect, audit, review, or access any of Vendor's internal systems, processes, or operational records.\n\nBusiness Continuity\nVendor shall maintain a documented business continuity and disaster recovery plan and shall test such plan at least annually, providing results to Client upon request.\n\nAccessibility Compliance\nAll software deliverables shall comply with WCAG 2.1 Level AA accessibility standards and Section 508 of the Rehabilitation Act.\n\nEnvironmental Responsibility\nBoth parties commit to conducting their operations in an environmentally responsible manner and minimizing waste associated with the performance of Services.\n\nClient Insurance Obligations\nClient shall be solely responsible for procuring and maintaining all insurance coverage required in connection with this Agreement, including general liability, professional liability, and cyber liability insurance. Vendor assumes no insurance obligations whatsoever under this Agreement.\n\nTechnology Refresh\nVendor shall update all server infrastructure and software components to current supported versions at least once per calendar year, at no additional cost to Client.\n\nReporting Obligations\nVendor shall provide monthly status reports detailing project progress, budget utilization, and any identified risks, delivered to Client's project manager by the fifth (5th) Business Day of each month.\n\nEscalation Procedures\nBoth parties shall follow the escalation matrix attached as Schedule C for the resolution of operational issues, service failures, and disputes.\n\nGeneral Termination Notice\nFor termination without cause, a ninety (90) calendar day written notice period shall be strictly enforced to allow for orderly wind-down of services and transition planning.\n\nAcceptance Testing\nClient shall have fifteen (15) Business Days from delivery to conduct acceptance testing of each Deliverable. Deliverables not rejected within this period shall be deemed accepted.\n\nCode of Conduct\nAll Vendor personnel shall adhere to Client's Code of Conduct and workplace policies while on Client premises or accessing Client systems.\n\nBenchmarking\nClient may, once per year, engage a mutually agreed independent third party to benchmark Vendor's pricing and service levels against comparable market offerings.\n\nMinimum Commitment Period\nNeither party may terminate this Agreement for convenience during the initial twelve (12) month term. Following the initial term, termination for convenience shall require no fewer than one hundred eighty (180) days' advance written notice.\n\nSurvival\nThe following sections shall survive termination: Confidentiality, Limitation of Liability, Indemnification, Intellectual Property, and Governing Law.\n\nThird-Party Software\nVendor shall ensure that all third-party software incorporated into Deliverables is properly licensed and that Client receives all necessary rights to use such software.\n\nSeverability\nIf any provision of this Agreement is held invalid or unenforceable, the remaining provisions shall continue in full force and effect.\n\nWaiver\nThe failure of either party to enforce any right or provision of this Agreement shall not constitute a waiver of such right or provision.\n\nAssignment\nNeither party may assign or transfer this Agreement without the prior written consent of the other party, except in connection with a merger, acquisition, or sale of substantially all of its assets.\n\nDisaster Recovery\nTo ensure business continuity, backup replication and disaster recovery operations may be conducted in secondary facilities located outside the primary Territory, including data centers in the European Union and Asia-Pacific region.\n\nEntire Agreement\nThis Agreement, together with all Statements of Work, Change Orders, and Schedules, constitutes the entire agreement between the parties and supersedes all prior written or oral communications.\n\nCounterparts\nThis Agreement may be executed in counterparts, each of which shall be deemed an original and all of which together shall constitute one and the same instrument.",
+  "clauses": [
+    {
+      "id": "clause_01",
+      "title": "Parties and Recitals",
+      "text": "This Master Service Agreement (\"MSA\") is entered into between Apex Systems Corp, a Delaware corporation (\"Vendor\"), and MegaRetail Group, a multinational retail enterprise headquartered in New York (\"Client\"). The parties wish to establish the terms governing the provision of enterprise technology services."
+    },
+    {
+      "id": "clause_02",
+      "title": "Definitions",
+      "text": "In this Agreement: \"Business Day\" means any day that is not a Saturday, Sunday, or public holiday in the State of Delaware. \"Confidential Information\" means all non-public information disclosed by one party to the other. \"Deliverables\" means all work product created under a Statement of Work. \"Services\" means the professional, technical, and managed services provided by Vendor."
+    },
+    {
+      "id": "clause_03",
+      "title": "Scope of Services",
+      "text": "Vendor shall provide the technology consulting, systems integration, managed infrastructure, and application development services described in each Statement of Work executed under this MSA."
+    },
+    {
+      "id": "clause_04",
+      "title": "Statements of Work",
+      "text": "Each engagement shall be governed by a separate Statement of Work that references this MSA, describes the scope of services, timeline, milestones, and applicable fees."
+    },
+    {
+      "id": "clause_05",
+      "title": "Payment Terms",
+      "text": "All validated invoices issued by Vendor under any Statement of Work are strictly payable within Net 30 days of receipt by the Client. Late payments shall accrue interest at 1.5% per month."
+    },
+    {
+      "id": "clause_06",
+      "title": "Personnel and Staffing",
+      "text": "Vendor shall assign qualified personnel with sufficient experience and expertise to perform the services. Client may request replacement of any assigned personnel upon reasonable written notice."
+    },
+    {
+      "id": "clause_07",
+      "title": "License Grant",
+      "text": "Vendor hereby grants Client a perpetual, worldwide, unrestricted, royalty-free license to use, modify, reproduce, and create derivative works from all Deliverables produced under this Agreement."
+    },
+    {
+      "id": "clause_08",
+      "title": "Standard Payment",
+      "text": "Standard payment terms for recurring managed services invoices are Net 45 days from the date of invoice."
+    },
+    {
+      "id": "clause_09",
+      "title": "Limitation of Liability",
+      "text": "Under no circumstances shall Vendor's total aggregate liability arising out of or relating to this Agreement or any Statement of Work exceed Five Hundred Thousand United States Dollars ($500,000)."
+    },
+    {
+      "id": "clause_10",
+      "title": "Warranties",
+      "text": "Vendor warrants that all Services shall be performed in a professional and workmanlike manner consistent with generally accepted industry standards and practices."
+    },
+    {
+      "id": "clause_11",
+      "title": "Indemnification by Vendor",
+      "text": "Vendor shall indemnify, defend, and hold harmless Client and its affiliates, officers, directors, and employees from and against any and all third-party claims, damages, losses, costs, and expenses (including reasonable attorney fees) arising from Vendor's negligence or willful misconduct in performing the Services."
+    },
+    {
+      "id": "clause_12",
+      "title": "Confidentiality",
+      "text": "Each party shall maintain the confidentiality of the other party's Confidential Information using at least the same degree of care it uses to protect its own confidential information, but in no event less than reasonable care."
+    },
+    {
+      "id": "clause_13",
+      "title": "Audit Rights",
+      "text": "Client is granted the express right to audit Vendor's systems, records, processes, and facilities related to the Services at any time upon providing five (5) Business Days' prior written notice. Vendor shall reasonably cooperate with such audits."
+    },
+    {
+      "id": "clause_14",
+      "title": "Primary Data Processing",
+      "text": "All primary data processing activities shall occur within facilities physically located in the Territory, defined as the United States of America and Canada."
+    },
+    {
+      "id": "clause_15",
+      "title": "Data Protection",
+      "text": "Vendor shall comply with all applicable data protection laws including CCPA, GDPR where applicable, and relevant state privacy statutes. All Client personal data shall be encrypted at rest and in transit."
+    },
+    {
+      "id": "clause_16",
+      "title": "Insurance Requirements",
+      "text": "Vendor shall obtain and maintain comprehensive general liability insurance with minimum coverage of Two Million United States Dollars ($2,000,000) per occurrence and shall name Client as an additional insured on all such policies throughout the term of this Agreement."
+    },
+    {
+      "id": "clause_17",
+      "title": "Compliance with Laws",
+      "text": "Both parties shall comply with all applicable federal, state, and local laws, regulations, and ordinances in the performance of their obligations under this Agreement."
+    },
+    {
+      "id": "clause_18",
+      "title": "Intellectual Property Restrictions",
+      "text": "Under no circumstances may Client modify, alter, adapt, reverse engineer, decompile, or create derivative works from any Deliverables, software tools, or proprietary materials provided by Vendor without prior written approval from Vendor."
+    },
+    {
+      "id": "clause_19",
+      "title": "Non-Solicitation",
+      "text": "During the term and for twelve (12) months after termination, neither party shall directly or indirectly solicit or hire any employee of the other party who was involved in performing or receiving Services under this Agreement."
+    },
+    {
+      "id": "clause_20",
+      "title": "Termination for Convenience",
+      "text": "Either party may terminate this Agreement or any Statement of Work without cause at any time by providing thirty (30) days' prior written notice to the other party."
+    },
+    {
+      "id": "clause_21",
+      "title": "Termination for Material Breach",
+      "text": "Either party may terminate this Agreement immediately upon written notice if the other party commits a material breach that remains uncured for thirty (30) days after receipt of written notice describing the breach."
+    },
+    {
+      "id": "clause_22",
+      "title": "Invoice Processing",
+      "text": "Client's established accounts payable processing cycle requires a minimum of sixty (60) days from the date of invoice receipt before any payment can be issued. Vendor acknowledges and accepts this processing timeline."
+    },
+    {
+      "id": "clause_23",
+      "title": "Transition Services",
+      "text": "Upon expiration or termination, Vendor shall provide transition services for a period of ninety (90) days to ensure orderly migration of services to Client or its designated successor vendor."
+    },
+    {
+      "id": "clause_24",
+      "title": "Change Management",
+      "text": "Any changes to the scope, schedule, or fees of a Statement of Work must be documented in a written Change Order signed by authorized representatives of both parties."
+    },
+    {
+      "id": "clause_25",
+      "title": "Termination for Cause",
+      "text": "In the event of a material breach by either party, the non-breaching party may terminate this Agreement immediately upon providing fourteen (14) calendar days' written notice and an opportunity to cure."
+    },
+    {
+      "id": "clause_26",
+      "title": "Governing Law",
+      "text": "This Agreement shall be governed by and construed in accordance with the laws of the State of Delaware, without regard to its conflict of laws provisions."
+    },
+    {
+      "id": "clause_27",
+      "title": "Dispute Resolution",
+      "text": "Any dispute arising under this Agreement shall first be escalated to senior management of both parties for resolution. If unresolved within thirty (30) days, the dispute shall be submitted to binding arbitration under AAA Commercial Rules in Wilmington, Delaware."
+    },
+    {
+      "id": "clause_28",
+      "title": "Strategic Account Exception",
+      "text": "Notwithstanding the payment terms set forth in clause_08, strategic enterprise accounts that have been designated in writing by Vendor's Chief Financial Officer shall be eligible for extended Net 90 payment terms."
+    },
+    {
+      "id": "clause_29",
+      "title": "Subcontracting",
+      "text": "Vendor may subcontract portions of the Services to qualified third-party providers, subject to Client's prior written consent, which shall not be unreasonably withheld."
+    },
+    {
+      "id": "clause_30",
+      "title": "Service Levels",
+      "text": "Vendor shall meet the service level targets specified in each Statement of Work. Failure to meet service levels for three (3) consecutive months shall entitle Client to service credits as defined in the applicable SLA schedule."
+    },
+    {
+      "id": "clause_31",
+      "title": "Indemnification Cap",
+      "text": "The maximum aggregate liability of either party under this Agreement, including all indemnification obligations, contributions, and damages of any kind, shall not exceed One Million United States Dollars ($1,000,000)."
+    },
+    {
+      "id": "clause_32",
+      "title": "Export Controls",
+      "text": "Neither party shall export or re-export any technical data, software, or deliverables in violation of United States export control laws and regulations."
+    },
+    {
+      "id": "clause_33",
+      "title": "Anti-Corruption",
+      "text": "Each party represents and warrants that it has not and shall not offer, pay, or accept bribes or kickbacks in connection with this Agreement, in compliance with the Foreign Corrupt Practices Act and applicable local laws."
+    },
+    {
+      "id": "clause_34",
+      "title": "Records Retention",
+      "text": "Each party shall maintain complete and accurate records related to the performance of this Agreement for a period of five (5) years following termination."
+    },
+    {
+      "id": "clause_35",
+      "title": "Mutual Indemnification",
+      "text": "Each party shall be solely responsible for defending itself against any and all third-party claims arising from this Agreement. Neither party shall have any obligation to indemnify, defend, or hold harmless the other party for any claims, damages, or losses whatsoever."
+    },
+    {
+      "id": "clause_36",
+      "title": "Publicity and Marketing",
+      "text": "Neither party shall issue any press release or public statement regarding this Agreement without the prior written approval of the other party."
+    },
+    {
+      "id": "clause_37",
+      "title": "Independent Contractors",
+      "text": "The relationship between the parties is that of independent contractors. Nothing in this Agreement shall be construed to create a partnership, joint venture, agency, or employment relationship."
+    },
+    {
+      "id": "clause_38",
+      "title": "Response Time SLA",
+      "text": "Vendor shall respond to Priority 1 incidents within four (4) Business Hours, where Business Hours means any hour between 8:00 AM and 8:00 PM Eastern Time, including Saturdays but excluding Sundays and public holidays observed by the Federal Reserve."
+    },
+    {
+      "id": "clause_39",
+      "title": "Background Checks",
+      "text": "All Vendor personnel assigned to perform Services at Client facilities shall be subject to background screening consistent with Client's security policies."
+    },
+    {
+      "id": "clause_40",
+      "title": "Confidentiality of Operations",
+      "text": "Vendor's internal systems, processes, operational methodologies, and records are strictly proprietary and confidential. Client shall have no right to inspect, audit, review, or access any of Vendor's internal systems, processes, or operational records."
+    },
+    {
+      "id": "clause_41",
+      "title": "Business Continuity",
+      "text": "Vendor shall maintain a documented business continuity and disaster recovery plan and shall test such plan at least annually, providing results to Client upon request."
+    },
+    {
+      "id": "clause_42",
+      "title": "Accessibility Compliance",
+      "text": "All software deliverables shall comply with WCAG 2.1 Level AA accessibility standards and Section 508 of the Rehabilitation Act."
+    },
+    {
+      "id": "clause_43",
+      "title": "Environmental Responsibility",
+      "text": "Both parties commit to conducting their operations in an environmentally responsible manner and minimizing waste associated with the performance of Services."
+    },
+    {
+      "id": "clause_44",
+      "title": "Client Insurance Obligations",
+      "text": "Client shall be solely responsible for procuring and maintaining all insurance coverage required in connection with this Agreement, including general liability, professional liability, and cyber liability insurance. Vendor assumes no insurance obligations whatsoever under this Agreement."
+    },
+    {
+      "id": "clause_45",
+      "title": "Technology Refresh",
+      "text": "Vendor shall update all server infrastructure and software components to current supported versions at least once per calendar year, at no additional cost to Client."
+    },
+    {
+      "id": "clause_46",
+      "title": "Reporting Obligations",
+      "text": "Vendor shall provide monthly status reports detailing project progress, budget utilization, and any identified risks, delivered to Client's project manager by the fifth (5th) Business Day of each month."
+    },
+    {
+      "id": "clause_47",
+      "title": "Escalation Procedures",
+      "text": "Both parties shall follow the escalation matrix attached as Schedule C for the resolution of operational issues, service failures, and disputes."
+    },
+    {
+      "id": "clause_48",
+      "title": "General Termination Notice",
+      "text": "For termination without cause, a ninety (90) calendar day written notice period shall be strictly enforced to allow for orderly wind-down of services and transition planning."
+    },
+    {
+      "id": "clause_49",
+      "title": "Acceptance Testing",
+      "text": "Client shall have fifteen (15) Business Days from delivery to conduct acceptance testing of each Deliverable. Deliverables not rejected within this period shall be deemed accepted."
+    },
+    {
+      "id": "clause_50",
+      "title": "Code of Conduct",
+      "text": "All Vendor personnel shall adhere to Client's Code of Conduct and workplace policies while on Client premises or accessing Client systems."
+    },
+    {
+      "id": "clause_51",
+      "title": "Benchmarking",
+      "text": "Client may, once per year, engage a mutually agreed independent third party to benchmark Vendor's pricing and service levels against comparable market offerings."
+    },
+    {
+      "id": "clause_52",
+      "title": "Minimum Commitment Period",
+      "text": "Neither party may terminate this Agreement for convenience during the initial twelve (12) month term. Following the initial term, termination for convenience shall require no fewer than one hundred eighty (180) days' advance written notice."
+    },
+    {
+      "id": "clause_53",
+      "title": "Survival",
+      "text": "The following sections shall survive termination: Confidentiality, Limitation of Liability, Indemnification, Intellectual Property, and Governing Law."
+    },
+    {
+      "id": "clause_54",
+      "title": "Third-Party Software",
+      "text": "Vendor shall ensure that all third-party software incorporated into Deliverables is properly licensed and that Client receives all necessary rights to use such software."
+    },
+    {
+      "id": "clause_55",
+      "title": "Severability",
+      "text": "If any provision of this Agreement is held invalid or unenforceable, the remaining provisions shall continue in full force and effect."
+    },
+    {
+      "id": "clause_56",
+      "title": "Waiver",
+      "text": "The failure of either party to enforce any right or provision of this Agreement shall not constitute a waiver of such right or provision."
+    },
+    {
+      "id": "clause_57",
+      "title": "Assignment",
+      "text": "Neither party may assign or transfer this Agreement without the prior written consent of the other party, except in connection with a merger, acquisition, or sale of substantially all of its assets."
+    },
+    {
+      "id": "clause_58",
+      "title": "Disaster Recovery",
+      "text": "To ensure business continuity, backup replication and disaster recovery operations may be conducted in secondary facilities located outside the primary Territory, including data centers in the European Union and Asia-Pacific region."
+    },
+    {
+      "id": "clause_59",
+      "title": "Entire Agreement",
+      "text": "This Agreement, together with all Statements of Work, Change Orders, and Schedules, constitutes the entire agreement between the parties and supersedes all prior written or oral communications."
+    },
+    {
+      "id": "clause_60",
+      "title": "Counterparts",
+      "text": "This Agreement may be executed in counterparts, each of which shall be deemed an original and all of which together shall constitute one and the same instrument."
+    }
+  ],
+  "contradictions": [
+    {
+      "clause_a_id": "clause_05",
+      "clause_b_id": "clause_22",
+      "type": "numeric",
+      "description": "Net 30 payment terms vs 60-day processing cycle."
+    },
+    {
+      "clause_a_id": "clause_09",
+      "clause_b_id": "clause_31",
+      "type": "numeric",
+      "description": "Vendor liability cap $500K vs aggregate liability cap $1M."
+    },
+    {
+      "clause_a_id": "clause_07",
+      "clause_b_id": "clause_18",
+      "type": "scope",
+      "description": "Unrestricted license to modify and create derivative works vs no modifications without written approval."
+    },
+    {
+      "clause_a_id": "clause_13",
+      "clause_b_id": "clause_40",
+      "type": "scope",
+      "description": "Client can audit Vendor's systems vs Client has no right to audit Vendor's systems."
+    },
+    {
+      "clause_a_id": "clause_11",
+      "clause_b_id": "clause_35",
+      "type": "party_obligation",
+      "description": "Vendor indemnifies Client vs neither party indemnifies the other."
+    },
+    {
+      "clause_a_id": "clause_16",
+      "clause_b_id": "clause_44",
+      "type": "party_obligation",
+      "description": "Vendor maintains insurance vs Client solely responsible for all insurance."
+    },
+    {
+      "clause_a_id": "clause_20",
+      "clause_b_id": "clause_52",
+      "type": "temporal",
+      "description": "30-day termination anytime vs no convenience termination during first 12 months and 180-day notice after."
+    },
+    {
+      "clause_a_id": "clause_02",
+      "clause_b_id": "clause_38",
+      "type": "definition",
+      "description": "Business Day excludes Saturday vs Business Hours includes Saturday."
+    }
+  ],
+  "traps": [
+    {
+      "clause_a_id": "clause_25",
+      "clause_b_id": "clause_48",
+      "reason": "Different contexts: 14 days for termination for cause vs 90 days for termination without cause."
+    },
+    {
+      "clause_a_id": "clause_08",
+      "clause_b_id": "clause_28",
+      "reason": "Explicit override: clause_28 uses 'Notwithstanding clause_08' to create an intentional exception for strategic accounts."
+    },
+    {
+      "clause_a_id": "clause_14",
+      "clause_b_id": "clause_58",
+      "reason": "Complementary scope: primary processing in Territory vs disaster recovery outside Territory \u2014 different activities."
+    }
+  ],
+  "execution_scenarios": [
+    {
+      "scenario_id": "scenario_01",
+      "title": "Client pays invoice on day 45 citing standard payment terms",
+      "description": "MegaRetail processes a managed services invoice and remits payment 45 days after receipt, citing the Net 45 standard payment clause. Apex Systems flags the payment as 15 days late under the Net 30 terms.",
+      "actor": "Client (MegaRetail Group)",
+      "action_taken": "MegaRetail pays managed services invoice on day 45 citing Net 45 standard terms",
+      "triggers_clauses": [
+        "clause_05",
+        "clause_22"
+      ],
+      "crashes": true,
+      "crash_pair": {
+        "clause_a_id": "clause_05",
+        "clause_b_id": "clause_22"
+      },
+      "crash_description": "Clause 05 requires Net 30 payment with 1.5% monthly interest on late payments. Clause 22 states accounts payable requires 60 days minimum processing. Payment at day 45 is late under Clause 05 but early under Clause 22. The interest obligation is ambiguous.",
+      "financial_exposure": "Disputed interest charges accruing at 1.5% monthly on enterprise-scale invoices",
+      "clean_resolution": null
+    },
+    {
+      "scenario_id": "scenario_02",
+      "title": "Apex Systems caps liability at $500K after major system failure",
+      "description": "A critical system outage causes MegaRetail to lose $800K in revenue. MegaRetail demands compensation. Apex Systems invokes the $500K liability cap. MegaRetail argues the aggregate cap is $1M.",
+      "actor": "Client (MegaRetail Group)",
+      "action_taken": "MegaRetail claims damages exceeding $500K citing the $1M aggregate liability cap",
+      "triggers_clauses": [
+        "clause_09",
+        "clause_31"
+      ],
+      "crashes": true,
+      "crash_pair": {
+        "clause_a_id": "clause_09",
+        "clause_b_id": "clause_31"
+      },
+      "crash_description": "Clause 09 caps Vendor liability at $500K. Clause 31 sets aggregate liability including indemnification at $1M. These are different caps for overlapping obligations. The enforceable maximum is unclear.",
+      "financial_exposure": "$500K gap in liability coverage creating uncertainty for claims above $500K",
+      "clean_resolution": null
+    },
+    {
+      "scenario_id": "scenario_03",
+      "title": "Client modifies delivered application to integrate with internal systems",
+      "description": "MegaRetail engineering team modifies the delivered CRM application to integrate with their proprietary inventory system. Apex Systems sends a cease-and-desist claiming unauthorized modification of deliverables.",
+      "actor": "Client (MegaRetail Group)",
+      "action_taken": "MegaRetail modifies delivered application source code to create custom integration",
+      "triggers_clauses": [
+        "clause_07",
+        "clause_18"
+      ],
+      "crashes": true,
+      "crash_pair": {
+        "clause_a_id": "clause_07",
+        "clause_b_id": "clause_18"
+      },
+      "crash_description": "Clause 07 grants an unrestricted license to modify and create derivative works. Clause 18 prohibits any modification without written approval. The client cannot determine if they have the right to modify deliverables.",
+      "financial_exposure": "Potential IP infringement claim against the modified integration system",
+      "clean_resolution": null
+    },
+    {
+      "scenario_id": "scenario_04",
+      "title": "Client sends audit notice to inspect Vendor operational records",
+      "description": "MegaRetail compliance team sends a 5-day advance notice to audit Vendor systems and operational records as part of their annual compliance review.",
+      "actor": "Client (MegaRetail Group)",
+      "action_taken": "MegaRetail exercises audit rights with 5 business days notice requesting access to Vendor systems",
+      "triggers_clauses": [
+        "clause_13",
+        "clause_40"
+      ],
+      "crashes": true,
+      "crash_pair": {
+        "clause_a_id": "clause_13",
+        "clause_b_id": "clause_40"
+      },
+      "crash_description": "Clause 13 grants Client the right to audit Vendor systems, records, and processes at any time with 5 days notice. Clause 40 states Client has no right to inspect, audit, or access Vendor internal systems or records. The audit request is simultaneously authorized and prohibited.",
+      "financial_exposure": "Compliance failure risk if audit cannot be conducted per regulatory requirements",
+      "clean_resolution": null
+    },
+    {
+      "scenario_id": "scenario_05",
+      "title": "Vendor refuses to indemnify Client after third-party negligence claim",
+      "description": "A third party sues MegaRetail for damages arising from Vendor negligence. MegaRetail demands Vendor indemnify and defend. Vendor refuses citing the mutual indemnification clause waiver.",
+      "actor": "Client (MegaRetail Group)",
+      "action_taken": "MegaRetail demands Vendor indemnification for third-party negligence claim",
+      "triggers_clauses": [
+        "clause_11",
+        "clause_35"
+      ],
+      "crashes": true,
+      "crash_pair": {
+        "clause_a_id": "clause_11",
+        "clause_b_id": "clause_35"
+      },
+      "crash_description": "Clause 11 obligates Vendor to indemnify Client against third-party claims from Vendor negligence. Clause 35 states neither party has any obligation to indemnify the other for any claims whatsoever. The indemnification obligation is simultaneously enforced and waived.",
+      "financial_exposure": "Uninsured third-party claim potentially exceeding $1M with no clear contractual defense allocation",
+      "clean_resolution": null
+    },
+    {
+      "scenario_id": "scenario_06",
+      "title": "Vendor drops insurance policy claiming Client is solely responsible",
+      "description": "Apex Systems allows its $2M general liability insurance policy to lapse, citing the clause making Client solely responsible for all insurance. MegaRetail discovers the lapse during a routine vendor risk assessment.",
+      "actor": "Vendor (Apex Systems Corp)",
+      "action_taken": "Apex Systems allows general liability insurance to lapse and refuses reinstatement",
+      "triggers_clauses": [
+        "clause_16",
+        "clause_44"
+      ],
+      "crashes": true,
+      "crash_pair": {
+        "clause_a_id": "clause_16",
+        "clause_b_id": "clause_44"
+      },
+      "crash_description": "Clause 16 requires Vendor to maintain $2M insurance naming Client as additional insured. Clause 44 states Client is solely responsible for all insurance and Vendor assumes no insurance obligations. Neither party can determine who is required to carry coverage.",
+      "financial_exposure": "Gap in insurance coverage exposing both parties to uninsured liability",
+      "clean_resolution": null
+    },
+    {
+      "scenario_id": "scenario_07",
+      "title": "Client sends 30-day termination notice during month 3",
+      "description": "Three months into the engagement, MegaRetail CTO decides to terminate citing the 30-day convenience clause. Apex Systems responds that termination is prohibited during the initial 12-month term.",
+      "actor": "Client (MegaRetail Group)",
+      "action_taken": "MegaRetail sends 30-day termination for convenience notice during month 3 of initial term",
+      "triggers_clauses": [
+        "clause_20",
+        "clause_52"
+      ],
+      "crashes": true,
+      "crash_pair": {
+        "clause_a_id": "clause_20",
+        "clause_b_id": "clause_52"
+      },
+      "crash_description": "Clause 20 allows termination without cause at any time with 30 days notice. Clause 52 prohibits convenience termination during the initial 12-month term and requires 180-day notice thereafter. The termination is simultaneously permitted and prohibited.",
+      "financial_exposure": "Potential liability for remaining 9 months of service fees if termination is invalid",
+      "clean_resolution": null
+    },
+    {
+      "scenario_id": "scenario_08",
+      "title": "SLA incident on Saturday triggers Business Day definition conflict",
+      "description": "A Priority 1 incident occurs at 2 PM on Saturday. The MegaRetail operations center demands a response within 4 Business Hours. Apex Systems argues Saturday is not a Business Day per the definitions clause.",
+      "actor": "Client (MegaRetail Group)",
+      "action_taken": "MegaRetail files Priority 1 incident at 2 PM Saturday and demands 4-hour response",
+      "triggers_clauses": [
+        "clause_02",
+        "clause_38"
+      ],
+      "crashes": true,
+      "crash_pair": {
+        "clause_a_id": "clause_02",
+        "clause_b_id": "clause_38"
+      },
+      "crash_description": "Clause 02 defines Business Day as excluding Saturday. Clause 38 defines Business Hours as including Saturday. The same SLA response obligation uses contradictory definitions of when business operations are active.",
+      "financial_exposure": "Extended outage exposure during weekend trading hours if response is delayed to Monday",
+      "clean_resolution": null
+    },
+    {
+      "scenario_id": "scenario_09",
+      "title": "Client terminates for cause with 14 days notice vs 30 days cure",
+      "description": "MegaRetail invokes termination for cause citing a material breach. Legal department must determine the cure period \u2014 one clause says 14 calendar days, another says 30 days.",
+      "actor": "Client (MegaRetail Group)",
+      "action_taken": "MegaRetail sends termination for cause notice giving Vendor 14 calendar days to cure",
+      "triggers_clauses": [
+        "clause_21",
+        "clause_25"
+      ],
+      "crashes": false,
+      "crash_pair": null,
+      "crash_description": null,
+      "financial_exposure": null,
+      "clean_resolution": "Clause 21 provides 30 days cure for material breach. Clause 25 provides 14 days for cause termination. These are different termination provisions covering different contexts \u2014 one for material breach and one for cause. No contradiction triggered."
+    },
+    {
+      "scenario_id": "scenario_10",
+      "title": "Strategic account receives Net 90 payment terms",
+      "description": "MegaRetail is designated as a strategic enterprise account by the CFO. They request Net 90 payment terms. Apex invoicing switches from Net 45 to Net 90 for this account.",
+      "actor": "Vendor (Apex Systems Corp)",
+      "action_taken": "Apex CFO designates MegaRetail as strategic account and extends Net 90 payment terms",
+      "triggers_clauses": [
+        "clause_08",
+        "clause_28"
+      ],
+      "crashes": false,
+      "crash_pair": null,
+      "crash_description": null,
+      "financial_exposure": null,
+      "clean_resolution": "Clause 28 explicitly says \"Notwithstanding clause_08\" which creates an intentional override for strategic accounts. This is not a contradiction \u2014 it is a deliberate legal exception."
+    },
+    {
+      "scenario_id": "scenario_11",
+      "title": "Disaster recovery runs in EU data center outside primary territory",
+      "description": "Apex Systems activates disaster recovery operations in an EU data center after a US facility disruption. MegaRetail compliance officer questions whether data processing outside the primary territory violates the agreement.",
+      "actor": "Vendor (Apex Systems Corp)",
+      "action_taken": "Apex Systems fails over to EU disaster recovery facility during US site disruption",
+      "triggers_clauses": [
+        "clause_14",
+        "clause_58"
+      ],
+      "crashes": false,
+      "crash_pair": null,
+      "crash_description": null,
+      "financial_exposure": null,
+      "clean_resolution": "Clause 14 restricts primary data processing to US and Canada. Clause 58 specifically addresses disaster recovery (a different activity) and explicitly permits it outside the territory. These cover complementary, non-overlapping scopes."
+    },
+    {
+      "scenario_id": "scenario_12",
+      "title": "Vendor provides monthly status report on schedule",
+      "description": "Apex Systems project manager delivers the January status report to MegaRetail by the 5th Business Day of February, detailing project progress, budget utilization, and identified risks.",
+      "actor": "Vendor (Apex Systems Corp)",
+      "action_taken": "Apex Systems delivers monthly status report by the 5th Business Day as required",
+      "triggers_clauses": [
+        "clause_46"
+      ],
+      "crashes": false,
+      "crash_pair": null,
+      "crash_description": null,
+      "financial_exposure": null,
+      "clean_resolution": "Clause 46 requires monthly status reports by the 5th Business Day. The report is delivered on time. No contradiction triggered."
+    },
+    {
+      "scenario_id": "scenario_13",
+      "title": "Both parties execute signed Change Order for scope expansion",
+      "description": "MegaRetail requests additional API integration features. Both parties negotiate terms and sign a written Change Order documenting the expanded scope, adjusted timeline, and additional fees.",
+      "actor": "Both parties",
+      "action_taken": "Both parties execute written Change Order for expanded API integration scope",
+      "triggers_clauses": [
+        "clause_24"
+      ],
+      "crashes": false,
+      "crash_pair": null,
+      "crash_description": null,
+      "financial_exposure": null,
+      "clean_resolution": "Clause 24 requires all scope changes to be documented in a written Change Order signed by both parties. Both conditions are met. No contradiction triggered."
+    },
+    {
+      "scenario_id": "scenario_14",
+      "title": "Vendor assigns qualified replacement personnel after Client request",
+      "description": "MegaRetail requests replacement of an underperforming developer. Apex Systems reassigns the developer and provides a qualified replacement within two weeks.",
+      "actor": "Client (MegaRetail Group)",
+      "action_taken": "MegaRetail requests personnel replacement via reasonable written notice",
+      "triggers_clauses": [
+        "clause_06"
+      ],
+      "crashes": false,
+      "crash_pair": null,
+      "crash_description": null,
+      "financial_exposure": null,
+      "clean_resolution": "Clause 06 allows Client to request replacement of assigned personnel upon reasonable written notice. The process is followed correctly. No contradiction triggered."
+    }
+  ]
+}

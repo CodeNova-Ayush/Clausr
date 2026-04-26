@@ -1,0 +1,85 @@
+{
+  "contract_id": "adversarial_easy_001",
+  "task_id": "adversarial_easy",
+  "title": "NDA between TechVentures Inc and InnovateCo Ltd",
+  "contract_text": "Parties\nThis Non-Disclosure Agreement is entered into between TechVentures Inc, a Delaware corporation (\"Disclosing Party\"), and InnovateCo Ltd, an Ontario corporation (\"Receiving Party\").\n\nPurpose\nThe parties wish to explore a potential joint venture in connection with which the Disclosing Party may share proprietary information with the Receiving Party.\n\nConfidentiality Obligations\nThe Receiving Party shall protect all Confidential Information with at least the same degree of care it uses for its own proprietary information, for a period of two (2) years from disclosure.\n\nPermitted Use\nConfidential Information may only be used for the Purpose described herein and may not be used for any other commercial or non-commercial purpose.\n\nReturn of Materials\nUpon termination, the Receiving Party shall return or destroy all materials containing Confidential Information within thirty (30) days.\n\nExclusions\nInformation that is publicly available, independently developed, or received from a third party without restriction shall not be considered Confidential Information.\n\nRemedies\nThe Disclosing Party shall be entitled to seek injunctive relief in addition to any other remedies available at law or in equity.\n\nGoverning Law\nThis Agreement shall be governed by the laws of the State of Delaware without regard to conflict of laws principles.",
+  "clauses": [
+    {
+      "id": "clause_01",
+      "title": "Parties",
+      "text": "This Non-Disclosure Agreement is entered into between TechVentures Inc, a Delaware corporation (\"Disclosing Party\"), and InnovateCo Ltd, an Ontario corporation (\"Receiving Party\")."
+    },
+    {
+      "id": "clause_02",
+      "title": "Purpose",
+      "text": "The parties wish to explore a potential joint venture in connection with which the Disclosing Party may share proprietary information with the Receiving Party."
+    },
+    {
+      "id": "clause_03",
+      "title": "Confidentiality Obligations",
+      "text": "The Receiving Party shall protect all Confidential Information with at least the same degree of care it uses for its own proprietary information, for a period of two (2) years from disclosure."
+    },
+    {
+      "id": "clause_04",
+      "title": "Permitted Use",
+      "text": "Confidential Information may only be used for the Purpose described herein and may not be used for any other commercial or non-commercial purpose."
+    },
+    {
+      "id": "clause_05",
+      "title": "Return of Materials",
+      "text": "Upon termination, the Receiving Party shall return or destroy all materials containing Confidential Information within thirty (30) days."
+    },
+    {
+      "id": "clause_06",
+      "title": "Exclusions",
+      "text": "Information that is publicly available, independently developed, or received from a third party without restriction shall not be considered Confidential Information."
+    },
+    {
+      "id": "clause_07",
+      "title": "Remedies",
+      "text": "The Disclosing Party shall be entitled to seek injunctive relief in addition to any other remedies available at law or in equity."
+    },
+    {
+      "id": "clause_08",
+      "title": "Governing Law",
+      "text": "This Agreement shall be governed by the laws of the State of Delaware without regard to conflict of laws principles."
+    }
+  ],
+  "obligation_taxonomy": [
+    {
+      "clause_id": "clause_03",
+      "obligations": [
+        "confidentiality"
+      ]
+    },
+    {
+      "clause_id": "clause_04",
+      "obligations": [
+        "confidentiality",
+        "ip_rights"
+      ]
+    },
+    {
+      "clause_id": "clause_05",
+      "obligations": [
+        "delivery",
+        "termination"
+      ]
+    },
+    {
+      "clause_id": "clause_07",
+      "obligations": [
+        "liability"
+      ]
+    }
+  ],
+  "forbidden_lexical_patterns": [
+    "day",
+    "month",
+    "year",
+    "period",
+    "confiden"
+  ],
+  "contradictions": [],
+  "auditor_history": null
+}

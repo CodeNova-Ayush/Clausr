@@ -1,0 +1,454 @@
+{
+  "task_id": "constitution_hard",
+  "contracts": [
+    {
+      "contract_id": "contract_1",
+      "contract_type": "Employment Agreement",
+      "clauses": [
+        {
+          "id": "employment_agreement_clause_08",
+          "title": "General Provision",
+          "text": "This agreement may not be assigned without the prior written consent of the other party."
+        },
+        {
+          "id": "employment_agreement_clause_06",
+          "title": "General Provision",
+          "text": "Each party represents and warrants that it has the authority to enter into this agreement."
+        },
+        {
+          "id": "employment_agreement_clause_04",
+          "title": "General Provision",
+          "text": "Amendments to this agreement must be in writing and signed by both parties."
+        },
+        {
+          "id": "employment_agreement_clause_02",
+          "title": "General Provision",
+          "text": "This agreement may not be assigned without the prior written consent of the other party."
+        },
+        {
+          "id": "employment_agreement_clause_03",
+          "title": "General Provision",
+          "text": "No waiver of any provision of this agreement shall be effective unless in writing."
+        },
+        {
+          "id": "employment_agreement_clause_05",
+          "title": "General Provision",
+          "text": "The headings in this agreement are for convenience only and do not affect its interpretation."
+        },
+        {
+          "id": "employment_agreement_clause_09",
+          "title": "General Provision",
+          "text": "This agreement may not be assigned without the prior written consent of the other party."
+        },
+        {
+          "id": "employment_agreement_clause_01",
+          "title": "IP Ownership Conflict Provision",
+          "text": "Intellectual property generated jointly shall be owned jointly by both parties, with neither having exclusive rights."
+        },
+        {
+          "id": "employment_agreement_clause_07",
+          "title": "General Provision",
+          "text": "This agreement may be executed in counterparts."
+        },
+        {
+          "id": "employment_agreement_clause_10",
+          "title": "General Provision",
+          "text": "Neither party shall be liable for any delay caused by force majeure events."
+        },
+        {
+          "id": "employment_agreement_clause_11",
+          "title": "General Provision",
+          "text": "No waiver of any provision of this agreement shall be effective unless in writing."
+        }
+      ]
+    },
+    {
+      "contract_id": "contract_2",
+      "contract_type": "Vendor Agreement",
+      "clauses": [
+        {
+          "id": "vendor_agreement_clause_12",
+          "title": "General Provision",
+          "text": "The headings in this agreement are for convenience only and do not affect its interpretation."
+        },
+        {
+          "id": "vendor_agreement_clause_16",
+          "title": "General Provision",
+          "text": "Notices shall be deemed given when delivered in person or sent by registered mail."
+        },
+        {
+          "id": "vendor_agreement_clause_09",
+          "title": "General Provision",
+          "text": "The headings in this agreement are for convenience only and do not affect its interpretation."
+        },
+        {
+          "id": "vendor_agreement_clause_19",
+          "title": "General Provision",
+          "text": "The provisions of this agreement are severable, and if any provision is found to be invalid, the remainder shall continue in effect."
+        },
+        {
+          "id": "vendor_agreement_clause_02",
+          "title": "Liability Cap Conflict Provision",
+          "text": "The total maximum liability of the Vendor for any claims is capped at 2x the annual fees paid."
+        },
+        {
+          "id": "vendor_agreement_clause_13",
+          "title": "General Provision",
+          "text": "Each party represents and warrants that it has the authority to enter into this agreement."
+        },
+        {
+          "id": "vendor_agreement_clause_08",
+          "title": "General Provision",
+          "text": "This agreement may not be assigned without the prior written consent of the other party."
+        },
+        {
+          "id": "vendor_agreement_clause_03",
+          "title": "Confidentiality Scope Conflict Provision",
+          "text": "Confidential information shall include all materials disclosed by either party, whether marked confidential or not."
+        },
+        {
+          "id": "vendor_agreement_clause_11",
+          "title": "General Provision",
+          "text": "This agreement may be executed in counterparts."
+        },
+        {
+          "id": "vendor_agreement_clause_17",
+          "title": "General Provision",
+          "text": "The provisions of this agreement are severable, and if any provision is found to be invalid, the remainder shall continue in effect."
+        },
+        {
+          "id": "vendor_agreement_clause_14",
+          "title": "General Provision",
+          "text": "Notices shall be deemed given when delivered in person or sent by registered mail."
+        },
+        {
+          "id": "vendor_agreement_clause_18",
+          "title": "General Provision",
+          "text": "The headings in this agreement are for convenience only and do not affect its interpretation."
+        },
+        {
+          "id": "vendor_agreement_clause_15",
+          "title": "General Provision",
+          "text": "The headings in this agreement are for convenience only and do not affect its interpretation."
+        },
+        {
+          "id": "vendor_agreement_clause_10",
+          "title": "General Provision",
+          "text": "This agreement may not be assigned without the prior written consent of the other party."
+        },
+        {
+          "id": "vendor_agreement_clause_04",
+          "title": "General Provision",
+          "text": "Each party represents and warrants that it has the authority to enter into this agreement."
+        },
+        {
+          "id": "vendor_agreement_clause_06",
+          "title": "General Provision",
+          "text": "This agreement may be executed in counterparts."
+        },
+        {
+          "id": "vendor_agreement_clause_05",
+          "title": "General Provision",
+          "text": "The parties are independent contractors and nothing herein creates a partnership or joint venture."
+        },
+        {
+          "id": "vendor_agreement_clause_07",
+          "title": "General Provision",
+          "text": "Each party represents and warrants that it has the authority to enter into this agreement."
+        },
+        {
+          "id": "vendor_agreement_clause_01",
+          "title": "Jurisdiction Conflict Provision",
+          "text": "Any controversy or claim arising out of or relating to this agreement shall be settled by binding arbitration in New York."
+        }
+      ]
+    },
+    {
+      "contract_id": "contract_3",
+      "contract_type": "Master Service Agreement",
+      "clauses": [
+        {
+          "id": "master_service_agreement_clause_01",
+          "title": "Jurisdiction Conflict Provision",
+          "text": "All disputes arising from this agreement shall be resolved exclusively in the state and federal courts located in California."
+        },
+        {
+          "id": "master_service_agreement_clause_07",
+          "title": "General Provision",
+          "text": "This agreement constitutes the entire understanding between the parties."
+        },
+        {
+          "id": "master_service_agreement_clause_04",
+          "title": "Jurisdiction Conflict Provision",
+          "text": "Any controversy or claim arising out of or relating to this agreement shall be settled by binding arbitration in New York."
+        },
+        {
+          "id": "master_service_agreement_clause_02",
+          "title": "IP Ownership Conflict Provision",
+          "text": "The Vendor retains all right, title, and interest in and to any intellectual property created during the provision of services."
+        },
+        {
+          "id": "master_service_agreement_clause_06",
+          "title": "General Provision",
+          "text": "Neither party shall be liable for any delay caused by force majeure events."
+        },
+        {
+          "id": "master_service_agreement_clause_03",
+          "title": "Confidentiality Scope Conflict Provision",
+          "text": "Confidential information is strictly limited to written documents explicitly stamped 'CONFIDENTIAL' prior to disclosure."
+        },
+        {
+          "id": "master_service_agreement_clause_08",
+          "title": "General Provision",
+          "text": "This agreement may be executed in counterparts."
+        },
+        {
+          "id": "master_service_agreement_clause_05",
+          "title": "General Provision",
+          "text": "Neither party shall be liable for any delay caused by force majeure events."
+        }
+      ]
+    },
+    {
+      "contract_id": "contract_4",
+      "contract_type": "Non-Disclosure Agreement",
+      "clauses": [
+        {
+          "id": "non_disclosure_agreement_clause_13",
+          "title": "General Provision",
+          "text": "This agreement constitutes the entire understanding between the parties."
+        },
+        {
+          "id": "non_disclosure_agreement_clause_06",
+          "title": "General Provision",
+          "text": "This agreement constitutes the entire understanding between the parties."
+        },
+        {
+          "id": "non_disclosure_agreement_clause_11",
+          "title": "General Provision",
+          "text": "The headings in this agreement are for convenience only and do not affect its interpretation."
+        },
+        {
+          "id": "non_disclosure_agreement_clause_12",
+          "title": "General Provision",
+          "text": "Notices shall be deemed given when delivered in person or sent by registered mail."
+        },
+        {
+          "id": "non_disclosure_agreement_clause_08",
+          "title": "General Provision",
+          "text": "Amendments to this agreement must be in writing and signed by both parties."
+        },
+        {
+          "id": "non_disclosure_agreement_clause_07",
+          "title": "General Provision",
+          "text": "This agreement constitutes the entire understanding between the parties."
+        },
+        {
+          "id": "non_disclosure_agreement_clause_09",
+          "title": "General Provision",
+          "text": "This agreement constitutes the entire understanding between the parties."
+        },
+        {
+          "id": "non_disclosure_agreement_clause_05",
+          "title": "General Provision",
+          "text": "Each party represents and warrants that it has the authority to enter into this agreement."
+        },
+        {
+          "id": "non_disclosure_agreement_clause_01",
+          "title": "Jurisdiction Conflict Provision",
+          "text": "The parties agree that the exclusive jurisdiction and venue for any disputes shall be the courts of London, England."
+        },
+        {
+          "id": "non_disclosure_agreement_clause_03",
+          "title": "Confidentiality Scope Conflict Provision",
+          "text": "Confidential information is strictly limited to written documents explicitly stamped 'CONFIDENTIAL' prior to disclosure."
+        },
+        {
+          "id": "non_disclosure_agreement_clause_04",
+          "title": "General Provision",
+          "text": "This agreement may be executed in counterparts."
+        },
+        {
+          "id": "non_disclosure_agreement_clause_10",
+          "title": "General Provision",
+          "text": "The parties are independent contractors and nothing herein creates a partnership or joint venture."
+        },
+        {
+          "id": "non_disclosure_agreement_clause_02",
+          "title": "Jurisdiction Conflict Provision",
+          "text": "All disputes arising from this agreement shall be resolved exclusively in the state and federal courts located in California."
+        }
+      ]
+    },
+    {
+      "contract_id": "contract_5",
+      "contract_type": "Software License Agreement",
+      "clauses": [
+        {
+          "id": "software_license_agreement_clause_12",
+          "title": "General Provision",
+          "text": "The provisions of this agreement are severable, and if any provision is found to be invalid, the remainder shall continue in effect."
+        },
+        {
+          "id": "software_license_agreement_clause_02",
+          "title": "IP Ownership Conflict Provision",
+          "text": "All work product and intellectual property created under this agreement shall be the exclusive property of the Client."
+        },
+        {
+          "id": "software_license_agreement_clause_13",
+          "title": "General Provision",
+          "text": "This agreement constitutes the entire understanding between the parties."
+        },
+        {
+          "id": "software_license_agreement_clause_07",
+          "title": "General Provision",
+          "text": "Amendments to this agreement must be in writing and signed by both parties."
+        },
+        {
+          "id": "software_license_agreement_clause_11",
+          "title": "General Provision",
+          "text": "The headings in this agreement are for convenience only and do not affect its interpretation."
+        },
+        {
+          "id": "software_license_agreement_clause_05",
+          "title": "General Provision",
+          "text": "The parties are independent contractors and nothing herein creates a partnership or joint venture."
+        },
+        {
+          "id": "software_license_agreement_clause_09",
+          "title": "General Provision",
+          "text": "This agreement constitutes the entire understanding between the parties."
+        },
+        {
+          "id": "software_license_agreement_clause_14",
+          "title": "General Provision",
+          "text": "Each party represents and warrants that it has the authority to enter into this agreement."
+        },
+        {
+          "id": "software_license_agreement_clause_04",
+          "title": "Confidentiality Scope Conflict Provision",
+          "text": "Confidential information shall include all materials disclosed by either party, whether marked confidential or not."
+        },
+        {
+          "id": "software_license_agreement_clause_06",
+          "title": "General Provision",
+          "text": "This agreement constitutes the entire understanding between the parties."
+        },
+        {
+          "id": "software_license_agreement_clause_10",
+          "title": "General Provision",
+          "text": "Amendments to this agreement must be in writing and signed by both parties."
+        },
+        {
+          "id": "software_license_agreement_clause_08",
+          "title": "General Provision",
+          "text": "The headings in this agreement are for convenience only and do not affect its interpretation."
+        },
+        {
+          "id": "software_license_agreement_clause_01",
+          "title": "Jurisdiction Conflict Provision",
+          "text": "Disputes shall be settled in the local courts of Delaware."
+        },
+        {
+          "id": "software_license_agreement_clause_03",
+          "title": "Liability Cap Conflict Provision",
+          "text": "Under no circumstances shall either party's liability exceed 1x the total annual fees paid under this agreement."
+        }
+      ]
+    }
+  ],
+  "cross_contradictions": [
+    {
+      "id": "cross_1",
+      "contract_a_id": "contract_3",
+      "clause_a_id": "master_service_agreement_clause_01",
+      "contract_b_id": "contract_2",
+      "clause_b_id": "vendor_agreement_clause_01",
+      "contradiction_type": "Jurisdiction Conflict",
+      "explanation": "Cascade link 1 of 3 for Jurisdiction Conflict"
+    },
+    {
+      "id": "cross_2",
+      "contract_a_id": "contract_2",
+      "clause_a_id": "vendor_agreement_clause_01",
+      "contract_b_id": "contract_4",
+      "clause_b_id": "non_disclosure_agreement_clause_01",
+      "contradiction_type": "Jurisdiction Conflict",
+      "explanation": "Cascade link 2 of 3 for Jurisdiction Conflict"
+    },
+    {
+      "id": "cross_3",
+      "contract_a_id": "contract_4",
+      "clause_a_id": "non_disclosure_agreement_clause_01",
+      "contract_b_id": "contract_5",
+      "clause_b_id": "software_license_agreement_clause_01",
+      "contradiction_type": "Jurisdiction Conflict",
+      "explanation": "Cascade link 3 of 3 for Jurisdiction Conflict"
+    },
+    {
+      "id": "cross_4",
+      "contract_a_id": "contract_5",
+      "clause_a_id": "software_license_agreement_clause_02",
+      "contract_b_id": "contract_3",
+      "clause_b_id": "master_service_agreement_clause_02",
+      "contradiction_type": "IP Ownership Conflict",
+      "explanation": "Cascade link 1 of 2 for IP Ownership Conflict"
+    },
+    {
+      "id": "cross_5",
+      "contract_a_id": "contract_3",
+      "clause_a_id": "master_service_agreement_clause_02",
+      "contract_b_id": "contract_1",
+      "clause_b_id": "employment_agreement_clause_01",
+      "contradiction_type": "IP Ownership Conflict",
+      "explanation": "Cascade link 2 of 2 for IP Ownership Conflict"
+    },
+    {
+      "id": "cross_6",
+      "contract_a_id": "contract_5",
+      "clause_a_id": "software_license_agreement_clause_03",
+      "contract_b_id": "contract_2",
+      "clause_b_id": "vendor_agreement_clause_02",
+      "contradiction_type": "Liability Cap Conflict",
+      "explanation": "Independent cross-contract conflict for Liability Cap Conflict"
+    },
+    {
+      "id": "cross_7",
+      "contract_a_id": "contract_5",
+      "clause_a_id": "software_license_agreement_clause_04",
+      "contract_b_id": "contract_3",
+      "clause_b_id": "master_service_agreement_clause_03",
+      "contradiction_type": "Confidentiality Scope Conflict",
+      "explanation": "Independent cross-contract conflict for Confidentiality Scope Conflict"
+    },
+    {
+      "id": "cross_8",
+      "contract_a_id": "contract_4",
+      "clause_a_id": "non_disclosure_agreement_clause_02",
+      "contract_b_id": "contract_3",
+      "clause_b_id": "master_service_agreement_clause_04",
+      "contradiction_type": "Jurisdiction Conflict",
+      "explanation": "Independent cross-contract conflict for Jurisdiction Conflict"
+    },
+    {
+      "id": "cross_9",
+      "contract_a_id": "contract_2",
+      "clause_a_id": "vendor_agreement_clause_03",
+      "contract_b_id": "contract_4",
+      "clause_b_id": "non_disclosure_agreement_clause_03",
+      "contradiction_type": "Confidentiality Scope Conflict",
+      "explanation": "Independent cross-contract conflict for Confidentiality Scope Conflict"
+    }
+  ],
+  "cascade_chains": [
+    [
+      "cross_1",
+      "cross_2",
+      "cross_3"
+    ],
+    [
+      "cross_4",
+      "cross_5"
+    ]
+  ]
+}
