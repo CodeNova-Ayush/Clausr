@@ -26,6 +26,8 @@ tags:
 
 **Find the conflict before it finds you.**
 
+Clausr is a production-grade Reinforcement Learning gym architected on the OpenEnv framework, specifically engineered to bridge the gap between static LLM legal reasoning and dynamic, verifiable contract simulation. It subjects AI agents to 8 distinct arenas of conflict detection—ranging from Cartesian clause-pair analysis (Detection) to temporal state-machine simulation (Oracle) and sequential working-memory tasks (LexMind). By mathematically eliminating "LLM-as-a-judge" and replacing it with a deterministic heuristic grader, Clausr provides a dense, variance-free reward signal essential for advanced training paradigms like GRPO. Ultimately, Clausr serves as the foundational infrastructure for training superhuman legal agents capable of mitigating the $860B global risk of contract contradictions.
+
 Built for the **Meta PyTorch OpenEnv Hackathon 2026**.
 
 </div>
@@ -196,37 +198,22 @@ curl -X POST "https://binarycoder-clausr.hf.space/step?task_id=easy&contract_id=
 
 ## 🏗️ 8. Architecture Diagram
 
-```text
-                         ┌──────────────────────────────┐
-                         │      RL Agent / Inference    │
-                         │  OpenAI SDK + JSON actions   │
-                         └───────────────┬──────────────┘
-                                         │
-                                         ▼
-┌────────────────────────────────────────────────────────────────────┐
-│                         FastAPI Server                              │
-│  /reset    /step    /execution/step    /lexmind/step    /fingerprint│
-└──────────────────────────────┬─────────────────────────────────────┘
-                               │
-                               ▼
-┌────────────────────────────────────────────────────────────────────┐
-│                       Environment Engine                            │
-│  ┌────────────────┐  ┌───────────────────┐  ┌───────────────────┐  │
-│  │ ContractFixEnv │  │ ExecutionOracle   │  │ LexMindEnv        │  │
-│  │ (Detection)    │  │ (Causal Tracing)  │  │ (Working Memory)  │  │
-│  └───────┬────────┘  └─────────┬─────────┘  └─────────┬─────────┘  │
-│          ▼                     ▼                      ▼            │
-│  ┌──────────────────────────────────────────────────────────────┐  │
-│  │               Deterministic Grader & Reward Shaper             │  │
-│  │          (Set Intersection + False Positive λ Penalty)         │  │
-│  └──────────────────────────────────────────────────────────────┘  │
-└──────────────────────────────┬─────────────────────────────────────┘
-                               │
-                               ▼
-┌────────────────────────────────────────────────────────────────────┐
-│                         openenv.yaml                                │
-│       9 core tasks · standard schemas · 2 vCPU / 8 GB limits        │
-└────────────────────────────────────────────────────────────────────┘
+```mermaid
+graph TD
+    Agent[RL Agent / Inference] -->|JSON Actions| Server[FastAPI Server]
+    subgraph Core Engine
+        Server -->|Reset/Step| Env[Environment Engine]
+        Env --> D[Detection Env]
+        Env --> O[Oracle Env]
+        Env --> L[LexMind Env]
+        D --> Grader[Deterministic Grader]
+        O --> Grader
+        L --> Grader
+    end
+    Grader -->|Reward/State| Agent
+    subgraph Config
+        YAML[openenv.yaml] -.-> Env
+    end
 ```
 
 ---
