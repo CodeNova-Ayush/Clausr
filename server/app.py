@@ -1,5 +1,9 @@
 from fastapi import FastAPI, Request, WebSocket, WebSocketDisconnect
+from fastapi.responses import FileResponse
+from fastapi.staticfiles import StaticFiles
 from fastapi.middleware.cors import CORSMiddleware
+import os
+import json
 import json
 
 from server.environment import ContractFixEnv
@@ -405,6 +409,18 @@ def timemachine_step(action: TimeMachineAction):
 @app.get("/timemachine/state", response_model=TimeMachineState)
 def timemachine_state():
     return _timemachine_env.state
+
+
+# Serve the React frontend if built
+if os.path.exists("frontend/dist"):
+    app.mount("/assets", StaticFiles(directory="frontend/dist/assets"), name="assets")
+    @app.get("/{full_path:path}")
+    async def serve_frontend(full_path: str):
+        path = f"frontend/dist/{full_path}"
+        if os.path.isfile(path):
+            return FileResponse(path)
+        return FileResponse("frontend/dist/index.html")
+
 
 
 @app.websocket("/ws")
