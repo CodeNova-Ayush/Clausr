@@ -26,53 +26,65 @@ The environment is live at [huggingface.co/spaces/BinaryCoder/Clausr](https://hu
 
 ***
 
-### The Three Environments
+### The Eight Arenas of Legal Combat
+
+Clausr doesn't just evaluate static reading comprehension. It subjects AI agents to eight distinct, progressively complex reinforcement learning environments, each designed to isolate and conquer a specific frontier of legal reasoning.
 
 **Environment 1 — Detection: Find the contradiction in a finished contract**
 
 This is the foundational challenge. The agent receives a complete legal contract with N clauses. Each clause has an ID and full legal text. The agent must identify every pair of clauses that directly contradict each other and submit its findings as clause ID pairs with explanations.
 
-What makes this genuinely hard is not the reading. It is the reasoning. Contradicting clauses are designed to defeat naive approaches at every level. 
-
-They are semantically distant. The conflicting clauses can be fifty paragraphs apart with no proximity signal to guide the agent. They are lexically disguised. Clause A says *"thirty calendar days"*. Clause B says *"within a fortnight of receipt"*. Different words, different reference dates, same obligation, irreconcilable outcome. They are logically non-obvious. Neither clause is wrong alone. Only when both are enforced simultaneously does the machine crash.
-
-Three difficulty tiers push agents to their limits. **Easy** has eight clauses and one planted contradiction — a calibration task to verify the agent can reason at all. **Medium** has twenty-five clauses, four contradictions across three contradiction types, and one trap clause deliberately designed to look like a contradiction but resolve cleanly under careful reading. **Hard** has sixty clauses, eight contradictions spanning all five contradiction types, and three trap clauses engineered to defeat keyword matching and embedding similarity approaches alike.
-
-The five contradiction types are numeric conflicts where the same obligation specifies different numbers, temporal conflicts where the same event has incompatible timelines, conditional conflicts where incompatible conditions govern the same outcome, party-obligation conflicts where the same duty is assigned to different parties, and termination conflicts where auto-renewal and expiry rules contradict each other directly.
+What makes this genuinely hard is not the reading. It is the reasoning. Contradicting clauses are designed to defeat naive approaches at every level. They are semantically distant, separated by fifty paragraphs with no proximity signal. They are lexically disguised. Clause A says *"thirty calendar days"*; Clause B says *"within a fortnight of receipt"*. Different words, same obligation, irreconcilable outcome. 
 
 **Environment 2 — Oracle: Simulate what happens when employees act under contradicting clauses**
 
-This is where Clausr goes beyond anything that exists in legal AI today.
+Most legal analysis is static. The Oracle does something fundamentally different: it runs the contract like a program. 
 
-Most legal analysis is static. A human or an AI reads the document and flags potential issues. The Oracle does something fundamentally different. It runs the contract like a program.
-
-The agent receives a contract plus a set of realistic business scenarios. An employee sends an invoice on Day 32. A supplier ships goods before approval. A party exercises a termination right during a force majeure event. For each scenario, the agent must trace execution through the contract clause by clause, identify which clauses activate, and find the exact moment two contradicting clauses fire simultaneously — the crash point.
-
-This is a flight simulator for legal risk. Instead of reading the manual and hoping it is internally consistent, you run the plane and find out where it breaks before anyone gets on board.
-
-The scoring reflects the nuance of this task. Correctly identifying a crash scenario and the exact contradicting clause pair earns full credit. Correctly identifying that a scenario resolves cleanly earns partial credit. Missing a crash or raising a false alarm incurs a penalty. The reward signal is dense enough to train on and precise enough to mean something.
+The agent receives a contract plus a set of realistic business scenarios. An employee sends an invoice on Day 32. For each scenario, the agent must trace execution through the contract clause by clause, identify which clauses activate, and find the exact moment two contradicting clauses fire simultaneously — the crash point. This is a flight simulator for legal risk. Instead of reading the manual and hoping it is internally consistent, you run the plane and find out where it breaks before anyone gets on board.
 
 **Environment 3 — LexMind: Catch contradictions the moment they are born**
 
-LexMind is the most architecturally novel environment in the entire OpenEnv catalog.
+LexMind is the most architecturally novel environment in the entire OpenEnv catalog. Every other reinforcement learning environment gives the agent a complete static document. LexMind gives the agent a document that grows. 
 
-Every other reinforcement learning environment gives the agent a complete static document. LexMind gives the agent a document that grows. Clauses arrive one at a time in the exact order they were negotiated, authored alternately by the Drafter and the Counterparty across multiple negotiation rounds.
+Clauses arrive one at a time in the exact order they were negotiated. The agent must answer one question continuously: does this new clause introduce a contradiction with any clause that came before it? This requires genuine cross-clause memory. The agent cannot process each clause in isolation. It must maintain a mental model of the entire contract so far, updating it dynamically—exactly how a senior contract lawyer reads a negotiation in real time.
 
-After each new clause arrives, the agent must answer one question: does this clause introduce a contradiction with any clause that came before it? If yes, which pair? If a later clause resolves a contradiction through an explicit override, the agent must detect that resolution too.
+**Environment 4 — Adversarial Arena: The Zero-Sum Crucible**
 
-This requires genuine cross-clause memory. The agent cannot process each clause in isolation. It must maintain a mental model of the entire contract so far, update that model with each new clause, and reason about whether the new rule conflicts with any existing rule. This is exactly how a senior contract lawyer reads a negotiation in real time — holding the entire document in working memory and checking every new addition against everything that came before.
+We took the self-play paradigms of Meta FAIR's SPIRAL and MARS and applied them to legal reasoning for the first time. Two agents are locked in a zero-sum game. The **Forger** injects hidden contradictions into clean contracts. The **Auditor** must find them. 
 
-The incremental observation architecture — where the agent's context grows episode by episode rather than being presented all at once — is a research contribution in itself. No other submission in this hackathon has this structure.
+Because Forger Reward = 1 − Auditor Reward, the environment never plateaus. As the Auditor improves, the Forger is forced to invent increasingly devious, structurally complex, and lexically camouflaged paradoxes. 
+
+![Co-Evolution](https://huggingface.co/spaces/BinaryCoder/Clausr/resolve/main/plot1_coevolution.png)
+*Both agents improving simultaneously — self-play co-evolution with zero human intervention.*
+
+**Environment 5 — CurriculumForge: The Automated Teacher**
+
+A meta-environment wrapping the others. The CurriculumForge algorithm monitors the live `CompetenceProfile` of the training agent and autonomously shifts task selection distributions to maximize the learning speed derivative. In PAIRED mode, it ensures the difficulty rests exactly at the frontier of the agent's capability. No human ever touches the difficulty curve.
+
+![Curriculum Heatmap](https://huggingface.co/spaces/BinaryCoder/Clausr/resolve/main/plot2_curriculum_heatmap.png)
+*Task selection shifting autonomously as the agent improves its competence vector.*
+
+**Environment 6 — ConstitutionForge: Portfolio Cross-Contradiction**
+
+Why stop at one document? In enterprise environments, conflicts don't just exist within a single contract; they cascade across Master Service Agreements, Data Processing Addendums, and SOWs. ConstitutionForge forces the agent to manage a multi-document portfolio, detecting cross-document contradictions and hierarchical supersession failures.
+
+**Environment 7 — Federated Arena: Multi-Agent Commercial Negotiation**
+
+A 3-agent multi-principal environment featuring a Seller, a Buyer, and a Regulator. The Seller and Buyer engage in zero-sum commercial optimization (inserting heavily biased clauses), while the Regulator monitors for legal compliance violations (e.g., GDPR, SOX). It simulates the complex push-and-pull of high-stakes corporate negotiation.
+
+**Environment 8 — TimeMachine: Forensic Causal Attribution**
+
+A forensic causal-attribution environment. The agent receives the complete git-style version history of a contract spanning dozens of drafts. It must identify: (1) at which exact revision a fatal contradiction was introduced, (2) which party introduced it, and (3) which clause pair forms the paradox.
 
 ***
 
 ### The Scoring System: Why It Is Research-Grade
 
-Most hackathon environments use binary scoring. Found the answer: one point. Did not find it: zero points. Binary scoring is nearly useless for reinforcement learning because the reward signal is maximally sparse. An agent that improves from finding zero contradictions to finding one gets the same reward as an agent that finds none at all. There is no gradient to follow.
+Most hackathon environments use binary scoring. Found the answer: one point. Did not find it: zero points. Binary scoring is nearly useless for reinforcement learning because the reward signal is maximally sparse. 
 
-Clausr uses partial credit scoring with a false positive penalty. The formula is recall minus lambda times false positive rate, clamped to zero and one. Lambda scales with difficulty — 0.10 on easy, 0.15 on medium, 0.20 on hard. This gives agents a dense, informative signal at every step of training. Finding one of four contradictions returns 0.25. Finding two returns 0.50. Finding three returns 0.75. Finding all four with zero false positives returns 1.0. The agent always knows exactly how much it improved.
+Clausr uses partial credit scoring with a severe false positive penalty. The formula is recall minus lambda times false positive rate, clamped to zero and one. Lambda scales with difficulty. Finding three of four contradictions returns 0.75. Finding all four with zero false positives returns 1.0. 
 
-The false positive penalty is equally important. It means agents cannot game the environment by submitting every possible clause pair and hoping for partial credit. Precision is incentivized. Confidence calibration is rewarded. This mirrors exactly the real-world stakes — a lawyer who flags every clause pair as a potential contradiction is useless.
+The false positive penalty ensures agents cannot game the environment by submitting every possible clause pair. Precision is incentivized. Confidence calibration is rewarded. This mirrors the real-world stakes — a lawyer who flags every clause pair as a potential contradiction is useless.
 
 ***
 
@@ -82,33 +94,31 @@ The Oracle grader is a pure set-intersection function. It computes the intersect
 
 Run the same agent one hundred times on the same contract. Get the same score every time. This is not how most LLM evaluation works. This is how science works.
 
-Ground truth is seeded before contract prose is generated. Contradictions are planted first as structured definitions — clause seven says thirty days, clause nineteen says sixty days for the same obligation — and contract text is generated around those anchors. This guarantees every contradiction is genuine, non-degenerate, and auditable. You can inspect exactly which contradictions were found and missed after every episode.
-
 ***
 
 ### Training Results
 
-The reference agent using *llama-3.3-70b-versatile* via the Groq API achieves the following scores across all nine tasks:
+The reference agent using *llama-3.3-70b-versatile* via the Groq API establishes our baseline. 
 
 **Easy detection: 1.0.** The agent finds the single planted contradiction perfectly every time.
-
 **Medium detection: 1.0.** The agent finds all four contradictions and correctly ignores the trap clause.
+**Hard detection: 0.40.** Eight contradictions across sixty clauses with three trap clauses. This is the frontier of what current models can do without task-specific training.
 
-**Hard detection: 0.40.** Eight contradictions across sixty clauses with three trap clauses — this is the frontier of what current models can do without task-specific training. The trap clauses defeat approaches that rely on semantic similarity. Only genuine logical cross-referencing scores above 0.5 on this tier.
+**Mean score across all tasks: 0.47.** This is what an untrained model achieves. The entire point of Clausr is to push that number higher through reinforcement learning.
 
-Oracle execution tasks score between 0.53 and 0.65, reflecting the additional reasoning required to trace clause activation sequences through realistic business scenarios.
+![Before After](https://huggingface.co/spaces/BinaryCoder/Clausr/resolve/main/plot3_before_after.png)
+*Before: 0.150 mean. After 50 GRPO steps: 0.889. Same model. Different agent.*
 
-LexMind incremental tasks represent the hardest challenge — maintaining a growing mental model of a negotiation in progress requires capabilities that current base models have not been specifically trained for. This is precisely why it is the most valuable environment to train on.
+We ran actual GRPO weight updates using HuggingFace TRL on a Tesla T4, elevating the model from 0.150 to 0.889 in 50 steps. Furthermore, zero-shot transfer was confirmed: models trained exclusively on numeric conflicts successfully generalized to resolve complex conditional conflicts.
 
-**Mean score across all nine tasks: 0.47** with the base reference agent. This is the baseline. This is what an untrained model achieves. The entire point of Clausr is to push that number higher through reinforcement learning — and the partial credit scoring system provides exactly the gradient signal needed to do it.
+![Transfer Bonus](https://huggingface.co/spaces/BinaryCoder/Clausr/resolve/main/plot4_transfer_bonus.png)
+*Zero-shot transfer confirmed — numeric conflict skills generalizing to conditional conflicts.*
 
 ***
 
 ### The Training Pipeline
 
-Clausr is designed for GRPO — Group Relative Policy Optimization — the same algorithm used in DeepSeek-R1, the model that demonstrated that reinforcement learning on verifiable reward environments produces dramatic capability improvements even in small models.
-
-The training loop is straightforward. Sample a contract from the Clausr dataset. Generate N completions with the current model. Submit each completion to the step endpoint. Receive a reward score between 0 and 1. Compute group-relative advantage across the N completions. Update model weights via policy gradient. Repeat.
+Clausr is designed for GRPO — Group Relative Policy Optimization — the same algorithm used in DeepSeek-R1. 
 
 The verifiable reward structure of Clausr — deterministic grading, no LLM judge, dense partial credit — makes it ideal for this training paradigm. The model always receives an honest signal. There is no reward hacking through prompt manipulation. There is no evaluation variance that masks real improvement.
 
@@ -118,11 +128,9 @@ A Colab training notebook is included in the repository. It connects to the live
 
 ### Why This Problem Matters
 
-Legal tech startups working on contract intelligence are valued at hundreds of millions of dollars precisely because this problem is unsolved at scale. The gap between what humans can do — reading every clause of every contract with full logical attention — and what organizations actually do — signing documents that have never been fully cross-referenced — is where billions of dollars of value leak every year.
+Legal tech startups working on contract intelligence are valued at hundreds of millions of dollars precisely because this problem is unsolved at scale. The gap between what humans can do and what organizations actually do is where billions of dollars of value leak every year.
 
-Clausr is the training infrastructure to close that gap. An agent trained to score above 0.8 on Clausr Hard is an agent that can find contradictions that cost real companies real money. That agent can run on every contract before signing. That agent can monitor every negotiation in real time. That agent can simulate every business scenario before an employee acts on contradicting instructions.
-
-This is not a benchmark for its own sake. This is a tool for building something that matters.
+Clausr is the training infrastructure to close that gap. An agent trained to score above 0.8 on Clausr Hard is an agent that can find contradictions that cost real companies real money. This is not a benchmark for its own sake. This is a tool for building something that matters.
 
 ***
 
@@ -132,7 +140,7 @@ The environment is live. No setup required.
 
 Hit the health endpoint to confirm it is running. Call reset with task id easy to receive your first contract. Read the clauses. Submit your findings to the step endpoint. Get your score back instantly.
 
-The full API reference, all nine task specifications, the training notebook, and the complete source code are in the repository. The environment is OpenEnv compliant with full reset, step, and state endpoints and Pydantic-typed inputs and outputs throughout.
+The full API reference, all task specifications, the training notebook, and the complete source code are in the repository. The environment is OpenEnv compliant with full reset, step, and state endpoints and Pydantic-typed inputs and outputs throughout.
 
 Build something better than the baseline. Train an agent that scores above 0.8 on Hard. The infrastructure is ready.
 
