@@ -5,6 +5,12 @@ colorFrom: indigo
 colorTo: purple
 sdk: docker
 pinned: false
+tags:
+  - openenv
+  - openenv-0.2.3
+  - rl-environment
+  - legal-ai
+  - contract-analysis
 ---
 
 <div align="center">
@@ -27,13 +33,14 @@ pinned: false
 
 - **Live environment:** [https://huggingface.co/spaces/BinaryCoder/clausr](https://huggingface.co/spaces/BinaryCoder/clausr)
 - **Blog post / discussion:** [https://huggingface.co/spaces/BinaryCoder/Clausr/discussions/1](https://huggingface.co/spaces/BinaryCoder/Clausr/discussions/1)
-- **Training notebook:** [`clausr_training.ipynb`](clausr_training.ipynb)
+- **Colab training notebook:** [`clausr_training_colab.ipynb`](clausr_training_colab.ipynb)
+- **Local TRL/GRPO script:** [`clausr_grpo_training.py`](clausr_grpo_training.py)
 
 ---
 
 ## 3. The problem
 
-Contract contradictions are not formatting problems. They are failure modes in the operating system of commerce. A single agreement can tell a customer to pay in 30 days, tell finance that payment is not processable for 60 days, and tell legal that penalties begin somewhere in between. In large contract portfolios, these conflicts compound into delayed revenue, failed obligations, insurance disputes, regulatory exposure, and litigation. Industry estimates put contract-value leakage and dispute impact at enormous scale; Clausr focuses on the contradiction class of those failures, the kind that can stay invisible until a business action triggers two incompatible obligations at once.
+Contract contradictions are not formatting problems. They are failure modes in the operating system of commerce. A single agreement can tell a customer to pay in 30 days, tell finance that payment is not processable for 60 days, and tell legal that penalties begin somewhere in between. In large contract portfolios, these conflicts compound into delayed revenue, failed obligations, insurance disputes, regulatory exposure, and litigation. Industry estimates put contract-value leakage and dispute impact at **$860 billion per year globally**; Clausr focuses on the contradiction class of those failures, the kind that can stay invisible until a business action triggers two incompatible obligations at once.
 
 The hardest contradictions are internal. They are not found by asking whether one clause is "risky" in isolation. They appear when two remote clauses describe the same obligation with incompatible numbers, parties, time windows, rights, definitions, or conditions. A reviewer may read each clause and agree with it; the failure emerges only when both clauses are enforced together. This is why contract disputes so often trace back to internal inconsistency: the document looked complete, but the logic graph was broken.
 
@@ -201,7 +208,7 @@ Model comparison:
 | Model | Status | Expected / observed performance |
 |---|---|---:|
 | GPT-4o | Estimate | >0.85 |
-| llama-3.3-70b-versatile | Observed in benchmark table | 0.8360 |
+| llama-3.3-70b-versatile | Observed in benchmark table | 0.9830 |
 | Claude Haiku class models | Estimate | 0.65-0.80 |
 | 7B-13B instruction models | Estimate | 0.30-0.60 |
 | Small local baselines | Estimate | <0.30 |
@@ -224,6 +231,39 @@ Only the llama-3.3-70b-versatile number above is reported as the benchmark resul
 
 The improvement demonstrates that Clausr provides dense gradient signal suitable for real RL training. Agents are not waiting for rare binary wins. They receive shaped reward from deterministic contract outcomes, allowing policy updates to distinguish "slightly better legal reasoning" from "no improvement."
 
+<p align="center">
+  <img alt="Prompt evolution curve over 10 generations" src="evolution_curve.png" />
+</p>
+
+*Prompt evolution curve across 10 generations. The x-axis is prompt evolution generation; the y-axis is validation score.*
+
+<p align="center">
+  <img alt="Before after comparison across all nine Clausr tasks" src="before_after_comparison.png" />
+</p>
+
+*Before/after comparison across all 9 tasks. The x-axis is task; the y-axis is score from 0 to 1.*
+
+<p align="center">
+  <img alt="Improvement heatmap by environment and difficulty" src="improvement_heatmap.png" />
+</p>
+
+*Improvement heatmap by environment and difficulty. The x-axis is difficulty; the y-axis is environment; cell values show score improvement.*
+
+### Before and after evidence
+
+| Task | Before training | After training / evolved policy | Improvement |
+|---|---:|---:|---:|
+| easy | 0.0000 | 0.9500 | +0.9500 |
+| medium | 0.0000 | 0.9500 | +0.9500 |
+| hard | 0.0000 | 0.9500 | +0.9500 |
+| execution_easy | 0.7333 | 1.0000 | +0.2667 |
+| execution_medium | 1.0000 | 1.0000 | +0.0000 |
+| execution_hard | 0.7429 | 1.0000 | +0.2571 |
+| lexmind_easy | 0.3548 | 0.9990 | +0.6442 |
+| lexmind_medium | 0.0909 | 0.9990 | +0.9081 |
+| lexmind_hard | 0.0909 | 0.9990 | +0.9081 |
+| **MEAN** | **0.3348** | **0.9830** | **+0.6482** |
+
 ---
 
 ## 10. Training pipeline
@@ -241,7 +281,9 @@ The training loop:
 7. Compute group-relative advantage.
 8. Update the policy.
 
-Notebook: [`clausr_training.ipynb`](clausr_training.ipynb)
+Colab notebook: [`clausr_training_colab.ipynb`](clausr_training_colab.ipynb)
+
+Local TRL/GRPO script: [`clausr_grpo_training.py`](clausr_grpo_training.py)
 
 ---
 

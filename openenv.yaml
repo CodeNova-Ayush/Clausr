@@ -1,5 +1,17 @@
+spec_version: 1
 name: clausr
 version: "1.0.0"
+type: space
+runtime: fastapi
+app: server.app:app
+port: 7860
+sdk: docker
+tags:
+  - openenv
+  - openenv-0.2.3
+  - rl-environment
+  - legal-ai
+  - contract-analysis
 entrypoint: inference.py
 description: >
   Clausr is an OpenEnv reinforcement learning gym for training agents to detect
