@@ -239,3 +239,10 @@ curl -X POST "https://binarycoder-clausr.hf.space/step?task_id=easy&contract_id=
 | 🤖 GRPO Training Script | https://huggingface.co/spaces/BinaryCoder/Clausr/blob/main/clausr_grpo_training.py |
 | 📊 Training Report | https://huggingface.co/spaces/BinaryCoder/Clausr/blob/main/TRAINING_REPORT.md |
 | 🎯 Reward Design | https://huggingface.co/spaces/BinaryCoder/Clausr/blob/main/REWARD_DESIGN.md |
+
+## Important Links
+
+- **Live Environment:** https://huggingface.co/spaces/BinaryCoder/Clausr
+- **Blog Post:** https://huggingface.co/spaces/BinaryCoder/Clausr/blob/main/Blog.md
+- **Training Notebook:** clausr_training_colab.ipynb (included in this repository)
+- **Discussion:** https://huggingface.co/spaces/BinaryCoder/Clausr/discussions/1
