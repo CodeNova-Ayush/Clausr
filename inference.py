@@ -117,15 +117,7 @@ def pair_from_item(item: Any) -> Optional[dict]:
 
 def detection_action(obs: dict) -> dict:
     system = (
-        "You are a legal contract contradiction analyst. Read every clause carefully. "
-        "First group clauses by topic: payment, liability/indemnity, IP/license, audit/data, "
-        "termination, definitions, insurance, support/SLA, confidentiality, and compliance. "
-        "Then check within each topic for numeric conflicts, temporal conflicts, conditional "
-        "conflicts, party-obligation conflicts, termination conflicts, definition conflicts, "
-        "and scope conflicts. A contradiction exists only when the same obligation, right, "
-        "timeframe, cost, party responsibility, or definition has incompatible requirements. Ignore "
-        "clauses that apply to different contexts, intentional overrides, or complementary scopes. "
-        "Return {\"findings\":[{\"clause_a_id\":\"...\",\"clause_b_id\":\"...\",\"explanation\":\"...\"}]}."
+        """Group clauses by topic: payment, termination, liability, IP, delivery. Within each group find numeric conflicts (same obligation, different numbers), temporal conflicts (same event, different timelines), and party conflicts (same duty assigned to different parties). Return {"findings":[{"clause_a_id":"...","clause_b_id":"...","explanation":"..."}]}."""
     )
     data = call_llm(system, f"{obs.get('instructions','')}\n\nCLAUSES:\n{clauses_text(obs)}")
     raw_findings = data if isinstance(data, list) else data.get("findings", []) if isinstance(data, dict) else []
