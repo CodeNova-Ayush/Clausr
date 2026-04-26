@@ -225,3 +225,17 @@ curl -X POST "https://binarycoder-clausr.hf.space/step?task_id=easy&contract_id=
 <div align="center">
   <i>"Clausr transforms static legal review into a dynamic reinforcement learning ecosystem."</i>
 </div>
+
+---
+
+## 📎 All Submission Materials
+
+| Material | Link |
+|----------|------|
+| 🚀 Live Environment | https://huggingface.co/spaces/BinaryCoder/Clausr |
+| 📝 Blog Post | https://huggingface.co/spaces/BinaryCoder/Clausr/blob/main/Blog.md |
+| 💬 Discussion & Training Results | https://huggingface.co/spaces/BinaryCoder/Clausr/discussions/1 |
+| 📓 Training Notebook | https://huggingface.co/spaces/BinaryCoder/Clausr/blob/main/clausr_training_colab.ipynb |
+| 🤖 GRPO Training Script | https://huggingface.co/spaces/BinaryCoder/Clausr/blob/main/clausr_grpo_training.py |
+| 📊 Training Report | https://huggingface.co/spaces/BinaryCoder/Clausr/blob/main/TRAINING_REPORT.md |
+| 🎯 Reward Design | https://huggingface.co/spaces/BinaryCoder/Clausr/blob/main/REWARD_DESIGN.md |
