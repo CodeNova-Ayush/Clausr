@@ -1,17 +1,4 @@
----
-title: Clausr
-emoji: 🛡️
-colorFrom: indigo
-colorTo: purple
-sdk: docker
-pinned: false
-tags:
-  - openenv
-  - openenv-0.2.3
-  - rl-environment
-  - legal-ai
-  - contract-analysis
----
+
 
 <div align="center">
 
