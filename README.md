@@ -122,7 +122,7 @@ Clausr includes a fully functional live GRPO (Group Relative Policy Optimization
 | **Mean Reward** | 0.150 | 0.889 | **+0.739** |
 
 <p align="center">
-  <img alt="Clausr GRPO training reward curve" src="training_curve_final.png" width="80%" />
+  <img alt="Clausr GRPO training reward curve" src="assets/training_curve_final.png" width="80%" />
 </p>
 *Reward curve demonstrating the dense gradient signal provided by Clausr's heuristic grader.*
 

@@ -57,7 +57,7 @@ We took the self-play paradigms of Meta FAIR's SPIRAL and MARS and applied them 
 Because Forger Reward = 1 − Auditor Reward, the environment never plateaus. As the Auditor improves, the Forger is forced to invent increasingly devious, structurally complex, and lexically camouflaged paradoxes. **This is a paradigm shift on the scale of AlphaGo moving from human games to self-play.**
 
 <p align="center">
-  <img alt="Co-Evolution" src="evolution_curve.png" width="80%" />
+  <img alt="Co-Evolution" src="assets/evolution_curve.png" width="80%" />
   <br><i>Both agents improving simultaneously — self-play co-evolution with zero human intervention.</i>
 </p>
 
@@ -66,7 +66,7 @@ Because Forger Reward = 1 − Auditor Reward, the environment never plateaus. As
 A meta-environment wrapping the others. The CurriculumForge algorithm monitors the live `CompetenceProfile` of the training agent and autonomously shifts task selection distributions to maximize the learning speed derivative. In PAIRED mode, it ensures the difficulty rests exactly at the frontier of the agent's capability. No human ever touches the difficulty curve.
 
 <p align="center">
-  <img alt="Curriculum Heatmap" src="plot2_curriculum_heatmap.png" width="80%" />
+  <img alt="Curriculum Heatmap" src="assets/plot2_curriculum_heatmap.png" width="80%" />
   <br><i>Task selection shifting autonomously as the agent improves its competence vector.</i>
 </p>
 
@@ -113,14 +113,14 @@ The reference agent using *llama-3.3-70b-versatile* via the Groq API establishes
 **Mean score across all tasks: 0.47.** This is what an untrained model achieves. The entire point of Clausr is to push that number higher through reinforcement learning.
 
 <p align="center">
-  <img alt="Before After Training" src="training_curve_final.png" width="80%" />
+  <img alt="Before After Training" src="assets/training_curve_final.png" width="80%" />
   <br><i>Before: 0.150 mean. After 50 GRPO steps: 0.889. Same model. Different agent.</i>
 </p>
 
 We ran actual GRPO weight updates using HuggingFace TRL on a Tesla T4, elevating the model from 0.150 to 0.889 in 50 steps. Furthermore, zero-shot transfer was confirmed: models trained exclusively on numeric conflicts successfully generalized to resolve complex conditional conflicts.
 
 <p align="center">
-  <img alt="Transfer Bonus" src="improvement_heatmap.png" width="80%" />
+  <img alt="Transfer Bonus" src="assets/improvement_heatmap.png" width="80%" />
   <br><i>Zero-shot transfer confirmed — numeric conflict skills generalizing to conditional conflicts.</i>
 </p>
 

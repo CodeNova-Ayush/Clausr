@@ -65,13 +65,13 @@ ensuring every obligation group was explicitly checked for incompatibility.
 ## Evidence Plots
 
 ### Evolution Curve
-![Evolution Curve](evolution_curve.png)
+![Evolution Curve](assets/evolution_curve.png)
 
 ### Before vs After Comparison
-![Before vs After](before_after_comparison.png)
+![Before vs After](assets/before_after_comparison.png)
 
 ### Score Distribution
-![Score Distribution](score_distribution.png)
+![Score Distribution](assets/score_distribution.png)
 
 ### Improvement Heatmap
-![Improvement Heatmap](improvement_heatmap.png)
+![Improvement Heatmap](assets/improvement_heatmap.png)
