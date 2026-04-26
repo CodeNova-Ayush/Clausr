@@ -1,0 +1,88 @@
+{
+  "contract_id": "execution_easy_001",
+  "task_id": "easy",
+  "contract_text": "Execution Easy Contract",
+  "clauses": [
+    {
+      "id": "clause_01",
+      "title": "Standard Clause 1",
+      "text": "This is standard clause text for section 1. It details the obligations and responsibilities under normal operating conditions."
+    },
+    {
+      "id": "clause_02",
+      "title": "Standard Clause 2",
+      "text": "This is standard clause text for section 2. It details the obligations and responsibilities under normal operating conditions."
+    },
+    {
+      "id": "clause_03",
+      "title": "Standard Clause 3",
+      "text": "Vendor invoices are payable strictly within 30 days of receipt."
+    },
+    {
+      "id": "clause_04",
+      "title": "Standard Clause 4",
+      "text": "This is standard clause text for section 4. It details the obligations and responsibilities under normal operating conditions."
+    },
+    {
+      "id": "clause_05",
+      "title": "Standard Clause 5",
+      "text": "This is standard clause text for section 5. It details the obligations and responsibilities under normal operating conditions."
+    },
+    {
+      "id": "clause_06",
+      "title": "Standard Clause 6",
+      "text": "This is standard clause text for section 6. It details the obligations and responsibilities under normal operating conditions."
+    },
+    {
+      "id": "clause_07",
+      "title": "Standard Clause 7",
+      "text": "All payments require a 45-day review period before funds can be released."
+    },
+    {
+      "id": "clause_08",
+      "title": "Standard Clause 8",
+      "text": "This is standard clause text for section 8. It details the obligations and responsibilities under normal operating conditions."
+    }
+  ],
+  "execution_scenarios": [
+    {
+      "scenario_id": "scenario_01",
+      "title": "Clean Execution",
+      "description": "Employee logs time normally.",
+      "actor": "Employee",
+      "action_taken": "Submitted timesheet",
+      "triggers_clauses": [
+        "clause_01"
+      ],
+      "crashes": false
+    },
+    {
+      "scenario_id": "scenario_02",
+      "title": "Clean Overlap",
+      "description": "Manager approves timesheet with normal override.",
+      "actor": "Manager",
+      "action_taken": "Approved time",
+      "triggers_clauses": [
+        "clause_01",
+        "clause_02"
+      ],
+      "crashes": false
+    },
+    {
+      "scenario_id": "scenario_03",
+      "title": "Direct Crash",
+      "description": "Vendor submits invoice on day 30, but finance system is locked.",
+      "actor": "Vendor",
+      "action_taken": "Submitted invoice",
+      "triggers_clauses": [
+        "clause_03",
+        "clause_07"
+      ],
+      "crashes": true,
+      "crash_pair": {
+        "clause_a_id": "clause_03",
+        "clause_b_id": "clause_07"
+      }
+    }
+  ]
+}

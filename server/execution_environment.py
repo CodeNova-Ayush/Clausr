@@ -29,14 +29,12 @@ class ContractExecutionEnv:
         self._episode_id = str(uuid.uuid4())
         self._last_feedback = None
 
-        # Map execution task IDs to the base contract difficulty
-        base_task = task_id.replace("execution_", "")
-        pattern = f"{base_task}_*.json"
+        pattern = f"{task_id}_*.json"
         matching_files = list(self._contracts_dir.glob(pattern))
 
         if not matching_files:
             raise FileNotFoundError(
-                f"No contracts found for task_id: {task_id} (base: {base_task}) "
+                f"No contracts found for task_id: {task_id} "
                 f"at {self._contracts_dir}/{pattern}"
             )
 
@@ -52,7 +50,7 @@ class ContractExecutionEnv:
             raise FileNotFoundError(f"Contract file not found: {filepath}")
         with open(filepath, "r", encoding="utf-8") as f:
             self._contract = json.load(f)
-        self._task_id = "execution_" + self._contract.get("task_id", "easy")
+        self._task_id = self._contract.get("task_id", "execution_easy")
         self._episode_id = str(uuid.uuid4())
         self._done = False
         self._score = 0.001

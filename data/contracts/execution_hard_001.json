@@ -1,0 +1,422 @@
+{
+  "contract_id": "execution_hard_001",
+  "task_id": "hard",
+  "contract_text": "Execution Hard Contract",
+  "clauses": [
+    {
+      "id": "clause_01",
+      "title": "Standard Clause 1",
+      "text": "This is standard clause text for section 1. It details the obligations and responsibilities under normal operating conditions."
+    },
+    {
+      "id": "clause_02",
+      "title": "Standard Clause 2",
+      "text": "This is standard clause text for section 2. It details the obligations and responsibilities under normal operating conditions."
+    },
+    {
+      "id": "clause_03",
+      "title": "Standard Clause 3",
+      "text": "This is standard clause text for section 3. It details the obligations and responsibilities under normal operating conditions."
+    },
+    {
+      "id": "clause_04",
+      "title": "Standard Clause 4",
+      "text": "This is standard clause text for section 4. It details the obligations and responsibilities under normal operating conditions."
+    },
+    {
+      "id": "clause_05",
+      "title": "Standard Clause 5",
+      "text": "This is standard clause text for section 5. It details the obligations and responsibilities under normal operating conditions."
+    },
+    {
+      "id": "clause_06",
+      "title": "Standard Clause 6",
+      "text": "This is standard clause text for section 6. It details the obligations and responsibilities under normal operating conditions."
+    },
+    {
+      "id": "clause_07",
+      "title": "Standard Clause 7",
+      "text": "This is standard clause text for section 7. It details the obligations and responsibilities under normal operating conditions."
+    },
+    {
+      "id": "clause_08",
+      "title": "Standard Clause 8",
+      "text": "This is standard clause text for section 8. It details the obligations and responsibilities under normal operating conditions."
+    },
+    {
+      "id": "clause_09",
+      "title": "Standard Clause 9",
+      "text": "This is standard clause text for section 9. It details the obligations and responsibilities under normal operating conditions."
+    },
+    {
+      "id": "clause_10",
+      "title": "Standard Clause 10",
+      "text": "This is standard clause text for section 10. It details the obligations and responsibilities under normal operating conditions."
+    },
+    {
+      "id": "clause_11",
+      "title": "Standard Clause 11",
+      "text": "This is standard clause text for section 11. It details the obligations and responsibilities under normal operating conditions."
+    },
+    {
+      "id": "clause_12",
+      "title": "Standard Clause 12",
+      "text": "This is standard clause text for section 12. It details the obligations and responsibilities under normal operating conditions."
+    },
+    {
+      "id": "clause_13",
+      "title": "Standard Clause 13",
+      "text": "This is standard clause text for section 13. It details the obligations and responsibilities under normal operating conditions."
+    },
+    {
+      "id": "clause_14",
+      "title": "Standard Clause 14",
+      "text": "This is standard clause text for section 14. It details the obligations and responsibilities under normal operating conditions."
+    },
+    {
+      "id": "clause_15",
+      "title": "Standard Clause 15",
+      "text": "This is standard clause text for section 15. It details the obligations and responsibilities under normal operating conditions."
+    },
+    {
+      "id": "clause_16",
+      "title": "Standard Clause 16",
+      "text": "This is standard clause text for section 16. It details the obligations and responsibilities under normal operating conditions."
+    },
+    {
+      "id": "clause_17",
+      "title": "Standard Clause 17",
+      "text": "This is standard clause text for section 17. It details the obligations and responsibilities under normal operating conditions."
+    },
+    {
+      "id": "clause_18",
+      "title": "Standard Clause 18",
+      "text": "This is standard clause text for section 18. It details the obligations and responsibilities under normal operating conditions."
+    },
+    {
+      "id": "clause_19",
+      "title": "Standard Clause 19",
+      "text": "This is standard clause text for section 19. It details the obligations and responsibilities under normal operating conditions."
+    },
+    {
+      "id": "clause_20",
+      "title": "Standard Clause 20",
+      "text": "This is standard clause text for section 20. It details the obligations and responsibilities under normal operating conditions."
+    },
+    {
+      "id": "clause_21",
+      "title": "Standard Clause 21",
+      "text": "This is standard clause text for section 21. It details the obligations and responsibilities under normal operating conditions."
+    },
+    {
+      "id": "clause_22",
+      "title": "Standard Clause 22",
+      "text": "This is standard clause text for section 22. It details the obligations and responsibilities under normal operating conditions."
+    },
+    {
+      "id": "clause_23",
+      "title": "Standard Clause 23",
+      "text": "This is standard clause text for section 23. It details the obligations and responsibilities under normal operating conditions."
+    },
+    {
+      "id": "clause_24",
+      "title": "Standard Clause 24",
+      "text": "This is standard clause text for section 24. It details the obligations and responsibilities under normal operating conditions."
+    },
+    {
+      "id": "clause_25",
+      "title": "Standard Clause 25",
+      "text": "This is standard clause text for section 25. It details the obligations and responsibilities under normal operating conditions."
+    },
+    {
+      "id": "clause_26",
+      "title": "Standard Clause 26",
+      "text": "This is standard clause text for section 26. It details the obligations and responsibilities under normal operating conditions."
+    },
+    {
+      "id": "clause_27",
+      "title": "Standard Clause 27",
+      "text": "This is standard clause text for section 27. It details the obligations and responsibilities under normal operating conditions."
+    },
+    {
+      "id": "clause_28",
+      "title": "Standard Clause 28",
+      "text": "This is standard clause text for section 28. It details the obligations and responsibilities under normal operating conditions."
+    },
+    {
+      "id": "clause_29",
+      "title": "Standard Clause 29",
+      "text": "This is standard clause text for section 29. It details the obligations and responsibilities under normal operating conditions."
+    },
+    {
+      "id": "clause_30",
+      "title": "Standard Clause 30",
+      "text": "This is standard clause text for section 30. It details the obligations and responsibilities under normal operating conditions."
+    },
+    {
+      "id": "clause_31",
+      "title": "Standard Clause 31",
+      "text": "This is standard clause text for section 31. It details the obligations and responsibilities under normal operating conditions."
+    },
+    {
+      "id": "clause_32",
+      "title": "Standard Clause 32",
+      "text": "This is standard clause text for section 32. It details the obligations and responsibilities under normal operating conditions."
+    },
+    {
+      "id": "clause_33",
+      "title": "Standard Clause 33",
+      "text": "This is standard clause text for section 33. It details the obligations and responsibilities under normal operating conditions."
+    },
+    {
+      "id": "clause_34",
+      "title": "Standard Clause 34",
+      "text": "This is standard clause text for section 34. It details the obligations and responsibilities under normal operating conditions."
+    },
+    {
+      "id": "clause_35",
+      "title": "Standard Clause 35",
+      "text": "This is standard clause text for section 35. It details the obligations and responsibilities under normal operating conditions."
+    },
+    {
+      "id": "clause_36",
+      "title": "Standard Clause 36",
+      "text": "This is standard clause text for section 36. It details the obligations and responsibilities under normal operating conditions."
+    },
+    {
+      "id": "clause_37",
+      "title": "Standard Clause 37",
+      "text": "This is standard clause text for section 37. It details the obligations and responsibilities under normal operating conditions."
+    },
+    {
+      "id": "clause_38",
+      "title": "Standard Clause 38",
+      "text": "This is standard clause text for section 38. It details the obligations and responsibilities under normal operating conditions."
+    },
+    {
+      "id": "clause_39",
+      "title": "Standard Clause 39",
+      "text": "This is standard clause text for section 39. It details the obligations and responsibilities under normal operating conditions."
+    },
+    {
+      "id": "clause_40",
+      "title": "Standard Clause 40",
+      "text": "This is standard clause text for section 40. It details the obligations and responsibilities under normal operating conditions."
+    },
+    {
+      "id": "clause_41",
+      "title": "Standard Clause 41",
+      "text": "This is standard clause text for section 41. It details the obligations and responsibilities under normal operating conditions."
+    },
+    {
+      "id": "clause_42",
+      "title": "Standard Clause 42",
+      "text": "This is standard clause text for section 42. It details the obligations and responsibilities under normal operating conditions."
+    },
+    {
+      "id": "clause_43",
+      "title": "Standard Clause 43",
+      "text": "This is standard clause text for section 43. It details the obligations and responsibilities under normal operating conditions."
+    },
+    {
+      "id": "clause_44",
+      "title": "Standard Clause 44",
+      "text": "This is standard clause text for section 44. It details the obligations and responsibilities under normal operating conditions."
+    },
+    {
+      "id": "clause_45",
+      "title": "Standard Clause 45",
+      "text": "This is standard clause text for section 45. It details the obligations and responsibilities under normal operating conditions."
+    },
+    {
+      "id": "clause_46",
+      "title": "Standard Clause 46",
+      "text": "This is standard clause text for section 46. It details the obligations and responsibilities under normal operating conditions."
+    },
+    {
+      "id": "clause_47",
+      "title": "Standard Clause 47",
+      "text": "This is standard clause text for section 47. It details the obligations and responsibilities under normal operating conditions."
+    },
+    {
+      "id": "clause_48",
+      "title": "Standard Clause 48",
+      "text": "This is standard clause text for section 48. It details the obligations and responsibilities under normal operating conditions."
+    },
+    {
+      "id": "clause_49",
+      "title": "Standard Clause 49",
+      "text": "This is standard clause text for section 49. It details the obligations and responsibilities under normal operating conditions."
+    },
+    {
+      "id": "clause_50",
+      "title": "Standard Clause 50",
+      "text": "This is standard clause text for section 50. It details the obligations and responsibilities under normal operating conditions."
+    },
+    {
+      "id": "clause_51",
+      "title": "Standard Clause 51",
+      "text": "This is standard clause text for section 51. It details the obligations and responsibilities under normal operating conditions."
+    },
+    {
+      "id": "clause_52",
+      "title": "Standard Clause 52",
+      "text": "This is standard clause text for section 52. It details the obligations and responsibilities under normal operating conditions."
+    },
+    {
+      "id": "clause_53",
+      "title": "Standard Clause 53",
+      "text": "This is standard clause text for section 53. It details the obligations and responsibilities under normal operating conditions."
+    },
+    {
+      "id": "clause_54",
+      "title": "Standard Clause 54",
+      "text": "This is standard clause text for section 54. It details the obligations and responsibilities under normal operating conditions."
+    },
+    {
+      "id": "clause_55",
+      "title": "Standard Clause 55",
+      "text": "This is standard clause text for section 55. It details the obligations and responsibilities under normal operating conditions."
+    },
+    {
+      "id": "clause_56",
+      "title": "Standard Clause 56",
+      "text": "This is standard clause text for section 56. It details the obligations and responsibilities under normal operating conditions."
+    },
+    {
+      "id": "clause_57",
+      "title": "Standard Clause 57",
+      "text": "This is standard clause text for section 57. It details the obligations and responsibilities under normal operating conditions."
+    },
+    {
+      "id": "clause_58",
+      "title": "Standard Clause 58",
+      "text": "This is standard clause text for section 58. It details the obligations and responsibilities under normal operating conditions."
+    },
+    {
+      "id": "clause_59",
+      "title": "Standard Clause 59",
+      "text": "This is standard clause text for section 59. It details the obligations and responsibilities under normal operating conditions."
+    },
+    {
+      "id": "clause_60",
+      "title": "Standard Clause 60",
+      "text": "This is standard clause text for section 60. It details the obligations and responsibilities under normal operating conditions."
+    }
+  ],
+  "execution_scenarios": [
+    {
+      "scenario_id": "scenario_01",
+      "title": "Clean Complex 1",
+      "description": "Multi-clause interaction that resolves safely.",
+      "actor": "System",
+      "action_taken": "Automated workflow",
+      "triggers_clauses": [
+        "clause_01",
+        "clause_02",
+        "clause_03"
+      ],
+      "crashes": false
+    },
+    {
+      "scenario_id": "scenario_02",
+      "title": "Clean Complex 2",
+      "description": "Multi-clause interaction that resolves safely.",
+      "actor": "System",
+      "action_taken": "Automated workflow",
+      "triggers_clauses": [
+        "clause_02",
+        "clause_03",
+        "clause_04"
+      ],
+      "crashes": false
+    },
+    {
+      "scenario_id": "scenario_03",
+      "title": "Clean Complex 3",
+      "description": "Multi-clause interaction that resolves safely.",
+      "actor": "System",
+      "action_taken": "Automated workflow",
+      "triggers_clauses": [
+        "clause_03",
+        "clause_04",
+        "clause_05"
+      ],
+      "crashes": false
+    },
+    {
+      "scenario_id": "scenario_04",
+      "title": "Clean Complex 4",
+      "description": "Multi-clause interaction that resolves safely.",
+      "actor": "System",
+      "action_taken": "Automated workflow",
+      "triggers_clauses": [
+        "clause_04",
+        "clause_05",
+        "clause_06"
+      ],
+      "crashes": false
+    },
+    {
+      "scenario_id": "scenario_05",
+      "title": "Clean Complex 5",
+      "description": "Multi-clause interaction that resolves safely.",
+      "actor": "System",
+      "action_taken": "Automated workflow",
+      "triggers_clauses": [
+        "clause_05",
+        "clause_06",
+        "clause_07"
+      ],
+      "crashes": false
+    },
+    {
+      "scenario_id": "scenario_06",
+      "title": "Data Loss Crash",
+      "description": "Server failure requires immediate restore, but data retention policy deleted backups.",
+      "actor": "IT Admin",
+      "action_taken": "Initiated recovery",
+      "triggers_clauses": [
+        "clause_30",
+        "clause_45"
+      ],
+      "crashes": true,
+      "crash_pair": {
+        "clause_a_id": "clause_30",
+        "clause_b_id": "clause_45"
+      }
+    },
+    {
+      "scenario_id": "scenario_07",
+      "title": "License Transfer Crash",
+      "description": "Acquired company attempts to transfer software licenses to parent.",
+      "actor": "Legal",
+      "action_taken": "Notice of assignment",
+      "triggers_clauses": [
+        "clause_08",
+        "clause_55"
+      ],
+      "crashes": true,
+      "crash_pair": {
+        "clause_a_id": "clause_08",
+        "clause_b_id": "clause_55"
+      }
+    },
+    {
+      "scenario_id": "scenario_08",
+      "title": "Liability Cap Crash",
+      "description": "Customer sues for $5M under IP indemnity, but general cap limits all claims to $1M.",
+      "actor": "Customer",
+      "action_taken": "Filed lawsuit",
+      "triggers_clauses": [
+        "clause_22",
+        "clause_59"
+      ],
+      "crashes": true,
+      "crash_pair": {
+        "clause_a_id": "clause_22",
+        "clause_b_id": "clause_59"
+      }
+    }
+  ]
+}
