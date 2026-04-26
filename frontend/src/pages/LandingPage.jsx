@@ -70,19 +70,47 @@ export default function LandingPage() {
   return (
     <div className="animated-mesh-bg" style={{ color: '#1a1a2e', fontFamily: 'system-ui, sans-serif', minHeight: '100vh', width: '100vw', overflowX: 'hidden' }}>
       
-      {/* Navbar handled globally by Layout.jsx */}
+      {showNav && (
+        <div style={{
+          position: 'fixed', top: 0, left: 0, right: 0,
+          background: 'rgba(255, 255, 255, 0.95)', backdropFilter: 'blur(10px)', WebkitBackdropFilter: 'blur(10px)',
+          borderBottom: '1px solid rgba(108,99,255,0.1)', zIndex: 1000,
+          padding: '14px 28px', display: 'flex', justifyContent: 'space-between', alignItems: 'center',
+          boxShadow: '0 2px 16px rgba(108,99,255,0.05)'
+        }}>
+          <div style={{ color: '#6C63FF', fontWeight: '900', fontSize: '16px', letterSpacing: '-0.02em', display: 'flex', alignItems: 'center', gap: '6px' }}>
+            <svg width="20" height="22" viewBox="0 0 24 28" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" style={{ filter: 'drop-shadow(0 0 8px rgba(108,99,255,0.4))' }}>
+              <path d="M12 2L2 7l10 5 10-5-10-5z" />
+              <path d="M2 17l10 5 10-5" />
+              <path d="M2 12l10 5 10-5" />
+            </svg>
+            Clausr
+          </div>
+          <div style={{ display: 'flex', gap: '24px', fontSize: '13px', fontWeight: '500', color: 'var(--text-secondary)' }}>
+            <span style={{ cursor: 'pointer' }} onClick={() => scrollTo('problem')}>Problem</span>
+            <span style={{ cursor: 'pointer' }} onClick={() => scrollTo('how-it-works')}>How It Works</span>
+            <span style={{ cursor: 'pointer' }} onClick={() => scrollTo('environments')}>Environments</span>
+            <span style={{ cursor: 'pointer' }} onClick={() => scrollTo('contradiction-types')}>Features</span>
+            <span style={{ cursor: 'pointer' }} onClick={() => scrollTo('enter')}>Enter</span>
+          </div>
+          <button onClick={() => navigate('/app')} style={{
+            background: 'transparent', border: '1px solid var(--purple)', color: 'var(--purple)',
+            padding: '6px 14px', borderRadius: '6px', fontSize: '13px', fontWeight: '600', cursor: 'pointer'
+          }}>Enter Clausr →</button>
+        </div>
+      )}
 
       {/* 1 - HERO */}
-      <section ref={s1} className="reveal" style={{...styles.sectionBase, borderBottom: 'none', background: 'var(--bg-main)', minHeight: '100vh', justifyContent: 'center', position: 'relative', paddingTop: '120px'}}>
-        <div style={{ position: 'absolute', top: '50%', left: '50%', transform: 'translate(-50%, -50%)', width: '60vw', height: '60vw', background: 'radial-gradient(circle, rgba(127,119,221,0.08) 0%, transparent 60%)', pointerEvents: 'none' }} />
+      <section ref={s1} className="reveal" style={{...styles.sectionBase, borderBottom: 'none', background: '#E8EAFB', minHeight: '100vh', justifyContent: 'center', position: 'relative', paddingTop: '120px'}}>
+        <div style={{ position: 'absolute', top: '50%', left: '50%', transform: 'translate(-50%, -50%)', width: '60vw', height: '60vw', background: 'radial-gradient(circle, rgba(108,99,255,0.08) 0%, transparent 60%)', pointerEvents: 'none' }} />
 
-        <div style={{ zIndex: 2, border: '1px solid var(--border-hi)', background: 'var(--bg-surface)', color: 'var(--purple)', borderRadius: '20px', padding: '8px 20px', fontSize: '13px', fontWeight: '700', display: 'flex', alignItems: 'center', gap: '8px', marginBottom: '40px' }}>
+        <div style={{ zIndex: 2, border: '1px solid rgba(108,99,255,0.25)', background: '#F5F4FF', color: '#6C63FF', borderRadius: '20px', padding: '8px 20px', fontSize: '13px', fontWeight: '700', display: 'flex', alignItems: 'center', gap: '8px', marginBottom: '40px' }}>
           <div style={{ width: '8px', height: '8px', borderRadius: '50%', background: 'var(--green)', animation: 'liveDot 1.5s infinite', boxShadow: '0 0 10px var(--green)' }} />
-          Meta PyTorch OpenEnv Hackathon 2026
+          Meta PyTorch OpenEnv Hackathon 2025
         </div>
 
         {/* MASSIVE BRAND NEW SVG LOGO */}
-        <svg width="140" height="140" viewBox="0 0 200 200" fill="none" style={{ zIndex: 2, marginBottom: '24px', filter: 'drop-shadow(0 10px 30px rgba(127,119,221,0.3))', animation: 'float 6s ease-in-out infinite' }}>
+        <svg width="140" height="140" viewBox="0 0 200 200" fill="none" style={{ zIndex: 2, marginBottom: '24px', filter: 'drop-shadow(0 10px 30px rgba(108,99,255,0.3))', animation: 'float 6s ease-in-out infinite' }}>
           <defs>
             <linearGradient id="logoGrad" x1="0%" y1="0%" x2="100%" y2="100%">
               <stop offset="0%" stopColor="#fff" />
@@ -99,44 +127,47 @@ export default function LandingPage() {
           <circle cx="100" cy="95" r="15" fill="#fff" filter="blur(1px)" />
         </svg>
 
-        <h1 style={{ zIndex: 2, fontSize: 'clamp(64px, 10vw, 100px)', fontWeight: 900, color: 'var(--text-primary)', letterSpacing: '-0.04em', marginBottom: '20px', lineHeight: 1, textAlign: 'center' }}>
-          Find the conflict <br/><span style={{ color: 'var(--purple)' }}>before it finds you.</span>
+        <h1 style={{ zIndex: 2, fontSize: 'clamp(64px, 10vw, 100px)', fontWeight: 900, background: 'linear-gradient(to right, #1a1a2e, #6C63FF)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', letterSpacing: '-0.04em', marginBottom: '20px', lineHeight: 1 }}>
+          Clausr
         </h1>
 
-        <p style={{ zIndex: 2, fontSize: 'clamp(20px, 3.5vw, 28px)', color: 'var(--text-secondary)', fontWeight: '600', maxWidth: '800px', textAlign: 'center', marginBottom: '56px', letterSpacing: '-0.01em' }}>
+        <p style={{ zIndex: 2, fontSize: 'clamp(20px, 3.5vw, 28px)', color: '#1a1a2e', fontWeight: '900', maxWidth: '700px', textAlign: 'center', marginBottom: '16px', letterSpacing: '-0.01em' }}>
+          Find the conflict before it finds you
+        </p>
+        <p style={{ zIndex: 2, fontSize: '18px', color: '#4a4a68', maxWidth: '680px', textAlign: 'center', marginBottom: '40px', lineHeight: 1.6 }}>
           The world's first RL gym for legal contract contradiction detection.
         </p>
 
-        <div style={{ zIndex: 2, display: 'flex', flexWrap: 'wrap', background: 'var(--bg-card)', backdropFilter: 'blur(20px)', border: '1px solid var(--border)', borderRadius: '20px', marginBottom: '56px', alignItems: 'center', boxShadow: '0 2px 16px rgba(127,119,221,0.07)' }}>
-          <div style={{ padding: '20px 40px', borderRight: '1px solid var(--border)', display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
-            <span style={{ color: 'var(--text-primary)', fontSize: '20px', fontWeight: '900', marginBottom: '4px' }}>$860B <span style={{color:'var(--red)'}}>Problem</span></span>
-            <span style={{ color: 'var(--text-muted)', fontSize: '12px', textTransform: 'uppercase', letterSpacing: '1px' }}>Global Cost of Disputes</span>
+        <div style={{ zIndex: 2, display: 'flex', flexWrap: 'wrap', gap: '16px', marginBottom: '48px', justifyContent: 'center' }}>
+          <div style={{ background: '#FFFFFF', padding: '12px 24px', borderRadius: '30px', border: '1px solid var(--border)', boxShadow: '0 4px 12px rgba(108,99,255,0.05)', display: 'flex', alignItems: 'center', gap: '10px' }}>
+            <span style={{ color: 'var(--red)', fontWeight: '900', fontSize: '18px' }}>$860B</span>
+            <span style={{ color: 'var(--text-secondary)', fontSize: '14px', fontWeight: '600' }}>problem</span>
           </div>
-          <div style={{ padding: '20px 40px', borderRight: '1px solid var(--border)', display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
-            <span style={{ color: 'var(--text-primary)', fontSize: '20px', fontWeight: '900', marginBottom: '4px' }}>0.8360 <span style={{color:'var(--green)'}}>Mean Score</span></span>
-            <span style={{ color: 'var(--text-muted)', fontSize: '12px', textTransform: 'uppercase', letterSpacing: '1px' }}>Llama 3.3 70B Benchmark</span>
+          <div style={{ background: '#FFFFFF', padding: '12px 24px', borderRadius: '30px', border: '1px solid var(--border)', boxShadow: '0 4px 12px rgba(108,99,255,0.05)', display: 'flex', alignItems: 'center', gap: '10px' }}>
+            <span style={{ color: 'var(--green)', fontWeight: '900', fontSize: '18px' }}>0.8360</span>
+            <span style={{ color: 'var(--text-secondary)', fontSize: '14px', fontWeight: '600' }}>mean score</span>
           </div>
-          <div style={{ padding: '20px 40px', display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
-            <span style={{ color: 'var(--text-primary)', fontSize: '20px', fontWeight: '900', marginBottom: '4px' }}>3 <span style={{color:'var(--purple)'}}>Environments</span></span>
-            <span style={{ color: 'var(--text-muted)', fontSize: '12px', textTransform: 'uppercase', letterSpacing: '1px' }}>Detection · Execution · LexMind</span>
+          <div style={{ background: '#FFFFFF', padding: '12px 24px', borderRadius: '30px', border: '1px solid var(--border)', boxShadow: '0 4px 12px rgba(108,99,255,0.05)', display: 'flex', alignItems: 'center', gap: '10px' }}>
+            <span style={{ color: 'var(--purple)', fontWeight: '900', fontSize: '18px' }}>3</span>
+            <span style={{ color: 'var(--text-secondary)', fontSize: '14px', fontWeight: '600' }}>environments</span>
           </div>
         </div>
 
         <div style={{ zIndex: 2, display: 'flex', gap: '16px', marginBottom: '24px' }}>
           <button onClick={() => navigate('/app')} style={{
-            background: 'var(--purple)', color: '#fff', padding: '16px 40px', borderRadius: '12px', fontWeight: 800, fontSize: '18px', border: 'none', cursor: 'pointer', transition: 'all 150ms ease'
-          }} onMouseOver={e => { e.currentTarget.style.transform = 'scale(1.03)'; e.currentTarget.style.background = 'var(--purple-lo)'; }} onMouseOut={e => { e.currentTarget.style.transform = 'scale(1)'; e.currentTarget.style.background = 'var(--purple)'; }}>
+            background: '#6C63FF', color: '#fff', padding: '16px 32px', borderRadius: '12px', fontWeight: 800, fontSize: '16px', border: 'none', cursor: 'pointer', transition: 'all 150ms ease', boxShadow: '0 4px 15px rgba(108,99,255,0.3)'
+          }} onMouseOver={e => { e.currentTarget.style.transform = 'scale(1.03)'; e.currentTarget.style.background = '#5A52E0'; }} onMouseOut={e => { e.currentTarget.style.transform = 'scale(1)'; e.currentTarget.style.background = '#6C63FF'; }}>
             Try Live Demo
           </button>
           
           <button onClick={() => window.open('https://huggingface.co/spaces/BinaryCoder/Clausr', '_blank')} style={{
-            background: 'transparent', color: 'var(--purple)', padding: '16px 40px', borderRadius: '12px', fontWeight: 800, fontSize: '18px', border: '2px solid var(--purple)', cursor: 'pointer', transition: 'all 150ms ease'
-          }} onMouseOver={e => { e.currentTarget.style.transform = 'scale(1.03)'; e.currentTarget.style.background = 'var(--purple-dim)'; }} onMouseOut={e => { e.currentTarget.style.transform = 'scale(1)'; e.currentTarget.style.background = 'transparent'; }}>
+            background: 'transparent', color: '#1a1a2e', padding: '16px 32px', borderRadius: '12px', fontWeight: 800, fontSize: '16px', border: '2px solid rgba(108,99,255,0.2)', cursor: 'pointer', transition: 'all 150ms ease'
+          }} onMouseOver={e => { e.currentTarget.style.transform = 'scale(1.03)'; e.currentTarget.style.borderColor = '#6C63FF'; e.currentTarget.style.color = '#6C63FF'; }} onMouseOut={e => { e.currentTarget.style.transform = 'scale(1)'; e.currentTarget.style.borderColor = 'rgba(108,99,255,0.2)'; e.currentTarget.style.color = '#1a1a2e'; }}>
             View on HuggingFace
           </button>
         </div>
 
-        <p style={{ zIndex: 2, fontSize: '12px', color: 'var(--text-muted)' }}>Powered by OpenEnv · Meta PyTorch</p>
+        <p style={{ zIndex: 2, fontSize: '12px', color: 'var(--text-muted)' }}>Powered by OpenEnv · Meta PyTorch · Hugging Face</p>
 
         <div style={{ position: 'absolute', bottom: '32px', color: 'var(--text-muted)', fontSize: '24px', animation: 'bounce 1.6s infinite', zIndex: 2 }}>↓</div>
       </section>
