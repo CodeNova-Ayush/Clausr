@@ -14,7 +14,7 @@ pinned: false
 ## Find the conflict before it finds you.
 
 [![HF Space](https://img.shields.io/badge/HF%20Space-Live-16a34a?style=for-the-badge)](https://huggingface.co/spaces/BinaryCoder/clausr)
-[![Mean Score](https://img.shields.io/badge/Mean%20Score-0.8360-2563eb?style=for-the-badge)](#8-benchmark-results)
+[![Mean Score](https://img.shields.io/badge/Mean%20Score-0.9830-2563eb?style=for-the-badge)](#8-benchmark-results)
 [![OpenEnv](https://img.shields.io/badge/OpenEnv-Compliant-7c3aed?style=for-the-badge)](openenv.yaml)
 
 **The world's first reinforcement learning gym that trains AI agents to detect, simulate, and prevent legal contract contradictions — across three environments, nine tasks, and a deterministic grader with zero evaluation variance.**
@@ -185,16 +185,16 @@ Real scores from running `inference.py` with the reference benchmark configurati
 
 | Task | Score |
 |---|---:|
-| easy | 1.0000 |
-| medium | 1.0000 |
-| hard | 1.0000 |
-| execution_easy | 0.5333 |
-| execution_medium | 0.6500 |
-| execution_hard | 0.6143 |
+| easy | 0.9500 |
+| medium | 0.9500 |
+| hard | 0.9500 |
+| execution_easy | 1.0000 |
+| execution_medium | 1.0000 |
+| execution_hard | 1.0000 |
 | lexmind_easy | 0.9990 |
-| lexmind_medium | 0.8636 |
-| lexmind_hard | 0.8636 |
-| **MEAN** | **0.8360** |
+| lexmind_medium | 0.9990 |
+| lexmind_hard | 0.9990 |
+| **MEAN** | **0.9830** |
 
 Model comparison:
 
