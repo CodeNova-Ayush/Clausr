@@ -17,14 +17,14 @@ tags:
 
 # 🛡️ Clausr
 
-## Find the conflict before it finds you.
+## The World's First Self-Play RL Gym for Legal Contract Intelligence
 
 [![HF Space](https://img.shields.io/badge/HF%20Space-Live-16a34a?style=for-the-badge)](https://huggingface.co/spaces/BinaryCoder/clausr)
 [![Mean Score](https://img.shields.io/badge/Llama_3.3_70B_Mean_Score-0.9830-2563eb?style=for-the-badge)](#8-benchmark-results)
 [![OpenEnv](https://img.shields.io/badge/OpenEnv-Compliant-7c3aed?style=for-the-badge)](openenv.yaml)
 [![GRPO](https://img.shields.io/badge/GRPO-Trained-ff69b4?style=for-the-badge)](#9-training-results)
 
-**The world's first reinforcement learning gym that trains AI agents to detect, simulate, and prevent legal contract contradictions — featuring 6 distinct environments, deterministic heuristics, and live GRPO training integration.**
+**Find the conflict before it finds you.**
 
 Built for the **Meta PyTorch OpenEnv Hackathon 2026**.
 
@@ -34,54 +34,34 @@ Built for the **Meta PyTorch OpenEnv Hackathon 2026**.
 
 ## 📖 1. Executive Summary
 
-### The Problem
-Contract contradictions are not formatting problems; they are failure modes in the operating system of commerce. A single agreement can tell a customer to pay in 30 days, tell finance that payment is not processable for 60 days, and tell legal that penalties begin somewhere in between. In large contract portfolios, these conflicts compound into delayed revenue, failed obligations, insurance disputes, regulatory exposure, and litigation. Industry estimates put contract-value leakage and dispute impact at **$860 billion per year globally**.
+Every legal contract is a state machine. Every clause is a transition rule. When two rules fire simultaneously on the same obligation with incompatible demands, the machine enters an undefined state. That undefined state is not a bug. It is a lawsuit.
 
-The hardest contradictions are internal. They are not found by asking whether one clause is "risky" in isolation. They appear when two remote clauses describe the same obligation with incompatible numbers, parties, time windows, rights, definitions, or conditions.
+Industry estimates put contract-value leakage and dispute impact at **$860 billion per year globally**. Nine percent of annual revenue evaporates in contract disputes. Sixty percent of those disputes are caused by internal contradictions that nobody caught before both parties signed.
 
-### The Clausr Solution
-Existing legal AI tools (Harvey, Spellbook) are built for static reading and drafting. **Clausr provides the missing reinforcement learning infrastructure.** It turns causal contract reasoning into a trainable environment: agents act, the deterministic heuristic environment grades, and the reward is perfectly reproducible without LLM-as-a-judge variance.
+**Clausr** is the missing reinforcement learning infrastructure to solve this. While existing legal AI tools read finished contracts statically, Clausr provides a fully deployed, deterministically graded, reward-shaped training environment across **8 distinct arenas** to train the next generation of legal reasoning agents.
 
 ---
 
-## 🏛️ 2. Core Environments (OpenEnv Official Track)
+## 🏛️ 2. The Eight Arenas of Legal Combat
 
-Clausr exposes **three core environments** and **nine formal tasks** in its `openenv.yaml` specification. The grader is 100% deterministic, using exact set-intersection of clause IDs against hidden ground truth metadata. 
+Clausr exposes 8 distinct, progressively complex environments. The grader is **100% deterministic**, using exact set-intersection of clause IDs against hidden ground truth metadata—mathematically eliminating LLM-as-a-judge stochasticity.
 
-### Environment 1: Detection
-The classic OpenEnv contract-review task. The agent receives a completed legal agreement with hidden contradictions and must return all conflicting pairs.
-* **Easy:** 8 clauses, 1 contradiction. Pure signal.
-* **Medium:** 25 clauses, 4 contradictions, 1 trap.
-* **Hard:** 60 clauses, 8 contradictions, 3 traps. Traps defeat naive embedding similarity (e.g., highly similar vocabulary but different legal contexts like "termination for cause" vs "termination for convenience").
-
-### Environment 2: Oracle Execution
-Turns contracts into executable systems. Rather than static review, it asks: *"What happens when a real employee performs an action under this contract?"*
-* Agents trace the causal path from business action to triggered clauses.
-* They must detect runtime **crash points** where simultaneous clause activations impose mutually exclusive demands.
-
-### Environment 3: LexMind (Incremental Drafting)
-The incremental observation environment. The document grows one clause at a time.
-* Agents must maintain **institutional memory** of the contract state.
-* Tests cross-clause working memory: catching when a new redline collides with a clause accepted 15 events earlier, while correctly allowing intentional "supersession" clauses.
+| Environment | Purpose | Core Challenge |
+|---|---|---|
+| **1. Detection** | Static contract review | Identify conflicting pairs of clauses disguised by semantic distance and lexical camouflage. |
+| **2. Oracle** | Dynamic execution tracing | Simulate employee actions under a contract to find runtime "crash points" where clauses collide. |
+| **3. LexMind** | Incremental drafting | Maintain cross-clause working memory as a contract grows one clause at a time. |
+| **4. Adversarial Arena** | Zero-sum self-play | A **Forger** injects hidden contradictions; an **Auditor** must find them. Endless co-evolution. |
+| **5. CurriculumForge** | Meta-learning | Autonomously shifts task distributions based on the agent's live `CompetenceProfile` (ALP). |
+| **6. ConstitutionForge**| Portfolio analysis | Detect hierarchical supersession failures and cross-contradictions across MSAs and SOWs. |
+| **7. Federated Arena** | Multi-agent negotiation | 3 agents (Buyer, Seller, Regulator) optimize commercial bias while avoiding compliance violations. |
+| **8. TimeMachine** | Forensic attribution | Trace the version history of a contract to find exactly *when* and *who* injected a fatal paradox. |
 
 ---
 
-## 🚀 3. Extended Architecture (The Hackathon Flex)
+## ⚖️ 3. Deterministic Scoring Mechanics
 
-Clausr doesn't stop at 3 environments. The backend contains a massive ecosystem of advanced RL training arenas designed to push frontier models to their absolute limits.
-
-* 🧬 **ContractDNA Engine:** An O(1) deterministic heuristic engine that calculates a 5-dimensional risk fingerprint (Numeric, Temporal, Party, Termination, Conditional) of a contract without any LLM calls.
-* ⚔️ **Adversarial Arena (`/adversarial`):** A zero-sum sequential game. A **Forger Agent** stealthily injects subtle logical contradictions into clean contracts. An **Auditor Agent** must find them. Used for advanced self-play RL.
-* 🎓 **Curriculum Forge (`/curriculum`):** An adaptive meta-environment utilizing Absolute Learning Progress (ALP) to dynamically bias task selection towards the edge of the agent's current competence profile.
-* 🏛️ **Constitution Forge (`/constitution`):** Scales contradiction detection from single documents to massive **portfolios**, testing inter-contract dependencies (e.g., MSA vs. SOW conflicts).
-* 🤝 **Federated Arena (`/federated`):** Simulates multi-agent, multi-party negotiation where agents propose and accept terms while trying to avoid systemic contradictions.
-* ⏱️ **TimeMachine (`/timemachine`):** A forensic environment where agents must attribute a specific contradiction to the exact historical draft version that introduced it.
-
----
-
-## ⚖️ 4. Deterministic Scoring Mechanics
-
-Clausr uses a highly tuned, RL-ready scoring formula that balances recall with a dynamic false-positive penalty ($\lambda$).
+Most hackathon environments use binary scoring, resulting in sparse rewards. Clausr uses a highly tuned, RL-ready scoring formula that balances recall with a dynamic false-positive penalty ($\lambda$).
 
 ```text
 score = clamp(recall - (lambda * false_positive_rate), 0.0, 1.0)
@@ -93,15 +73,13 @@ score = clamp(recall - (lambda * false_positive_rate), 0.0, 1.0)
 | **Medium** | 0.15 | Balances exploration with precision. |
 | **Hard** | 0.20 | Ruthless precision required. Guessing destroys the score. |
 
-**Why this matters for RL:** Binary pass/fail rewards create sparse, unlearnable landscapes. Clausr provides dense, shaped reward signals. Finding 7 out of 8 contradictions yields a high score, giving the optimizer a smooth gradient toward the optimal policy.
-
 ---
 
-## 📊 5. Benchmark Results
+## 📊 4. Benchmark Results
 
-Real scores from running the pipeline against **Llama 3.3 70B Versatile** via the Groq API. 
+Real scores from running the pipeline against **Llama 3.3 70B Versatile** via the Groq API. The system achieves near-perfect performance on state-of-the-art models, validating the determinism of the grader.
 
-| Task | Score | Execution | LexMind |
+| Task | Detection Score | Execution Score | LexMind Score |
 |---|---:|---:|---:|
 | **Easy** | 0.9500 | 1.0000 | 0.9990 |
 | **Medium** | 0.9500 | 1.0000 | 0.9990 |
@@ -109,13 +87,11 @@ Real scores from running the pipeline against **Llama 3.3 70B Versatile** via th
 
 🥇 **Overall Mean Score: 0.9830**
 
-The system achieves near-perfect performance on state-of-the-art >70B parameter models, validating the determinism of the grader and the clarity of the task definitions.
-
 ---
 
-## 🧠 6. GRPO Training Performance
+## 🧠 5. GRPO Training Performance
 
-Clausr includes a fully functional live GRPO (Group Relative Policy Optimization) training loop (`clausr_grpo_training.py`) using HuggingFace TRL. Small models (e.g., Qwen-0.5B) were trained directly against the Clausr HF Space as a live reward oracle.
+Clausr includes a fully functional live GRPO (Group Relative Policy Optimization) training loop using HuggingFace TRL. Models were trained directly against the Clausr HF Space as a live reward oracle.
 
 | Metric | Before Training | After 50 GRPO Steps | Net Improvement |
 |---|---:|---:|---:|
@@ -123,20 +99,26 @@ Clausr includes a fully functional live GRPO (Group Relative Policy Optimization
 
 <p align="center">
   <img alt="Clausr GRPO training reward curve" src="assets/training_curve_final.png" width="80%" />
+  <br><i>Reward curve demonstrating the dense gradient signal provided by Clausr's heuristic grader.</i>
 </p>
-*Reward curve demonstrating the dense gradient signal provided by Clausr's heuristic grader.*
 
-Before and after GRPO + Prompt Evolution evidence:
-* **Detection Easy:** `0.0000` ➔ `0.9500`
-* **Execution Hard:** `0.7429` ➔ `1.0000`
-* **LexMind Hard:** `0.0909` ➔ `0.9990`
-* **GLOBAL MEAN:** `0.3348` ➔ `0.9830`
+### Self-Play Co-Evolution (Adversarial Arena)
+<p align="center">
+  <img alt="Co-Evolution" src="assets/evolution_curve.png" width="80%" />
+  <br><i>Forger and Auditor agents improving simultaneously via self-play co-evolution.</i>
+</p>
+
+### Zero-Shot Transfer
+<p align="center">
+  <img alt="Transfer Bonus" src="assets/improvement_heatmap.png" width="80%" />
+  <br><i>Zero-shot transfer confirmed — numeric conflict skills generalizing to conditional conflicts.</i>
+</p>
 
 ---
 
-## 🛠️ 7. API Reference & Quick Start
+## 🛠️ 6. API Reference & Quick Start
 
-Clausr provides a robust FastAPI backend. All environments share a standardized `/reset` and `/step` Pydantic schema.
+Clausr provides a robust FastAPI backend. All environments share standardized OpenEnv-compliant `/reset` and `/step` Pydantic schemas.
 
 ### Quick Start (Live Space)
 
@@ -165,19 +147,9 @@ curl -X POST "https://binarycoder-clausr.hf.space/step?task_id=easy&contract_id=
   }'
 ```
 
-### Core Endpoints
-| Path | Method | Purpose | Returns |
-|---|---|---|---|
-| `/health` | GET | Check system status | JSON Status |
-| `/reset` | POST | Initialize Detection | `ContractObservation` |
-| `/step` | POST | Submit Detection finding | `ContractStepResult` |
-| `/execution/reset` | POST | Initialize Oracle | `ExecutionObservation` |
-| `/lexmind/reset` | POST | Initialize LexMind | `LexMindObservation` |
-| `/fingerprint` | POST | ContractDNA analysis | `FingerprintResult` |
-
 ---
 
-## 🏗️ 8. Architecture Diagram
+## 🏗️ 7. Architecture Diagram
 
 ```text
                          ┌──────────────────────────────┐
@@ -214,35 +186,25 @@ curl -X POST "https://binarycoder-clausr.hf.space/step?task_id=easy&contract_id=
 
 ---
 
-## 🔗 9. Important Links
-* **Live Deployment:** [Hugging Face Space](https://huggingface.co/spaces/BinaryCoder/clausr)
-* **OpenEnv Spec:** [`openenv.yaml`](openenv.yaml)
-* **GRPO Training Logic:** [`clausr_grpo_training.py`](clausr_grpo_training.py)
-* **Frontend Application:** Beautiful React/Vite web application providing visual state observation for all 6 environments.
+## 🔗 8. Important Links & Submission Materials
+
+Everything you need to evaluate this submission is consolidated below:
+
+| Resource | Link |
+|----------|------|
+| 🚀 **Live Environment** | [huggingface.co/spaces/BinaryCoder/Clausr](https://huggingface.co/spaces/BinaryCoder/Clausr) |
+| 📄 **Product Requirements (PRD)** | [View Official PRD Document](https://drive.google.com/file/d/1xA4quUwoTwAJBLGFjq3v5DKVezrLMeO6/view?usp=sharing) |
+| 📝 **Narrative Blog Post** | [Blog.md](https://huggingface.co/spaces/BinaryCoder/Clausr/blob/main/Blog.md) |
+| 💻 **GitHub Repository** | [github.com/CodeNova-Ayush/Clausr](https://github.com/CodeNova-Ayush/Clausr) |
+| 📓 **Training Notebook** | [clausr_training_colab.ipynb](https://huggingface.co/spaces/BinaryCoder/Clausr/blob/main/clausr_training_colab.ipynb) |
+| 🤖 **GRPO Training Script** | [clausr_grpo_training.py](https://huggingface.co/spaces/BinaryCoder/Clausr/blob/main/clausr_grpo_training.py) |
+| 📊 **Detailed Training Report** | [TRAINING_REPORT.md](https://huggingface.co/spaces/BinaryCoder/Clausr/blob/main/TRAINING_REPORT.md) |
+| 🎯 **Reward Design Document** | [REWARD_DESIGN.md](https://huggingface.co/spaces/BinaryCoder/Clausr/blob/main/REWARD_DESIGN.md) |
+| 💬 **Discussion & Results** | [HuggingFace Community Discussion](https://huggingface.co/spaces/BinaryCoder/Clausr/discussions/1) |
+| 📜 **OpenEnv Spec** | [openenv.yaml](openenv.yaml) |
 
 ---
 
 <div align="center">
-  <i>"Clausr transforms static legal review into a dynamic reinforcement learning ecosystem."</i>
+  <i>"Clausr is where the $860 billion problem of contract management goes from being an inevitable human error to a mathematically solvable equation."</i>
 </div>
-
----
-
-## 📎 All Submission Materials
-
-| Material | Link |
-|----------|------|
-| 🚀 Live Environment | https://huggingface.co/spaces/BinaryCoder/Clausr |
-| 📝 Blog Post | https://huggingface.co/spaces/BinaryCoder/Clausr/blob/main/Blog.md |
-| 💬 Discussion & Training Results | https://huggingface.co/spaces/BinaryCoder/Clausr/discussions/1 |
-| 📓 Training Notebook | https://huggingface.co/spaces/BinaryCoder/Clausr/blob/main/clausr_training_colab.ipynb |
-| 🤖 GRPO Training Script | https://huggingface.co/spaces/BinaryCoder/Clausr/blob/main/clausr_grpo_training.py |
-| 📊 Training Report | https://huggingface.co/spaces/BinaryCoder/Clausr/blob/main/TRAINING_REPORT.md |
-| 🎯 Reward Design | https://huggingface.co/spaces/BinaryCoder/Clausr/blob/main/REWARD_DESIGN.md |
-
-## Important Links
-
-- **Live Environment:** https://huggingface.co/spaces/BinaryCoder/Clausr
-- **Blog Post:** https://huggingface.co/spaces/BinaryCoder/Clausr/blob/main/Blog.md
-- **Training Notebook:** clausr_training_colab.ipynb (included in this repository)
-- **Discussion:** https://huggingface.co/spaces/BinaryCoder/Clausr/discussions/1
